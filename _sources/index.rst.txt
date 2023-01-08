@@ -1,14 +1,32 @@
-.. No Errors Test Project documentation master file, created by
-   sphinx-quickstart on Fri Aug 30 17:07:56 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Welcome to choreo's documentation!
+==================================
 
-Welcome to No Errors Test Project's documentation!
-==================================================
+**Choreo** is a Python library to compute periodic solutions of motion of classical point masses under gravitational binary interaction.
+
+Still under development.
+
+Coming soon: Try it yourself !
+==============================
+
+At `this address <https://gabrielfougeron.github.io//choreo/>`_ !
+
+
+
+Contents
+--------
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Hello World!
+
+   usage
+   api
+   ode
+
+
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
 
 
 

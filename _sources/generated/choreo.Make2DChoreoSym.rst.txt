@@ -1,0 +1,6 @@
+﻿choreo.Make2DChoreoSym
+======================
+
+.. currentmodule:: choreo
+
+.. autofunction:: Make2DChoreoSym

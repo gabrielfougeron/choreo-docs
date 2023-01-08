@@ -1,0 +1,6 @@
+﻿choreo.ExplicitSymplecticWithTable\_VX\_cython
+==============================================
+
+.. currentmodule:: choreo
+
+.. autofunction:: ExplicitSymplecticWithTable_VX_cython
