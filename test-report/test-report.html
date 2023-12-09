@@ -1,0 +1,2484 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tests &#8212; Choreo  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/assets/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common.css?v=bd9ab754" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=ffa536d2" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/styles.css?v=6c8eb985" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/layouts.css?v=448c382f" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-test-results/common.css?v=9ec2c1d5" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=1e888504" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/assets/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="../_static/assets/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=f783d6a5"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'test-report/test-report';</script>
+    <link rel="icon" href="../_static/eight_icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API" href="../api.html" />
+    <link rel="prev" title="Convergence analysis of scipy’s Runge-Kutta methods for ODE IVP" href="../_build/auto_examples/convergence/scipyRungeKutta_ivp.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/eight_icon.png" class="logo__image only-light" alt="choreo"/>
+    <script>document.write(`<img src="../_static/eight_icon.png" class="logo__image only-dark" alt="choreo"/>`);</script>
+  
+  
+    <p class="title logo__title">choreo</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../_build/auto_examples/index.html">
+                        Gallery
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Tests
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../api.html">
+                        API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/gabrielfougeron/choreo" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gabrielfougeron.github.io/choreo/" title="Choreo_GUI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/img/eight_icon.png" class="icon-link-image" alt="Choreo_GUI"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../_build/auto_examples/index.html">
+                        Gallery
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Tests
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../api.html">
+                        API
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/gabrielfougeron/choreo" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gabrielfougeron.github.io/choreo/" title="Choreo_GUI" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/img/eight_icon.png" class="icon-link-image" alt="Choreo_GUI"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Tests</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="tests">
+<h1>Tests<a class="headerlink" href="#tests" title="Link to this heading">#</a></h1>
+<div class="line-block">
+<div class="line"><strong>Test suites:</strong> 1</div>
+<div class="line"><strong>Test cases:</strong> 10</div>
+<div class="line"><strong>Failed test cases:</strong> 0</div>
+<div class="line"><strong>Skipped test cases:</strong> 0</div>
+</div>
+<figure class="align-center" id="needflow-test-report/test-report-0">
+<p class="plantuml">
+<a href="../_images/plantuml-4aa2da024323120d993a83718691abe8fd5e043c.png"><img src="../_images/plantuml-4aa2da024323120d993a83718691abe8fd5e043c.png" alt="&#64;startuml
+
+' Nodes definition 
+
+folder &quot;&lt;size:12&gt;Test-Suite&lt;/size&gt;\n**Pytest test**\n**results**\n&lt;size:10&gt;REPORT_986&lt;/size&gt;&quot; as REPORT_986 [[../test-report/test-report.html#REPORT_986]] #cccccc
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_ImplicitSy**\n**mmetricPairs**\n&lt;size:10&gt;REPORT_986_D7A81&lt;/size&gt;&quot; as REPORT_986_D7A81 [[../test-report/test-report.html#REPORT_986_D7A81]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_ImplicitRK**\n**DefaultDPSIsEno**\n**ugh**\n&lt;size:10&gt;REPORT_986_E7A3E&lt;/size&gt;&quot; as REPORT_986_E7A3E [[../test-report/test-report.html#REPORT_986_E7A3E]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_Random**\n&lt;size:10&gt;REPORT_986_A31EB&lt;/size&gt;&quot; as REPORT_986_A31EB [[../test-report/test-report.html#REPORT_986_A31EB]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_Identity**\n&lt;size:10&gt;REPORT_986_3BDCE&lt;/size&gt;&quot; as REPORT_986_3BDCE [[../test-report/test-report.html#REPORT_986_3BDCE]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_Random**\n&lt;size:10&gt;REPORT_986_D08BF&lt;/size&gt;&quot; as REPORT_986_D08BF [[../test-report/test-report.html#REPORT_986_D08BF]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_random_ort**\n**hogonal_matrix**\n&lt;size:10&gt;REPORT_986_3A498&lt;/size&gt;&quot; as REPORT_986_3A498 [[../test-report/test-report.html#REPORT_986_3A498]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_nullspace**\n&lt;size:10&gt;REPORT_986_35E0C&lt;/size&gt;&quot; as REPORT_986_35E0C [[../test-report/test-report.html#REPORT_986_35E0C]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_Modulo_Num**\n**erator**\n&lt;size:10&gt;REPORT_986_4E0BF&lt;/size&gt;&quot; as REPORT_986_4E0BF [[../test-report/test-report.html#REPORT_986_4E0BF]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_ImplicitSy**\n**mmetricSymplect**\n**icPairs**\n&lt;size:10&gt;REPORT_986_AA3DC&lt;/size&gt;&quot; as REPORT_986_AA3DC [[../test-report/test-report.html#REPORT_986_AA3DC]] #999999
+rectangle &quot;&lt;size:12&gt;Test-Case&lt;/size&gt;\n**test_ImplicitSy**\n**mplecticPairs**\n&lt;size:10&gt;REPORT_986_E7B7D&lt;/size&gt;&quot; as REPORT_986_E7B7D [[../test-report/test-report.html#REPORT_986_E7B7D]] #999999
+
+' Connection definition 
+
+REPORT_986_D7A81 --&gt; REPORT_986
+REPORT_986_E7A3E --&gt; REPORT_986
+REPORT_986_A31EB --&gt; REPORT_986
+REPORT_986_3BDCE --&gt; REPORT_986
+REPORT_986_D08BF --&gt; REPORT_986
+REPORT_986_3A498 --&gt; REPORT_986
+REPORT_986_35E0C --&gt; REPORT_986
+REPORT_986_4E0BF --&gt; REPORT_986
+REPORT_986_AA3DC --&gt; REPORT_986
+REPORT_986_E7B7D --&gt; REPORT_986
+
+&#64;enduml" style="width: 1710.0px; height: 271.0px"/></a>
+</p>
+</figure>
+<span id="needtable-test-report/test-report-0"></span><table class="NEEDS_DATATABLES rtd-exclude-wy-table no-sphinx-material-strip table" id="needtable-test-report/test-report-0-table_node">
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 60.0%" />
+<col style="width: 20.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Title</p></th>
+<th class="head"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="need tr_passed row-even"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_35E0C">REPORT_986_35E0C</a></p></td>
+<td class="needs_title"><p>test_nullspace</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-odd"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_3A498">REPORT_986_3A498</a></p></td>
+<td class="needs_title"><p>test_random_orthogonal_matrix</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-even"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_3BDCE">REPORT_986_3BDCE</a></p></td>
+<td class="needs_title"><p>test_Identity</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-odd"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_4E0BF">REPORT_986_4E0BF</a></p></td>
+<td class="needs_title"><p>test_Modulo_Numerator</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-even"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_A31EB">REPORT_986_A31EB</a></p></td>
+<td class="needs_title"><p>test_Random</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-odd"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_AA3DC">REPORT_986_AA3DC</a></p></td>
+<td class="needs_title"><p>test_ImplicitSymmetricSymplecticPairs</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-even"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_D08BF">REPORT_986_D08BF</a></p></td>
+<td class="needs_title"><p>test_Random</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-odd"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_D7A81">REPORT_986_D7A81</a></p></td>
+<td class="needs_title"><p>test_ImplicitSymmetricPairs</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-even"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_E7A3E">REPORT_986_E7A3E</a></p></td>
+<td class="needs_title"><p>test_ImplicitRKDefaultDPSIsEnough</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+<tr class="need tr_passed row-odd"><td class="needs_id"><p><a class="reference internal" href="#REPORT_986_E7B7D">REPORT_986_E7B7D</a></p></td>
+<td class="needs_title"><p>test_ImplicitSymplecticPairs</p></td>
+<td class="needs_result"><p>passed</p></td>
+</tr>
+</tbody>
+</table>
+<div class="need_container docutils container" id="SNCB-d6571007">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_testfile table" id="REPORT">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-File</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Junix report</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT" title="REPORT">REPORT</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suites"><span class="needs_label">suites: </span><span class="needs_data">1</span></span></div>
+<div class="line"><span class="needs_cases"><span class="needs_label">cases: </span><span class="needs_data">10</span></span></div>
+<div class="line"><span class="needs_passed"><span class="needs_label">passed: </span><span class="needs_data">10</span></span></div>
+<div class="line"><span class="needs_skipped"><span class="needs_label">skipped: </span><span class="needs_data">0</span></span></div>
+<div class="line"><span class="needs_failed"><span class="needs_label">failed: </span><span class="needs_data">0</span></span></div>
+<div class="line"><span class="needs_errors"><span class="needs_label">errors: </span><span class="needs_data">0</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links incoming: <span class="links"><span><a class="reference internal" href="#REPORT_986" title="REPORT">REPORT_986</a>, <a class="reference internal" href="#REPORT_986_D7A81" title="REPORT">REPORT_986_D7A81</a>, <a class="reference internal" href="#REPORT_986_E7A3E" title="REPORT">REPORT_986_E7A3E</a>, <a class="reference internal" href="#REPORT_986_A31EB" title="REPORT">REPORT_986_A31EB</a>, <a class="reference internal" href="#REPORT_986_3BDCE" title="REPORT">REPORT_986_3BDCE</a>, <a class="reference internal" href="#REPORT_986_D08BF" title="REPORT">REPORT_986_D08BF</a>, <a class="reference internal" href="#REPORT_986_3A498" title="REPORT">REPORT_986_3A498</a>, <a class="reference internal" href="#REPORT_986_35E0C" title="REPORT">REPORT_986_35E0C</a>, <a class="reference internal" href="#REPORT_986_4E0BF" title="REPORT">REPORT_986_4E0BF</a>, <a class="reference internal" href="#REPORT_986_AA3DC" title="REPORT">REPORT_986_AA3DC</a>, <a class="reference internal" href="#REPORT_986_E7B7D" title="REPORT">REPORT_986_E7B7D</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>[]</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-6ed3f91e">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_none needs_type_testsuite table" id="REPORT_986">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Suite</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Pytest test results</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986" title="REPORT_986">REPORT_986</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_cases"><span class="needs_label">cases: </span><span class="needs_data">10</span></span></div>
+<div class="line"><span class="needs_passed"><span class="needs_label">passed: </span><span class="needs_data">10</span></span></div>
+<div class="line"><span class="needs_skipped"><span class="needs_label">skipped: </span><span class="needs_data">0</span></span></div>
+<div class="line"><span class="needs_failed"><span class="needs_label">failed: </span><span class="needs_data">0</span></span></div>
+<div class="line"><span class="needs_errors"><span class="needs_label">errors: </span><span class="needs_data">0</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986">REPORT</a></span></span></div>
+<div class="line">links incoming: <span class="links"><span><a class="reference internal" href="#REPORT_986_D7A81" title="REPORT_986">REPORT_986_D7A81</a>, <a class="reference internal" href="#REPORT_986_E7A3E" title="REPORT_986">REPORT_986_E7A3E</a>, <a class="reference internal" href="#REPORT_986_A31EB" title="REPORT_986">REPORT_986_A31EB</a>, <a class="reference internal" href="#REPORT_986_3BDCE" title="REPORT_986">REPORT_986_3BDCE</a>, <a class="reference internal" href="#REPORT_986_D08BF" title="REPORT_986">REPORT_986_D08BF</a>, <a class="reference internal" href="#REPORT_986_3A498" title="REPORT_986">REPORT_986_3A498</a>, <a class="reference internal" href="#REPORT_986_35E0C" title="REPORT_986">REPORT_986_35E0C</a>, <a class="reference internal" href="#REPORT_986_4E0BF" title="REPORT_986">REPORT_986_4E0BF</a>, <a class="reference internal" href="#REPORT_986_AA3DC" title="REPORT_986">REPORT_986_AA3DC</a>, <a class="reference internal" href="#REPORT_986_E7B7D" title="REPORT_986">REPORT_986_E7B7D</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-010c600e">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_D7A81">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_ImplicitSymmetricPairs</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_D7A81" title="REPORT_986_D7A81">REPORT_986_D7A81</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_ImplicitSymmetricPairs</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_ImplicitSymmetricPairs</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_Butcher_tables</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">1.172</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_D7A81">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_D7A81">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Making</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">the</span> <span class="n">symmetry</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">small</span> <span class="n">enough</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">2.7755575615628914e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">7.778769097326427e-62</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">7.778769097326427e-62</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">7.778769097326427e-62</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">2.7755575615628914e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">4</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">2.7755575615628914e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.5612511283791264e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">2.7755575615628914e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">6</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">7</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">8</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">9</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-dc4102d1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_E7A3E">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_ImplicitRKDefaultDPSIsEnough</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_E7A3E" title="REPORT_986_E7A3E">REPORT_986_E7A3E</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_ImplicitRKDefaultDPSIsEnough</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_ImplicitRKDefaultDPSIsEnough</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_Butcher_tables</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">10.938</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_E7A3E">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_E7A3E">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Making</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">Butcher</span> <span class="n">tables</span> <span class="n">are</span> <span class="n">computed</span> <span class="k">with</span> <span class="n">a</span> <span class="n">high</span> <span class="n">enough</span> <span class="n">precision</span> <span class="n">by</span> <span class="n">default</span><span class="o">.</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.3877787807814457e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.3877787807814457e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.3877787807814457e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.491314423931624e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.0103284081488426e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.095036667062121e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.8754522554646994e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.0103284081488426e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.325963818389766e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.19641731393178e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2335811384723961e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">1.60363433127837e-61</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2335811384723961e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.8503717077085944e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">6.05092486695206e-122</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">6.1679056923619804e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2335811384723961e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8893845486632136e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2335811384723961e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">4</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.604373304455657e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.309322075768783e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.320537451234444e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5394627546288857e-61</span>
+<span class="mf">7.705741375659656e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.309322075768783e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.514955164620489e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5394627546288857e-61</span>
+<span class="mf">5.914482887549631e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2963223659249744e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">4.7709959946272774e-61</span>
+<span class="mf">0.0</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2963223659249744e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.5235490598286095e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.0995055434787233e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">5.5981379539705e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">0.0</span>
+<span class="mf">4.028019837751307e-62</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2963223659249744e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.302041578024374e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">6.419003796133624e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.3302946014611691e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.625495983354742e-61</span>
+<span class="mf">9.948314394807122e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">6.419003796133624e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.805706381805537e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.625495983354742e-61</span>
+<span class="mf">1.0426805801858122e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">3.3375223024225386e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">1.0834781059740903e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">3.611308754554131e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.470965199454213e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">7.766614770611855e-61</span>
+<span class="mf">0.0</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.7386587252086528e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">6.826861382811323e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">4.6867083811391726e-61</span>
+<span class="mf">0.0</span>
+<span class="mf">7.110281128024937e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">1.2454513940707162e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">6</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">6.460348512557283e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.3407741657012836e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.0658142611554815e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.692366519706643e-61</span>
+<span class="mf">3.790736406895056e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.3407741657012836e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.2909405285757684e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.692366519706643e-61</span>
+<span class="mf">7.391462148212351e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">6.184430310668012e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">2.5221891605061036e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">7.604721071090112e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">6.1764557260266826e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">9.263695102405577e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">8.12770345046863e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">1.0890276736256998e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">4.724994510290076e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">2.333630729197928e-61</span>
+<span class="mf">1.0775741115745466e-17</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">7</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.764638737175432e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.5027982250392966e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">6.388621652252686e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">6.0816119221575505e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.5027982250392966e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.4570696572586706e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">5.9937871424453684e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">4.914645729519846e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">4.3996966449529405e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">6.229021040036531e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">5.052307778490623e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">4.833740284265916e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">3.0711431520985405e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">6.229021040036531e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">2.021553921364713e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3329442787616894e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5557538194652854e-61</span>
+<span class="mf">6.798738942786573e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">8</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.592553669661122e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.273238918334896e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.046228553331308e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.585232663730828e-61</span>
+<span class="mf">4.046228553331308e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.273238918334896e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.645556691106832e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.585232663730828e-61</span>
+<span class="mf">3.7646259928229986e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.174057017948832e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">6.159454381996425e-60</span>
+<span class="mf">0.0</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.215842509268638e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">5.267396027187748e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">7.251547943471855e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.3579398366607522e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">5.0006372768527035e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.462317432847009e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">6.725885434976752e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">9</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.0897256610318294e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.6026184027412676e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">2.6759319457183913e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.1316098153303254e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.6026184027412676e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.325376339560606e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.425852206681494e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.9406620533995364e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">1.1189201231409164e-58</span>
+<span class="mf">0.0</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.8116921334962236e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">4.153675500962685e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">3.7986653775374724e-59</span>
+<span class="mf">0.0</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.267716156759174e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.771169467299215e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">4.415315770410228e-59</span>
+<span class="mf">0.0</span>
+<span class="mf">3.4089088207277678e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.9406620533995364e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Gauss&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.2797969349242396e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8552005047784783e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.445128598461997e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIA&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.866570148647088e-61</span>
+<span class="mf">2.915819658337885e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.8552005047784783e-63</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">3.1183337524174426e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Radau_IIB&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.866570148647088e-61</span>
+<span class="mf">2.863460216321042e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIA&#39;</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">5.834624490169102e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span>
+<span class="mf">3.629268752203615e-58</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">2.8989735825356692e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">3.0932713980210792e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">3.366812722221291e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIID&#39;</span>
+<span class="mf">0.0</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">2.8403330531416768e-18</span>
+<span class="mf">0.0</span>
+
+<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span>
+<span class="mf">1.5112635817669657e-58</span>
+<span class="mf">0.0</span>
+<span class="mf">1.5658191212757908e-62</span>
+<span class="mf">0.0</span>
+<span class="mf">7.778769097326427e-62</span>
+<span class="mf">2.1553443592883545e-18</span>
+<span class="mf">0.0</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-fcc01165">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_A31EB">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_Random</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_A31EB" title="REPORT_986_A31EB">REPORT_986_A31EB</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_Random</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_Random</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_ChoreoSym</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.053</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_A31EB">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_A31EB">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Testing</span> <span class="n">group</span> <span class="n">properties</span> <span class="n">on</span> <span class="n">random</span> <span class="n">transformations</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-cd7a6a60">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_3BDCE">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_Identity</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_3BDCE" title="REPORT_986_3BDCE">REPORT_986_3BDCE</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_Identity</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_Identity</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_ActionSym</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.004</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_3BDCE">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_3BDCE">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Testing</span> <span class="n">group</span> <span class="n">properties</span> <span class="n">on</span> <span class="n">identity</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-10f67027">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_D08BF">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_Random</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_D08BF" title="REPORT_986_D08BF">REPORT_986_D08BF</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_Random</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_Random</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_ActionSym</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.008</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_D08BF">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_D08BF">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Testing</span> <span class="n">group</span> <span class="n">properties</span> <span class="n">on</span> <span class="n">random</span> <span class="n">transformations</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-fd79f95a">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_3A498">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_random_orthogonal_matrix</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_3A498" title="REPORT_986_3A498">REPORT_986_3A498</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_random_orthogonal_matrix</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_random_orthogonal_matrix</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_scipy_plus_linalg</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.005</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_3A498">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_3A498">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Generation</span> <span class="n">of</span> <span class="n">random</span> <span class="n">orthogonal</span> <span class="n">matrices</span><span class="o">.</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">2</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">10</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-ee7082b1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_35E0C">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_nullspace</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_35E0C" title="REPORT_986_35E0C">REPORT_986_35E0C</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_nullspace</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_nullspace</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_scipy_plus_linalg</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.038</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_35E0C">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_35E0C">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Testing</span> <span class="n">nullspace</span> <span class="n">of</span> <span class="n">a</span> <span class="n">dense</span> <span class="n">matrix</span><span class="o">.</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">20</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span>
+<span class="n">Dimension</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-b9c99c22">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_4E0BF">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_Modulo_Numerator</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_4E0BF" title="REPORT_986_4E0BF">REPORT_986_4E0BF</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_Modulo_Numerator</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_Modulo_Numerator</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_ChoreoSym</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.08</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_4E0BF">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_4E0BF">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">Testing</span> <span class="n">acceptable</span> <span class="n">values</span> <span class="n">of</span> <span class="n">TimeShift</span> <span class="n">numerator</span><span class="o">.</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">geodim</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="n">nbody</span> <span class="o">=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-49e8ffd1">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_AA3DC">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_ImplicitSymmetricSymplecticPairs</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_AA3DC" title="REPORT_986_AA3DC">REPORT_986_AA3DC</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_ImplicitSymmetricSymplecticPairs</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_ImplicitSymmetricSymplecticPairs</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_Butcher_tables</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.362</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_AA3DC">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_AA3DC">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Making</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">the</span> <span class="n">symmetry</span><span class="o">-</span><span class="n">symplecticity</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">small</span> <span class="n">enough</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">4</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">2.7755575615628914e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">6</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">5.551115123125783e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">7</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">8</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">9</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">1.1102230246251565e-16</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IA&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIA&#39;</span><span class="p">)</span>
+<span class="mf">4.163336342344337e-17</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="need_container docutils container" id="SNCB-c654f8a3">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_tr_passed needs_type_testcase table" id="REPORT_986_E7B7D">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Test-Case</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">test_ImplicitSymplecticPairs</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REPORT_986_E7B7D" title="REPORT_986_E7B7D">REPORT_986_E7B7D</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed"><span><img alt="../_images/arrow-down-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-down-circle.svg" width="17px" /></span></span><span class="needs visible"><span><img alt="../_images/arrow-right-circle.svg" class="sn_collapse_img no-scaled-link" src="../_images/arrow-right-circle.svg" width="17px" /></span></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">REPORT</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">tr_passed</span></span></div>
+<div class="line"><span class="needs_delete"><span class="needs_label">delete: </span>False</span></div>
+<div class="line"><span class="needs_jinja_content"><span class="needs_label">jinja_content: </span>False</span></div>
+<div class="line"><span class="needs_file"><span class="needs_label">file: </span><span class="needs_data">/home/runner/work/choreo/choreo/docs/source/../pytest_out/junit.xml</span></span></div>
+<div class="line"><span class="needs_suite"><span class="needs_label">suite: </span><span class="needs_data">Pytest test results</span></span></div>
+<div class="line"><span class="needs_case"><span class="needs_label">case: </span><span class="needs_data">test_ImplicitSymplecticPairs</span></span></div>
+<div class="line"><span class="needs_case_name"><span class="needs_label">case_name: </span><span class="needs_data">test_ImplicitSymplecticPairs</span></span></div>
+<div class="line"><span class="needs_classname"><span class="needs_label">classname: </span><span class="needs_data">tests.test_Butcher_tables</span></span></div>
+<div class="line"><span class="needs_time"><span class="needs_label">time: </span><span class="needs_data">0.049</span></span></div>
+<div class="line"><span class="needs_result"><span class="needs_label">result: </span><span class="needs_data">passed</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REPORT" title="REPORT_986_E7B7D">REPORT</a>, <a class="reference internal" href="#REPORT_986" title="REPORT_986_E7B7D">REPORT_986</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p><strong>System-out</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------</span> <span class="n">Captured</span> <span class="n">Out</span> <span class="o">---------------------------------</span>
+<span class="n">Making</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">the</span> <span class="n">symplecticity</span> <span class="n">default</span> <span class="ow">is</span> <span class="n">small</span> <span class="n">enough</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">6.938893903907228e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">1.3877787807814457e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.3877787807814457e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">0.0</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.9446922743316068e-62</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">3.8893845486632136e-62</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">0.0</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">3</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">1.770923943792997e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">2.6416669070551443e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">1.982235505018573e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">2.6213599192538418e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.2335811384723961e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">2.6213599192538418e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">3.700743415417188e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">4</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">8.57209966499118e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">1.514955164620489e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">7.963304920264826e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">9.297359945486888e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.2963223659249744e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">1.2963223659249744e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">3.7208654627325653e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">5</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">1.302041578024374e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">1.0229642107734232e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">4.343158527610883e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">8.612605880166451e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.2454513940707162e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">2.5187918751982686e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">1.470965199454213e-17</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">6</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">6.460348512557283e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">1.2909405285757684e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">7.391462148212351e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.456724267844652e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">1.2058131082804095e-17</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">6.184430310668012e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">5.365527491883716e-18</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">7</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">7.93628851173588e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">4.4570696572586706e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">5.9937871424453684e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">4.7158014324689945e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">8.294241291172452e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">8.294241291172452e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">8.462994872144355e-18</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">8</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">4.592553669661122e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">5.1130095137515755e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">4.75792841672356e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.2336011773401785e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">6.725885434976752e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">2.780776859324109e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">3.57391607007858e-18</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">9</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">4.1920279576393796e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">4.325376339560606e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">3.596761377283e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.341292323891135e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">3.726530281461155e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">4.830697043213724e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">3.743733030254051e-18</span>
+
+<span class="n">nsteps</span> <span class="o">=</span> <span class="mi">10</span>
+
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Gauss&#39;</span><span class="p">,</span> <span class="s1">&#39;Gauss&#39;</span><span class="p">)</span>
+<span class="mf">3.2797969349242396e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IB&#39;</span><span class="p">)</span>
+<span class="mf">5.390163760012726e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Radau_IIB&#39;</span><span class="p">,</span> <span class="s1">&#39;Radau_IIB&#39;</span><span class="p">)</span>
+<span class="mf">4.0754336875861864e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIID&#39;</span><span class="p">)</span>
+<span class="mf">5.646686992442228e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIS&#39;</span><span class="p">)</span>
+<span class="mf">3.809648758188132e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIA&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIB&#39;</span><span class="p">)</span>
+<span class="mf">3.809648758188132e-18</span>
+
+<span class="n">method_pair</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Lobatto_IIIC&#39;</span><span class="p">,</span> <span class="s1">&#39;Lobatto_IIIC*&#39;</span><span class="p">)</span>
+<span class="mf">3.608026734986367e-18</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/gabrielfougeron/choreo/edit/main/test-report/test-report.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/test-report/test-report.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

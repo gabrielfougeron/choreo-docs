@@ -1,0 +1,23 @@
+choreo
+======
+
+.. automodule:: choreo
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+

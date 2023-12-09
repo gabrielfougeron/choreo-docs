@@ -1,0 +1,30 @@
+choreo.ChoreoSym
+================
+
+.. currentmodule:: choreo
+
+.. autoclass:: ChoreoSym
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ChoreoSym.ApplyT
+      ~ChoreoSym.Compose
+      ~ChoreoSym.ComposeLight
+      ~ChoreoSym.Inverse
+      ~ChoreoSym.IsIdentity
+      ~ChoreoSym.IsSame
+      ~ChoreoSym.IsSameLight
+      ~ChoreoSym.Random
+      ~ChoreoSym.__init__
+   
+   
+
+   
+   
+   
