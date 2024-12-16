@@ -23,7 +23,7 @@ except (NameError, ValueError):
 
     __PROJECT_ROOT__ = os.path.abspath(os.path.join(os.getcwd(),os.pardir,os.pardir))
 
-sys.path.append(__PROJECT_ROOT__)
+timings_folder = os.path.join(__PROJECT_ROOT__,'examples','generated_files')
 
 os.environ['OPENBLAS_NUM_THREADS'] = '1'
 os.environ['NUMEXPR_NUM_THREADS'] = '1'
@@ -37,12 +37,13 @@ import scipy
 import choreo
 import choreo.scipy_plus.precomputed_tables as precomputed_tables
 
+import pyquickbench
+
 if ("--no-show" in sys.argv):
     plt.show = (lambda : None)
-bench_folder = os.path.join(__PROJECT_ROOT__,'examples','generated_files')
 
-if not(os.path.isdir(bench_folder)):
-    os.makedirs(bench_folder)
+if not(os.path.isdir(timings_folder)):
+    os.makedirs(timings_folder)
     
 basename_bench_filename = 'ExplicitRK_ivp_cvg_bench_'
 
@@ -88,13 +89,8 @@ all_benchs = {
     } for order, eq_name in itertools.product(sorted_method_order, eq_names)
 }
 
-
 def setup(nint):
-    return nint
-
-def setup_timings(nint):
-    return [(nint, 'nint')]
-
+    return {'nint': nint}
 
 n_bench = len(all_benchs)
 
@@ -126,9 +122,9 @@ for bench_name, all_funs in all_benchs.items():
 
     i_bench += 1
     
-    bench_filename = os.path.join(bench_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error.npy')
+    bench_filename = os.path.join(timings_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error.npy')
     
-    all_errors = choreo.benchmark.run_benchmark(
+    all_errors = pyquickbench.run_benchmark(
         all_nint                        ,
         all_funs                        ,
         setup = setup                   ,
@@ -137,7 +133,7 @@ for bench_name, all_funs in all_benchs.items():
         ForceBenchmark = ForceBenchmark ,
     )
 
-    choreo.plot_benchmark(
+    pyquickbench.plot_benchmark(
         all_errors                                  ,
         all_nint                                    ,
         all_funs                                    ,
@@ -182,9 +178,9 @@ for bench_name, all_funs in all_benchs.items():
 
     i_bench += 1
     
-    bench_filename = os.path.join(bench_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error.npy') 
+    bench_filename = os.path.join(timings_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error.npy') 
 
-    all_errors = choreo.benchmark.run_benchmark(
+    all_errors = pyquickbench.run_benchmark(
         all_nint                        ,
         all_funs                        ,
         setup = setup                   ,
@@ -193,7 +189,7 @@ for bench_name, all_funs in all_benchs.items():
         ForceBenchmark = ForceBenchmark ,
     )
 
-    choreo.plot_benchmark(
+    pyquickbench.plot_benchmark(
         all_errors                                  ,
         all_nint                                    ,
         all_funs                                    ,
@@ -226,7 +222,7 @@ plt.show()
 # %%
 # We can see 3 distinct phases on these plots:
 # 
-# * A first pre-convergence phase, where the convergence rate is growing towards its theoretical value. the end of the pre-convergence phase occurs for a number of sub-intervals roughtly independant of the convergence order of the quadrature method.
+# * A first pre-convergence phase, where the convergence rate is growing towards its theoretical value. the end of the pre-convergence phase occurs for a number of sub-intervals roughtly independent of the convergence order of the quadrature method.
 # * A steady convergence phase where the convergence remains close to the theoretical value
 # * A final phase, where the relative error stagnates arround 1e-15. The value of the integral is computed with maximal accuracy given floating point precision. The approximation of the convergence rate is dominated by seemingly random floating point errors.
 # 
@@ -256,9 +252,9 @@ for bench_name, all_funs in all_benchs.items():
 
     i_bench += 1
     
-    bench_filename = os.path.join(bench_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error.npy') 
+    bench_filename = os.path.join(timings_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error.npy') 
 
-    all_errors = choreo.benchmark.run_benchmark(
+    all_errors = pyquickbench.run_benchmark(
         all_nint                        ,
         all_funs                        ,
         setup = setup                   ,
@@ -267,18 +263,18 @@ for bench_name, all_funs in all_benchs.items():
         ForceBenchmark = ForceBenchmark ,
     )
     
-    timings_filename = os.path.join(bench_folder,basename_bench_filename+str(i_bench).zfill(2)+'_timings.npy') 
+    timings_filename = os.path.join(timings_folder,basename_bench_filename+str(i_bench).zfill(2)+'_timings.npy') 
     
-    all_times = choreo.benchmark.run_benchmark(
+    all_times = pyquickbench.run_benchmark(
         all_nint                        ,
         all_funs                        ,
-        setup = setup_timings           ,
+        setup = setup                   ,
         mode = "timings"                ,
         filename = timings_filename     ,
         ForceBenchmark = ForceBenchmark ,
     )
     
-    choreo.plot_benchmark(
+    pyquickbench.plot_benchmark(
         all_errors                                  ,
         all_nint                                    ,
         all_funs                                    ,
@@ -305,13 +301,13 @@ plt.close()
 
 best_method_by_order = {
     1: 'SymplecticEuler',
-    2: 'McAte2',
-    3: 'McAte3',
-    4: 'McAte4',
-    5: 'McAte5',
-    6: 'KahanLi6',
-    8: 'KahanLi8',
-    10:'SofSpa10',
+    2: 'McAte2'         ,
+    3: 'McAte3'         ,
+    4: 'McAte4'         ,
+    5: 'McAte5'         ,
+    6: 'KahanLi6'       ,
+    8: 'KahanLi8'       ,
+    10:'SofSpa10'       ,
 }
 
 
@@ -347,9 +343,9 @@ for bench_name, all_funs in all_benchs.items():
 
     i_bench += 1
     
-    bench_filename = os.path.join(bench_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error_best.npy') 
+    bench_filename = os.path.join(timings_folder,basename_bench_filename+str(i_bench).zfill(2)+'_error_best.npy') 
 
-    all_errors = choreo.benchmark.run_benchmark(
+    all_errors = pyquickbench.run_benchmark(
         all_nint                        ,
         all_funs                        ,
         setup = setup                   ,
@@ -358,18 +354,18 @@ for bench_name, all_funs in all_benchs.items():
         ForceBenchmark = ForceBenchmark ,
     )
     
-    timings_filename = os.path.join(bench_folder,basename_bench_filename+str(i_bench).zfill(2)+'_timings_best.npy') 
+    timings_filename = os.path.join(timings_folder,basename_bench_filename+str(i_bench).zfill(2)+'_timings_best.npy') 
     
-    all_times = choreo.benchmark.run_benchmark(
+    all_times = pyquickbench.run_benchmark(
         all_nint                        ,
         all_funs                        ,
-        setup = setup_timings           ,
+        setup = setup                   ,
         mode = "timings"                ,
         filename = timings_filename     ,
         ForceBenchmark = ForceBenchmark ,
     )
     
-    choreo.plot_benchmark(
+    pyquickbench.plot_benchmark(
         all_errors                                  ,
         all_nint                                    ,
         all_funs                                    ,

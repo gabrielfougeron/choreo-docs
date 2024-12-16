@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download__build_auto_examples_convergence_ImplicitRungeKutta_ivp.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -63,11 +63,11 @@ Evaluation of relative quadrature error with the following parameters:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-119
+.. GENERATED FROM PYTHON SOURCE LINES 112-113
 
 The following plots give the measured relative error as a function of the number of quadrature subintervals
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-124
+.. GENERATED FROM PYTHON SOURCE LINES 113-118
 
 .. code-block:: Python
 
@@ -88,11 +88,11 @@ The following plots give the measured relative error as a function of the number
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-172
+.. GENERATED FROM PYTHON SOURCE LINES 165-166
 
 Error as a function of running time
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-177
+.. GENERATED FROM PYTHON SOURCE LINES 166-171
 
 .. code-block:: Python
 
@@ -114,11 +114,6 @@ Error as a function of running time
 
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 2.499 seconds)
-
-
 .. _sphx_glr_download__build_auto_examples_convergence_ImplicitRungeKutta_ivp.py:
 
 .. only:: html
@@ -132,6 +127,10 @@ Error as a function of running time
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: ImplicitRungeKutta_ivp.py <ImplicitRungeKutta_ivp.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: ImplicitRungeKutta_ivp.zip <ImplicitRungeKutta_ivp.zip>`
 
 
 .. only:: html

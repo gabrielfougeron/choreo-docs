@@ -1,0 +1,181 @@
+choreo.NBodySyst
+================
+
+.. currentmodule:: choreo
+
+.. autoclass:: NBodySyst
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~NBodySyst.AssertAllBodyConstraintAreRespected
+      ~NBodySyst.AssertAllSegmGenConstraintsAreRespected
+      ~NBodySyst.BuildSegmGraph
+      ~NBodySyst.ChooseInterSegm
+      ~NBodySyst.ChooseLoopGen
+      ~NBodySyst.ComputeCenterOfMass
+      ~NBodySyst.ComputeSymDefault
+      ~NBodySyst.Compute_forces
+      ~NBodySyst.Compute_forces_nosym
+      ~NBodySyst.Compute_forces_vectorized
+      ~NBodySyst.Compute_forces_vectorized_nosym
+      ~NBodySyst.Compute_init_pos_mom
+      ~NBodySyst.Compute_n_sub_fft
+      ~NBodySyst.Compute_periodicity_default
+      ~NBodySyst.Compute_velocities
+      ~NBodySyst.Compute_velocities_vectorized
+      ~NBodySyst.ConfigureShortcutSym
+      ~NBodySyst.DescribeSystem
+      ~NBodySyst.DetectEscape
+      ~NBodySyst.DetectLoops
+      ~NBodySyst.DetectSegmRequiresDisp
+      ~NBodySyst.DetectXlim
+      ~NBodySyst.Detect_homo_inter_law
+      ~NBodySyst.FromDict
+      ~NBodySyst.FromSolutionFile
+      ~NBodySyst.GatherInterSym
+      ~NBodySyst.GetFullAABB
+      ~NBodySyst.GetKrylovJacobian
+      ~NBodySyst.Get_ODE_def
+      ~NBodySyst.Get_segmpos_minmax
+      ~NBodySyst.Init_to_dict
+      ~NBodySyst.Make_params_bounds
+      ~NBodySyst.PlotTimeBodyGraph
+      ~NBodySyst.Segmpos_Descriptor
+      ~NBodySyst.Set_inter_law
+      ~NBodySyst.TT_params_to_action_grad
+      ~NBodySyst.TestActionSame
+      ~NBodySyst.TestHashSame
+      ~NBodySyst.Update_ODE_params
+      ~NBodySyst.Validate_inter_law
+      ~NBodySyst.Write_Descriptor
+      ~NBodySyst.__init__
+      ~NBodySyst.all_coeffs_dense_to_params_noopt
+      ~NBodySyst.all_coeffs_pos_to_vel_inplace
+      ~NBodySyst.all_coeffs_to_kin_nrg
+      ~NBodySyst.all_coeffs_to_kin_nrg_grad
+      ~NBodySyst.all_coeffs_to_params_noopt
+      ~NBodySyst.all_pos_to_all_body_pos_noopt
+      ~NBodySyst.all_to_segm_noopt
+      ~NBodySyst.allocate_owned_memory
+      ~NBodySyst.co_in
+      ~NBodySyst.free_owned_memory
+      ~NBodySyst.nnz_k
+      ~NBodySyst.params_basis_pos
+      ~NBodySyst.params_basis_vel
+      ~NBodySyst.params_changevar
+      ~NBodySyst.params_resize
+      ~NBodySyst.params_to_action
+      ~NBodySyst.params_to_action_grad
+      ~NBodySyst.params_to_action_hess
+      ~NBodySyst.params_to_all_coeffs_dense_noopt
+      ~NBodySyst.params_to_all_coeffs_noopt
+      ~NBodySyst.params_to_kin_nrg
+      ~NBodySyst.params_to_kin_nrg_grad
+      ~NBodySyst.params_to_pot_nrg
+      ~NBodySyst.params_to_pot_nrg_grad
+      ~NBodySyst.params_to_pot_nrg_hess
+      ~NBodySyst.params_to_segmpos
+      ~NBodySyst.params_to_segmvel
+      ~NBodySyst.plot_segmpos_2D
+      ~NBodySyst.pos_slice
+      ~NBodySyst.segm_to_path_stats
+      ~NBodySyst.segmpos_dparams_to_action_hess
+      ~NBodySyst.segmpos_params_to_action
+      ~NBodySyst.segmpos_params_to_action_grad
+      ~NBodySyst.segmpos_to_all_noopt
+      ~NBodySyst.segmpos_to_allbody_noopt
+      ~NBodySyst.segmpos_to_hash
+      ~NBodySyst.segmpos_to_params
+      ~NBodySyst.segmpos_to_params_T
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~NBodySyst.ALG_Iint
+      ~NBodySyst.ALG_SpaceRot
+      ~NBodySyst.ALG_TimeRev
+      ~NBodySyst.BinProdChargeSum
+      ~NBodySyst.BinSourceSegm
+      ~NBodySyst.BinSpaceRot
+      ~NBodySyst.BinSpaceRotIsId
+      ~NBodySyst.BinTargetSegm
+      ~NBodySyst.BodyGraph
+      ~NBodySyst.ForceGeneralSym
+      ~NBodySyst.ForceGreaterNStore
+      ~NBodySyst.GreaterNStore
+      ~NBodySyst.Hash_exp
+      ~NBodySyst.Homo_exp
+      ~NBodySyst.Homo_unit
+      ~NBodySyst.InitValPosBasis
+      ~NBodySyst.InitValVelBasis
+      ~NBodySyst.InterSpaceRot
+      ~NBodySyst.InterSpaceRotIsId
+      ~NBodySyst.InterTimeRev
+      ~NBodySyst.LawIsHomo
+      ~NBodySyst.LoopGenConstraints
+      ~NBodySyst.ParamBasisShortcutPos
+      ~NBodySyst.ParamBasisShortcutVel
+      ~NBodySyst.PerDef_Isegm
+      ~NBodySyst.PerDef_SpaceRotPos
+      ~NBodySyst.PerDef_SpaceRotVel
+      ~NBodySyst.PerDef_TimeRev
+      ~NBodySyst.RequiresGreaterNStore
+      ~NBodySyst.SegmGraph
+      ~NBodySyst.SegmRequiresDisp
+      ~NBodySyst.Sym_list
+      ~NBodySyst.Targets
+      ~NBodySyst.bodyloop
+      ~NBodySyst.bodysegm
+      ~NBodySyst.fft_backend
+      ~NBodySyst.fftw_nthreads
+      ~NBodySyst.fftw_planner_effort
+      ~NBodySyst.fftw_wisdom_only
+      ~NBodySyst.gensegm_loop_start
+      ~NBodySyst.gensegm_to_all
+      ~NBodySyst.gensegm_to_body
+      ~NBodySyst.gensegm_to_iint
+      ~NBodySyst.gensegm_to_iintrel
+      ~NBodySyst.geodim
+      ~NBodySyst.ifft_shapes
+      ~NBodySyst.inter_law_param_dict
+      ~NBodySyst.inter_law_str
+      ~NBodySyst.intersegm_to_all
+      ~NBodySyst.intersegm_to_body
+      ~NBodySyst.intersegm_to_iint
+      ~NBodySyst.loopcharge
+      ~NBodySyst.loopgen
+      ~NBodySyst.loopmass
+      ~NBodySyst.loopnb
+      ~NBodySyst.n_sub_fft
+      ~NBodySyst.nbin_segm_tot
+      ~NBodySyst.nbin_segm_unique
+      ~NBodySyst.nbody
+      ~NBodySyst.ncoeff_min_loop
+      ~NBodySyst.ncoeffs
+      ~NBodySyst.ngensegm_loop
+      ~NBodySyst.nint
+      ~NBodySyst.nint_fac
+      ~NBodySyst.nint_min
+      ~NBodySyst.nloop
+      ~NBodySyst.nparams
+      ~NBodySyst.nparams_incl_o
+      ~NBodySyst.nrem
+      ~NBodySyst.nsegm
+      ~NBodySyst.params_shapes
+      ~NBodySyst.params_shifts
+      ~NBodySyst.pos_slice_shapes
+      ~NBodySyst.segm_size
+      ~NBodySyst.segm_store
+   
+   

@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download__build_auto_examples_Numerical_tricks_FFT_sym.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -438,12 +438,113 @@ Half the positions are retrieved using the IDST I.
 
 .. GENERATED FROM PYTHON SOURCE LINES 167-171
 
+Even - Odd decomposition of real-valued signals
+***********************************************
+
+Any signal can be decomposed in even and odd parts
+
+.. GENERATED FROM PYTHON SOURCE LINES 171-208
+
+.. code-block:: Python
+
+
+
+    n = 2*n_base   # Total number of nodes. Necessarily even here.
+    t = np.array(range(n))/n
+    x = np.array(range(n))+1
+
+    x_even = np.zeros(n)
+    x_odd = np.zeros(n)
+    for i in range(n):
+        x_even[i] = (x[i] + x[(n-i) % n]) / 2
+        x_odd[i]  = (x[i] - x[(n-i) % n]) / 2
+
+
+    z = np.zeros(n)
+    for i in range(n):
+        z[i] = x_even[i] - x_even[(n-i) % n]
+
+    err = np.linalg.norm(z)
+    print(err)
+
+    z = np.zeros(n)
+    for i in range(n):
+        z[i] = x_odd[i] + x_odd[(n-i) % n]
+
+    err = np.linalg.norm(z)
+    print(err)
+
+    z = x - (x_even + x_odd)
+
+    err = np.linalg.norm(z)
+    print(err)
+
+    plt.plot(t,x)
+    plt.plot(t,x_even)
+    plt.plot(t,x_odd)
+    plt.show()
+
+
+
+
+.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_004.png
+   :alt: FFT sym
+   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_004.png
+   :class: sphx-glr-single-img
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    0.0
+    0.0
+    0.0
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 209-210
+
+The even and odd parts can be transformed separately to form the transform of the initial signal
+
+.. GENERATED FROM PYTHON SOURCE LINES 210-221
+
+.. code-block:: Python
+
+
+    rfft_c = scipy.fft.rfft(x)
+    dct_I_c = scipy.fft.dct(x_even[0:n//2+1],1)
+    dst_I_c =  scipy.fft.dst(x_odd[1:n//2],1)
+
+    err = np.linalg.norm(rfft_c.real - dct_I_c)
+    print(err)
+    err = np.linalg.norm(rfft_c.imag[1:n//2] - (- dst_I_c))
+    print(err)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    1.2560739669470201e-15
+    0.0
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 222-226
+
 Real-valued even-odd signals and DCT III
 ****************************************
 
 Suppose a coordinate of the orbit is constrained to be even arround the origin :math:`t=0` and odd arround a quarter period :math:`t=T/4`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-205
+.. GENERATED FROM PYTHON SOURCE LINES 226-260
 
 .. code-block:: Python
 
@@ -484,9 +585,9 @@ Suppose a coordinate of the orbit is constrained to be even arround the origin :
 
 
 
-.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_004.png
+.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_005.png
    :alt: FFT sym
-   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_004.png
+   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_005.png
    :class: sphx-glr-single-img
 
 
@@ -500,11 +601,11 @@ Suppose a coordinate of the orbit is constrained to be even arround the origin :
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 206-207
+.. GENERATED FROM PYTHON SOURCE LINES 261-262
 
 In this case, the Fourier transform is purely real and its odd-numbered coefficients are zero.
 
-.. GENERATED FROM PYTHON SOURCE LINES 207-215
+.. GENERATED FROM PYTHON SOURCE LINES 262-270
 
 .. code-block:: Python
 
@@ -530,11 +631,11 @@ In this case, the Fourier transform is purely real and its odd-numbered coeffici
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 216-217
+.. GENERATED FROM PYTHON SOURCE LINES 271-272
 
 This symmetry can be leveraged to only compute the non-zero coefficients using the DCT III
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-222
+.. GENERATED FROM PYTHON SOURCE LINES 272-277
 
 .. code-block:: Python
 
@@ -556,11 +657,11 @@ This symmetry can be leveraged to only compute the non-zero coefficients using t
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 223-224
+.. GENERATED FROM PYTHON SOURCE LINES 278-279
 
 A quarter of the positions are retrieved using the IDCT III.
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-229
+.. GENERATED FROM PYTHON SOURCE LINES 279-284
 
 .. code-block:: Python
 
@@ -582,14 +683,14 @@ A quarter of the positions are retrieved using the IDCT III.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-234
+.. GENERATED FROM PYTHON SOURCE LINES 285-289
 
 Real-valued odd-even signals and DST III
 ****************************************
 
 Suppose a coordinate of the orbit is constrained to be odd arround the origin :math:`t=0` and even arround a quarter period :math:`t=T/4`.
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-269
+.. GENERATED FROM PYTHON SOURCE LINES 289-324
 
 .. code-block:: Python
 
@@ -631,9 +732,9 @@ Suppose a coordinate of the orbit is constrained to be odd arround the origin :m
 
 
 
-.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_005.png
+.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_006.png
    :alt: FFT sym
-   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_005.png
+   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_006.png
    :class: sphx-glr-single-img
 
 
@@ -647,11 +748,11 @@ Suppose a coordinate of the orbit is constrained to be odd arround the origin :m
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-271
+.. GENERATED FROM PYTHON SOURCE LINES 325-326
 
 In this case, the Fourier transform is purely imaginary and its even-numbered coefficients are zero.
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-278
+.. GENERATED FROM PYTHON SOURCE LINES 326-333
 
 .. code-block:: Python
 
@@ -676,11 +777,11 @@ In this case, the Fourier transform is purely imaginary and its even-numbered co
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 279-280
+.. GENERATED FROM PYTHON SOURCE LINES 334-335
 
 This symmetry can be leveraged to only compute the non-zero coefficients using the DST III
 
-.. GENERATED FROM PYTHON SOURCE LINES 280-285
+.. GENERATED FROM PYTHON SOURCE LINES 335-340
 
 .. code-block:: Python
 
@@ -702,11 +803,11 @@ This symmetry can be leveraged to only compute the non-zero coefficients using t
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 286-287
+.. GENERATED FROM PYTHON SOURCE LINES 341-342
 
 A quarter of the positions are retrieved using the IDCT III.
 
-.. GENERATED FROM PYTHON SOURCE LINES 287-292
+.. GENERATED FROM PYTHON SOURCE LINES 342-347
 
 .. code-block:: Python
 
@@ -728,14 +829,14 @@ A quarter of the positions are retrieved using the IDCT III.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 293-297
+.. GENERATED FROM PYTHON SOURCE LINES 348-352
 
 Real-valued signals with a subperiod
 ************************************
 
 Suppose a coordinate of the orbit is constrained to have a period that is a multiple of the base period
 
-.. GENERATED FROM PYTHON SOURCE LINES 297-319
+.. GENERATED FROM PYTHON SOURCE LINES 352-374
 
 .. code-block:: Python
 
@@ -764,9 +865,9 @@ Suppose a coordinate of the orbit is constrained to have a period that is a mult
 
 
 
-.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_006.png
+.. image-sg:: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_007.png
    :alt: FFT sym
-   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_006.png
+   :srcset: /_build/auto_examples/Numerical_tricks/images/sphx_glr_FFT_sym_007.png
    :class: sphx-glr-single-img
 
 
@@ -780,11 +881,11 @@ Suppose a coordinate of the orbit is constrained to have a period that is a mult
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 320-321
+.. GENERATED FROM PYTHON SOURCE LINES 375-376
 
 In this case, the coefficients of the Fourier transform that are not indexed by a multiple of the subperiod are zero.
 
-.. GENERATED FROM PYTHON SOURCE LINES 321-329
+.. GENERATED FROM PYTHON SOURCE LINES 376-384
 
 .. code-block:: Python
 
@@ -809,11 +910,11 @@ In this case, the coefficients of the Fourier transform that are not indexed by 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 330-331
+.. GENERATED FROM PYTHON SOURCE LINES 385-386
 
 This symmetry can be leveraged to only compute the non-zero coefficients using the RFFT on a sub-period only
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-336
+.. GENERATED FROM PYTHON SOURCE LINES 386-391
 
 .. code-block:: Python
 
@@ -835,11 +936,11 @@ This symmetry can be leveraged to only compute the non-zero coefficients using t
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 337-338
+.. GENERATED FROM PYTHON SOURCE LINES 392-393
 
 The positions on a sub-period are retrieved using the RFFT.
 
-.. GENERATED FROM PYTHON SOURCE LINES 338-342
+.. GENERATED FROM PYTHON SOURCE LINES 393-397
 
 .. code-block:: Python
 
@@ -861,11 +962,6 @@ The positions on a sub-period are retrieved using the RFFT.
 
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 0.407 seconds)
-
-
 .. _sphx_glr_download__build_auto_examples_Numerical_tricks_FFT_sym.py:
 
 .. only:: html
@@ -879,6 +975,10 @@ The positions on a sub-period are retrieved using the RFFT.
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: FFT_sym.py <FFT_sym.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: FFT_sym.zip <FFT_sym.zip>`
 
 
 .. only:: html

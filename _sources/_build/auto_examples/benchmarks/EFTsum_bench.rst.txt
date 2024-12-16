@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download__build_auto_examples_benchmarks_EFTsum_bench.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -75,14 +75,14 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 176-181
+.. GENERATED FROM PYTHON SOURCE LINES 145-150
 
 .. code-block:: Python
 
 
     def prepare_x(n):
         x = np.random.random(n)
-        return [(x, 'x')]
+        return {'x': x}
 
 
 
@@ -95,11 +95,6 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
 
 
 
-
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 1.049 seconds)
 
 
 .. _sphx_glr_download__build_auto_examples_benchmarks_EFTsum_bench.py:
@@ -115,6 +110,10 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: EFTsum_bench.py <EFTsum_bench.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: EFTsum_bench.zip <EFTsum_bench.zip>`
 
 
 .. only:: html

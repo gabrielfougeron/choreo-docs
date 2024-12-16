@@ -1,0 +1,67 @@
+choreo.ActionSym
+================
+
+.. currentmodule:: choreo
+
+.. autoclass:: ActionSym
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~ActionSym.ApplyT
+      ~ActionSym.ApplyTInv
+      ~ActionSym.ApplyTInvSegm
+      ~ActionSym.ApplyTSegm
+      ~ActionSym.BuildCayleyGraph
+      ~ActionSym.Compose
+      ~ActionSym.Conjugate
+      ~ActionSym.FromDict
+      ~ActionSym.Identity
+      ~ActionSym.Inverse
+      ~ActionSym.InvolutivePermutations
+      ~ActionSym.IsIdentity
+      ~ActionSym.IsIdentityPerm
+      ~ActionSym.IsIdentityPermAndRot
+      ~ActionSym.IsIdentityPermAndRotAndTimeRev
+      ~ActionSym.IsIdentityRot
+      ~ActionSym.IsIdentityRotAndTime
+      ~ActionSym.IsIdentityRotAndTimeRev
+      ~ActionSym.IsIdentityTimeRev
+      ~ActionSym.IsIdentityTimeShift
+      ~ActionSym.IsSame
+      ~ActionSym.IsSamePerm
+      ~ActionSym.IsSameRot
+      ~ActionSym.IsSameRotAndTime
+      ~ActionSym.IsSameRotAndTimeRev
+      ~ActionSym.IsSameTimeRev
+      ~ActionSym.IsSameTimeShift
+      ~ActionSym.IsWellFormed
+      ~ActionSym.Random
+      ~ActionSym.SurjectiveDirectSpaceRot
+      ~ActionSym.TimeDerivative
+      ~ActionSym.TimeShifts
+      ~ActionSym.TransformPos
+      ~ActionSym.TransformSegment
+      ~ActionSym.__init__
+      ~ActionSym.to_dict
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ActionSym.BodyPerm
+      ~ActionSym.SpaceRot
+      ~ActionSym.TimeRev
+      ~ActionSym.TimeShiftDen
+      ~ActionSym.TimeShiftNum
+   
+   

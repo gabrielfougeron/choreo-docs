@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download__build_auto_examples_benchmarks_ODE_ivp_LowLevel_bench.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -25,13 +25,13 @@ Benchmark of LowLevelCallable for ODE IVP
 
 Definition of benchmarked integrands
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-22
+.. GENERATED FROM PYTHON SOURCE LINES 8-19
 
 .. code-block:: Python
 
 
 
-    all_funs_vect = {
+    all_funs = {
         'mul_py_fun_array' : test_from_fun(mul_py_fun_array),
         'mul_nb_fun_inplace_pointer' : test_from_fun(mul_nb_fun_inplace_pointer),
         'py_fun_in_pyx' : test_from_fun(choreo.scipy_plus.cython.test.mul_py_fun_tx) ,
@@ -39,15 +39,12 @@ Definition of benchmarked integrands
         'cy_fun_memoryview_LowLevel' : test_from_fun(scipy.LowLevelCallable.from_cython(choreo.scipy_plus.cython.test, "mul_cy_fun_memoryview_tx")),
     }
 
-    all_benchs = {
-        f'Vector function of size {choreo.scipy_plus.cython.test.mul_size_py}' : all_funs_vect  ,
-    }
 
 
 
 
 .. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_001.png
-   :alt: Vector function of size 10
+   :alt: ODE ivp LowLevel bench
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_001.png
    :class: sphx-glr-single-img
 
@@ -55,10 +52,33 @@ Definition of benchmarked integrands
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 132-144
 
-.. rst-class:: sphx-glr-timing
+.. code-block:: Python
 
-   **Total running time of the script:** (0 minutes 0.691 seconds)
+
+    relative_to_val = {pyquickbench.fun_ax_name:'cy_fun_memoryview_LowLevel'}
+
+    pyquickbench.plot_benchmark(
+        all_times                           ,
+        all_nint                            ,
+        all_funs                            ,
+        show = True                         ,
+        relative_to_val = relative_to_val   ,
+        title = 'Timings relative to cy_fun_memoryview_LowLevel'      ,
+    )
+
+
+
+
+.. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_002.png
+   :alt: Timings relative to cy_fun_memoryview_LowLevel
+   :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_002.png
+   :class: sphx-glr-single-img
+
+
+
+
 
 
 .. _sphx_glr_download__build_auto_examples_benchmarks_ODE_ivp_LowLevel_bench.py:
@@ -74,6 +94,10 @@ Definition of benchmarked integrands
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: ODE_ivp_LowLevel_bench.py <ODE_ivp_LowLevel_bench.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: ODE_ivp_LowLevel_bench.zip <ODE_ivp_LowLevel_bench.zip>`
 
 
 .. only:: html

@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:03.915** total execution time for 5 files **from _build/auto_examples/benchmarks**:
+**00:02.344** total execution time for 4 files **from _build/auto_examples/benchmarks**:
 
 .. container::
 
@@ -32,18 +32,15 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_SegmQuad_LowLevel_bench.py` (``SegmQuad_LowLevel_bench.py``)
-     - 00:01.085
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTsum_bench.py` (``EFTsum_bench.py``)
-     - 00:01.049
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_FFT_bench.py` (``FFT_bench.py``)
-     - 00:00.999
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_FFT_bench_scipy_backend.py` (``FFT_bench_scipy_backend.py``)
+     - 00:00.951
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_ODE_ivp_LowLevel_bench.py` (``ODE_ivp_LowLevel_bench.py``)
-     - 00:00.691
+     - 00:00.651
      - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_Benchmark Hardware Info.py` (``Benchmark Hardware Info.py``)
-     - 00:00.091
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTsum_bench.py` (``EFTsum_bench.py``)
+     - 00:00.605
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_Benchmark_Hardware_Info.py` (``Benchmark_Hardware_Info.py``)
+     - 00:00.136
      - 0.0

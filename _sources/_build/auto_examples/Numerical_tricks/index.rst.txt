@@ -11,10 +11,11 @@ Numerical tips and tricks
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="A few numerical investigation of how symmetries of a signal determine the shape of its discrete...">
+    <div class="sphx-glr-thumbcontainer" tooltip="A few numerical investigation of how symmetries of a signal determine the shape of its discrete Fourier transform, and how to take advantage of this fact to optimize performance.">
 
 .. only:: html
 
@@ -28,6 +29,8 @@ Numerical tips and tricks
       <div class="sphx-glr-thumbnail-title">FFT and symmetries</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

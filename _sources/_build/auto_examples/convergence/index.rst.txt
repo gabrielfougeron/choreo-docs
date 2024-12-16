@@ -11,6 +11,7 @@ Convergence analysis of numerical methods
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -99,7 +100,7 @@ Convergence analysis of numerical methods
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Valiadation of tangent integration alorithms using Finite Differences">
+    <div class="sphx-glr-thumbcontainer" tooltip="Validation of tangent integration algorithms using Finite Differences">
 
 .. only:: html
 
@@ -110,7 +111,7 @@ Convergence analysis of numerical methods
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Valiadation of tangent integration alorithms using Finite Differences</div>
+      <div class="sphx-glr-thumbnail-title">Validation of tangent integration algorithms using Finite Differences</div>
     </div>
 
 
@@ -130,6 +131,8 @@ Convergence analysis of numerical methods
       <div class="sphx-glr-thumbnail-title">Convergence analysis of scipy's Runge-Kutta methods for ODE IVP</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 

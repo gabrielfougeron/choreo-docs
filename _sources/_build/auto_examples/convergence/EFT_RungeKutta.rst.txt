@@ -11,7 +11,7 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download__build_auto_examples_convergence_EFT_RungeKutta.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -21,11 +21,11 @@
 Benchmark of Error-Free Transforms for ODE IVP
 ==============================================
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-8
+.. GENERATED FROM PYTHON SOURCE LINES 9-10
 
 This benchmark compares accuracy and efficiency of several summation algorithms in floating point arithmetics for initial value problems of ordinary differential equations
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-31
+.. GENERATED FROM PYTHON SOURCE LINES 10-33
 
 .. code-block:: Python
 
@@ -59,23 +59,58 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 118-119
+.. GENERATED FROM PYTHON SOURCE LINES 103-104
 
 The following plots give the measured relative error as a function of the number of quadrature subintervals
 
-.. GENERATED FROM PYTHON SOURCE LINES 119-123
+.. GENERATED FROM PYTHON SOURCE LINES 104-143
 
 .. code-block:: Python
 
 
+    plot_ylim = [1e-17,1e1]
 
-    plt.show()
+    bench_filename = os.path.join(bench_folder, basename_bench_filename+'_error.npz')
+
+    all_args = {
+        "eq_name" : eq_names                ,
+        "nint" : all_nint                   ,
+        "DoEFT" : all_EFT                   ,
+    }
+
+    all_errors = pyquickbench.run_benchmark(
+        all_args                        ,
+        all_funs                        ,  
+        setup = setup                   ,
+        mode = "scalar_output"          ,
+        filename = bench_filename       ,
+        ForceBenchmark = ForceBenchmark ,
+    )
+
+    plot_intent = {
+        "eq_name" : "subplot_grid_y"                ,
+        "nint" : "points"                           ,
+        "DoEFT" : "curve_linestyle"                 ,
+        pyquickbench.fun_ax_name : "curve_color"    ,
+    }
+
+    pyquickbench.plot_benchmark(
+        all_errors                              ,
+        all_args                                ,
+        all_funs                                ,
+        mode = "scalar_output"                  ,
+        show = True                             ,
+        plot_ylim = plot_ylim                   ,
+        plot_intent = plot_intent               ,
+        title = f'Relative error on integrand'  ,
+    )
+    
 
 
 
 
 .. image-sg:: /_build/auto_examples/convergence/images/sphx_glr_EFT_RungeKutta_001.png
-   :alt: Relative error on integrand y'' = -y, Relative error on integrand y'' = - exp(y), Relative error on integrand y'' = xy, Relative error on integrand y' = Az; z' = By
+   :alt: Relative error on integrand, eq_name : y'' = -y, eq_name : y'' = - exp(y), eq_name : y'' = xy, eq_name : y' = Az; z' = By
    :srcset: /_build/auto_examples/convergence/images/sphx_glr_EFT_RungeKutta_001.png
    :class: sphx-glr-single-img
 
@@ -83,35 +118,48 @@ The following plots give the measured relative error as a function of the number
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-173
+.. GENERATED FROM PYTHON SOURCE LINES 144-145
 
 Error as a function of running time
 
-.. GENERATED FROM PYTHON SOURCE LINES 173-178
+.. GENERATED FROM PYTHON SOURCE LINES 145-168
 
 .. code-block:: Python
 
 
+    bench_filename = os.path.join(bench_folder, basename_bench_filename+'_timings.npz')
 
-    plt.show()
+    all_timings = pyquickbench.run_benchmark(
+        all_args                        ,
+        all_funs                        ,  
+        setup = setup                   ,
+        filename = bench_filename       ,
+        ForceBenchmark = ForceBenchmark ,
+    )
 
+    pyquickbench.plot_benchmark(
+        all_errors                  ,
+        all_args                    ,
+        all_funs                    ,
+        all_xvalues = all_timings   ,
+        show = True                 ,
+        plot_ylim = plot_ylim       ,
+        plot_intent = plot_intent   ,
+        xlabel = 'Time (s)'         ,
+        ylabel = 'Relative error'   ,
+    )
 
 
 
 
 .. image-sg:: /_build/auto_examples/convergence/images/sphx_glr_EFT_RungeKutta_002.png
-   :alt: Computational cost (s) as a function of number of iterations for equation y'' = -y, Computational cost (s) as a function of number of iterations for equation y'' = - exp(y), Computational cost (s) as a function of number of iterations for equation y'' = xy, Computational cost (s) as a function of number of iterations for equation y' = Az; z' = By
+   :alt: eq_name : y'' = -y, eq_name : y'' = - exp(y), eq_name : y'' = xy, eq_name : y' = Az; z' = By
    :srcset: /_build/auto_examples/convergence/images/sphx_glr_EFT_RungeKutta_002.png
    :class: sphx-glr-single-img
 
 
 
 
-
-
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 3.406 seconds)
 
 
 .. _sphx_glr_download__build_auto_examples_convergence_EFT_RungeKutta.py:
@@ -127,6 +175,10 @@ Error as a function of running time
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: EFT_RungeKutta.py <EFT_RungeKutta.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: EFT_RungeKutta.zip <EFT_RungeKutta.zip>`
 
 
 .. only:: html

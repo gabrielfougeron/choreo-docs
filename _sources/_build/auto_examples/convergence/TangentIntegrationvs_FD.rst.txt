@@ -11,14 +11,14 @@
         :class: sphx-glr-download-link-note
 
         :ref:`Go to the end <sphx_glr_download__build_auto_examples_convergence_TangentIntegrationvs_FD.py>`
-        to download the full example code
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
 .. _sphx_glr__build_auto_examples_convergence_TangentIntegrationvs_FD.py:
 
 
-Valiadation of tangent integration alorithms using Finite Differences
+Validation of tangent integration algorithms using Finite Differences
 =====================================================================
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-8
@@ -202,11 +202,6 @@ Evaluation of relative quadrature error with the following parameters:
 
 
 
-.. rst-class:: sphx-glr-timing
-
-   **Total running time of the script:** (0 minutes 3.115 seconds)
-
-
 .. _sphx_glr_download__build_auto_examples_convergence_TangentIntegrationvs_FD.py:
 
 .. only:: html
@@ -220,6 +215,10 @@ Evaluation of relative quadrature error with the following parameters:
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: TangentIntegrationvs_FD.py <TangentIntegrationvs_FD.py>`
+
+    .. container:: sphx-glr-download sphx-glr-download-zip
+
+      :download:`Download zipped: TangentIntegrationvs_FD.zip <TangentIntegrationvs_FD.zip>`
 
 
 .. only:: html
