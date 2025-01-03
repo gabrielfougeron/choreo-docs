@@ -1,0 +1,6 @@
+choreo.NBodySyst.all\_coeffs\_pos\_to\_vel\_inplace
+===================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.all_coeffs_pos_to_vel_inplace

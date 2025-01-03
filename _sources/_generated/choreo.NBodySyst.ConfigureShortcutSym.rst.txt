@@ -1,0 +1,6 @@
+choreo.NBodySyst.ConfigureShortcutSym
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.ConfigureShortcutSym

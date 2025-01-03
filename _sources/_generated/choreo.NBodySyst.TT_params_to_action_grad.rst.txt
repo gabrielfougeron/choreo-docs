@@ -1,0 +1,6 @@
+choreo.NBodySyst.TT\_params\_to\_action\_grad
+=============================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.TT_params_to_action_grad

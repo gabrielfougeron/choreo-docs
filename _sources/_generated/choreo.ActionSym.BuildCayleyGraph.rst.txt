@@ -1,0 +1,6 @@
+choreo.ActionSym.BuildCayleyGraph
+=================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.BuildCayleyGraph

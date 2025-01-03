@@ -1,0 +1,6 @@
+choreo.NBodySyst.Make\_params\_bounds
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Make_params_bounds

@@ -1,0 +1,6 @@
+choreo.NBodySyst.SegmRequiresDisp
+=================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.SegmRequiresDisp

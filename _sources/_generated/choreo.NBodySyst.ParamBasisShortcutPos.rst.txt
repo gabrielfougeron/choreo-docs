@@ -1,0 +1,6 @@
+choreo.NBodySyst.ParamBasisShortcutPos
+======================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ParamBasisShortcutPos

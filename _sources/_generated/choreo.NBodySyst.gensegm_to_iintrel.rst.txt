@@ -1,0 +1,6 @@
+choreo.NBodySyst.gensegm\_to\_iintrel
+=====================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.gensegm_to_iintrel

@@ -1,0 +1,6 @@
+choreo.NBodySyst.fftw\_planner\_effort
+======================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.fftw_planner_effort

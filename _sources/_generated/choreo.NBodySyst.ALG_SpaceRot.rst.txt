@@ -1,0 +1,6 @@
+choreo.NBodySyst.ALG\_SpaceRot
+==============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ALG_SpaceRot

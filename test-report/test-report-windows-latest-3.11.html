@@ -32,10 +32,12 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
@@ -58,6 +60,9 @@
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
     <script src="../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
     <script src="../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
@@ -163,6 +168,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../_build/auto_examples/index.html">
     Gallery
   </a>
@@ -172,13 +184,6 @@
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="test-report.html">
     Tests
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../theory.html">
-    Theory
   </a>
 </li>
 
@@ -297,6 +302,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../_build/auto_examples/index.html">
     Gallery
   </a>
@@ -306,13 +318,6 @@
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="test-report.html">
     Tests
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../theory.html">
-    Theory
   </a>
 </li>
 
@@ -399,16 +404,80 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Description of tests</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/tests.test_config.html">test_config</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_config.float64_tols_strict.html">float64_tols_strict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_config.float64_tols.html">float64_tols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_config.float64_tols_loose.html">float64_tols_loose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_config.float32_tols_strict.html">float32_tols_strict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_config.float32_tols.html">float32_tols</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/tests.test_scipy_plus_linalg.html">test_scipy_plus_linalg</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_scipy_plus_linalg.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_scipy_plus_linalg.test_nullspace.html">test_nullspace</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/tests.test_integration_tables.html">test_integration_tables</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough.html">test_ImplicitRKDefaultDPSIsEnough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_integration_tables.test_ImplicitSymplecticPairs.html">test_ImplicitSymplecticPairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_integration_tables.test_ImplicitSymmetricPairs.html">test_ImplicitSymmetricPairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_integration_tables.test_ImplicitSymmetricSymplecticPairs.html">test_ImplicitSymmetricSymplecticPairs</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/tests.test_ODE.html">test_ODE</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_ODE.test_Implicit_ODE.html">test_Implicit_ODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_ODE.test_Explicit_ODE.html">test_Explicit_ODE</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/tests.test_ActionSym.html">test_ActionSym</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_ActionSym.test_Identity.html">test_Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_ActionSym.test_Random.html">test_Random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_ActionSym.test_rotation_generation.html">test_rotation_generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_ActionSym.test_Cayley_graph.html">test_Cayley_graph</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/tests.test_NBodySyst.html">test_NBodySyst</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_create_destroy.html">test_create_destroy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_all_pos_to_segmpos.html">test_all_pos_to_segmpos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_all_vel_to_segmvel.html">test_all_vel_to_segmvel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_segmpos_to_all_pos.html">test_segmpos_to_all_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_capture_co.html">test_capture_co</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_round_trips_pos.html">test_round_trips_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_round_trips_vel.html">test_round_trips_vel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_changevars.html">test_changevars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_params_segmpos_dual.html">test_params_segmpos_dual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_kin.html">test_kin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_pot.html">test_pot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_action.html">test_action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_resize.html">test_resize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_action_indep_resize.html">test_action_indep_resize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_repeatability.html">test_repeatability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_ForceGeneralSym.html">test_ForceGeneralSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_ForceGreaterNstore.html">test_ForceGreaterNstore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_fft_backends.html">test_fft_backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_action_cst_sym_pairs.html">test_action_cst_sym_pairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_custom_inter_law.html">test_custom_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_periodicity_default.html">test_periodicity_default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html">test_ODE_vs_spectral</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Tests results on Github Actions</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="test-report-macos-latest-3.10.html">Tests MacOs Python 3.10</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-macos-latest-3.11.html">Tests MacOs Python 3.11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-macos-latest-3.12.html">Tests MacOs Python 3.12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-report-macos-latest-3.13.html">Tests MacOs Python 3.13</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-ubuntu-latest-3.10.html">Tests Ubuntu Python 3.10</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-ubuntu-latest-3.11.html">Tests Ubuntu Python 3.11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-ubuntu-latest-3.12.html">Tests Ubuntu Python 3.12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-report-ubuntu-latest-3.13.html">Tests Ubuntu Python 3.13</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-windows-latest-3.10.html">Tests Windows Python 3.10</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tests Windows Python 3.11</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-report-windows-latest-3.12.html">Tests Windows Python 3.12</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-report-windows-latest-3.13.html">Tests Windows Python 3.13</a></li>
 </ul>
 </div>
 </nav></div>
@@ -466,6 +535,22 @@
                   
   <section id="tests-windows-python-3-11">
 <h1>Tests Windows Python 3.11<a class="headerlink" href="#tests-windows-python-3-11" title="Link to this heading">#</a></h1>
+<div class="line-block">
+<div class="line">Test suites: 0</div>
+<div class="line">Test cases: 0</div>
+<div class="line">Failed test cases: 0</div>
+<div class="line">Skipped test cases: 0</div>
+</div>
+<p><strong>Test cases</strong>:</p>
+<p class="needs_filter_warning" id="needtable-test-report/test-report-windows-latest-3.11-0">No needs passed the filters</p>
+<p><strong>Failed test cases</strong>:</p>
+<p class="needs_filter_warning" id="needtable-test-report/test-report-windows-latest-3.11-1">No needs passed the filters</p>
+<p><strong>Skipped test cases</strong>:</p>
+<p class="needs_filter_warning" id="needtable-test-report/test-report-windows-latest-3.11-2">No needs passed the filters</p>
+<div class="admonition error">
+<p class="admonition-title">Error</p>
+<p>Test file not found: /mnt/c/Users/gfo/Travail/Python/tests/choreo/docs/source/test-report/all_reports/junit-windows-latest-3.11.xml</p>
+</div>
 </section>
 
 

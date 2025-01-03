@@ -6,12 +6,19 @@ choreo.ActionSym
 .. autoclass:: ActionSym
 
    
+
+   .. rubric:: Class Constructor
    .. automethod:: __init__
+      :no-index:
 
    
-   .. rubric:: Methods
+   .. rubric:: Methods Summary
 
    .. autosummary::
+    :nosignatures:
+    :recursive:
+    :toctree:
+
    
       ~ActionSym.ApplyT
       ~ActionSym.ApplyTInv
@@ -57,6 +64,7 @@ choreo.ActionSym
    .. rubric:: Attributes
 
    .. autosummary::
+    :toctree:
    
       ~ActionSym.BodyPerm
       ~ActionSym.SpaceRot

@@ -1,0 +1,6 @@
+choreo.ActionSym.TransformPos
+=============================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.TransformPos

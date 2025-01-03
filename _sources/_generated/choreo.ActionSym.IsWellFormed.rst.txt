@@ -1,0 +1,6 @@
+choreo.ActionSym.IsWellFormed
+=============================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsWellFormed

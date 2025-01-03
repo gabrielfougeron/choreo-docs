@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_forces\_vectorized\_nosym
+===================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_forces_vectorized_nosym

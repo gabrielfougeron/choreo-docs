@@ -1,0 +1,6 @@
+choreo.NBodySyst.loopmass
+=========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.loopmass

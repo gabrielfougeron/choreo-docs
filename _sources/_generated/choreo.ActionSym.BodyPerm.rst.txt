@@ -1,0 +1,6 @@
+choreo.ActionSym.BodyPerm
+=========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: ActionSym.BodyPerm

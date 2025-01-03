@@ -1,0 +1,6 @@
+test\_ForceGreaterNstore
+========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_ForceGreaterNstore

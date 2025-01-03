@@ -1,6 +1,0 @@
-choreo.run.entrypoint\_CLI\_search
-==================================
-
-.. currentmodule:: choreo.run
-
-.. autofunction:: entrypoint_CLI_search

@@ -1,0 +1,6 @@
+test\_action\_cst\_sym\_pairs
+=============================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_action_cst_sym_pairs

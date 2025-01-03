@@ -1,0 +1,6 @@
+choreo.NBodySyst.nparams\_incl\_o
+=================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.nparams_incl_o

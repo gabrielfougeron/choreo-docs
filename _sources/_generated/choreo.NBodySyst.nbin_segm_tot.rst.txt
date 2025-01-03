@@ -1,0 +1,6 @@
+choreo.NBodySyst.nbin\_segm\_tot
+================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.nbin_segm_tot

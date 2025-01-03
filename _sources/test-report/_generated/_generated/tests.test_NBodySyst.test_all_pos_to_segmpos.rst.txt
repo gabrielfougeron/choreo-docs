@@ -1,0 +1,6 @@
+test\_all\_pos\_to\_segmpos
+===========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_all_pos_to_segmpos

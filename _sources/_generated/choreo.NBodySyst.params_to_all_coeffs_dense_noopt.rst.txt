@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_to\_all\_coeffs\_dense\_noopt
+======================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.params_to_all_coeffs_dense_noopt

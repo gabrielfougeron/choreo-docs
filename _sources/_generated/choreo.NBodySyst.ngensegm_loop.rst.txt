@@ -1,0 +1,6 @@
+choreo.NBodySyst.ngensegm\_loop
+===============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ngensegm_loop

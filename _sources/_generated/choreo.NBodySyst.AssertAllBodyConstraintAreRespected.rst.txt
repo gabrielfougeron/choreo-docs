@@ -1,0 +1,6 @@
+choreo.NBodySyst.AssertAllBodyConstraintAreRespected
+====================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.AssertAllBodyConstraintAreRespected

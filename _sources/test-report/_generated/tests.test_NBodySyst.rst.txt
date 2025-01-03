@@ -1,0 +1,4 @@
+test\_NBodySyst
+===============
+
+.. automodule:: tests.test_NBodySyst

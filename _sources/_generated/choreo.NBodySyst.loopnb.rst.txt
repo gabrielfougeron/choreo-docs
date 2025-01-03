@@ -1,0 +1,6 @@
+choreo.NBodySyst.loopnb
+=======================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.loopnb

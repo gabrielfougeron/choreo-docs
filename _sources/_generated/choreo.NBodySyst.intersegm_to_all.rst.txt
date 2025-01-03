@@ -1,0 +1,6 @@
+choreo.NBodySyst.intersegm\_to\_all
+===================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.intersegm_to_all

@@ -1,0 +1,4 @@
+test\_integration\_tables
+=========================
+
+.. automodule:: tests.test_integration_tables

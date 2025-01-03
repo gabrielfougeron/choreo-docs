@@ -1,0 +1,6 @@
+choreo.ActionSym.IsIdentityPerm
+===============================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsIdentityPerm

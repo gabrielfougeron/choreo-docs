@@ -1,0 +1,6 @@
+choreo.NBodySyst.Homo\_unit
+===========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.Homo_unit

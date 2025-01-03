@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_to\_pot\_nrg\_hess
+===========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.params_to_pot_nrg_hess

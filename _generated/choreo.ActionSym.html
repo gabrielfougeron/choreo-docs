@@ -32,10 +32,12 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
@@ -58,6 +60,9 @@
     <script src="../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
     <script src="../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
     <script src="../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
@@ -70,8 +75,8 @@
     <link rel="icon" href="../_static/eight_icon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="choreo.run.entrypoint_CLI_search" href="choreo.run.entrypoint_CLI_search.html" />
-    <link rel="prev" title="choreo.NBodySyst" href="choreo.NBodySyst.html" />
+    <link rel="next" title="choreo.ActionSym.ApplyT" href="choreo.ActionSym.ApplyT.html" />
+    <link rel="prev" title="choreo.NBodySyst.segm_store" href="choreo.NBodySyst.segm_store.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="main" />
@@ -400,18 +405,213 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">N-body system</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="choreo.NBodySyst.html">choreo.NBodySyst</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.AssertAllBodyConstraintAreRespected.html">choreo.NBodySyst.AssertAllBodyConstraintAreRespected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.AssertAllSegmGenConstraintsAreRespected.html">choreo.NBodySyst.AssertAllSegmGenConstraintsAreRespected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BuildSegmGraph.html">choreo.NBodySyst.BuildSegmGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ChooseInterSegm.html">choreo.NBodySyst.ChooseInterSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ChooseLoopGen.html">choreo.NBodySyst.ChooseLoopGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ComputeCenterOfMass.html">choreo.NBodySyst.ComputeCenterOfMass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ComputeSymDefault.html">choreo.NBodySyst.ComputeSymDefault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_forces.html">choreo.NBodySyst.Compute_forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_forces_nosym.html">choreo.NBodySyst.Compute_forces_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_forces_vectorized.html">choreo.NBodySyst.Compute_forces_vectorized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_forces_vectorized_nosym.html">choreo.NBodySyst.Compute_forces_vectorized_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_init_pos_mom.html">choreo.NBodySyst.Compute_init_pos_mom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_n_sub_fft.html">choreo.NBodySyst.Compute_n_sub_fft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_periodicity_default.html">choreo.NBodySyst.Compute_periodicity_default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_velocities.html">choreo.NBodySyst.Compute_velocities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Compute_velocities_vectorized.html">choreo.NBodySyst.Compute_velocities_vectorized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ConfigureShortcutSym.html">choreo.NBodySyst.ConfigureShortcutSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.DescribeSystem.html">choreo.NBodySyst.DescribeSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.DetectEscape.html">choreo.NBodySyst.DetectEscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.DetectLoops.html">choreo.NBodySyst.DetectLoops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.DetectSegmRequiresDisp.html">choreo.NBodySyst.DetectSegmRequiresDisp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.DetectXlim.html">choreo.NBodySyst.DetectXlim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Detect_homo_inter_law.html">choreo.NBodySyst.Detect_homo_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.FromDict.html">choreo.NBodySyst.FromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.FromSolutionFile.html">choreo.NBodySyst.FromSolutionFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.GatherInterSym.html">choreo.NBodySyst.GatherInterSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.GetFullAABB.html">choreo.NBodySyst.GetFullAABB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.GetKrylovJacobian.html">choreo.NBodySyst.GetKrylovJacobian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Get_ODE_def.html">choreo.NBodySyst.Get_ODE_def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Get_segmpos_minmax.html">choreo.NBodySyst.Get_segmpos_minmax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Init_to_dict.html">choreo.NBodySyst.Init_to_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Make_params_bounds.html">choreo.NBodySyst.Make_params_bounds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.PlotTimeBodyGraph.html">choreo.NBodySyst.PlotTimeBodyGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Segmpos_Descriptor.html">choreo.NBodySyst.Segmpos_Descriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Set_inter_law.html">choreo.NBodySyst.Set_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.TT_params_to_action_grad.html">choreo.NBodySyst.TT_params_to_action_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.TestActionSame.html">choreo.NBodySyst.TestActionSame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.TestHashSame.html">choreo.NBodySyst.TestHashSame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Update_ODE_params.html">choreo.NBodySyst.Update_ODE_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Validate_inter_law.html">choreo.NBodySyst.Validate_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Write_Descriptor.html">choreo.NBodySyst.Write_Descriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.__init__.html">choreo.NBodySyst.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_coeffs_dense_to_params_noopt.html">choreo.NBodySyst.all_coeffs_dense_to_params_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_coeffs_pos_to_vel_inplace.html">choreo.NBodySyst.all_coeffs_pos_to_vel_inplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_coeffs_to_kin_nrg.html">choreo.NBodySyst.all_coeffs_to_kin_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_coeffs_to_kin_nrg_grad.html">choreo.NBodySyst.all_coeffs_to_kin_nrg_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_coeffs_to_params_noopt.html">choreo.NBodySyst.all_coeffs_to_params_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_pos_to_all_body_pos_noopt.html">choreo.NBodySyst.all_pos_to_all_body_pos_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.all_to_segm_noopt.html">choreo.NBodySyst.all_to_segm_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.allocate_owned_memory.html">choreo.NBodySyst.allocate_owned_memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.co_in.html">choreo.NBodySyst.co_in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.free_owned_memory.html">choreo.NBodySyst.free_owned_memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nnz_k.html">choreo.NBodySyst.nnz_k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_basis_pos.html">choreo.NBodySyst.params_basis_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_basis_vel.html">choreo.NBodySyst.params_basis_vel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_changevar.html">choreo.NBodySyst.params_changevar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_resize.html">choreo.NBodySyst.params_resize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_action.html">choreo.NBodySyst.params_to_action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_action_grad.html">choreo.NBodySyst.params_to_action_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_action_hess.html">choreo.NBodySyst.params_to_action_hess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_all_coeffs_dense_noopt.html">choreo.NBodySyst.params_to_all_coeffs_dense_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_all_coeffs_noopt.html">choreo.NBodySyst.params_to_all_coeffs_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_kin_nrg.html">choreo.NBodySyst.params_to_kin_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_kin_nrg_grad.html">choreo.NBodySyst.params_to_kin_nrg_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_pot_nrg.html">choreo.NBodySyst.params_to_pot_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_pot_nrg_grad.html">choreo.NBodySyst.params_to_pot_nrg_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_pot_nrg_hess.html">choreo.NBodySyst.params_to_pot_nrg_hess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_segmpos.html">choreo.NBodySyst.params_to_segmpos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_to_segmvel.html">choreo.NBodySyst.params_to_segmvel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.plot_segmpos_2D.html">choreo.NBodySyst.plot_segmpos_2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.pos_slice.html">choreo.NBodySyst.pos_slice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segm_to_path_stats.html">choreo.NBodySyst.segm_to_path_stats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_dparams_to_action_hess.html">choreo.NBodySyst.segmpos_dparams_to_action_hess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_params_to_action.html">choreo.NBodySyst.segmpos_params_to_action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_params_to_action_grad.html">choreo.NBodySyst.segmpos_params_to_action_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_to_all_noopt.html">choreo.NBodySyst.segmpos_to_all_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_to_allbody_noopt.html">choreo.NBodySyst.segmpos_to_allbody_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_to_hash.html">choreo.NBodySyst.segmpos_to_hash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_to_params.html">choreo.NBodySyst.segmpos_to_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segmpos_to_params_T.html">choreo.NBodySyst.segmpos_to_params_T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ALG_Iint.html">choreo.NBodySyst.ALG_Iint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ALG_SpaceRot.html">choreo.NBodySyst.ALG_SpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ALG_TimeRev.html">choreo.NBodySyst.ALG_TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BinProdChargeSum.html">choreo.NBodySyst.BinProdChargeSum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BinSourceSegm.html">choreo.NBodySyst.BinSourceSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BinSpaceRot.html">choreo.NBodySyst.BinSpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BinSpaceRotIsId.html">choreo.NBodySyst.BinSpaceRotIsId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BinTargetSegm.html">choreo.NBodySyst.BinTargetSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.BodyGraph.html">choreo.NBodySyst.BodyGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ForceGeneralSym.html">choreo.NBodySyst.ForceGeneralSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ForceGreaterNStore.html">choreo.NBodySyst.ForceGreaterNStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.GreaterNStore.html">choreo.NBodySyst.GreaterNStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Hash_exp.html">choreo.NBodySyst.Hash_exp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Homo_exp.html">choreo.NBodySyst.Homo_exp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Homo_unit.html">choreo.NBodySyst.Homo_unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.InitValPosBasis.html">choreo.NBodySyst.InitValPosBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.InitValVelBasis.html">choreo.NBodySyst.InitValVelBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.InterSpaceRot.html">choreo.NBodySyst.InterSpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.InterSpaceRotIsId.html">choreo.NBodySyst.InterSpaceRotIsId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.InterTimeRev.html">choreo.NBodySyst.InterTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.LawIsHomo.html">choreo.NBodySyst.LawIsHomo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.LoopGenConstraints.html">choreo.NBodySyst.LoopGenConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ParamBasisShortcutPos.html">choreo.NBodySyst.ParamBasisShortcutPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ParamBasisShortcutVel.html">choreo.NBodySyst.ParamBasisShortcutVel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.PerDef_Isegm.html">choreo.NBodySyst.PerDef_Isegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.PerDef_SpaceRotPos.html">choreo.NBodySyst.PerDef_SpaceRotPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.PerDef_SpaceRotVel.html">choreo.NBodySyst.PerDef_SpaceRotVel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.PerDef_TimeRev.html">choreo.NBodySyst.PerDef_TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.RequiresGreaterNStore.html">choreo.NBodySyst.RequiresGreaterNStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.SegmGraph.html">choreo.NBodySyst.SegmGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.SegmRequiresDisp.html">choreo.NBodySyst.SegmRequiresDisp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Sym_list.html">choreo.NBodySyst.Sym_list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.Targets.html">choreo.NBodySyst.Targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.bodyloop.html">choreo.NBodySyst.bodyloop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.bodysegm.html">choreo.NBodySyst.bodysegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.fft_backend.html">choreo.NBodySyst.fft_backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.fftw_nthreads.html">choreo.NBodySyst.fftw_nthreads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.fftw_planner_effort.html">choreo.NBodySyst.fftw_planner_effort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.fftw_wisdom_only.html">choreo.NBodySyst.fftw_wisdom_only</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.gensegm_loop_start.html">choreo.NBodySyst.gensegm_loop_start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.gensegm_to_all.html">choreo.NBodySyst.gensegm_to_all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.gensegm_to_body.html">choreo.NBodySyst.gensegm_to_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.gensegm_to_iint.html">choreo.NBodySyst.gensegm_to_iint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.gensegm_to_iintrel.html">choreo.NBodySyst.gensegm_to_iintrel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.geodim.html">choreo.NBodySyst.geodim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ifft_shapes.html">choreo.NBodySyst.ifft_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.inter_law_param_dict.html">choreo.NBodySyst.inter_law_param_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.inter_law_str.html">choreo.NBodySyst.inter_law_str</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.intersegm_to_all.html">choreo.NBodySyst.intersegm_to_all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.intersegm_to_body.html">choreo.NBodySyst.intersegm_to_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.intersegm_to_iint.html">choreo.NBodySyst.intersegm_to_iint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.loopcharge.html">choreo.NBodySyst.loopcharge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.loopgen.html">choreo.NBodySyst.loopgen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.loopmass.html">choreo.NBodySyst.loopmass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.loopnb.html">choreo.NBodySyst.loopnb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.n_sub_fft.html">choreo.NBodySyst.n_sub_fft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nbin_segm_tot.html">choreo.NBodySyst.nbin_segm_tot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nbin_segm_unique.html">choreo.NBodySyst.nbin_segm_unique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nbody.html">choreo.NBodySyst.nbody</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ncoeff_min_loop.html">choreo.NBodySyst.ncoeff_min_loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ncoeffs.html">choreo.NBodySyst.ncoeffs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.ngensegm_loop.html">choreo.NBodySyst.ngensegm_loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nint.html">choreo.NBodySyst.nint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nint_fac.html">choreo.NBodySyst.nint_fac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nint_min.html">choreo.NBodySyst.nint_min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nloop.html">choreo.NBodySyst.nloop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nparams.html">choreo.NBodySyst.nparams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nparams_incl_o.html">choreo.NBodySyst.nparams_incl_o</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nrem.html">choreo.NBodySyst.nrem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.nsegm.html">choreo.NBodySyst.nsegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_shapes.html">choreo.NBodySyst.params_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.params_shifts.html">choreo.NBodySyst.params_shifts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.pos_slice_shapes.html">choreo.NBodySyst.pos_slice_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segm_size.html">choreo.NBodySyst.segm_size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.NBodySyst.segm_store.html">choreo.NBodySyst.segm_store</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="choreo.NBodySyst.html">choreo.NBodySyst</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">choreo.ActionSym</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">choreo.ActionSym</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.ApplyT.html">choreo.ActionSym.ApplyT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.ApplyTInv.html">choreo.ActionSym.ApplyTInv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.ApplyTInvSegm.html">choreo.ActionSym.ApplyTInvSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.ApplyTSegm.html">choreo.ActionSym.ApplyTSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.BuildCayleyGraph.html">choreo.ActionSym.BuildCayleyGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.Compose.html">choreo.ActionSym.Compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.Conjugate.html">choreo.ActionSym.Conjugate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.FromDict.html">choreo.ActionSym.FromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.Identity.html">choreo.ActionSym.Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.Inverse.html">choreo.ActionSym.Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.InvolutivePermutations.html">choreo.ActionSym.InvolutivePermutations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentity.html">choreo.ActionSym.IsIdentity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityPerm.html">choreo.ActionSym.IsIdentityPerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityPermAndRot.html">choreo.ActionSym.IsIdentityPermAndRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityPermAndRotAndTimeRev.html">choreo.ActionSym.IsIdentityPermAndRotAndTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityRot.html">choreo.ActionSym.IsIdentityRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityRotAndTime.html">choreo.ActionSym.IsIdentityRotAndTime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityRotAndTimeRev.html">choreo.ActionSym.IsIdentityRotAndTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityTimeRev.html">choreo.ActionSym.IsIdentityTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsIdentityTimeShift.html">choreo.ActionSym.IsIdentityTimeShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSame.html">choreo.ActionSym.IsSame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSamePerm.html">choreo.ActionSym.IsSamePerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSameRot.html">choreo.ActionSym.IsSameRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSameRotAndTime.html">choreo.ActionSym.IsSameRotAndTime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSameRotAndTimeRev.html">choreo.ActionSym.IsSameRotAndTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSameTimeRev.html">choreo.ActionSym.IsSameTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsSameTimeShift.html">choreo.ActionSym.IsSameTimeShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.IsWellFormed.html">choreo.ActionSym.IsWellFormed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.Random.html">choreo.ActionSym.Random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.SurjectiveDirectSpaceRot.html">choreo.ActionSym.SurjectiveDirectSpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TimeDerivative.html">choreo.ActionSym.TimeDerivative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TimeShifts.html">choreo.ActionSym.TimeShifts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TransformPos.html">choreo.ActionSym.TransformPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TransformSegment.html">choreo.ActionSym.TransformSegment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.__init__.html">choreo.ActionSym.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.to_dict.html">choreo.ActionSym.to_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.BodyPerm.html">choreo.ActionSym.BodyPerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.SpaceRot.html">choreo.ActionSym.SpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TimeRev.html">choreo.ActionSym.TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TimeShiftDen.html">choreo.ActionSym.TimeShiftDen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="choreo.ActionSym.TimeShiftNum.html">choreo.ActionSym.TimeShiftNum</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="choreo.run.entrypoint_CLI_search.html">choreo.run.entrypoint_CLI_search</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="choreo_GUI.run.entrypoint_GUI.html">choreo_GUI.run.entrypoint_GUI</a></li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -471,14 +671,18 @@
 <h1>choreo.ActionSym<a class="headerlink" href="#choreo-actionsym" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="choreo.ActionSym">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ActionSym</span></span><a class="headerlink" href="#choreo.ActionSym" title="Link to this definition">#</a></dt>
-<dd><p>This class defines the symmetries of the action.</p>
-<p>A symmetry of the action is a transformation of paths that leaves the action invariant.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ActionSym</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Py_ssize_t[::1]</span> <span class="pre">BodyPerm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double[:</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">::1]</span> <span class="pre">SpaceRot</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Py_ssize_t</span> <span class="pre">TimeRev</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Py_ssize_t</span> <span class="pre">TimeShiftNum</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Py_ssize_t</span> <span class="pre">TimeShiftDen</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#choreo.ActionSym" title="Link to this definition">#</a></dt>
+<dd><p>This class defines the symmetries in a N-body system.</p>
+<p>A symmetry <span class="math notranslate nohighlight">\(\sigma\)</span> is a transformation of paths that leaves the physics of a N-body system invariant.</p>
 <div class="math notranslate nohighlight">
 \[x_{\text{LoopTarget}}(t) = \text{SpaceRot} \cdot x_{\text{LoopSource}} (\text{TimeRev} * (t - \text{TimeShift}))\]</div>
 <p>Where SpaceRot is assumed orthogonal and TimeShift is defined as a rational fraction.</p>
 <p>Useful to detect loops and constraints.</p>
 <p>cf Palais’ principle of symmetric criticality in <span id="id1">[<a class="reference internal" href="#id3" title="Richard S Palais. The principle of symmetric criticality. Communications in Mathematical Physics, 69(1):19–30, 1979.">1</a>]</span></p>
+<dl class="field-list simple">
+<dt class="field-odd">Cited<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
 <div class="docutils container" id="id2">
 <div role="list" class="citation-list">
 <div class="citation" id="id3" role="doc-biblioentry">
@@ -487,138 +691,134 @@
 </div>
 </div>
 </div>
-<dl class="field-list simple">
-<dt class="field-odd">Cited<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p></dd>
-</dl>
+<p class="rubric">Class Constructor</p>
 <dl class="py method">
-<dt class="sig sig-object py" id="choreo.ActionSym.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#choreo.ActionSym.__init__" title="Link to this definition">#</a></dt>
-<dd><p>Specify a symmetry of the Action functional.</p>
-<p>_extended_summary_</p>
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>Specifies a symmetry of the action functional.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>BodyPerm</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">np.ndarray(nbody</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype=np.intp)</span></code>) – Permutation of the bodies.</p></li>
-<li><p><strong>SpaceRot</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">np.ndarray(geodim</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype=np.float64)</span></code>) – Isometry of space.</p></li>
-<li><p><strong>TimeRev</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – _description_</p></li>
-<li><p><strong>TimeShiftNum</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – _description_</p></li>
-<li><p><strong>TimeShiftDen</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – _description_</p></li>
+<li><p><strong>BodyPerm</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a><code class="xref py py-class docutils literal notranslate"><span class="pre">(shape</span> <span class="pre">=</span> <span class="pre">(nbody),</span> <span class="pre">dtype</span> <span class="pre">=</span> <span class="pre">np.intp)</span></code>) – Permutation of the bodies.</p></li>
+<li><p><strong>SpaceRot</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a><code class="xref py py-class docutils literal notranslate"><span class="pre">(shape</span> <span class="pre">=</span> <span class="pre">(geodim,</span> <span class="pre">geodim),</span> <span class="pre">dtype</span> <span class="pre">=</span> <span class="pre">np.float64)</span></code>) – Isometry of space.</p></li>
+<li><p><strong>TimeRev</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>) – A value of <code class="docutils literal notranslate"><span class="pre">-1</span></code> denotes time reversal, and a value of <code class="docutils literal notranslate"><span class="pre">1</span></code> denotes no time reversal.</p></li>
+<li><p><strong>TimeShiftNum</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>) – Numerator of the rational time shift.</p></li>
+<li><p><strong>TimeShiftDen</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>) – Denominator of the rational time shift.</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<p class="rubric">Methods</p>
+<p class="rubric">Methods Summary</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyT</span></code>(tnum, tden)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.ApplyT.html#choreo.ActionSym.ApplyT" title="choreo.ActionSym.ApplyT"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyT</span></code></a></p></td>
+<td><p>Returns a rational transformed time instant given an input rational time instant.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyTInv</span></code>(tnum, tden)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.ApplyTInv.html#choreo.ActionSym.ApplyTInv" title="choreo.ActionSym.ApplyTInv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyTInv</span></code></a></p></td>
+<td><p>Returns a rational inverse transformed time instant given an input rational time instant.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyTInvSegm</span></code>(tnum, tden)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.ApplyTInvSegm.html#choreo.ActionSym.ApplyTInvSegm" title="choreo.ActionSym.ApplyTInvSegm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyTInvSegm</span></code></a></p></td>
+<td><p>Returns a rational inverse transformed time segment given an input rational time segment.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyTSegm</span></code>(tnum, tden)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.ApplyTSegm.html#choreo.ActionSym.ApplyTSegm" title="choreo.ActionSym.ApplyTSegm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApplyTSegm</span></code></a></p></td>
+<td><p>Returns a rational transformed time segment given an input rational time segment.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">BuildCayleyGraph</span></code>(nbody, geodim[, ...])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.BuildCayleyGraph.html#choreo.ActionSym.BuildCayleyGraph" title="choreo.ActionSym.BuildCayleyGraph"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BuildCayleyGraph</span></code></a></p></td>
+<td><p>Builds the <a class="reference external" href="https://en.wikipedia.org/wiki/Cayley_graph">Cayley graph</a> of a list of group generators.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Compose</span></code>(A)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.Compose.html#choreo.ActionSym.Compose" title="choreo.ActionSym.Compose"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Compose</span></code></a></p></td>
 <td><p>Returns the composition of two transformations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Conjugate</span></code>(B)</p></td>
-<td><p>Returns the conjugation of a transformation wrt another transformation.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.Conjugate.html#choreo.ActionSym.Conjugate" title="choreo.ActionSym.Conjugate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Conjugate</span></code></a></p></td>
+<td><p>Returns the conjugation of a transformation with respect to another transformation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">FromDict</span></code>(Sym_dict)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.FromDict.html#choreo.ActionSym.FromDict" title="choreo.ActionSym.FromDict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FromDict</span></code></a></p></td>
+<td><p>Returns a new <a class="reference internal" href="#choreo.ActionSym" title="choreo.ActionSym"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.ActionSym</span></code></a> from a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Identity</span></code>(nbody, geodim)</p></td>
-<td><p>Identity: Returns the identity transformation</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.Identity.html#choreo.ActionSym.Identity" title="choreo.ActionSym.Identity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Identity</span></code></a></p></td>
+<td><p>Returns the identity transformation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Inverse</span></code>()</p></td>
-<td><p>Returns the inverse of a symmetry transformation</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.Inverse.html#choreo.ActionSym.Inverse" title="choreo.ActionSym.Inverse"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Inverse</span></code></a></p></td>
+<td><p>Returns the inverse of a symmetry transformation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvolutivePermutations</span></code>(n)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.InvolutivePermutations.html#choreo.ActionSym.InvolutivePermutations" title="choreo.ActionSym.InvolutivePermutations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InvolutivePermutations</span></code></a></p></td>
+<td><p>Generates all involutive permutations of size <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentity</span></code>([atol])</p></td>
-<td><p>Returns True if the transformation is close to identity.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentity.html#choreo.ActionSym.IsIdentity" title="choreo.ActionSym.IsIdentity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentity</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the transformation is within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of the identity.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityPerm</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityPerm.html#choreo.ActionSym.IsIdentityPerm" title="choreo.ActionSym.IsIdentityPerm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityPerm</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the body permutation part of the transformation is the identity permutation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityPermAndRot</span></code>([atol])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityPermAndRot.html#choreo.ActionSym.IsIdentityPermAndRot" title="choreo.ActionSym.IsIdentityPermAndRot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityPermAndRot</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if parts of the transformation are within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of the identity.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityPermAndRotAndTimeRev</span></code>([atol])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityPermAndRotAndTimeRev.html#choreo.ActionSym.IsIdentityPermAndRotAndTimeRev" title="choreo.ActionSym.IsIdentityPermAndRotAndTimeRev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityPermAndRotAndTimeRev</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if parts of the transformation are within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of the identity.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityRot</span></code>([atol])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityRot.html#choreo.ActionSym.IsIdentityRot" title="choreo.ActionSym.IsIdentityRot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityRot</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the space isometry part of the transformation is within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of the identity.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityRotAndTime</span></code>([atol])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityRotAndTime.html#choreo.ActionSym.IsIdentityRotAndTime" title="choreo.ActionSym.IsIdentityRotAndTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityRotAndTime</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if parts of the transformation are within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of the identity.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityRotAndTimeRev</span></code>([atol])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityRotAndTimeRev.html#choreo.ActionSym.IsIdentityRotAndTimeRev" title="choreo.ActionSym.IsIdentityRotAndTimeRev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityRotAndTimeRev</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if parts of the transformation are within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of the identity.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityTimeRev</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityTimeRev.html#choreo.ActionSym.IsIdentityTimeRev" title="choreo.ActionSym.IsIdentityTimeRev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityTimeRev</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the transformation does not reverse time.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityTimeShift</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsIdentityTimeShift.html#choreo.ActionSym.IsIdentityTimeShift" title="choreo.ActionSym.IsIdentityTimeShift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsIdentityTimeShift</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the transformation does not shift time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSame</span></code>(other[, atol])</p></td>
-<td><p>Returns True if the two transformations are almost identical.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsSame.html#choreo.ActionSym.IsSame" title="choreo.ActionSym.IsSame"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSame</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations are within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of each other.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSamePerm</span></code>(other)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsSamePerm.html#choreo.ActionSym.IsSamePerm" title="choreo.ActionSym.IsSamePerm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSamePerm</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations have identical body permutations.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameRot</span></code>(other[, atol])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsSameRot.html#choreo.ActionSym.IsSameRot" title="choreo.ActionSym.IsSameRot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameRot</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations have space isometries within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of each other.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameRotAndTime</span></code>(other[, atol])</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsSameRotAndTime.html#choreo.ActionSym.IsSameRotAndTime" title="choreo.ActionSym.IsSameRotAndTime"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameRotAndTime</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations have properties within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of each other.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameRotAndTimeRev</span></code>(other[, atol])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsSameRotAndTimeRev.html#choreo.ActionSym.IsSameRotAndTimeRev" title="choreo.ActionSym.IsSameRotAndTimeRev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameRotAndTimeRev</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations have properties within <code class="docutils literal notranslate"><span class="pre">atol</span></code> of each other.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameTimeRev</span></code>(other)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsSameTimeRev.html#choreo.ActionSym.IsSameTimeRev" title="choreo.ActionSym.IsSameTimeRev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameTimeRev</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations have identical time reversal.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameTimeShift</span></code>(other[, atol])</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.IsSameTimeShift.html#choreo.ActionSym.IsSameTimeShift" title="choreo.ActionSym.IsSameTimeShift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsSameTimeShift</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the two transformations have identical time shifts.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsWellFormed</span></code>([atol])</p></td>
-<td><p>Returns True if the transformation is well-formed.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.IsWellFormed.html#choreo.ActionSym.IsWellFormed" title="choreo.ActionSym.IsWellFormed"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsWellFormed</span></code></a></p></td>
+<td><p>Returns <a class="reference external" href="https://docs.python.org/3/library/constants.html#True" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">True</span></code></a> if the transformation is well-formed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">Random</span></code>(nbody, geodim[, maxden])</p></td>
-<td><p>Random Returns a random transformation.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.Random.html#choreo.ActionSym.Random" title="choreo.ActionSym.Random"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Random</span></code></a></p></td>
+<td><p>Returns a random transformation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurjectiveDirectSpaceRot</span></code>(params)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.SurjectiveDirectSpaceRot.html#choreo.ActionSym.SurjectiveDirectSpaceRot" title="choreo.ActionSym.SurjectiveDirectSpaceRot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SurjectiveDirectSpaceRot</span></code></a></p></td>
+<td><p>Surjective parametrization of direct isometries.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeDerivative</span></code>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.TimeDerivative.html#choreo.ActionSym.TimeDerivative" title="choreo.ActionSym.TimeDerivative"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeDerivative</span></code></a></p></td>
 <td><p>Returns the time derivative of a symmetry transformation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeShifts</span></code>(max_den)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.TimeShifts.html#choreo.ActionSym.TimeShifts" title="choreo.ActionSym.TimeShifts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeShifts</span></code></a></p></td>
+<td><p>Generates all rational fractions in <span class="math notranslate nohighlight">\([0,1[\)</span> with denominator lower or equal to <code class="docutils literal notranslate"><span class="pre">max_den</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransformPos</span></code>(in_segm, out)</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.TransformPos.html#choreo.ActionSym.TransformPos" title="choreo.ActionSym.TransformPos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransformPos</span></code></a></p></td>
+<td><p>Computes a transformed position by the space isometry.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransformSegment</span></code>(in_segm, out)</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.TransformSegment.html#choreo.ActionSym.TransformSegment" title="choreo.ActionSym.TransformSegment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TransformSegment</span></code></a></p></td>
+<td><p>Computes a transformed segment of positions by the time and space isometry.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#choreo.ActionSym.__init__" title="choreo.ActionSym.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a></p></td>
-<td><p>Specify a symmetry of the Action functional.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.__init__.html#choreo.ActionSym.__init__" title="choreo.ActionSym.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a></p></td>
+<td><p>Specifies a symmetry of the action functional.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code>()</p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.to_dict.html#choreo.ActionSym.to_dict" title="choreo.ActionSym.to_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dict</span></code></a></p></td>
+<td><p>Returns a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> containing the transformation informations.</p></td>
 </tr>
 </tbody>
 </table>
@@ -626,20 +826,20 @@
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">BodyPerm</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.BodyPerm.html#choreo.ActionSym.BodyPerm" title="choreo.ActionSym.BodyPerm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">BodyPerm</span></code></a></p></td>
+<td><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a><code class="xref py py-class docutils literal notranslate"><span class="pre">(shape</span> <span class="pre">=</span> <span class="pre">(nbody),</span> <span class="pre">dtype</span> <span class="pre">=</span> <span class="pre">np.intp)</span></code> Permutation of the bodies.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpaceRot</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.SpaceRot.html#choreo.ActionSym.SpaceRot" title="choreo.ActionSym.SpaceRot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SpaceRot</span></code></a></p></td>
+<td><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a><code class="xref py py-class docutils literal notranslate"><span class="pre">(shape</span> <span class="pre">=</span> <span class="pre">(nbody),</span> <span class="pre">dtype</span> <span class="pre">=</span> <span class="pre">np.intp)</span></code> Isometry of space.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeRev</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.TimeRev.html#choreo.ActionSym.TimeRev" title="choreo.ActionSym.TimeRev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeRev</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> Time reversal</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeShiftDen</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="choreo.ActionSym.TimeShiftDen.html#choreo.ActionSym.TimeShiftDen" title="choreo.ActionSym.TimeShiftDen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeShiftDen</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> Denominator of the rational time shift.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeShiftNum</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="choreo.ActionSym.TimeShiftNum.html#choreo.ActionSym.TimeShiftNum" title="choreo.ActionSym.TimeShiftNum"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TimeShiftNum</span></code></a></p></td>
+<td><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> Numerator of the rational time shift.</p></td>
 </tr>
 </tbody>
 </table>
@@ -671,10 +871,7 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo.ActionSym"><code class="docutils literal notranslate"><span class="pre">ActionSym</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo.ActionSym.__init__"><code class="docutils literal notranslate"><span class="pre">ActionSym.__init__()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo.ActionSym"><code class="docutils literal notranslate"><span class="pre">ActionSym</span></code></a></li>
 </ul>
   </nav></div>
 

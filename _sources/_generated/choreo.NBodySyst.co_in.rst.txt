@@ -1,0 +1,6 @@
+choreo.NBodySyst.co\_in
+=======================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.co_in

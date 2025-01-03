@@ -1,0 +1,6 @@
+choreo.NBodySyst.Write\_Descriptor
+==================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Write_Descriptor

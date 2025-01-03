@@ -1,0 +1,6 @@
+choreo.NBodySyst.InterSpaceRot
+==============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.InterSpaceRot

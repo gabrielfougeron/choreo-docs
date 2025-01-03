@@ -1,0 +1,6 @@
+choreo.NBodySyst.DescribeSystem
+===============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.DescribeSystem

@@ -1,0 +1,6 @@
+choreo.ActionSym.Random
+=======================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.Random

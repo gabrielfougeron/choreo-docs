@@ -1,0 +1,6 @@
+test\_action
+============
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_action

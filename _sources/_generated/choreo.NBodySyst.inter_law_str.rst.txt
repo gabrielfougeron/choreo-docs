@@ -1,0 +1,6 @@
+choreo.NBodySyst.inter\_law\_str
+================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.inter_law_str

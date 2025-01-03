@@ -32,10 +32,12 @@
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
@@ -58,6 +60,9 @@
     <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
     <script src="../../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
     <script src="../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
@@ -162,6 +167,13 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../theory.html">
+    Theory
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Gallery
@@ -172,13 +184,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../test-report/test-report.html">
     Tests
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../theory.html">
-    Theory
   </a>
 </li>
 
@@ -296,6 +301,13 @@
 </li>
 
 
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../theory.html">
+    Theory
+  </a>
+</li>
+
+
 <li class="nav-item current active">
   <a class="nav-link nav-internal" href="../index.html">
     Gallery
@@ -306,13 +318,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../test-report/test-report.html">
     Tests
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../theory.html">
-    Theory
   </a>
 </li>
 
@@ -406,12 +411,8 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../convergence/index.html">Convergence analysis of numerical methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../convergence/EFT_RungeKutta.html">Benchmark of Error-Free Transforms for ODE IVP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../convergence/ExplicitRungeKutta_ivp.html">Convergence analysis of explicit Runge-Kutta methods for ODE IVP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../convergence/ImplicitRungeKutta_ivp.html">Convergence analysis of implicit Runge-Kutta methods for ODE IVP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../convergence/Integration_on_segment.html">Convergence analysis of integration methods on segment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../convergence/SelectedRungeKutta.html">Convergence analysis of Runge-Kutta methods for ODE IVP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../convergence/TangentIntegrationvs_FD.html">Validation of tangent integration algorithms using Finite Differences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../convergence/scipyRungeKutta_ivp.html">Convergence analysis of scipy’s Runge-Kutta methods for ODE IVP</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Benchmarks</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -494,10 +495,10 @@ to download the full example code.</p>
     <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">np_sum</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a></a></a></a></a></a></a></a></a></a></a></a></a><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <a href="https://numpy.org/doc/stable/reference/generated/numpy.sum.html#numpy.sum" title="numpy.sum" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">m_fsum</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">m</span><span class="o">.</span><span class="n">fsum</span></a></a></a></a></a></a></a></a></a></a></a></a></a><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <a href="https://docs.python.org/3/library/math.html#math.fsum" title="math.fsum" class="sphx-glr-backref-module-math sphx-glr-backref-type-py-function"><span class="n">m</span><span class="o">.</span><span class="n">fsum</span></a><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">SumK_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">cython</span><span class="o">.</span><span class="n">eft_lib</span><span class="o">.</span><span class="n">SumK</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -519,7 +520,7 @@ to download the full example code.</p>
 </pre></div>
 </div>
 <img src="../../../_images/sphx_glr_EFTsum_bench_001.png" srcset="../../../_images/sphx_glr_EFTsum_bench_001.png" alt="Relative error for increasing conditionning" class = "sphx-glr-single-img"/><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prepare_x</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">x</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span></a></a></a></a></a></a></a></a></a></a></a></a></a><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">x</span> <span class="o">=</span> <a href="https://numpy.org/doc/stable/reference/random/generated/numpy.random.random.html#numpy.random.random" title="numpy.random.random" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span></a><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">x</span><span class="p">}</span>
 </pre></div>
 </div>

@@ -1,0 +1,6 @@
+choreo.NBodySyst.BodyGraph
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.BodyGraph

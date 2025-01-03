@@ -1,0 +1,6 @@
+choreo.NBodySyst.ChooseInterSegm
+================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.ChooseInterSegm

@@ -1,0 +1,6 @@
+choreo.NBodySyst.ALG\_Iint
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ALG_Iint

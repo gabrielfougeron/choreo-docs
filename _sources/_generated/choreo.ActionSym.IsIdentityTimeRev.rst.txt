@@ -1,0 +1,6 @@
+choreo.ActionSym.IsIdentityTimeRev
+==================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsIdentityTimeRev

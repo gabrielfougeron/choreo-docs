@@ -1,0 +1,6 @@
+choreo.NBodySyst.ChooseLoopGen
+==============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.ChooseLoopGen

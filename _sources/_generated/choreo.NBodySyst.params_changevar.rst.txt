@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_changevar
+==================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.params_changevar

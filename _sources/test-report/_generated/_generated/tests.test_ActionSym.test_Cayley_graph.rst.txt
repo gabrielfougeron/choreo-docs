@@ -1,0 +1,6 @@
+test\_Cayley\_graph
+===================
+
+.. currentmodule:: tests.test_ActionSym
+
+.. autofunction:: test_Cayley_graph

@@ -1,6 +1,0 @@
-choreo\_GUI.run.entrypoint\_GUI
-===============================
-
-.. currentmodule:: choreo_GUI.run
-
-.. autofunction:: entrypoint_GUI

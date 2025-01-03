@@ -1,0 +1,6 @@
+choreo.ActionSym.Conjugate
+==========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.Conjugate

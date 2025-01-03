@@ -1,0 +1,6 @@
+choreo.ActionSym.InvolutivePermutations
+=======================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.InvolutivePermutations

@@ -1,0 +1,6 @@
+choreo.NBodySyst.Homo\_exp
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.Homo_exp

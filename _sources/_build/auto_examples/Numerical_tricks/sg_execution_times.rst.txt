@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.396** total execution time for 1 file **from _build/auto_examples/Numerical_tricks**:
+**00:00.498** total execution time for 1 file **from _build/auto_examples/Numerical_tricks**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr__build_auto_examples_Numerical_tricks_FFT_sym.py` (``FFT_sym.py``)
-     - 00:00.396
+     - 00:00.498
      - 0.0

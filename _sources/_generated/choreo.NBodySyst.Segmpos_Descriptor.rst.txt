@@ -1,0 +1,6 @@
+choreo.NBodySyst.Segmpos\_Descriptor
+====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Segmpos_Descriptor

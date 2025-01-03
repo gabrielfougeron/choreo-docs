@@ -1,0 +1,6 @@
+choreo.NBodySyst.GatherInterSym
+===============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.GatherInterSym

@@ -1,0 +1,6 @@
+choreo.ActionSym.SurjectiveDirectSpaceRot
+=========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.SurjectiveDirectSpaceRot

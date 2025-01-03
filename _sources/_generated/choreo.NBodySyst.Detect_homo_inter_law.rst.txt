@@ -1,0 +1,6 @@
+choreo.NBodySyst.Detect\_homo\_inter\_law
+=========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Detect_homo_inter_law

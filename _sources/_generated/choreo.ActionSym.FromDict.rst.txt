@@ -1,0 +1,6 @@
+choreo.ActionSym.FromDict
+=========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.FromDict

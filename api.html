@@ -32,10 +32,12 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
@@ -58,6 +60,9 @@
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script src="_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
     <script src="_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
     <script src="_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
@@ -71,7 +76,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="choreo.NBodySyst" href="_generated/choreo.NBodySyst.html" />
-    <link rel="prev" title="Tests Windows Python 3.12" href="test-report/test-report-windows-latest-3.12.html" />
+    <link rel="prev" title="Tests Windows Python 3.13" href="test-report/test-report-windows-latest-3.13.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="main" />
@@ -400,18 +405,213 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">N-body system</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="_generated/choreo.NBodySyst.html">choreo.NBodySyst</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_generated/choreo.ActionSym.html">choreo.ActionSym</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/choreo.NBodySyst.html">choreo.NBodySyst</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.AssertAllBodyConstraintAreRespected.html">choreo.NBodySyst.AssertAllBodyConstraintAreRespected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.AssertAllSegmGenConstraintsAreRespected.html">choreo.NBodySyst.AssertAllSegmGenConstraintsAreRespected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BuildSegmGraph.html">choreo.NBodySyst.BuildSegmGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ChooseInterSegm.html">choreo.NBodySyst.ChooseInterSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ChooseLoopGen.html">choreo.NBodySyst.ChooseLoopGen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ComputeCenterOfMass.html">choreo.NBodySyst.ComputeCenterOfMass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ComputeSymDefault.html">choreo.NBodySyst.ComputeSymDefault</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces.html">choreo.NBodySyst.Compute_forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces_nosym.html">choreo.NBodySyst.Compute_forces_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces_vectorized.html">choreo.NBodySyst.Compute_forces_vectorized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces_vectorized_nosym.html">choreo.NBodySyst.Compute_forces_vectorized_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_init_pos_mom.html">choreo.NBodySyst.Compute_init_pos_mom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_n_sub_fft.html">choreo.NBodySyst.Compute_n_sub_fft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_periodicity_default.html">choreo.NBodySyst.Compute_periodicity_default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_velocities.html">choreo.NBodySyst.Compute_velocities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_velocities_vectorized.html">choreo.NBodySyst.Compute_velocities_vectorized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ConfigureShortcutSym.html">choreo.NBodySyst.ConfigureShortcutSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.DescribeSystem.html">choreo.NBodySyst.DescribeSystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.DetectEscape.html">choreo.NBodySyst.DetectEscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.DetectLoops.html">choreo.NBodySyst.DetectLoops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.DetectSegmRequiresDisp.html">choreo.NBodySyst.DetectSegmRequiresDisp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.DetectXlim.html">choreo.NBodySyst.DetectXlim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Detect_homo_inter_law.html">choreo.NBodySyst.Detect_homo_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.FromDict.html">choreo.NBodySyst.FromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.FromSolutionFile.html">choreo.NBodySyst.FromSolutionFile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.GatherInterSym.html">choreo.NBodySyst.GatherInterSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.GetFullAABB.html">choreo.NBodySyst.GetFullAABB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.GetKrylovJacobian.html">choreo.NBodySyst.GetKrylovJacobian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Get_ODE_def.html">choreo.NBodySyst.Get_ODE_def</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Get_segmpos_minmax.html">choreo.NBodySyst.Get_segmpos_minmax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Init_to_dict.html">choreo.NBodySyst.Init_to_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Make_params_bounds.html">choreo.NBodySyst.Make_params_bounds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PlotTimeBodyGraph.html">choreo.NBodySyst.PlotTimeBodyGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Segmpos_Descriptor.html">choreo.NBodySyst.Segmpos_Descriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Set_inter_law.html">choreo.NBodySyst.Set_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.TT_params_to_action_grad.html">choreo.NBodySyst.TT_params_to_action_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.TestActionSame.html">choreo.NBodySyst.TestActionSame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.TestHashSame.html">choreo.NBodySyst.TestHashSame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Update_ODE_params.html">choreo.NBodySyst.Update_ODE_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Validate_inter_law.html">choreo.NBodySyst.Validate_inter_law</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Write_Descriptor.html">choreo.NBodySyst.Write_Descriptor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.__init__.html">choreo.NBodySyst.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_coeffs_dense_to_params_noopt.html">choreo.NBodySyst.all_coeffs_dense_to_params_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_coeffs_pos_to_vel_inplace.html">choreo.NBodySyst.all_coeffs_pos_to_vel_inplace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_coeffs_to_kin_nrg.html">choreo.NBodySyst.all_coeffs_to_kin_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_coeffs_to_kin_nrg_grad.html">choreo.NBodySyst.all_coeffs_to_kin_nrg_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_coeffs_to_params_noopt.html">choreo.NBodySyst.all_coeffs_to_params_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_pos_to_all_body_pos_noopt.html">choreo.NBodySyst.all_pos_to_all_body_pos_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.all_to_segm_noopt.html">choreo.NBodySyst.all_to_segm_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.allocate_owned_memory.html">choreo.NBodySyst.allocate_owned_memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.co_in.html">choreo.NBodySyst.co_in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.free_owned_memory.html">choreo.NBodySyst.free_owned_memory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nnz_k.html">choreo.NBodySyst.nnz_k</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_basis_pos.html">choreo.NBodySyst.params_basis_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_basis_vel.html">choreo.NBodySyst.params_basis_vel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_changevar.html">choreo.NBodySyst.params_changevar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_resize.html">choreo.NBodySyst.params_resize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_action.html">choreo.NBodySyst.params_to_action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_action_grad.html">choreo.NBodySyst.params_to_action_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_action_hess.html">choreo.NBodySyst.params_to_action_hess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_all_coeffs_dense_noopt.html">choreo.NBodySyst.params_to_all_coeffs_dense_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_all_coeffs_noopt.html">choreo.NBodySyst.params_to_all_coeffs_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_kin_nrg.html">choreo.NBodySyst.params_to_kin_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_kin_nrg_grad.html">choreo.NBodySyst.params_to_kin_nrg_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_pot_nrg.html">choreo.NBodySyst.params_to_pot_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_pot_nrg_grad.html">choreo.NBodySyst.params_to_pot_nrg_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_pot_nrg_hess.html">choreo.NBodySyst.params_to_pot_nrg_hess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_segmpos.html">choreo.NBodySyst.params_to_segmpos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_to_segmvel.html">choreo.NBodySyst.params_to_segmvel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.plot_segmpos_2D.html">choreo.NBodySyst.plot_segmpos_2D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.pos_slice.html">choreo.NBodySyst.pos_slice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segm_to_path_stats.html">choreo.NBodySyst.segm_to_path_stats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_dparams_to_action_hess.html">choreo.NBodySyst.segmpos_dparams_to_action_hess</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_params_to_action.html">choreo.NBodySyst.segmpos_params_to_action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_params_to_action_grad.html">choreo.NBodySyst.segmpos_params_to_action_grad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_to_all_noopt.html">choreo.NBodySyst.segmpos_to_all_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_to_allbody_noopt.html">choreo.NBodySyst.segmpos_to_allbody_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_to_hash.html">choreo.NBodySyst.segmpos_to_hash</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_to_params.html">choreo.NBodySyst.segmpos_to_params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segmpos_to_params_T.html">choreo.NBodySyst.segmpos_to_params_T</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ALG_Iint.html">choreo.NBodySyst.ALG_Iint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ALG_SpaceRot.html">choreo.NBodySyst.ALG_SpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ALG_TimeRev.html">choreo.NBodySyst.ALG_TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BinProdChargeSum.html">choreo.NBodySyst.BinProdChargeSum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BinSourceSegm.html">choreo.NBodySyst.BinSourceSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BinSpaceRot.html">choreo.NBodySyst.BinSpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BinSpaceRotIsId.html">choreo.NBodySyst.BinSpaceRotIsId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BinTargetSegm.html">choreo.NBodySyst.BinTargetSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.BodyGraph.html">choreo.NBodySyst.BodyGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ForceGeneralSym.html">choreo.NBodySyst.ForceGeneralSym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ForceGreaterNStore.html">choreo.NBodySyst.ForceGreaterNStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.GreaterNStore.html">choreo.NBodySyst.GreaterNStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Hash_exp.html">choreo.NBodySyst.Hash_exp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Homo_exp.html">choreo.NBodySyst.Homo_exp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Homo_unit.html">choreo.NBodySyst.Homo_unit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.InitValPosBasis.html">choreo.NBodySyst.InitValPosBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.InitValVelBasis.html">choreo.NBodySyst.InitValVelBasis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.InterSpaceRot.html">choreo.NBodySyst.InterSpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.InterSpaceRotIsId.html">choreo.NBodySyst.InterSpaceRotIsId</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.InterTimeRev.html">choreo.NBodySyst.InterTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.LawIsHomo.html">choreo.NBodySyst.LawIsHomo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.LoopGenConstraints.html">choreo.NBodySyst.LoopGenConstraints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ParamBasisShortcutPos.html">choreo.NBodySyst.ParamBasisShortcutPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ParamBasisShortcutVel.html">choreo.NBodySyst.ParamBasisShortcutVel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_Isegm.html">choreo.NBodySyst.PerDef_Isegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_SpaceRotPos.html">choreo.NBodySyst.PerDef_SpaceRotPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_SpaceRotVel.html">choreo.NBodySyst.PerDef_SpaceRotVel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_TimeRev.html">choreo.NBodySyst.PerDef_TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.RequiresGreaterNStore.html">choreo.NBodySyst.RequiresGreaterNStore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.SegmGraph.html">choreo.NBodySyst.SegmGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.SegmRequiresDisp.html">choreo.NBodySyst.SegmRequiresDisp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Sym_list.html">choreo.NBodySyst.Sym_list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Targets.html">choreo.NBodySyst.Targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.bodyloop.html">choreo.NBodySyst.bodyloop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.bodysegm.html">choreo.NBodySyst.bodysegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.fft_backend.html">choreo.NBodySyst.fft_backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.fftw_nthreads.html">choreo.NBodySyst.fftw_nthreads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.fftw_planner_effort.html">choreo.NBodySyst.fftw_planner_effort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.fftw_wisdom_only.html">choreo.NBodySyst.fftw_wisdom_only</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.gensegm_loop_start.html">choreo.NBodySyst.gensegm_loop_start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.gensegm_to_all.html">choreo.NBodySyst.gensegm_to_all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.gensegm_to_body.html">choreo.NBodySyst.gensegm_to_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.gensegm_to_iint.html">choreo.NBodySyst.gensegm_to_iint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.gensegm_to_iintrel.html">choreo.NBodySyst.gensegm_to_iintrel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.geodim.html">choreo.NBodySyst.geodim</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ifft_shapes.html">choreo.NBodySyst.ifft_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.inter_law_param_dict.html">choreo.NBodySyst.inter_law_param_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.inter_law_str.html">choreo.NBodySyst.inter_law_str</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.intersegm_to_all.html">choreo.NBodySyst.intersegm_to_all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.intersegm_to_body.html">choreo.NBodySyst.intersegm_to_body</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.intersegm_to_iint.html">choreo.NBodySyst.intersegm_to_iint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.loopcharge.html">choreo.NBodySyst.loopcharge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.loopgen.html">choreo.NBodySyst.loopgen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.loopmass.html">choreo.NBodySyst.loopmass</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.loopnb.html">choreo.NBodySyst.loopnb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.n_sub_fft.html">choreo.NBodySyst.n_sub_fft</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nbin_segm_tot.html">choreo.NBodySyst.nbin_segm_tot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nbin_segm_unique.html">choreo.NBodySyst.nbin_segm_unique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nbody.html">choreo.NBodySyst.nbody</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ncoeff_min_loop.html">choreo.NBodySyst.ncoeff_min_loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ncoeffs.html">choreo.NBodySyst.ncoeffs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ngensegm_loop.html">choreo.NBodySyst.ngensegm_loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nint.html">choreo.NBodySyst.nint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nint_fac.html">choreo.NBodySyst.nint_fac</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nint_min.html">choreo.NBodySyst.nint_min</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nloop.html">choreo.NBodySyst.nloop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nparams.html">choreo.NBodySyst.nparams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nparams_incl_o.html">choreo.NBodySyst.nparams_incl_o</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nrem.html">choreo.NBodySyst.nrem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.nsegm.html">choreo.NBodySyst.nsegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_shapes.html">choreo.NBodySyst.params_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.params_shifts.html">choreo.NBodySyst.params_shifts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.pos_slice_shapes.html">choreo.NBodySyst.pos_slice_shapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segm_size.html">choreo.NBodySyst.segm_size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.segm_store.html">choreo.NBodySyst.segm_store</a></li>
+</ul>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="_generated/choreo.run.entrypoint_CLI_search.html">choreo.run.entrypoint_CLI_search</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/choreo.ActionSym.html">choreo.ActionSym</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.ApplyT.html">choreo.ActionSym.ApplyT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.ApplyTInv.html">choreo.ActionSym.ApplyTInv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.ApplyTInvSegm.html">choreo.ActionSym.ApplyTInvSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.ApplyTSegm.html">choreo.ActionSym.ApplyTSegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.BuildCayleyGraph.html">choreo.ActionSym.BuildCayleyGraph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.Compose.html">choreo.ActionSym.Compose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.Conjugate.html">choreo.ActionSym.Conjugate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.FromDict.html">choreo.ActionSym.FromDict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.Identity.html">choreo.ActionSym.Identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.Inverse.html">choreo.ActionSym.Inverse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.InvolutivePermutations.html">choreo.ActionSym.InvolutivePermutations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentity.html">choreo.ActionSym.IsIdentity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityPerm.html">choreo.ActionSym.IsIdentityPerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityPermAndRot.html">choreo.ActionSym.IsIdentityPermAndRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityPermAndRotAndTimeRev.html">choreo.ActionSym.IsIdentityPermAndRotAndTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityRot.html">choreo.ActionSym.IsIdentityRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityRotAndTime.html">choreo.ActionSym.IsIdentityRotAndTime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityRotAndTimeRev.html">choreo.ActionSym.IsIdentityRotAndTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityTimeRev.html">choreo.ActionSym.IsIdentityTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsIdentityTimeShift.html">choreo.ActionSym.IsIdentityTimeShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSame.html">choreo.ActionSym.IsSame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSamePerm.html">choreo.ActionSym.IsSamePerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSameRot.html">choreo.ActionSym.IsSameRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSameRotAndTime.html">choreo.ActionSym.IsSameRotAndTime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSameRotAndTimeRev.html">choreo.ActionSym.IsSameRotAndTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSameTimeRev.html">choreo.ActionSym.IsSameTimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsSameTimeShift.html">choreo.ActionSym.IsSameTimeShift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.IsWellFormed.html">choreo.ActionSym.IsWellFormed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.Random.html">choreo.ActionSym.Random</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.SurjectiveDirectSpaceRot.html">choreo.ActionSym.SurjectiveDirectSpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TimeDerivative.html">choreo.ActionSym.TimeDerivative</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TimeShifts.html">choreo.ActionSym.TimeShifts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TransformPos.html">choreo.ActionSym.TransformPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TransformSegment.html">choreo.ActionSym.TransformSegment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.__init__.html">choreo.ActionSym.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.to_dict.html">choreo.ActionSym.to_dict</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.BodyPerm.html">choreo.ActionSym.BodyPerm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.SpaceRot.html">choreo.ActionSym.SpaceRot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TimeRev.html">choreo.ActionSym.TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TimeShiftDen.html">choreo.ActionSym.TimeShiftDen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.ActionSym.TimeShiftNum.html">choreo.ActionSym.TimeShiftNum</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Symmetries</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="_generated/choreo_GUI.run.entrypoint_GUI.html">choreo_GUI.run.entrypoint_GUI</a></li>
+</details></li>
 </ul>
 </div>
 </nav></div>
@@ -464,20 +664,38 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="module-choreo">
-<span id="api"></span><h1>API<a class="headerlink" href="#module-choreo" title="Link to this heading">#</a></h1>
+  <section id="api">
+<h1>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Even though the performance critical sections of <a class="reference internal" href="#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a> are coded in <a class="reference external" href="https://cython.org/">Cython</a>, the actual underlying C types only appear in this API documentation as part of function prototypes. The rest of the API documentation uses <a class="reference external" href="https://www.python.org/">Python</a> types as expected from a user interacting with the code. This follows <a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#automatic-type-conversions">Cython’s automatic type conversions</a> and uses <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> in lieu of <a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/memoryviews.html">Cython typed memoryviews</a>.</p>
+<p>The following modules classes are concerned:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="_generated/choreo.ActionSym.html#choreo.ActionSym" title="choreo.ActionSym"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.ActionSym</span></code></a></p></li>
+<li><p><a class="reference internal" href="_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.NBodySyst</span></code></a></p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo.scipy_plus.ODE</span></code></p></li>
+</ul>
+</div>
 <section id="choreo">
-<h2>choreo<a class="headerlink" href="#choreo" title="Link to this heading">#</a></h2>
+<span id="module-choreo"></span><h2>choreo<a class="headerlink" href="#choreo" title="Link to this heading">#</a></h2>
 </section>
-<section id="defining-symmetries">
-<h2>Defining Symmetries<a class="headerlink" href="#defining-symmetries" title="Link to this heading">#</a></h2>
+<section id="systems-of-interacting-point-masses">
+<h2>Systems of interacting point masses<a class="headerlink" href="#systems-of-interacting-point-masses" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-obj docutils literal notranslate"><span class="pre">NBodySyst</span></code></a></p></td>
 <td><p>This class defines a N-body system</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/choreo.ActionSym.html#choreo.ActionSym" title="choreo.ActionSym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionSym</span></code></a></p></td>
-<td><p>This class defines the symmetries of the action.</p></td>
+</tbody>
+</table>
+</div>
+</section>
+<section id="defining-symmetries">
+<h2>Defining Symmetries<a class="headerlink" href="#defining-symmetries" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo.ActionSym.html#choreo.ActionSym" title="choreo.ActionSym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionSym</span></code></a></p></td>
+<td><p>This class defines the symmetries in a N-body system.</p></td>
 </tr>
 </tbody>
 </table>
@@ -485,25 +703,44 @@
 </section>
 <section id="entrypoints">
 <h2>Entrypoints<a class="headerlink" href="#entrypoints" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo.run.entrypoint_CLI_search.html#choreo.run.entrypoint_CLI_search" title="choreo.run.entrypoint_CLI_search"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run.entrypoint_CLI_search</span></code></a></p></td>
-<td><p>Search in CLI</p></td>
-</tr>
-</tbody>
-</table>
+<section id="choreo-cli-search">
+<h3>choreo_CLI_search<a class="headerlink" href="#choreo-cli-search" title="Link to this heading">#</a></h3>
+<p>Searches periodic solutions to the N-body problem as defined in <a class="reference internal" href="#module-choreo_GUI" title="choreo_GUI"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo_GUI</span></code></a></p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: choreo_CLI_search [-h] [-f]</span>
+</pre></div>
 </div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-choreo_CLI_search-h">
+<span id="cmdoption-choreo_CLI_search-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-choreo_CLI_search-h" title="Link to this definition">#</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-choreo_CLI_search-f">
+<span id="cmdoption-choreo_CLI_search-foldername"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;workspace_folder&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--foldername</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;workspace_folder&gt;</span></span><a class="headerlink" href="#cmdoption-choreo_CLI_search-f" title="Link to this definition">#</a></dt>
+<dd><p>Workspace folder as defined in the GUI. Defaults to the current directory.</p>
+</dd></dl>
+
+</section>
 </section>
 <section id="choreo-gui">
 <span id="module-choreo_GUI"></span><h2>choreo_GUI<a class="headerlink" href="#choreo-gui" title="Link to this heading">#</a></h2>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo_GUI.run.entrypoint_GUI.html#choreo_GUI.run.entrypoint_GUI" title="choreo_GUI.run.entrypoint_GUI"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run.entrypoint_GUI</span></code></a></p></td>
-<td><p>Launches the GUI server.</p></td>
-</tr>
-</tbody>
-</table>
+<p>Launches choreo GUI</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: choreo_GUI [-h] [-f]</span>
+</pre></div>
 </div>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-choreo_GUI-h">
+<span id="cmdoption-choreo_GUI-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-choreo_GUI-h" title="Link to this definition">#</a></dt>
+<dd><p>show this help message and exit</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-choreo_GUI-f">
+<span id="cmdoption-choreo_GUI-foldername"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;gallery_root&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--foldername</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;gallery_root&gt;</span></span><a class="headerlink" href="#cmdoption-choreo_GUI-f" title="Link to this definition">#</a></dt>
+<dd><p>Gallery root.</p>
+</dd></dl>
+
 </section>
 </section>
 
@@ -531,8 +768,12 @@
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo">choreo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-of-interacting-point-masses">Systems of interacting point masses</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-symmetries">Defining Symmetries</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrypoints">Entrypoints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrypoints">Entrypoints</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo-cli-search">choreo_CLI_search</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo-gui">choreo_GUI</a></li>
 </ul>
   </nav></div>

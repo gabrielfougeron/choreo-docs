@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_to\_kin\_nrg\_grad
+===========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.params_to_kin_nrg_grad

@@ -1,0 +1,6 @@
+test\_rotation\_generation
+==========================
+
+.. currentmodule:: tests.test_ActionSym
+
+.. autofunction:: test_rotation_generation

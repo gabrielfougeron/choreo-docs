@@ -1,0 +1,6 @@
+choreo.NBodySyst.bodysegm
+=========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.bodysegm

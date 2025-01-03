@@ -1,0 +1,6 @@
+test\_periodicity\_default
+==========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_periodicity_default

@@ -1,0 +1,6 @@
+choreo.NBodySyst.loopcharge
+===========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.loopcharge

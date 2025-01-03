@@ -1,0 +1,6 @@
+choreo.ActionSym.SpaceRot
+=========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: ActionSym.SpaceRot

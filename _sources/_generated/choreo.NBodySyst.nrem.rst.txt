@@ -1,0 +1,6 @@
+choreo.NBodySyst.nrem
+=====================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.nrem

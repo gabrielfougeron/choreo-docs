@@ -1,0 +1,6 @@
+choreo.NBodySyst.all\_to\_segm\_noopt
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.all_to_segm_noopt

@@ -1,0 +1,6 @@
+choreo.NBodySyst.LoopGenConstraints
+===================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.LoopGenConstraints

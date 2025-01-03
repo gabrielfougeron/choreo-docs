@@ -1,0 +1,6 @@
+choreo.ActionSym.IsIdentityPermAndRot
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsIdentityPermAndRot

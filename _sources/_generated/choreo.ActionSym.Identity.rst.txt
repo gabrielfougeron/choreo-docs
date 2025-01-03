@@ -1,0 +1,6 @@
+choreo.ActionSym.Identity
+=========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.Identity

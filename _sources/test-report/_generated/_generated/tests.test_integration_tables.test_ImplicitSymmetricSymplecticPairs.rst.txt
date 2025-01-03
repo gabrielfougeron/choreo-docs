@@ -1,0 +1,6 @@
+test\_ImplicitSymmetricSymplecticPairs
+======================================
+
+.. currentmodule:: tests.test_integration_tables
+
+.. autofunction:: test_ImplicitSymmetricSymplecticPairs

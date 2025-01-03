@@ -1,0 +1,6 @@
+choreo.NBodySyst.segm\_to\_path\_stats
+======================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.segm_to_path_stats

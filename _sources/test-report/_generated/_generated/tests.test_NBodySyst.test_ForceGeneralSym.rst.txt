@@ -1,0 +1,6 @@
+test\_ForceGeneralSym
+=====================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_ForceGeneralSym

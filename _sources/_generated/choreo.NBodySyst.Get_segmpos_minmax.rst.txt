@@ -1,0 +1,6 @@
+choreo.NBodySyst.Get\_segmpos\_minmax
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Get_segmpos_minmax

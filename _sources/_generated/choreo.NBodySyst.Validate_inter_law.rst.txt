@@ -1,0 +1,6 @@
+choreo.NBodySyst.Validate\_inter\_law
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Validate_inter_law

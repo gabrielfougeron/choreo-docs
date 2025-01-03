@@ -1,0 +1,6 @@
+choreo.NBodySyst.nint\_min
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.nint_min

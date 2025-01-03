@@ -1,0 +1,6 @@
+choreo.NBodySyst.fft\_backend
+=============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.fft_backend

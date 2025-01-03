@@ -1,0 +1,6 @@
+choreo.ActionSym.IsSameTimeShift
+================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsSameTimeShift

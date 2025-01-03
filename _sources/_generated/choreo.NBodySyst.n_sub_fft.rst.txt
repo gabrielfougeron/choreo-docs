@@ -1,0 +1,6 @@
+choreo.NBodySyst.n\_sub\_fft
+============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.n_sub_fft

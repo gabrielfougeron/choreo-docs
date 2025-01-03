@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_velocities\_vectorized
+================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_velocities_vectorized

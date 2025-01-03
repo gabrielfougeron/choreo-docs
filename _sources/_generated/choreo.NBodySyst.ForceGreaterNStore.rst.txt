@@ -1,0 +1,6 @@
+choreo.NBodySyst.ForceGreaterNStore
+===================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ForceGreaterNStore

@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_shifts
+===============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.params_shifts

@@ -1,0 +1,6 @@
+test\_custom\_inter\_law
+========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_custom_inter_law

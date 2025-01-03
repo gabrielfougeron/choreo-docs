@@ -1,0 +1,6 @@
+choreo.ActionSym.Inverse
+========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.Inverse

@@ -1,0 +1,6 @@
+choreo.ActionSym.TimeShiftDen
+=============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: ActionSym.TimeShiftDen

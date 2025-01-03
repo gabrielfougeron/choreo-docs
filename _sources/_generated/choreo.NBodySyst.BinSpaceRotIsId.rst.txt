@@ -1,0 +1,6 @@
+choreo.NBodySyst.BinSpaceRotIsId
+================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.BinSpaceRotIsId

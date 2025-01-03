@@ -1,0 +1,6 @@
+choreo.ActionSym.to\_dict
+=========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.to_dict

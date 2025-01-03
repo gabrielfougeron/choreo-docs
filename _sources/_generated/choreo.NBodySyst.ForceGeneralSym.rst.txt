@@ -1,0 +1,6 @@
+choreo.NBodySyst.ForceGeneralSym
+================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ForceGeneralSym

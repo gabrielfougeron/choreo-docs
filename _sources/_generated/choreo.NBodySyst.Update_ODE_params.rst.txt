@@ -1,0 +1,6 @@
+choreo.NBodySyst.Update\_ODE\_params
+====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Update_ODE_params

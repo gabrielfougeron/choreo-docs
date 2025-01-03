@@ -1,0 +1,4 @@
+test\_scipy\_plus\_linalg
+=========================
+
+.. automodule:: tests.test_scipy_plus_linalg

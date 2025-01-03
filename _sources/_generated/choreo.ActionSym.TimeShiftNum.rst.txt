@@ -1,0 +1,6 @@
+choreo.ActionSym.TimeShiftNum
+=============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: ActionSym.TimeShiftNum

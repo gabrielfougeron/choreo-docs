@@ -1,0 +1,6 @@
+choreo.ActionSym.Compose
+========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.Compose

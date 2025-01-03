@@ -1,0 +1,6 @@
+test\_action\_indep\_resize
+===========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_action_indep_resize

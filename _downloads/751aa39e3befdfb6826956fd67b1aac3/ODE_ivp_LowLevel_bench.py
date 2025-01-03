@@ -48,7 +48,6 @@ basename_timings_filename = 'ODE_ivp_lowlevel_bench'
 # ForceBenchmark = True
 ForceBenchmark = False
 
-
 ndim_mul = choreo.scipy_plus.cython.test.mul_size_py
 
 t_span = (0., 1.)

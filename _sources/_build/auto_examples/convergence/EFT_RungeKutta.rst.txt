@@ -63,7 +63,7 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
 
 The following plots give the measured relative error as a function of the number of quadrature subintervals
 
-.. GENERATED FROM PYTHON SOURCE LINES 104-143
+.. GENERATED FROM PYTHON SOURCE LINES 104-142
 
 .. code-block:: Python
 
@@ -102,10 +102,9 @@ The following plots give the measured relative error as a function of the number
         show = True                             ,
         plot_ylim = plot_ylim                   ,
         plot_intent = plot_intent               ,
-        title = f'Relative error on integrand'  ,
+        title = 'Relative error on integrand'   ,
     )
     
-
 
 
 
@@ -118,48 +117,9 @@ The following plots give the measured relative error as a function of the number
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 144-145
+.. GENERATED FROM PYTHON SOURCE LINES 143-143
 
-Error as a function of running time
-
-.. GENERATED FROM PYTHON SOURCE LINES 145-168
-
-.. code-block:: Python
-
-
-    bench_filename = os.path.join(bench_folder, basename_bench_filename+'_timings.npz')
-
-    all_timings = pyquickbench.run_benchmark(
-        all_args                        ,
-        all_funs                        ,  
-        setup = setup                   ,
-        filename = bench_filename       ,
-        ForceBenchmark = ForceBenchmark ,
-    )
-
-    pyquickbench.plot_benchmark(
-        all_errors                  ,
-        all_args                    ,
-        all_funs                    ,
-        all_xvalues = all_timings   ,
-        show = True                 ,
-        plot_ylim = plot_ylim       ,
-        plot_intent = plot_intent   ,
-        xlabel = 'Time (s)'         ,
-        ylabel = 'Relative error'   ,
-    )
-
-
-
-
-.. image-sg:: /_build/auto_examples/convergence/images/sphx_glr_EFT_RungeKutta_002.png
-   :alt: eq_name : y'' = -y, eq_name : y'' = - exp(y), eq_name : y'' = xy, eq_name : y' = Az; z' = By
-   :srcset: /_build/auto_examples/convergence/images/sphx_glr_EFT_RungeKutta_002.png
-   :class: sphx-glr-single-img
-
-
-
-
+TODO: Add interpretative blabla
 
 
 .. _sphx_glr_download__build_auto_examples_convergence_EFT_RungeKutta.py:

@@ -1,0 +1,6 @@
+choreo.NBodySyst.AssertAllSegmGenConstraintsAreRespected
+========================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.AssertAllSegmGenConstraintsAreRespected

@@ -1,0 +1,6 @@
+choreo.NBodySyst.ComputeCenterOfMass
+====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.ComputeCenterOfMass

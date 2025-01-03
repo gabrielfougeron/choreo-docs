@@ -6,12 +6,19 @@ choreo.NBodySyst
 .. autoclass:: NBodySyst
 
    
+
+   .. rubric:: Class Constructor
    .. automethod:: __init__
+      :no-index:
 
    
-   .. rubric:: Methods
+   .. rubric:: Methods Summary
 
    .. autosummary::
+    :nosignatures:
+    :recursive:
+    :toctree:
+
    
       ~NBodySyst.AssertAllBodyConstraintAreRespected
       ~NBodySyst.AssertAllSegmGenConstraintsAreRespected
@@ -101,6 +108,7 @@ choreo.NBodySyst
    .. rubric:: Attributes
 
    .. autosummary::
+    :toctree:
    
       ~NBodySyst.ALG_Iint
       ~NBodySyst.ALG_SpaceRot

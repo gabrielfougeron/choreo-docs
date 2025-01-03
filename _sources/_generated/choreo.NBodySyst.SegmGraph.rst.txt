@@ -1,0 +1,6 @@
+choreo.NBodySyst.SegmGraph
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.SegmGraph

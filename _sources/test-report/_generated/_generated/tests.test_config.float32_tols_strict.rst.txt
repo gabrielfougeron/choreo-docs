@@ -1,0 +1,6 @@
+float32\_tols\_strict
+=====================
+
+.. currentmodule:: tests.test_config
+
+.. autofunction:: float32_tols_strict

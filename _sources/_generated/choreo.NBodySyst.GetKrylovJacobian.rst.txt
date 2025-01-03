@@ -1,0 +1,6 @@
+choreo.NBodySyst.GetKrylovJacobian
+==================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.GetKrylovJacobian

@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_shapes
+===============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.params_shapes

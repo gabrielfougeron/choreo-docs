@@ -1,0 +1,6 @@
+choreo.NBodySyst.plot\_segmpos\_2D
+==================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.plot_segmpos_2D

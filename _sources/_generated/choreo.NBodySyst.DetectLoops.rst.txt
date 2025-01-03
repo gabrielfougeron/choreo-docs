@@ -1,0 +1,6 @@
+choreo.NBodySyst.DetectLoops
+============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.DetectLoops

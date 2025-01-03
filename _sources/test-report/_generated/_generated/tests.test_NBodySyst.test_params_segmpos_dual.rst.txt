@@ -1,0 +1,6 @@
+test\_params\_segmpos\_dual
+===========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_params_segmpos_dual

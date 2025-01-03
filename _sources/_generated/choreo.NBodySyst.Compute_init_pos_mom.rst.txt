@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_init\_pos\_mom
+========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_init_pos_mom

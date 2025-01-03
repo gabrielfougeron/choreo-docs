@@ -1,0 +1,4 @@
+test\_ActionSym
+===============
+
+.. automodule:: tests.test_ActionSym

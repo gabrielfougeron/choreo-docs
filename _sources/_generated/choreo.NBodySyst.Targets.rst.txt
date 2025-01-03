@@ -1,0 +1,6 @@
+choreo.NBodySyst.Targets
+========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.Targets

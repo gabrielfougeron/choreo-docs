@@ -1,0 +1,6 @@
+choreo.NBodySyst.segm\_store
+============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.segm_store

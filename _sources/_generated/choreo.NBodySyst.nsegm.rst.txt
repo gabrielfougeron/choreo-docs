@@ -1,0 +1,6 @@
+choreo.NBodySyst.nsegm
+======================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.nsegm

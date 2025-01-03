@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_resize
+===============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.params_resize

@@ -1,0 +1,6 @@
+choreo.ActionSym.IsSame
+=======================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsSame

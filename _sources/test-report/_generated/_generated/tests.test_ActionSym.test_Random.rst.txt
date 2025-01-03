@@ -1,0 +1,6 @@
+test\_Random
+============
+
+.. currentmodule:: tests.test_ActionSym
+
+.. autofunction:: test_Random

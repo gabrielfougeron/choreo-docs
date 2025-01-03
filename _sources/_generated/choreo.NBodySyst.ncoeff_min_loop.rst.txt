@@ -1,0 +1,6 @@
+choreo.NBodySyst.ncoeff\_min\_loop
+==================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ncoeff_min_loop

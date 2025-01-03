@@ -1,0 +1,6 @@
+choreo.NBodySyst.BinProdChargeSum
+=================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.BinProdChargeSum

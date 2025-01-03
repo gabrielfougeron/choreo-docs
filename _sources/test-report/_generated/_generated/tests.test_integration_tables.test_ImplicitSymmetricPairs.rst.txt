@@ -1,0 +1,6 @@
+test\_ImplicitSymmetricPairs
+============================
+
+.. currentmodule:: tests.test_integration_tables
+
+.. autofunction:: test_ImplicitSymmetricPairs

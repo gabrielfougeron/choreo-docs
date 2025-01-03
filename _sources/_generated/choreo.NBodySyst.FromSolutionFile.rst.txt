@@ -1,0 +1,6 @@
+choreo.NBodySyst.FromSolutionFile
+=================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.FromSolutionFile

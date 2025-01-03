@@ -1,0 +1,6 @@
+choreo.ActionSym.ApplyT
+=======================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.ApplyT

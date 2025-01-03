@@ -1,0 +1,6 @@
+choreo.NBodySyst.all\_pos\_to\_all\_body\_pos\_noopt
+====================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.all_pos_to_all_body_pos_noopt

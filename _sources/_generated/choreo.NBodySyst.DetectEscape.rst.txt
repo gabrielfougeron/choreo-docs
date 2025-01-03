@@ -1,0 +1,6 @@
+choreo.NBodySyst.DetectEscape
+=============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.DetectEscape

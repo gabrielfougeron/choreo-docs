@@ -1,0 +1,6 @@
+choreo.NBodySyst.nnz\_k
+=======================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.nnz_k

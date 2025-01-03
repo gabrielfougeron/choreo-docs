@@ -1,0 +1,6 @@
+test\_pot
+=========
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_pot

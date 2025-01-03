@@ -1,0 +1,6 @@
+choreo.NBodySyst.nbody
+======================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.nbody

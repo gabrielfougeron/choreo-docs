@@ -1,0 +1,6 @@
+test\_all\_vel\_to\_segmvel
+===========================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_all_vel_to_segmvel

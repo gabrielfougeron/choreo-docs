@@ -1,0 +1,6 @@
+choreo.NBodySyst.Set\_inter\_law
+================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Set_inter_law

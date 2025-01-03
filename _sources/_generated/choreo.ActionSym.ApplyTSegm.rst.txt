@@ -1,0 +1,6 @@
+choreo.ActionSym.ApplyTSegm
+===========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.ApplyTSegm

@@ -1,0 +1,6 @@
+choreo.NBodySyst.all\_coeffs\_to\_kin\_nrg
+==========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.all_coeffs_to_kin_nrg

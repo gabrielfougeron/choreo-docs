@@ -1,0 +1,6 @@
+test\_capture\_co
+=================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_capture_co

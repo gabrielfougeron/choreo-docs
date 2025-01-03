@@ -1,0 +1,6 @@
+choreo.ActionSym.IsIdentityTimeShift
+====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsIdentityTimeShift

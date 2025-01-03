@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**01:25.357** total execution time for 7 files **from _build/auto_examples/convergence**:
+**00:05.930** total execution time for 3 files **from _build/auto_examples/convergence**:
 
 .. container::
 
@@ -32,24 +32,12 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr__build_auto_examples_convergence_ExplicitRungeKutta_ivp.py` (``ExplicitRungeKutta_ivp.py``)
-     - 01:13.053
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_convergence_TangentIntegrationvs_FD.py` (``TangentIntegrationvs_FD.py``)
-     - 00:02.466
-     - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_SelectedRungeKutta.py` (``SelectedRungeKutta.py``)
-     - 00:02.334
+     - 00:02.935
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_EFT_RungeKutta.py` (``EFT_RungeKutta.py``)
-     - 00:02.255
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_convergence_ImplicitRungeKutta_ivp.py` (``ImplicitRungeKutta_ivp.py``)
-     - 00:02.107
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_convergence_scipyRungeKutta_ivp.py` (``scipyRungeKutta_ivp.py``)
-     - 00:02.041
+     - 00:01.800
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_Integration_on_segment.py` (``Integration_on_segment.py``)
-     - 00:01.101
+     - 00:01.196
      - 0.0

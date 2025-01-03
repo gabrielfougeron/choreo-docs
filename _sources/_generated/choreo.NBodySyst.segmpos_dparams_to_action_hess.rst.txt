@@ -1,0 +1,6 @@
+choreo.NBodySyst.segmpos\_dparams\_to\_action\_hess
+===================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.segmpos_dparams_to_action_hess

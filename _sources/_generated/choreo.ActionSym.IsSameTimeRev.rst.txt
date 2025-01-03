@@ -1,0 +1,6 @@
+choreo.ActionSym.IsSameTimeRev
+==============================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsSameTimeRev

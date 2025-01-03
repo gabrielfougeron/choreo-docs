@@ -1,0 +1,6 @@
+choreo.NBodySyst.Hash\_exp
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.Hash_exp

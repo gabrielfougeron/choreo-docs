@@ -1,0 +1,6 @@
+choreo.ActionSym.IsIdentityRotAndTime
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.IsIdentityRotAndTime

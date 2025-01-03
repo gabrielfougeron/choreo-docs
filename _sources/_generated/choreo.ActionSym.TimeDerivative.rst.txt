@@ -1,0 +1,6 @@
+choreo.ActionSym.TimeDerivative
+===============================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.TimeDerivative

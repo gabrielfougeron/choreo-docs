@@ -1,0 +1,6 @@
+choreo.ActionSym.\_\_init\_\_
+=============================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.__init__

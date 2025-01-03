@@ -1,0 +1,6 @@
+choreo.NBodySyst.InterTimeRev
+=============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.InterTimeRev

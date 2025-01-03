@@ -1,0 +1,1453 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests.test_NBodySyst &#8212; Choreo  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-test-results/common.css?v=9ec2c1d5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f19979f9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tests/test_NBodySyst';</script>
+    <script src="../../_static/js/custom-icon.js?v=063adea7"></script>
+    <link rel="canonical" href="https://gabrielfougeron.github.io/choreo-docs/_modules/tests/test_NBodySyst.html" />
+    <link rel="icon" href="../../_static/eight_icon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/eight_icon.png" class="logo__image only-light" alt="choreo"/>
+    <img src="../../_static/eight_icon.png" class="logo__image only-dark pst-js-only" alt="choreo"/>
+  
+  
+    <p class="title logo__title">choreo</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../_build/auto_examples/index.html">
+    Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../test-report/test-report.html">
+    Tests
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/gabrielfougeron/choreo" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gabrielfougeron.github.io/choreo/" title="Choreo_GUI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/img/eight_icon.png" class="icon-link-image" alt="Choreo_GUI"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../_build/auto_examples/index.html">
+    Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../test-report/test-report.html">
+    Tests
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/gabrielfougeron/choreo" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gabrielfougeron.github.io/choreo/" title="Choreo_GUI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../../_static/img/eight_icon.png" class="icon-link-image" alt="Choreo_GUI"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../../_static/eight_icon.png" class="logo__image only-light" alt="choreo"/>
+    <img src="../../_static/eight_icon.png" class="logo__image only-dark pst-js-only" alt="choreo"/>
+  
+  
+    <p class="title logo__title">choreo</p>
+  
+</a></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">tests.test_NBodySyst</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tests.test_NBodySyst</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; Tests properties of :class:`choreo.NBodySyst`</span>
+
+<span class="sd">.. autosummary::</span>
+<span class="sd">    :toctree: _generated/</span>
+<span class="sd">    :template: tests-formatting/base.rst</span>
+<span class="sd">    :nosignatures:</span>
+
+<span class="sd">    test_create_destroy</span>
+<span class="sd">    test_all_pos_to_segmpos</span>
+<span class="sd">    test_all_vel_to_segmvel</span>
+<span class="sd">    test_segmpos_to_all_pos</span>
+<span class="sd">    test_capture_co</span>
+<span class="sd">    test_round_trips_pos</span>
+<span class="sd">    test_round_trips_vel</span>
+<span class="sd">    test_changevars</span>
+<span class="sd">    test_params_segmpos_dual</span>
+<span class="sd">    test_kin</span>
+<span class="sd">    test_pot</span>
+<span class="sd">    test_action</span>
+<span class="sd">    test_resize</span>
+<span class="sd">    test_action_indep_resize</span>
+<span class="sd">    test_repeatability</span>
+<span class="sd">    test_ForceGeneralSym</span>
+<span class="sd">    test_ForceGreaterNstore</span>
+<span class="sd">    test_fft_backends</span>
+<span class="sd">    test_action_cst_sym_pairs</span>
+<span class="sd">    test_custom_inter_law</span>
+<span class="sd">    test_periodicity_default</span>
+<span class="sd">    test_ODE_vs_spectral</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">.test_config</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span>
+<span class="kn">import</span> <span class="nn">choreo</span>
+
+<div class="viewcode-block" id="test_create_destroy">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_create_destroy.html#tests.test_NBodySyst.test_create_destroy">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">AllConfigNames_list</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_create_destroy</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests initialization and destruction of NBodySyst.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span> <span class="o">=</span> <span class="n">load_from_config_file</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">2</span>
+    
+    <span class="k">del</span> <span class="n">NBS</span></div>
+
+
+<div class="viewcode-block" id="test_all_pos_to_segmpos">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_all_pos_to_segmpos.html#tests.test_NBodySyst.test_all_pos_to_segmpos">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>        
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_all_pos_to_segmpos</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">float64_tols</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether ``all_pos`` and ``segmpos`` agree.</span>
+
+<span class="sd">Tests:   </span>
+<span class="sd"> </span>
+<span class="sd">* Whether the unoptimized track ``params_buf`` =&gt; ``all_pos`` =&gt; ``segmpos_noopt`` and the optimized track ``params_buf`` =&gt; ``segmpos_cy`` agree.</span>
+<span class="sd">* That ``all_pos`` and ``segmpos`` respects all symmetry constraints.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+
+    <span class="c1"># Unoptimized version</span>
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>        
+    <span class="n">all_pos</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">AssertAllSegmGenConstraintsAreRespected</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">AssertAllBodyConstraintAreRespected</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">segmpos_noopt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_to_segm_noopt</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="c1"># Optimized version</span>
+    <span class="n">segmpos_cy</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos_noopt</span> <span class="o">-</span> <span class="n">segmpos_cy</span><span class="p">))</span>
+    
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos_noopt</span><span class="p">,</span> <span class="n">segmpos_cy</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>   
+    
+    <span class="k">for</span> <span class="n">Sym</span> <span class="ow">in</span> <span class="n">NBS</span><span class="o">.</span><span class="n">Sym_list</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">NBS</span><span class="o">.</span><span class="n">ComputeSymDefault</span><span class="p">(</span><span class="n">segmpos_cy</span><span class="p">,</span> <span class="n">Sym</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span></div>
+
+        
+<div class="viewcode-block" id="test_all_vel_to_segmvel">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_all_vel_to_segmvel.html#tests.test_NBodySyst.test_all_vel_to_segmvel">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_all_vel_to_segmvel</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">float64_tols</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether ``all_vel`` and ``segmvel`` agree.</span>
+
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* Whether the unoptimized track ``params_buf`` =&gt; ``all_vel`` =&gt; ``segmvel_noopt`` and the optimized track ``params_buf`` =&gt; ``segmvel_cy`` agree.</span>
+<span class="sd">* That ``all_vel`` and ``segmvel`` respects all symmetry constraints.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+
+    <span class="c1"># Unoptimized version</span>
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>        
+    <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_pos_to_vel_inplace</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    <span class="n">all_vel</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">AssertAllSegmGenConstraintsAreRespected</span><span class="p">(</span><span class="n">all_vel</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">AssertAllBodyConstraintAreRespected</span><span class="p">(</span><span class="n">all_vel</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+    <span class="n">segmvel_noopt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_to_segm_noopt</span><span class="p">(</span><span class="n">all_vel</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+    <span class="c1"># Optimized version</span>
+    <span class="n">segmvel_cy</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmvel</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmvel_noopt</span> <span class="o">-</span> <span class="n">segmvel_cy</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmvel_noopt</span><span class="p">,</span> <span class="n">segmvel_cy</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    
+    <span class="k">for</span> <span class="n">Sym</span> <span class="ow">in</span> <span class="n">NBS</span><span class="o">.</span><span class="n">Sym_list</span><span class="p">:</span>
+        <span class="k">assert</span> <span class="n">NBS</span><span class="o">.</span><span class="n">ComputeSymDefault</span><span class="p">(</span><span class="n">segmvel_cy</span><span class="p">,</span> <span class="n">Sym</span><span class="o">.</span><span class="n">TimeDerivative</span><span class="p">(),</span> <span class="n">pos</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span></div>
+
+    
+<div class="viewcode-block" id="test_segmpos_to_all_pos">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_segmpos_to_all_pos.html#tests.test_NBodySyst.test_segmpos_to_all_pos">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_segmpos_to_all_pos</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">float64_tols</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests going from ``segmpos`` to ``all_pos`` and back.</span>
+
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* Whether the track ``params_buf`` =&gt; ``segmpos`` =&gt; ``all_pos`` =&gt; ``all_coeffs`` =&gt; ``params_buf`` is the identity.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">all_pos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_all_noopt</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_params_noopt</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_buf</span><span class="o">-</span><span class="n">params</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>      </div>
+
+
+<div class="viewcode-block" id="test_capture_co">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_capture_co.html#tests.test_NBodySyst.test_capture_co">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_capture_co</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Checks consistency of parameters definition for :math:`c_o`.</span>
+
+<span class="sd">Tests whether the parameter corresponding to the imaginary part of the coefficient of index 0 in the Fourier expansion is included only if it needs to be.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="n">nnz</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">il</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">nloop</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">il</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">nloop</span><span class="p">):</span>
+        
+        <span class="n">nnz_k</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">nnz_k</span><span class="p">(</span><span class="n">il</span><span class="p">)</span>
+        <span class="n">params_basis_pos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_basis_pos</span><span class="p">(</span><span class="n">il</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">nnz_k</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">nnz_k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+
+                <span class="k">for</span> <span class="n">iparam</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">params_basis_pos</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]):</span>
+                    
+                    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_basis_pos</span><span class="p">[:,</span><span class="mi">0</span><span class="p">,</span><span class="n">iparam</span><span class="p">]</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">:</span>
+                        
+                        <span class="n">nnz</span><span class="p">[</span><span class="n">il</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">iparam</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">il</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">nloop</span><span class="p">):</span>
+        <span class="n">co_in</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">co_in</span><span class="p">(</span><span class="n">il</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">iparam</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">co_in</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>            
+            <span class="k">assert</span> <span class="ow">not</span><span class="p">(</span><span class="n">co_in</span><span class="p">[</span><span class="n">iparam</span><span class="p">])</span> <span class="o">==</span> <span class="p">(</span><span class="n">iparam</span> <span class="ow">in</span> <span class="n">nnz</span><span class="p">[</span><span class="n">il</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="test_round_trips_pos">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_round_trips_pos.html#tests.test_NBodySyst.test_round_trips_pos">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">()</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_round_trips_pos</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether several ways of going back and forth in the chain ``param_buf`` =&gt; ``segmpos`` indeed give the same result.</span>
+
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* That ``all_pos`` =&gt; ``segmpos`` =&gt; ``all_pos`` is the identity.</span>
+<span class="sd">* That ``all_coeffs`` =&gt; ``all_pos`` =&gt; ``all_coeffs`` is the identity.</span>
+<span class="sd">* That ``params_buf`` =&gt; ``all_coeffs`` =&gt; ``params_buf`` is the identity.</span>
+<span class="sd">* That ``params_buf`` =&gt; shifted ``all_coeffs`` =&gt; ``params_buf`` is the identity.</span>
+<span class="sd">* That ``all_coeffs`` =&gt; shifted ``params_buf`` =&gt; ``all_coeffs`` is the identity in cases where it makes sense (i.e. no invariance wrt space orientation reversing  transformations).</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>  
+    <span class="n">all_pos</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_to_segm_noopt</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">all_pos_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_all_noopt</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">all_pos_rt</span> <span class="o">-</span> <span class="n">all_pos</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">all_pos_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+            
+    <span class="n">all_coeffs_rt</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">all_coeffs_rt</span> <span class="o">-</span> <span class="n">all_coeffs</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">all_coeffs_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+
+    <span class="n">params_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_params_noopt</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_buf</span> <span class="o">-</span> <span class="n">params_buf_rt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params_buf_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    
+    <span class="n">segmpos_cy</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">params_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params</span><span class="p">(</span><span class="n">segmpos_cy</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_buf</span> <span class="o">-</span> <span class="n">params_buf_rt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params_buf_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>  
+    <span class="n">params_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_params_noopt</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_buf</span> <span class="o">-</span> <span class="n">params_buf_rt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params_buf_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>     
+    
+    <span class="n">IsReflexionInvariant</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">Sym</span> <span class="ow">in</span> <span class="n">NBS</span><span class="o">.</span><span class="n">Sym_list</span><span class="p">:</span>
+        <span class="n">IsReflexionInvariant</span> <span class="o">=</span> <span class="n">IsReflexionInvariant</span> <span class="ow">or</span> <span class="p">(</span><span class="n">Sym</span><span class="o">.</span><span class="n">TimeRev</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">IsReflexionInvariant</span><span class="p">:</span>
+    
+        <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>  
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+        <span class="n">params_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_params_noopt</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>
+        <span class="n">all_coeffs_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf_rt</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="n">dt</span><span class="p">)</span>  
+        <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">all_coeffs</span> <span class="o">-</span> <span class="n">all_coeffs_rt</span><span class="p">))</span>
+        <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">all_coeffs_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> </div>
+
+        
+<div class="viewcode-block" id="test_round_trips_vel">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_round_trips_vel.html#tests.test_NBodySyst.test_round_trips_vel">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">()</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_round_trips_vel</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether several ways of going back and forth in the chain ``param_buf`` =&gt; ``segmvel`` indeed give the same result.</span>
+
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* That ``all_vel`` =&gt; ``segmvel`` =&gt; ``all_vel`` is the identity.</span>
+<span class="sd">* That ``all_coeffs`` =&gt; ``all_vel`` =&gt; ``all_coeffs`` is the identity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Else it will sometime fail for huge symmetries</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>  
+    <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_pos_to_vel_inplace</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    <span class="n">all_vel</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="n">segmvel</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_to_segm_noopt</span><span class="p">(</span><span class="n">all_vel</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    
+    <span class="n">all_vel_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_all_noopt</span><span class="p">(</span><span class="n">segmvel</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">all_vel_rt</span> <span class="o">-</span> <span class="n">all_vel</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">all_vel</span><span class="p">,</span> <span class="n">all_vel_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+            
+    <span class="n">all_coeffs_rt</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">all_vel</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">all_coeffs_rt</span> <span class="o">-</span> <span class="n">all_coeffs</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">all_coeffs_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> </div>
+
+    
+<div class="viewcode-block" id="test_changevars">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_changevars.html#tests.test_NBodySyst.test_changevars">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_changevars</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests properties of change of variables of parameters.</span>
+
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* That ``params_mom_buf`` =&gt; ``params_pos_buf`` =&gt; ``params_mom_buf`` is the identity.</span>
+<span class="sd">* That ``params_pos_buf`` =&gt; ``params_mom_buf`` =&gt; ``params_pos_buf`` is the identity.</span>
+<span class="sd">* That scalar poducts are conserved by the (dual) change of variables.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    
+    <span class="n">params_mom_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    
+    <span class="n">params_pos_buf</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_changevar</span><span class="p">(</span><span class="n">params_mom_buf</span><span class="p">,</span> <span class="n">inv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>        
+    <span class="n">params_mom_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_changevar</span><span class="p">(</span><span class="n">params_pos_buf</span><span class="p">,</span> <span class="n">inv</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>        
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_mom_buf</span> <span class="o">-</span> <span class="n">params_mom_buf_rt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_mom_buf</span><span class="p">,</span> <span class="n">params_mom_buf_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>     
+    
+    <span class="n">params_pos_buf_dual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams_incl_o</span><span class="p">))</span>
+    <span class="n">params_mom_buf_dual</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_changevar</span><span class="p">(</span><span class="n">params_pos_buf_dual</span><span class="p">,</span> <span class="n">inv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">dot_mom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">params_mom_buf</span><span class="p">,</span> <span class="n">params_mom_buf_dual</span><span class="p">)</span>
+    <span class="n">dot_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">params_pos_buf</span><span class="p">,</span> <span class="n">params_pos_buf_dual</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dot_mom</span> <span class="o">-</span> <span class="n">dot_pos</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dot_mom</span> <span class="o">-</span> <span class="n">dot_pos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+    <span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">dot_mom</span> <span class="o">-</span> <span class="n">dot_pos</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">dot_mom</span> <span class="o">+</span> <span class="n">dot_pos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span>        
+    
+    <span class="c1"># ##################################################################################################</span>
+    
+    <span class="n">params_mom_buf</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_changevar</span><span class="p">(</span><span class="n">params_pos_buf</span><span class="p">,</span> <span class="n">inv</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>        
+    <span class="n">params_pos_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_changevar</span><span class="p">(</span><span class="n">params_mom_buf</span><span class="p">,</span> <span class="n">inv</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>   
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_pos_buf</span> <span class="o">-</span> <span class="n">params_pos_buf_rt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_pos_buf</span><span class="p">,</span> <span class="n">params_pos_buf_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>     
+    
+    <span class="n">params_mom_buf_dual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">params_pos_buf_dual</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_changevar</span><span class="p">(</span><span class="n">params_mom_buf_dual</span><span class="p">,</span> <span class="n">inv</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">dot_mom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">params_mom_buf</span><span class="p">,</span> <span class="n">params_mom_buf_dual</span><span class="p">)</span>
+    <span class="n">dot_pos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">params_pos_buf</span><span class="p">,</span> <span class="n">params_pos_buf_dual</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dot_mom</span> <span class="o">-</span> <span class="n">dot_pos</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dot_mom</span> <span class="o">-</span> <span class="n">dot_pos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+    <span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">dot_mom</span> <span class="o">-</span> <span class="n">dot_pos</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">dot_mom</span> <span class="o">+</span> <span class="n">dot_pos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span>        </div>
+
+        
+<div class="viewcode-block" id="test_params_segmpos_dual">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_params_segmpos_dual.html#tests.test_NBodySyst.test_params_segmpos_dual">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_params_segmpos_dual</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests invariance of dot product  by the transformation ``params`` =&gt; ``segmpos``.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="n">segmpos_dual</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nsegm</span><span class="p">,</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span><span class="p">,</span><span class="n">NBS</span><span class="o">.</span><span class="n">geodim</span><span class="p">))</span>
+    <span class="n">params_buf_dual</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params_T</span><span class="p">(</span><span class="n">segmpos_dual</span><span class="p">)</span>
+    
+    <span class="n">dot_params</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params_buf_dual</span><span class="p">)</span>
+    <span class="n">dot_segmpos</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">segmpos_dual</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">segmpos</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">dot_params</span> <span class="o">-</span> <span class="n">dot_segmpos</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">dot_params</span> <span class="o">-</span> <span class="n">dot_segmpos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+    <span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">dot_params</span> <span class="o">-</span> <span class="n">dot_segmpos</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">dot_params</span> <span class="o">+</span> <span class="n">dot_segmpos</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span></div>
+
+    
+<div class="viewcode-block" id="test_kin">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_kin.html#tests.test_NBodySyst.test_kin">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_kin</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests computation of kinetic energy.</span>
+<span class="sd">    </span>
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* That optimized and non optimized computations of kinetic energy give the same result.</span>
+<span class="sd">* Idem for the gradient of the kinetic energy.</span>
+<span class="sd">* That the gradient of the kinetic energy agrees with its finite difference approximation.</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span> 
+    <span class="n">kin</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_kin_nrg</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    <span class="n">kin_opt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_kin_nrg</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">kin</span> <span class="o">-</span> <span class="n">kin_opt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+    <span class="k">assert</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">kin</span> <span class="o">-</span> <span class="n">kin_opt</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">kin</span> <span class="o">+</span> <span class="n">kin_opt</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span>
+    
+    <span class="n">kin_grad_params</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_kin_nrg_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="n">kin_grad_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_kin_nrg_grad</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    <span class="n">kin_grad_params_2</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_coeffs_to_params_noopt</span><span class="p">(</span><span class="n">kin_grad_coeffs</span><span class="p">,</span> <span class="n">transpose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">kin_grad_params</span><span class="p">,</span> <span class="n">kin_grad_params_2</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    
+    <span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dx</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">params_to_kin_nrg_grad</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">dx</span><span class="p">)</span>
+    
+    <span class="n">err</span> <span class="o">=</span> <span class="n">compare_FD_and_exact_grad</span><span class="p">(</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_kin_nrg</span>   <span class="p">,</span>
+        <span class="n">grad</span>                    <span class="p">,</span>
+        <span class="n">params_buf</span>              <span class="p">,</span>
+        <span class="n">dx</span><span class="o">=</span><span class="kc">None</span>                 <span class="p">,</span>
+        <span class="n">epslist</span><span class="o">=</span><span class="kc">None</span>            <span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="mi">2</span>                 <span class="p">,</span>
+        <span class="n">vectorize</span><span class="o">=</span><span class="kc">False</span>         <span class="p">,</span>
+    <span class="p">)</span>
+    
+    <span class="k">assert</span> <span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span></div>
+
+        
+<div class="viewcode-block" id="test_pot">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_pot.html#tests.test_NBodySyst.test_pot">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">(</span><span class="n">RepeatOnFail</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_nozerodiv_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_pot</span><span class="p">(</span><span class="n">float64_tols_loose</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests computation of potential energy.</span>
+<span class="sd">    </span>
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* That the gradient of the potential energy agrees with its finite difference approximation.</span>
+<span class="sd">* That the hessian of the potential energy agrees with its finite difference approximation.</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    
+    <span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dx</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">params_to_pot_nrg_grad</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">dx</span><span class="p">)</span>
+    
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+
+    <span class="n">err</span> <span class="o">=</span> <span class="n">compare_FD_and_exact_grad</span><span class="p">(</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_pot_nrg</span>   <span class="p">,</span>
+        <span class="n">grad</span>                    <span class="p">,</span>
+        <span class="n">params_buf</span>              <span class="p">,</span>
+        <span class="n">dx</span><span class="o">=</span><span class="n">dx</span>                   <span class="p">,</span>
+        <span class="n">epslist</span><span class="o">=</span><span class="kc">None</span>            <span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="mi">2</span>                 <span class="p">,</span>
+        <span class="n">vectorize</span><span class="o">=</span><span class="kc">False</span>         <span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span><span class="p">)</span>
+    
+    <span class="n">err</span> <span class="o">=</span> <span class="n">compare_FD_and_exact_grad</span><span class="p">(</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_pot_nrg_grad</span>  <span class="p">,</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_pot_nrg_hess</span>  <span class="p">,</span>
+        <span class="n">params_buf</span>                  <span class="p">,</span>
+        <span class="n">dx</span><span class="o">=</span><span class="n">dx</span>                       <span class="p">,</span>
+        <span class="n">epslist</span><span class="o">=</span><span class="kc">None</span>                <span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="mi">2</span>                     <span class="p">,</span>
+        <span class="n">vectorize</span><span class="o">=</span><span class="kc">False</span>             <span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span><span class="p">)</span></div>
+
+        
+<div class="viewcode-block" id="test_action">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_action.html#tests.test_NBodySyst.test_action">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">(</span><span class="n">RepeatOnFail</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_nozerodiv_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_action</span><span class="p">(</span><span class="n">float64_tols_loose</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests computation of the action.</span>
+<span class="sd">    </span>
+<span class="sd">Tests:  </span>
+<span class="sd">  </span>
+<span class="sd">* That the gradient of the action agrees with its finite difference approximation.</span>
+<span class="sd">* That the hessian of the action agrees with its finite difference approximation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    
+    <span class="k">def</span> <span class="nf">grad</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">dx</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">dx</span><span class="p">)</span>
+    
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+
+    <span class="n">err</span> <span class="o">=</span> <span class="n">compare_FD_and_exact_grad</span><span class="p">(</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action</span>    <span class="p">,</span>
+        <span class="n">grad</span>                    <span class="p">,</span>
+        <span class="n">params_buf</span>              <span class="p">,</span>
+        <span class="n">dx</span><span class="o">=</span><span class="n">dx</span>                   <span class="p">,</span>
+        <span class="n">epslist</span><span class="o">=</span><span class="kc">None</span>            <span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="mi">2</span>                 <span class="p">,</span>
+        <span class="n">vectorize</span><span class="o">=</span><span class="kc">False</span>         <span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span><span class="p">)</span>
+    
+    <span class="n">err</span> <span class="o">=</span> <span class="n">compare_FD_and_exact_grad</span><span class="p">(</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span>   <span class="p">,</span>
+        <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_hess</span>   <span class="p">,</span>
+        <span class="n">params_buf</span>                  <span class="p">,</span>
+        <span class="n">dx</span><span class="o">=</span><span class="n">dx</span>                       <span class="p">,</span>
+        <span class="n">epslist</span><span class="o">=</span><span class="kc">None</span>                <span class="p">,</span>
+        <span class="n">order</span><span class="o">=</span><span class="mi">2</span>                     <span class="p">,</span>
+        <span class="n">vectorize</span><span class="o">=</span><span class="kc">False</span>             <span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="p">(</span><span class="n">err</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span><span class="p">)</span></div>
+
+    
+<div class="viewcode-block" id="test_resize">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_resize.html#tests.test_NBodySyst.test_resize">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_nozerodiv_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_resize</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests nested properties of Fourier spaces on positions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">small_segm_size</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>  
+    <span class="n">all_pos</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="n">segmpos_noopt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_to_segm_noopt</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span> <span class="o">-</span> <span class="n">segmpos_noopt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">segmpos_noopt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    
+    <span class="n">fac</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">new_nint_fac</span> <span class="o">=</span> <span class="n">fac</span> <span class="o">*</span> <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span>
+    
+    <span class="n">params_buf_long</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_resize</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">new_nint_fac</span><span class="p">)</span> 
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="n">new_nint_fac</span>
+    <span class="n">long_segm_size</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span>
+    <span class="n">segmpos_long</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf_long</span><span class="p">)</span>
+    
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf_long</span><span class="p">)</span>  
+    <span class="n">all_pos</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s1">&#39;forward&#39;</span><span class="p">)</span>
+    <span class="n">segmpos_long_noopt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">all_to_segm_noopt</span><span class="p">(</span><span class="n">all_pos</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos_long</span> <span class="o">-</span> <span class="n">segmpos_long_noopt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos_long</span><span class="p">,</span> <span class="n">segmpos_long_noopt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span><span class="p">[:,:</span><span class="n">small_segm_size</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">segmpos_long</span><span class="p">[:,:</span><span class="n">long_segm_size</span><span class="p">:</span><span class="n">fac</span><span class="p">,:]))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">[:,:</span><span class="n">small_segm_size</span><span class="p">,:],</span> <span class="n">segmpos_long</span><span class="p">[:,:</span><span class="n">long_segm_size</span><span class="p">:</span><span class="n">fac</span><span class="p">,:],</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> </div>
+
+
+<div class="viewcode-block" id="test_action_indep_resize">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_action_indep_resize.html#tests.test_NBodySyst.test_action_indep_resize">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_nozerodiv_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_action_indep_resize</span><span class="p">(</span><span class="n">float64_tols_loose</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that action is left **similar** by resizing.</span>
+
+<span class="sd">.. note::</span>
+<span class="sd">    This test is very susceptible to false positives. It should be replaced by a better test.</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Passed_any</span> <span class="o">=</span> <span class="kc">False</span>
+    
+    <span class="n">ntries</span> <span class="o">=</span> <span class="mi">100</span>
+    
+    <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ntries</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+    
+    <span class="k">for</span> <span class="n">itry</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ntries</span><span class="p">):</span> 
+        
+        <span class="n">Passed</span> <span class="o">=</span> <span class="kc">True</span>
+        
+        <span class="n">nint_fac_short</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="n">nint_fac_mid</span> <span class="o">=</span> <span class="mi">200</span>
+        <span class="n">nint_fac_big</span> <span class="o">=</span> <span class="n">nint_fac_mid</span><span class="o">*</span><span class="mi">2</span>
+        
+        <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="n">nint_fac_short</span>
+        <span class="n">params_buf_short</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+        
+        <span class="n">params_buf_mid</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_resize</span><span class="p">(</span><span class="n">params_buf_short</span><span class="p">,</span> <span class="n">nint_fac_mid</span><span class="p">)</span> 
+        <span class="n">params_buf_big</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_resize</span><span class="p">(</span><span class="n">params_buf_short</span><span class="p">,</span> <span class="n">nint_fac_big</span><span class="p">)</span> 
+
+        <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="n">nint_fac_mid</span>
+        <span class="n">kin_nrg</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_kin_nrg</span><span class="p">(</span><span class="n">params_buf_mid</span><span class="p">)</span>
+        <span class="n">pot_nrg</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_pot_nrg</span><span class="p">(</span><span class="n">params_buf_mid</span><span class="p">)</span>
+        
+        <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="n">nint_fac_big</span>
+        <span class="n">kin_nrg_big</span><span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_kin_nrg</span><span class="p">(</span><span class="n">params_buf_big</span><span class="p">)</span>
+        <span class="n">pot_nrg_big</span><span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_pot_nrg</span><span class="p">(</span><span class="n">params_buf_big</span><span class="p">)</span>
+        
+        <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">kin_nrg</span> <span class="o">-</span> <span class="n">kin_nrg_big</span><span class="p">)</span>
+        <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">kin_nrg</span> <span class="o">-</span> <span class="n">kin_nrg_big</span><span class="p">)</span> <span class="o">/</span> <span class="nb">abs</span><span class="p">(</span><span class="n">kin_nrg</span> <span class="o">+</span> <span class="n">kin_nrg_big</span><span class="p">)</span>
+        <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pot_nrg</span> <span class="o">-</span> <span class="n">pot_nrg_big</span><span class="p">)</span>
+        <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">pot_nrg</span> <span class="o">-</span> <span class="n">pot_nrg_big</span><span class="p">)</span> <span class="o">/</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pot_nrg</span> <span class="o">+</span> <span class="n">pot_nrg_big</span><span class="p">)</span> 
+
+        <span class="n">Passed</span> <span class="o">=</span> <span class="n">Passed</span> <span class="ow">and</span> <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span>
+        <span class="n">Passed</span> <span class="o">=</span> <span class="n">Passed</span> <span class="ow">and</span> <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span>  
+        
+        <span class="n">Passed</span> <span class="o">=</span> <span class="n">Passed</span> <span class="ow">and</span> <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span>
+        <span class="n">Passed</span> <span class="o">=</span> <span class="n">Passed</span> <span class="ow">and</span> <span class="n">err</span><span class="p">[</span><span class="n">itry</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">float64_tols_loose</span><span class="o">.</span><span class="n">rtol</span>
+        
+        <span class="n">Passed_any</span> <span class="o">=</span> <span class="n">Passed_any</span> <span class="ow">or</span> <span class="n">Passed</span>
+        
+        <span class="k">if</span> <span class="n">Passed_any</span><span class="p">:</span>
+            <span class="k">break</span>
+        
+    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">Passed_any</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+    
+    <span class="k">assert</span> <span class="n">Passed_any</span></div>
+
+    
+<div class="viewcode-block" id="test_repeatability">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_repeatability.html#tests.test_NBodySyst.test_repeatability">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_repeatability</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that computing ``params_buf`` =&gt; ``segmpos`` twice give the same result.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">params_buf_cp</span> <span class="o">=</span> <span class="n">params_buf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_buf</span> <span class="o">-</span> <span class="n">params_buf_cp</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params_buf_cp</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">segmpos_2</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span> <span class="o">-</span> <span class="n">segmpos_2</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">segmpos_2</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>         </div>
+
+        
+<div class="viewcode-block" id="test_ForceGeneralSym">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_ForceGeneralSym.html#tests.test_NBodySyst.test_ForceGeneralSym">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_ForceGeneralSym</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that computations results are independant of :meth:`choreo.NBodySyst.ForceGeneralSym`.</span>
+<span class="sd">    </span>
+<span class="sd">Tests that the following computations are independant of :meth:`choreo.NBodySyst.ForceGeneralSym`:</span>
+
+<span class="sd">* ``params`` =&gt; ``segmpos``</span>
+<span class="sd">* ``params`` =&gt; ``segmvel``</span>
+<span class="sd">* ``segmpos`` =&gt; ``params``</span>
+<span class="sd">* ``segmpos`` =&gt; ``params_T``</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGeneralSym</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">segmvel</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmvel</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params</span><span class="p">(</span><span class="n">segmpos</span><span class="p">)</span>
+    <span class="n">params_T</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params_T</span><span class="p">(</span><span class="n">segmpos</span><span class="p">)</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGeneralSym</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">segmpos_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">segmvel_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmvel</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">params_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params</span><span class="p">(</span><span class="n">segmpos</span><span class="p">)</span>
+    <span class="n">params_T_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params_T</span><span class="p">(</span><span class="n">segmpos</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span> <span class="o">-</span> <span class="n">segmpos_f</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">segmpos_f</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>             
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmvel</span> <span class="o">-</span> <span class="n">segmvel_f</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmvel</span><span class="p">,</span> <span class="n">segmvel_f</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>    
+        
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params</span> <span class="o">-</span> <span class="n">params_f</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">params_f</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>            
+        
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_T</span> <span class="o">-</span> <span class="n">params_T_f</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_T</span><span class="p">,</span> <span class="n">params_T_f</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>     </div>
+
+    
+<div class="viewcode-block" id="test_ForceGreaterNstore">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_ForceGreaterNstore.html#tests.test_NBodySyst.test_ForceGreaterNstore">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">(</span><span class="n">RepeatOnFail</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_ForceGreaterNstore</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that computations results are independant of :meth:`choreo.NBodySyst.ForceGreaterNStore`.</span>
+<span class="sd">    </span>
+<span class="sd">Tests that the following computations are independant of :meth:`choreo.NBodySyst.ForceGreaterNStore`:</span>
+
+<span class="sd">* ``params`` =&gt; ``segmpos``</span>
+<span class="sd">* ``params`` =&gt; ``action_grad``</span>
+<span class="sd">* ``params`` =&gt; ``action_hess``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGreaterNStore</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">params_buf</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">dparams_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    
+    <span class="n">segm_store_ini</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span> 
+    
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_grad</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_hess</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_hess</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">dparams_buf</span><span class="p">)</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGreaterNStore</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">assert</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span> <span class="o">==</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">assert</span> <span class="n">NBS</span><span class="o">.</span><span class="n">GreaterNStore</span>
+    
+    <span class="n">segmpos_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_grad_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_hess_f</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_hess</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">dparams_buf</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">isegm</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">nsegm</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">isegm</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span><span class="p">[</span><span class="n">isegm</span><span class="p">,:</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span><span class="p">,:]</span> <span class="o">-</span> <span class="n">segmpos_f</span><span class="p">[</span><span class="n">isegm</span><span class="p">,:</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span><span class="p">,:]))</span>
+        <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">[</span><span class="n">isegm</span><span class="p">,:</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span><span class="p">,:],</span> <span class="n">segmpos_f</span><span class="p">[</span><span class="n">isegm</span><span class="p">,:</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_size</span><span class="p">,:],</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_grad</span> <span class="o">-</span> <span class="n">action_grad_f</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_grad</span><span class="p">,</span> <span class="n">action_grad_f</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_hess</span> <span class="o">-</span> <span class="n">action_hess_f</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_hess</span><span class="p">,</span> <span class="n">action_hess_f</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGreaterNStore</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">assert</span> <span class="n">segm_store_ini</span> <span class="o">==</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span> 
+    
+    <span class="n">segmpos_nf</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_grad_nf</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_hess_nf</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_hess</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">dparams_buf</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span> <span class="o">-</span> <span class="n">segmpos_nf</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">segmpos_nf</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_grad</span> <span class="o">-</span> <span class="n">action_grad_nf</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_grad</span><span class="p">,</span> <span class="n">action_grad_nf</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_hess</span> <span class="o">-</span> <span class="n">action_hess_nf</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_hess</span><span class="p">,</span> <span class="n">action_hess_nf</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  </div>
+
+    
+<div class="viewcode-block" id="test_fft_backends">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_fft_backends.html#tests.test_NBodySyst.test_fft_backends">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">(</span><span class="n">RepeatOnFail</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS</span> <span class="ow">in</span> <span class="n">NBS_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;backend&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;scipy&quot;</span><span class="p">,</span> <span class="s2">&quot;mkl&quot;</span><span class="p">,</span> <span class="s2">&quot;fftw&quot;</span><span class="p">,</span> <span class="s2">&quot;ducc&quot;</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;ForceGeneralSym&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">test_fft_backends</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">ForceGeneralSym</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">NBS</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that computations results are independant of :meth:`choreo.NBodySyst.fft_backend`.</span>
+<span class="sd">    </span>
+<span class="sd">Tests that the following computations are independant of :meth:`choreo.NBodySyst.fft_backend`:</span>
+
+<span class="sd">* ``params`` =&gt; ``segmpos``</span>
+<span class="sd">* ``segmpos`` =&gt; ``params``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    
+    <span class="n">NBS</span><span class="o">.</span><span class="n">fft_backend</span> <span class="o">=</span> <span class="s2">&quot;scipy&quot;</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">fftw_planner_effort</span> <span class="o">=</span> <span class="s1">&#39;FFTW_ESTIMATE&#39;</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">fftw_wisdom_only</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">fftw_nthreads</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>
+    <span class="n">segmpos_ref</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGeneralSym</span> <span class="o">=</span> <span class="n">ForceGeneralSym</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">fft_backend</span> <span class="o">=</span> <span class="n">backend</span>
+    
+    <span class="n">params_buf_cp</span> <span class="o">=</span> <span class="n">params_buf</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf_cp</span><span class="p">)</span>
+        
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span> <span class="o">-</span> <span class="n">segmpos_ref</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">segmpos_ref</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    
+    <span class="n">params_buf_rt</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_to_params</span><span class="p">(</span><span class="n">segmpos</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">params_buf</span> <span class="o">-</span> <span class="n">params_buf_rt</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">params_buf_rt</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGeneralSym</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">NBS</span><span class="o">.</span><span class="n">fft_backend</span> <span class="o">=</span> <span class="s2">&quot;scipy&quot;</span></div>
+
+    
+<div class="viewcode-block" id="test_action_cst_sym_pairs">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_action_cst_sym_pairs.html#tests.test_NBodySyst.test_action_cst_sym_pairs">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@ProbabilisticTest</span><span class="p">(</span><span class="n">RepeatOnFail</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NBS_pair&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS_pair</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">NBS_pair</span> <span class="ow">in</span> <span class="n">NBS_pairs_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_action_cst_sym_pairs</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS_pair</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that computations results are independant of the prescribed symmetries.</span>
+<span class="sd">    </span>
+<span class="sd">Tests that the following computations results are independant of the prescribed symmetries:</span>
+
+<span class="sd">* ``all_coeffs`` =&gt; ``kinetic energy``</span>
+<span class="sd">* ``params`` =&gt; ``kinetic energy``</span>
+<span class="sd">* ``params`` =&gt; ``potential energy``</span>
+<span class="sd">* ``params`` =&gt; ``action``</span>
+<span class="sd">* ``params`` =&gt; ``path_stats``</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">NBS_m</span><span class="p">,</span> <span class="n">NBS_l</span> <span class="o">=</span> <span class="n">NBS_pair</span>
+    
+    <span class="c1"># m =&gt; more symmetry. l =&gt; less symmetry</span>
+
+    <span class="k">assert</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">nint_min</span> <span class="o">&gt;</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">nint_min</span>
+    <span class="k">assert</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">nint_min</span> <span class="o">%</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">nint_min</span> <span class="o">==</span> <span class="mi">0</span>
+    
+    <span class="n">nint_fac</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">NBS_m</span><span class="o">.</span><span class="n">nint_fac</span> <span class="o">=</span> <span class="n">nint_fac</span>
+    <span class="n">NBS_l</span><span class="o">.</span><span class="n">nint</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">nint</span>
+    
+    <span class="n">params_buf_m</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS_m</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>        
+    <span class="n">all_coeffs</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">params_to_all_coeffs_noopt</span><span class="p">(</span><span class="n">params_buf_m</span><span class="p">)</span>  
+    <span class="n">params_buf_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">all_coeffs_to_params_noopt</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+
+    <span class="n">kin_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">all_coeffs_to_kin_nrg</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    <span class="n">kin_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">all_coeffs_to_kin_nrg</span><span class="p">(</span><span class="n">all_coeffs</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kin_m</span> <span class="o">-</span> <span class="n">kin_l</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">kin_m</span> <span class="o">-</span> <span class="n">kin_l</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+
+    <span class="n">kin_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">params_to_kin_nrg</span><span class="p">(</span><span class="n">params_buf_m</span><span class="p">)</span>
+    <span class="n">kin_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">params_to_kin_nrg</span><span class="p">(</span><span class="n">params_buf_l</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">kin_m</span> <span class="o">-</span> <span class="n">kin_l</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">kin_m</span> <span class="o">-</span> <span class="n">kin_l</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+
+    <span class="n">pot_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">params_to_pot_nrg</span><span class="p">(</span><span class="n">params_buf_m</span><span class="p">)</span>
+    <span class="n">pot_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">params_to_pot_nrg</span><span class="p">(</span><span class="n">params_buf_l</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">pot_m</span> <span class="o">-</span> <span class="n">pot_l</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">pot_m</span> <span class="o">-</span> <span class="n">pot_l</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+    
+    <span class="n">act_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">params_to_action</span><span class="p">(</span><span class="n">params_buf_m</span><span class="p">)</span>
+    <span class="n">act_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">params_to_action</span><span class="p">(</span><span class="n">params_buf_l</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">act_m</span> <span class="o">-</span> <span class="n">act_l</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">act_m</span> <span class="o">-</span> <span class="n">act_l</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>
+    
+    <span class="n">segmpos_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf_m</span><span class="p">)</span>
+    <span class="n">segmvel_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">params_to_segmvel</span><span class="p">(</span><span class="n">params_buf_m</span><span class="p">)</span>
+    <span class="n">segmpos_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf_l</span><span class="p">)</span>
+    <span class="n">segmvel_l</span> <span class="o">=</span> <span class="n">NBS_l</span><span class="o">.</span><span class="n">params_to_segmvel</span><span class="p">(</span><span class="n">params_buf_l</span><span class="p">)</span>
+    
+    <span class="n">loop_len_m</span><span class="p">,</span> <span class="n">bin_dx_min_m</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">segm_to_path_stats</span><span class="p">(</span><span class="n">segmpos_m</span><span class="p">,</span> <span class="n">segmvel_m</span><span class="p">)</span>
+    <span class="n">loop_len_l</span><span class="p">,</span> <span class="n">bin_dx_min_l</span> <span class="o">=</span> <span class="n">NBS_m</span><span class="o">.</span><span class="n">segm_to_path_stats</span><span class="p">(</span><span class="n">segmpos_l</span><span class="p">,</span> <span class="n">segmvel_l</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">il</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NBS_m</span><span class="o">.</span><span class="n">nloop</span><span class="p">):</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">loop_len_m</span><span class="p">[</span><span class="n">il</span><span class="p">]</span> <span class="o">-</span> <span class="n">loop_len_l</span><span class="p">[</span><span class="n">il</span><span class="p">]))</span>
+        <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">loop_len_m</span><span class="p">[</span><span class="n">il</span><span class="p">]</span> <span class="o">-</span> <span class="n">loop_len_l</span><span class="p">[</span><span class="n">il</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>     
+    
+    <span class="n">bin_dx_min_m</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+    <span class="n">bin_dx_min_l</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+                    
+    <span class="k">for</span> <span class="n">ibin</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">NBS_m</span><span class="o">.</span><span class="n">nbin_segm_unique</span><span class="p">):</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">bin_dx_min_m</span><span class="p">[</span><span class="n">ibin</span><span class="p">]</span> <span class="o">-</span> <span class="n">bin_dx_min_l</span><span class="p">[</span><span class="n">ibin</span><span class="p">]))</span>
+        <span class="k">assert</span> <span class="nb">abs</span><span class="p">(</span><span class="n">bin_dx_min_m</span><span class="p">[</span><span class="n">ibin</span><span class="p">]</span> <span class="o">-</span> <span class="n">bin_dx_min_l</span><span class="p">[</span><span class="n">ibin</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span>        </div>
+
+
+<div class="viewcode-block" id="test_custom_inter_law">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_custom_inter_law.html#tests.test_NBodySyst.test_custom_inter_law">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="k">def</span> <span class="nf">test_custom_inter_law</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that custom interaction laws are correctly handled.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="n">geodim</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">nbody</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">bodymass</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">3.</span><span class="p">])</span>
+    <span class="n">bodycharge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">])</span>
+    <span class="n">Sym_list</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># Classical gravity_pot</span>
+    <span class="n">inter_law</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">LowLevelCallable</span><span class="o">.</span><span class="n">from_cython</span><span class="p">(</span><span class="n">choreo</span><span class="o">.</span><span class="n">cython</span><span class="o">.</span><span class="n">_NBodySyst</span><span class="p">,</span> <span class="s2">&quot;gravity_pot&quot;</span><span class="p">)</span>
+    <span class="n">NBS</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">NBodySyst</span><span class="p">(</span><span class="n">geodim</span><span class="p">,</span> <span class="n">nbody</span><span class="p">,</span> <span class="n">bodymass</span><span class="p">,</span> <span class="n">bodycharge</span><span class="p">,</span> <span class="n">Sym_list</span><span class="p">,</span> <span class="n">inter_law</span><span class="p">)</span>
+    <span class="n">params_buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">nparams</span><span class="p">))</span>   
+    <span class="n">action_grad_grav</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+
+    <span class="c1"># Parametrized power_law_pot</span>
+    <span class="n">inter_law_str</span> <span class="o">=</span> <span class="s2">&quot;power_law_pot&quot;</span>
+    <span class="n">inter_law_param_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;n&#39;</span><span class="p">:</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="s1">&#39;alpha&#39;</span><span class="p">:</span><span class="mf">1.</span><span class="p">}</span>
+    <span class="n">NBS</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">NBodySyst</span><span class="p">(</span><span class="n">geodim</span><span class="p">,</span> <span class="n">nbody</span><span class="p">,</span> <span class="n">bodymass</span><span class="p">,</span> <span class="n">bodycharge</span><span class="p">,</span> <span class="n">Sym_list</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">inter_law_str</span><span class="p">,</span> <span class="n">inter_law_param_dict</span><span class="p">)</span>
+    <span class="n">action_grad</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_grad_grav</span><span class="o">-</span><span class="n">action_grad</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_grad_grav</span><span class="p">,</span> <span class="n">action_grad</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    
+    <span class="c1"># Python pot_fun</span>
+    <span class="k">def</span> <span class="nf">inter_law</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span> <span class="n">xsq</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
+            
+        <span class="n">a</span> <span class="o">=</span> <span class="n">xsq</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mf">2.5</span><span class="p">)</span>
+        <span class="n">b</span> <span class="o">=</span> <span class="n">xsq</span><span class="o">*</span><span class="n">a</span>
+
+        <span class="n">res</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="n">xsq</span><span class="o">*</span><span class="n">b</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">b</span>
+        <span class="n">res</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">0.75</span><span class="p">)</span><span class="o">*</span><span class="n">a</span>
+            
+    <span class="n">NBS</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">NBodySyst</span><span class="p">(</span><span class="n">geodim</span><span class="p">,</span> <span class="n">nbody</span><span class="p">,</span> <span class="n">bodymass</span><span class="p">,</span> <span class="n">bodycharge</span><span class="p">,</span> <span class="n">Sym_list</span><span class="p">,</span> <span class="n">inter_law</span><span class="p">)</span>
+    <span class="n">action_grad</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_grad_grav</span><span class="o">-</span><span class="n">action_grad</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_grad_grav</span><span class="p">,</span> <span class="n">action_grad</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  
+    
+    <span class="n">inter_law_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">def inter_law(ptr, xsq, res):</span>
+<span class="s2">        </span>
+<span class="s2">    a = xsq ** (-2.5)</span>
+<span class="s2">    b = xsq*a</span>
+
+<span class="s2">    res[0] = -xsq*b</span>
+<span class="s2">    res[1]= 0.5*b</span>
+<span class="s2">    res[2] = (-0.75)*a</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="n">NBS</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">NBodySyst</span><span class="p">(</span><span class="n">geodim</span><span class="p">,</span> <span class="n">nbody</span><span class="p">,</span> <span class="n">bodymass</span><span class="p">,</span> <span class="n">bodycharge</span><span class="p">,</span> <span class="n">Sym_list</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">inter_law_str</span><span class="p">)</span>
+    <span class="n">action_grad</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_action_grad</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_grad_grav</span><span class="o">-</span><span class="n">action_grad</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">action_grad_grav</span><span class="p">,</span> <span class="n">action_grad</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  </div>
+
+        
+<div class="viewcode-block" id="test_periodicity_default">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_periodicity_default.html#tests.test_NBodySyst.test_periodicity_default">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">((</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="s2">&quot;params_buf&quot;</span><span class="p">),</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">)</span> <span class="ow">in</span> <span class="n">Sols_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_periodicity_default</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">NBS</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that Fourier periodic solutions have zero periodicity default.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGreaterNStore</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+
+    <span class="n">xo</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">segmpos</span><span class="p">[:,</span><span class="mi">0</span> <span class="p">,:]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">xf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">segmpos</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">Compute_periodicity_default</span><span class="p">(</span><span class="n">xo</span><span class="p">,</span> <span class="n">xf</span><span class="p">)</span>
+    <span class="n">ndof</span> <span class="o">=</span> <span class="n">dx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">ndof</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">),</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>  </div>
+
+        
+<div class="viewcode-block" id="test_ODE_vs_spectral">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html#tests.test_NBodySyst.test_ODE_vs_spectral">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;NoSymIfPossible&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;LowLevel&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;vector_calls&quot;</span><span class="p">,</span> <span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">((</span><span class="s2">&quot;NBS&quot;</span><span class="p">,</span> <span class="s2">&quot;params_buf&quot;</span><span class="p">),</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="n">name</span><span class="p">)</span> <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">)</span> <span class="ow">in</span> <span class="n">Sols_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()])</span>
+<span class="k">def</span> <span class="nf">test_ODE_vs_spectral</span><span class="p">(</span><span class="n">NBS</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">,</span> <span class="n">vector_calls</span><span class="p">,</span> <span class="n">LowLevel</span><span class="p">,</span> <span class="n">NoSymIfPossible</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests that the Fourier periodic spectral solver agrees with the time forward Runge-Kutta solver.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+        
+    <span class="n">NBS</span><span class="o">.</span><span class="n">ForceGreaterNStore</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">segmpos</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">params_to_segmpos</span><span class="p">(</span><span class="n">params_buf</span><span class="p">)</span>
+    
+    <span class="n">action_grad</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">segmpos_params_to_action_grad</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">params_buf</span><span class="p">)</span>
+    <span class="n">action_grad_norm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">action_grad</span><span class="p">,</span> <span class="nb">ord</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+    <span class="n">tol</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">action_grad_norm</span>
+    
+    <span class="n">ODE_Syst</span> <span class="o">=</span> <span class="n">NBS</span><span class="o">.</span><span class="n">Get_ODE_def</span><span class="p">(</span><span class="n">params_buf</span><span class="p">,</span> <span class="n">vector_calls</span> <span class="o">=</span> <span class="n">vector_calls</span><span class="p">,</span> <span class="n">LowLevel</span> <span class="o">=</span> <span class="n">LowLevel</span><span class="p">,</span> <span class="n">NoSymIfPossible</span> <span class="o">=</span> <span class="n">NoSymIfPossible</span><span class="p">)</span>
+    
+    <span class="n">nsteps</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">keep_freq</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">nint_ODE</span> <span class="o">=</span> <span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">keep_freq</span>
+    <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;Gauss&quot;</span>
+    
+    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    
+    <span class="n">segmpos_ODE</span><span class="p">,</span> <span class="n">segmvel_ODE</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">ODE</span><span class="o">.</span><span class="n">SymplecticIVP</span><span class="p">(</span>
+        <span class="n">rk</span> <span class="o">=</span> <span class="n">rk</span>                 <span class="p">,</span>
+        <span class="n">keep_freq</span> <span class="o">=</span> <span class="n">keep_freq</span>   <span class="p">,</span>
+        <span class="n">nint</span> <span class="o">=</span> <span class="n">nint_ODE</span>         <span class="p">,</span>
+        <span class="n">keep_init</span> <span class="o">=</span> <span class="kc">True</span>        <span class="p">,</span>
+        <span class="o">**</span><span class="n">ODE_Syst</span>              <span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="n">segmpos_ODE</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ascontiguousarray</span><span class="p">(</span><span class="n">segmpos_ODE</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span><span class="p">,</span> <span class="n">NBS</span><span class="o">.</span><span class="n">nsegm</span><span class="p">,</span> <span class="n">NBS</span><span class="o">.</span><span class="n">geodim</span><span class="p">))</span><span class="o">.</span><span class="n">swapaxes</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">segmpos</span> <span class="o">-</span> <span class="n">segmpos_ODE</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">segmpos</span><span class="p">,</span> <span class="n">segmpos_ODE</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">tol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">tol</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

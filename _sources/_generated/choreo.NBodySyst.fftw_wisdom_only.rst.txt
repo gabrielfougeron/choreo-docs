@@ -1,0 +1,6 @@
+choreo.NBodySyst.fftw\_wisdom\_only
+===================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.fftw_wisdom_only

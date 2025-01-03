@@ -1,0 +1,6 @@
+choreo.NBodySyst.Sym\_list
+==========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.Sym_list

@@ -1,0 +1,6 @@
+choreo.NBodySyst.segmpos\_params\_to\_action
+============================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.segmpos_params_to_action

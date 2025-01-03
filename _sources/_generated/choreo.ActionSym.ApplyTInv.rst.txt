@@ -1,0 +1,6 @@
+choreo.ActionSym.ApplyTInv
+==========================
+
+.. currentmodule:: choreo
+
+.. automethod:: ActionSym.ApplyTInv

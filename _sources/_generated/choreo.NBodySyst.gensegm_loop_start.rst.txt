@@ -1,0 +1,6 @@
+choreo.NBodySyst.gensegm\_loop\_start
+=====================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.gensegm_loop_start

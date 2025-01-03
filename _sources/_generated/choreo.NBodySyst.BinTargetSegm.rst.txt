@@ -1,0 +1,6 @@
+choreo.NBodySyst.BinTargetSegm
+==============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.BinTargetSegm

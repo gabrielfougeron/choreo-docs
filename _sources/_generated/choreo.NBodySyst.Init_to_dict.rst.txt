@@ -1,0 +1,6 @@
+choreo.NBodySyst.Init\_to\_dict
+===============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Init_to_dict

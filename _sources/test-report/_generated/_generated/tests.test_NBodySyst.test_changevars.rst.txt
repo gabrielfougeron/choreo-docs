@@ -1,0 +1,6 @@
+test\_changevars
+================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_changevars

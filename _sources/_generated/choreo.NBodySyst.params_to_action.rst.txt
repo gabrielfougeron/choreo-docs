@@ -1,0 +1,6 @@
+choreo.NBodySyst.params\_to\_action
+===================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.params_to_action

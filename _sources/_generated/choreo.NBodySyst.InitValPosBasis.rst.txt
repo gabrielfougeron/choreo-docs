@@ -1,0 +1,6 @@
+choreo.NBodySyst.InitValPosBasis
+================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.InitValPosBasis

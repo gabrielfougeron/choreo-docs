@@ -32,10 +32,12 @@
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
@@ -58,6 +60,9 @@
     <script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script src="_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
     <script src="_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
     <script src="_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
@@ -161,6 +166,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="_build/auto_examples/index.html">
     Gallery
   </a>
@@ -170,13 +182,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="test-report/test-report.html">
     Tests
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="theory.html">
-    Theory
   </a>
 </li>
 
@@ -297,6 +302,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="theory.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="_build/auto_examples/index.html">
     Gallery
   </a>
@@ -306,13 +318,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="test-report/test-report.html">
     Tests
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="theory.html">
-    Theory
   </a>
 </li>
 
@@ -446,7 +451,7 @@
                   
   <section id="computation-times">
 <span id="sphx-glr-sg-execution-times"></span><h1>Computation times<a class="headerlink" href="#computation-times" title="Link to this heading">#</a></h1>
-<p><strong>01:28.097</strong> total execution time for 12 files <strong>from all galleries</strong>:</p>
+<p><strong>00:09.123</strong> total execution time for 8 files <strong>from all galleries</strong>:</p>
 <div class="docutils container">
 <style scoped>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -467,52 +472,36 @@ $(document).ready( function () {
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/convergence/ExplicitRungeKutta_ivp.html#sphx-glr-build-auto-examples-convergence-explicitrungekutta-ivp-py"><span class="std std-ref">Convergence analysis of explicit Runge-Kutta methods for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/ExplicitRungeKutta_ivp.py</span></code>)</p></td>
-<td><p>01:13.053</p></td>
-<td><p>0.0</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/convergence/TangentIntegrationvs_FD.html#sphx-glr-build-auto-examples-convergence-tangentintegrationvs-fd-py"><span class="std std-ref">Validation of tangent integration algorithms using Finite Differences</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/TangentIntegrationvs_FD.py</span></code>)</p></td>
-<td><p>00:02.466</p></td>
-<td><p>0.0</p></td>
-</tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/convergence/SelectedRungeKutta.html#sphx-glr-build-auto-examples-convergence-selectedrungekutta-py"><span class="std std-ref">Convergence analysis of Runge-Kutta methods for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/SelectedRungeKutta.py</span></code>)</p></td>
-<td><p>00:02.334</p></td>
+<td><p>00:02.935</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/convergence/EFT_RungeKutta.html#sphx-glr-build-auto-examples-convergence-eft-rungekutta-py"><span class="std std-ref">Benchmark of Error-Free Transforms for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/EFT_RungeKutta.py</span></code>)</p></td>
-<td><p>00:02.255</p></td>
-<td><p>0.0</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/convergence/ImplicitRungeKutta_ivp.html#sphx-glr-build-auto-examples-convergence-implicitrungekutta-ivp-py"><span class="std std-ref">Convergence analysis of implicit Runge-Kutta methods for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/ImplicitRungeKutta_ivp.py</span></code>)</p></td>
-<td><p>00:02.107</p></td>
-<td><p>0.0</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/convergence/scipyRungeKutta_ivp.html#sphx-glr-build-auto-examples-convergence-scipyrungekutta-ivp-py"><span class="std std-ref">Convergence analysis of scipy’s Runge-Kutta methods for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/scipyRungeKutta_ivp.py</span></code>)</p></td>
-<td><p>00:02.041</p></td>
+<td><p>00:01.800</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/convergence/Integration_on_segment.html#sphx-glr-build-auto-examples-convergence-integration-on-segment-py"><span class="std std-ref">Convergence analysis of integration methods on segment</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/convergence/Integration_on_segment.py</span></code>)</p></td>
-<td><p>00:01.101</p></td>
+<td><p>00:01.196</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/benchmarks/FFT_bench_scipy_backend.html#sphx-glr-build-auto-examples-benchmarks-fft-bench-scipy-backend-py"><span class="std std-ref">Benchmark of FFT implementations available as scipy backends</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/benchmarks/FFT_bench_scipy_backend.py</span></code>)</p></td>
-<td><p>00:00.951</p></td>
+<td><p>00:01.156</p></td>
 <td><p>0.0</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/benchmarks/ODE_ivp_LowLevel_bench.html#sphx-glr-build-auto-examples-benchmarks-ode-ivp-lowlevel-bench-py"><span class="std std-ref">Benchmark of LowLevelCallable for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/benchmarks/ODE_ivp_LowLevel_bench.py</span></code>)</p></td>
-<td><p>00:00.651</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/benchmarks/EFTsum_bench.html#sphx-glr-build-auto-examples-benchmarks-eftsum-bench-py"><span class="std std-ref">Benchmark of Error-Free Transforms for summation</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/benchmarks/EFTsum_bench.py</span></code>)</p></td>
+<td><p>00:00.787</p></td>
 <td><p>0.0</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/benchmarks/EFTsum_bench.html#sphx-glr-build-auto-examples-benchmarks-eftsum-bench-py"><span class="std std-ref">Benchmark of Error-Free Transforms for summation</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/benchmarks/EFTsum_bench.py</span></code>)</p></td>
-<td><p>00:00.605</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/benchmarks/ODE_ivp_LowLevel_bench.html#sphx-glr-build-auto-examples-benchmarks-ode-ivp-lowlevel-bench-py"><span class="std std-ref">Benchmark of LowLevelCallable for ODE IVP</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/benchmarks/ODE_ivp_LowLevel_bench.py</span></code>)</p></td>
+<td><p>00:00.627</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="_build/auto_examples/Numerical_tricks/FFT_sym.html#sphx-glr-build-auto-examples-numerical-tricks-fft-sym-py"><span class="std std-ref">FFT and symmetries</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/Numerical_tricks/FFT_sym.py</span></code>)</p></td>
-<td><p>00:00.396</p></td>
+<td><p>00:00.498</p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_build/auto_examples/benchmarks/Benchmark_Hardware_Info.html#sphx-glr-build-auto-examples-benchmarks-benchmark-hardware-info-py"><span class="std std-ref">Description of the benchmark machine</span></a> (<code class="docutils literal notranslate"><span class="pre">../../examples/benchmarks/Benchmark_Hardware_Info.py</span></code>)</p></td>
-<td><p>00:00.136</p></td>
+<td><p>00:00.125</p></td>
 <td><p>0.0</p></td>
 </tr>
 </tbody>

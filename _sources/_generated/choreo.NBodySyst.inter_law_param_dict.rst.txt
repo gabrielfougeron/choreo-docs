@@ -1,0 +1,6 @@
+choreo.NBodySyst.inter\_law\_param\_dict
+========================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.inter_law_param_dict

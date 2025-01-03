@@ -1,0 +1,6 @@
+choreo.NBodySyst.free\_owned\_memory
+====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.free_owned_memory

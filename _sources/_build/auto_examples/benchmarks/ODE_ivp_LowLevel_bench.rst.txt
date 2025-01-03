@@ -52,7 +52,7 @@ Definition of benchmarked integrands
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 132-144
+.. GENERATED FROM PYTHON SOURCE LINES 131-143
 
 .. code-block:: Python
 

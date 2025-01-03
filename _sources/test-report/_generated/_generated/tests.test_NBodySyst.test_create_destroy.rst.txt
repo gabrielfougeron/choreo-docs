@@ -1,0 +1,6 @@
+test\_create\_destroy
+=====================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_create_destroy

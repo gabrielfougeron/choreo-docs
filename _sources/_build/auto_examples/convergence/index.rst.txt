@@ -32,40 +32,6 @@ Convergence analysis of numerical methods
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Convergence analysis of explicit Runge-Kutta methods for ODE IVP">
-
-.. only:: html
-
-  .. image:: /_build/auto_examples/convergence/images/thumb/sphx_glr_ExplicitRungeKutta_ivp_thumb.png
-    :alt:
-
-  :ref:`sphx_glr__build_auto_examples_convergence_ExplicitRungeKutta_ivp.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Convergence analysis of explicit Runge-Kutta methods for ODE IVP</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Convergence analysis of implicit Runge-Kutta methods for ODE IVP">
-
-.. only:: html
-
-  .. image:: /_build/auto_examples/convergence/images/thumb/sphx_glr_ImplicitRungeKutta_ivp_thumb.png
-    :alt:
-
-  :ref:`sphx_glr__build_auto_examples_convergence_ImplicitRungeKutta_ivp.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Convergence analysis of implicit Runge-Kutta methods for ODE IVP</div>
-    </div>
-
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="Convergence analysis of integration methods on segment">
 
 .. only:: html
@@ -98,40 +64,6 @@ Convergence analysis of numerical methods
     </div>
 
 
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Validation of tangent integration algorithms using Finite Differences">
-
-.. only:: html
-
-  .. image:: /_build/auto_examples/convergence/images/thumb/sphx_glr_TangentIntegrationvs_FD_thumb.png
-    :alt:
-
-  :ref:`sphx_glr__build_auto_examples_convergence_TangentIntegrationvs_FD.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Validation of tangent integration algorithms using Finite Differences</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Convergence analysis of scipy&#x27;s Runge-Kutta methods for ODE IVP">
-
-.. only:: html
-
-  .. image:: /_build/auto_examples/convergence/images/thumb/sphx_glr_scipyRungeKutta_ivp_thumb.png
-    :alt:
-
-  :ref:`sphx_glr__build_auto_examples_convergence_scipyRungeKutta_ivp.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">Convergence analysis of scipy's Runge-Kutta methods for ODE IVP</div>
-    </div>
-
-
 .. thumbnail-parent-div-close
 
 .. raw:: html
@@ -143,10 +75,6 @@ Convergence analysis of numerical methods
    :hidden:
 
    /_build/auto_examples/convergence/EFT_RungeKutta
-   /_build/auto_examples/convergence/ExplicitRungeKutta_ivp
-   /_build/auto_examples/convergence/ImplicitRungeKutta_ivp
    /_build/auto_examples/convergence/Integration_on_segment
    /_build/auto_examples/convergence/SelectedRungeKutta
-   /_build/auto_examples/convergence/TangentIntegrationvs_FD
-   /_build/auto_examples/convergence/scipyRungeKutta_ivp
 
