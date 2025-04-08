@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.symmetric\_adjoint
+=============================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. automethod:: QuadTable.symmetric_adjoint

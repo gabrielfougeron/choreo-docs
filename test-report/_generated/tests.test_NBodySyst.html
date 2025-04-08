@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,10 +27,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
@@ -40,20 +40,20 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-test-results/common.css?v=9ec2c1d5" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f19979f9" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
@@ -68,14 +68,15 @@
     <script src="../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"dd": "\\operatorname{\\mathrm{d}}", "eqdef": "\\mathrel{\\stackrel{\\mathrm{def}}{=}}"}}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'test-report/_generated/tests.test_NBodySyst';</script>
     <script src="../../_static/js/custom-icon.js?v=063adea7"></script>
     <link rel="canonical" href="https://gabrielfougeron.github.io/choreo-docs/test-report/_generated/tests.test_NBodySyst.html" />
     <link rel="icon" href="../../_static/eight_icon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="test_create_destroy" href="_generated/tests.test_NBodySyst.test_create_destroy.html" />
+    <link rel="next" title="test_bad_init_args" href="_generated/tests.test_NBodySyst.test_bad_init_args.html" />
     <link rel="prev" title="test_Cayley_graph" href="_generated/tests.test_ActionSym.test_Cayley_graph.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -169,7 +170,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../theory.html">
+  <a class="nav-link nav-internal" href="../../theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -265,10 +266,6 @@
   
 
   
-    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -303,7 +300,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../theory.html">
+  <a class="nav-link nav-internal" href="../../theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -440,6 +437,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">test_NBodySyst</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_bad_init_args.html">test_bad_init_args</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_create_destroy.html">test_create_destroy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_all_pos_to_segmpos.html">test_all_pos_to_segmpos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_all_vel_to_segmvel.html">test_all_vel_to_segmvel</a></li>
@@ -462,6 +460,9 @@
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_custom_inter_law.html">test_custom_inter_law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_periodicity_default.html">test_periodicity_default</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html">test_ODE_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_param.html">test_segmpos_param</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_grad_fun_FD.html">test_grad_fun_FD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD.html">test_ODE_grad_vs_FD</a></li>
 </ul>
 </details></li>
 </ul>
@@ -486,9 +487,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -536,74 +542,86 @@
                   
   <section id="module-tests.test_NBodySyst">
 <span id="test-nbodysyst"></span><h1>test_NBodySyst<a class="headerlink" href="#module-tests.test_NBodySyst" title="Link to this heading">#</a></h1>
-<p>Tests properties of <a class="reference internal" href="../../_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.NBodySyst</span></code></a></p>
+<p>Tests properties of <a class="reference internal" href="../../_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.NBodySyst</span></code></a>.</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_create_destroy.html#tests.test_NBodySyst.test_create_destroy" title="tests.test_NBodySyst.test_create_destroy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_create_destroy</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_bad_init_args.html#tests.test_NBodySyst.test_bad_init_args" title="tests.test_NBodySyst.test_bad_init_args"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_bad_init_args</span></code></a></p></td>
+<td><p>Tests that mismatched init arguments are properly handled during initialization of a <a class="reference internal" href="../../_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.NBodySyst</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_create_destroy.html#tests.test_NBodySyst.test_create_destroy" title="tests.test_NBodySyst.test_create_destroy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_create_destroy</span></code></a></p></td>
 <td><p>Tests initialization and destruction of NBodySyst.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_all_pos_to_segmpos.html#tests.test_NBodySyst.test_all_pos_to_segmpos" title="tests.test_NBodySyst.test_all_pos_to_segmpos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_all_pos_to_segmpos</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_all_pos_to_segmpos.html#tests.test_NBodySyst.test_all_pos_to_segmpos" title="tests.test_NBodySyst.test_all_pos_to_segmpos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_all_pos_to_segmpos</span></code></a></p></td>
 <td><p>Tests whether <code class="docutils literal notranslate"><span class="pre">all_pos</span></code> and <code class="docutils literal notranslate"><span class="pre">segmpos</span></code> agree.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_all_vel_to_segmvel.html#tests.test_NBodySyst.test_all_vel_to_segmvel" title="tests.test_NBodySyst.test_all_vel_to_segmvel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_all_vel_to_segmvel</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_all_vel_to_segmvel.html#tests.test_NBodySyst.test_all_vel_to_segmvel" title="tests.test_NBodySyst.test_all_vel_to_segmvel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_all_vel_to_segmvel</span></code></a></p></td>
 <td><p>Tests whether <code class="docutils literal notranslate"><span class="pre">all_vel</span></code> and <code class="docutils literal notranslate"><span class="pre">segmvel</span></code> agree.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_to_all_pos.html#tests.test_NBodySyst.test_segmpos_to_all_pos" title="tests.test_NBodySyst.test_segmpos_to_all_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_segmpos_to_all_pos</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_to_all_pos.html#tests.test_NBodySyst.test_segmpos_to_all_pos" title="tests.test_NBodySyst.test_segmpos_to_all_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_segmpos_to_all_pos</span></code></a></p></td>
 <td><p>Tests going from <code class="docutils literal notranslate"><span class="pre">segmpos</span></code> to <code class="docutils literal notranslate"><span class="pre">all_pos</span></code> and back.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_capture_co.html#tests.test_NBodySyst.test_capture_co" title="tests.test_NBodySyst.test_capture_co"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_capture_co</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_capture_co.html#tests.test_NBodySyst.test_capture_co" title="tests.test_NBodySyst.test_capture_co"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_capture_co</span></code></a></p></td>
 <td><p>Checks consistency of parameters definition for <span class="math notranslate nohighlight">\(c_o\)</span>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_round_trips_pos.html#tests.test_NBodySyst.test_round_trips_pos" title="tests.test_NBodySyst.test_round_trips_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_round_trips_pos</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_round_trips_pos.html#tests.test_NBodySyst.test_round_trips_pos" title="tests.test_NBodySyst.test_round_trips_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_round_trips_pos</span></code></a></p></td>
 <td><p>Tests whether several ways of going back and forth in the chain <code class="docutils literal notranslate"><span class="pre">param_buf</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">segmpos</span></code> indeed give the same result.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_round_trips_vel.html#tests.test_NBodySyst.test_round_trips_vel" title="tests.test_NBodySyst.test_round_trips_vel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_round_trips_vel</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_round_trips_vel.html#tests.test_NBodySyst.test_round_trips_vel" title="tests.test_NBodySyst.test_round_trips_vel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_round_trips_vel</span></code></a></p></td>
 <td><p>Tests whether several ways of going back and forth in the chain <code class="docutils literal notranslate"><span class="pre">param_buf</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">segmvel</span></code> indeed give the same result.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_changevars.html#tests.test_NBodySyst.test_changevars" title="tests.test_NBodySyst.test_changevars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_changevars</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_changevars.html#tests.test_NBodySyst.test_changevars" title="tests.test_NBodySyst.test_changevars"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_changevars</span></code></a></p></td>
 <td><p>Tests properties of change of variables of parameters.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_params_segmpos_dual.html#tests.test_NBodySyst.test_params_segmpos_dual" title="tests.test_NBodySyst.test_params_segmpos_dual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_params_segmpos_dual</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_params_segmpos_dual.html#tests.test_NBodySyst.test_params_segmpos_dual" title="tests.test_NBodySyst.test_params_segmpos_dual"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_params_segmpos_dual</span></code></a></p></td>
 <td><p>Tests invariance of dot product  by the transformation <code class="docutils literal notranslate"><span class="pre">params</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">segmpos</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_kin.html#tests.test_NBodySyst.test_kin" title="tests.test_NBodySyst.test_kin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_kin</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_kin.html#tests.test_NBodySyst.test_kin" title="tests.test_NBodySyst.test_kin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_kin</span></code></a></p></td>
 <td><p>Tests computation of kinetic energy.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_pot.html#tests.test_NBodySyst.test_pot" title="tests.test_NBodySyst.test_pot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_pot</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_pot.html#tests.test_NBodySyst.test_pot" title="tests.test_NBodySyst.test_pot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_pot</span></code></a></p></td>
 <td><p>Tests computation of potential energy.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action.html#tests.test_NBodySyst.test_action" title="tests.test_NBodySyst.test_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_action</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action.html#tests.test_NBodySyst.test_action" title="tests.test_NBodySyst.test_action"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_action</span></code></a></p></td>
 <td><p>Tests computation of the action.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_resize.html#tests.test_NBodySyst.test_resize" title="tests.test_NBodySyst.test_resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_resize</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_resize.html#tests.test_NBodySyst.test_resize" title="tests.test_NBodySyst.test_resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_resize</span></code></a></p></td>
 <td><p>Tests nested properties of Fourier spaces on positions.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action_indep_resize.html#tests.test_NBodySyst.test_action_indep_resize" title="tests.test_NBodySyst.test_action_indep_resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_action_indep_resize</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action_indep_resize.html#tests.test_NBodySyst.test_action_indep_resize" title="tests.test_NBodySyst.test_action_indep_resize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_action_indep_resize</span></code></a></p></td>
 <td><p>Tests that action is left <strong>similar</strong> by resizing.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_repeatability.html#tests.test_NBodySyst.test_repeatability" title="tests.test_NBodySyst.test_repeatability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_repeatability</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_repeatability.html#tests.test_NBodySyst.test_repeatability" title="tests.test_NBodySyst.test_repeatability"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_repeatability</span></code></a></p></td>
 <td><p>Tests that computing <code class="docutils literal notranslate"><span class="pre">params_buf</span></code> =&gt; <code class="docutils literal notranslate"><span class="pre">segmpos</span></code> twice give the same result.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ForceGeneralSym.html#tests.test_NBodySyst.test_ForceGeneralSym" title="tests.test_NBodySyst.test_ForceGeneralSym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ForceGeneralSym</span></code></a></p></td>
-<td><p>Tests that computations results are independant of <a class="reference internal" href="../../_generated/choreo.NBodySyst.ForceGeneralSym.html#choreo.NBodySyst.ForceGeneralSym" title="choreo.NBodySyst.ForceGeneralSym"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.ForceGeneralSym()</span></code></a>.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ForceGeneralSym.html#tests.test_NBodySyst.test_ForceGeneralSym" title="tests.test_NBodySyst.test_ForceGeneralSym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ForceGeneralSym</span></code></a></p></td>
+<td><p>Tests that computations results are independent of <a class="reference internal" href="../../_generated/choreo.NBodySyst.ForceGeneralSym.html#choreo.NBodySyst.ForceGeneralSym" title="choreo.NBodySyst.ForceGeneralSym"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.ForceGeneralSym()</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ForceGreaterNstore.html#tests.test_NBodySyst.test_ForceGreaterNstore" title="tests.test_NBodySyst.test_ForceGreaterNstore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ForceGreaterNstore</span></code></a></p></td>
-<td><p>Tests that computations results are independant of <a class="reference internal" href="../../_generated/choreo.NBodySyst.ForceGreaterNStore.html#choreo.NBodySyst.ForceGreaterNStore" title="choreo.NBodySyst.ForceGreaterNStore"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.ForceGreaterNStore()</span></code></a>.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ForceGreaterNstore.html#tests.test_NBodySyst.test_ForceGreaterNstore" title="tests.test_NBodySyst.test_ForceGreaterNstore"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ForceGreaterNstore</span></code></a></p></td>
+<td><p>Tests that computations results are independent of <a class="reference internal" href="../../_generated/choreo.NBodySyst.ForceGreaterNStore.html#choreo.NBodySyst.ForceGreaterNStore" title="choreo.NBodySyst.ForceGreaterNStore"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.ForceGreaterNStore()</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_fft_backends.html#tests.test_NBodySyst.test_fft_backends" title="tests.test_NBodySyst.test_fft_backends"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_fft_backends</span></code></a></p></td>
-<td><p>Tests that computations results are independant of <a class="reference internal" href="../../_generated/choreo.NBodySyst.fft_backend.html#choreo.NBodySyst.fft_backend" title="choreo.NBodySyst.fft_backend"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.fft_backend()</span></code></a>.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_fft_backends.html#tests.test_NBodySyst.test_fft_backends" title="tests.test_NBodySyst.test_fft_backends"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_fft_backends</span></code></a></p></td>
+<td><p>Tests that computations results are independent of <a class="reference internal" href="../../_generated/choreo.NBodySyst.fft_backend.html#choreo.NBodySyst.fft_backend" title="choreo.NBodySyst.fft_backend"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.fft_backend()</span></code></a>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action_cst_sym_pairs.html#tests.test_NBodySyst.test_action_cst_sym_pairs" title="tests.test_NBodySyst.test_action_cst_sym_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_action_cst_sym_pairs</span></code></a></p></td>
-<td><p>Tests that computations results are independant of the prescribed symmetries.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action_cst_sym_pairs.html#tests.test_NBodySyst.test_action_cst_sym_pairs" title="tests.test_NBodySyst.test_action_cst_sym_pairs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_action_cst_sym_pairs</span></code></a></p></td>
+<td><p>Tests that computations results are independent of the prescribed symmetries.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_custom_inter_law.html#tests.test_NBodySyst.test_custom_inter_law" title="tests.test_NBodySyst.test_custom_inter_law"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_custom_inter_law</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_custom_inter_law.html#tests.test_NBodySyst.test_custom_inter_law" title="tests.test_NBodySyst.test_custom_inter_law"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_custom_inter_law</span></code></a></p></td>
 <td><p>Tests that custom interaction laws are correctly handled.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_periodicity_default.html#tests.test_NBodySyst.test_periodicity_default" title="tests.test_NBodySyst.test_periodicity_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_periodicity_default</span></code></a></p></td>
-<td><p>Tests that Fourier periodic solutions have zero periodicity default.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_periodicity_default.html#tests.test_NBodySyst.test_periodicity_default" title="tests.test_NBodySyst.test_periodicity_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_periodicity_default</span></code></a></p></td>
+<td><p>Tests that Fourier periodic trajectories have zero periodicity default and satisfy initial constraints.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html#tests.test_NBodySyst.test_ODE_vs_spectral" title="tests.test_NBodySyst.test_ODE_vs_spectral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_vs_spectral</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html#tests.test_NBodySyst.test_ODE_vs_spectral" title="tests.test_NBodySyst.test_ODE_vs_spectral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_vs_spectral</span></code></a></p></td>
 <td><p>Tests that the Fourier periodic spectral solver agrees with the time forward Runge-Kutta solver.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_param.html#tests.test_NBodySyst.test_segmpos_param" title="tests.test_NBodySyst.test_segmpos_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_segmpos_param</span></code></a></p></td>
+<td><p>Tests whether functions taking advantage of <code class="docutils literal notranslate"><span class="pre">segmpos</span></code> caching give the same result as those that do not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_grad_fun_FD.html#tests.test_NBodySyst.test_grad_fun_FD" title="tests.test_NBodySyst.test_grad_fun_FD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_grad_fun_FD</span></code></a></p></td>
+<td><p>Tests that the gradient of velocities and forces agree with their finite difference estimations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD.html#tests.test_NBodySyst.test_ODE_grad_vs_FD" title="tests.test_NBodySyst.test_ODE_grad_vs_FD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_grad_vs_FD</span></code></a></p></td>
+<td><p>Tests that the solution of the tangent system agrees with its finite difference estimation.</p></td>
 </tr>
 </tbody>
 </table>
@@ -621,37 +639,6 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-
-  
-  <div class="tocsection editthispage">
-    <a href="https://github.com/gabrielfougeron/choreo/edit/main/docs/source/test-report/_generated/tests.test_NBodySyst.rst">
-      <i class="fa-solid fa-pencil"></i>
-      
-      
-        
-          Edit on GitHub
-        
-      
-    </a>
-  </div>
-</div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="../../_sources/test-report/_generated/tests.test_NBodySyst.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
-
-</div></div>
-              
             
           </div>
           <footer class="bd-footer-content">
@@ -663,8 +650,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

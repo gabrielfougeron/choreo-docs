@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.nsteps
+=================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autoattribute:: QuadTable.nsteps

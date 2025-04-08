@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.\_\_init\_\_
+=======================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. automethod:: QuadTable.__init__

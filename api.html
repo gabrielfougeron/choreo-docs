@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,10 +27,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
@@ -40,20 +40,20 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-test-results/common.css?v=9ec2c1d5" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=f19979f9" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/jquery.js?v=5d32c60e"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
@@ -68,7 +68,8 @@
     <script src="_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"dd": "\\operatorname{\\mathrm{d}}", "eqdef": "\\mathrel{\\stackrel{\\mathrm{def}}{=}}"}}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
     <script src="_static/js/custom-icon.js?v=063adea7"></script>
     <link rel="canonical" href="https://gabrielfougeron.github.io/choreo-docs/api.html" />
@@ -169,7 +170,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="theory.html">
+  <a class="nav-link nav-internal" href="theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -303,7 +304,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="theory.html">
+  <a class="nav-link nav-internal" href="theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -419,9 +420,18 @@
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces_nosym.html">choreo.NBodySyst.Compute_forces_nosym</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces_vectorized.html">choreo.NBodySyst.Compute_forces_vectorized</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_forces_vectorized_nosym.html">choreo.NBodySyst.Compute_forces_vectorized_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_grad_forces.html">choreo.NBodySyst.Compute_grad_forces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_grad_forces_nosym.html">choreo.NBodySyst.Compute_grad_forces_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_grad_forces_vectorized.html">choreo.NBodySyst.Compute_grad_forces_vectorized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_grad_forces_vectorized_nosym.html">choreo.NBodySyst.Compute_grad_forces_vectorized_nosym</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_grad_velocities.html">choreo.NBodySyst.Compute_grad_velocities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_grad_velocities_vectorized.html">choreo.NBodySyst.Compute_grad_velocities_vectorized</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_init_pos_mom.html">choreo.NBodySyst.Compute_init_pos_mom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_initial_constraint_default_pos.html">choreo.NBodySyst.Compute_initial_constraint_default_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_initial_constraint_default_vel.html">choreo.NBodySyst.Compute_initial_constraint_default_vel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_n_sub_fft.html">choreo.NBodySyst.Compute_n_sub_fft</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_periodicity_default.html">choreo.NBodySyst.Compute_periodicity_default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_periodicity_default_pos.html">choreo.NBodySyst.Compute_periodicity_default_pos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_periodicity_default_vel.html">choreo.NBodySyst.Compute_periodicity_default_vel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_velocities.html">choreo.NBodySyst.Compute_velocities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.Compute_velocities_vectorized.html">choreo.NBodySyst.Compute_velocities_vectorized</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ConfigureShortcutSym.html">choreo.NBodySyst.ConfigureShortcutSym</a></li>
@@ -512,10 +522,14 @@
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.LoopGenConstraints.html">choreo.NBodySyst.LoopGenConstraints</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ParamBasisShortcutPos.html">choreo.NBodySyst.ParamBasisShortcutPos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.ParamBasisShortcutVel.html">choreo.NBodySyst.ParamBasisShortcutVel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_Isegm.html">choreo.NBodySyst.PerDef_Isegm</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_SpaceRotPos.html">choreo.NBodySyst.PerDef_SpaceRotPos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_SpaceRotVel.html">choreo.NBodySyst.PerDef_SpaceRotVel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDef_TimeRev.html">choreo.NBodySyst.PerDef_TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefBeg_Isegm.html">choreo.NBodySyst.PerDefBeg_Isegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefBeg_SpaceRotPos.html">choreo.NBodySyst.PerDefBeg_SpaceRotPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefBeg_SpaceRotVel.html">choreo.NBodySyst.PerDefBeg_SpaceRotVel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefBeg_TimeRev.html">choreo.NBodySyst.PerDefBeg_TimeRev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefEnd_Isegm.html">choreo.NBodySyst.PerDefEnd_Isegm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefEnd_SpaceRotPos.html">choreo.NBodySyst.PerDefEnd_SpaceRotPos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefEnd_SpaceRotVel.html">choreo.NBodySyst.PerDefEnd_SpaceRotVel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.PerDefEnd_TimeRev.html">choreo.NBodySyst.PerDefEnd_TimeRev</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.RequiresGreaterNStore.html">choreo.NBodySyst.RequiresGreaterNStore</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.SegmGraph.html">choreo.NBodySyst.SegmGraph</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/choreo.NBodySyst.SegmRequiresDisp.html">choreo.NBodySyst.SegmRequiresDisp</a></li>
@@ -613,15 +627,38 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Segment quadrature / ODE</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.html">choreo.segm.quad.QuadTable</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.__init__.html">choreo.segm.quad.QuadTable.__init__</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.is_symmetric.html">choreo.segm.quad.QuadTable.is_symmetric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.is_symmetric_pair.html">choreo.segm.quad.QuadTable.is_symmetric_pair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.symmetric_adjoint.html">choreo.segm.quad.QuadTable.symmetric_adjoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.symmetry_default.html">choreo.segm.quad.QuadTable.symmetry_default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.nsteps.html">choreo.segm.quad.QuadTable.nsteps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.th_cvg_rate.html">choreo.segm.quad.QuadTable.th_cvg_rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.w.html">choreo.segm.quad.QuadTable.w</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.wlag.html">choreo.segm.quad.QuadTable.wlag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.x.html">choreo.segm.quad.QuadTable.x</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="_generated/choreo.segm.multiprec_tables.ComputeQuadrature.html">choreo.segm.multiprec_tables.ComputeQuadrature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_generated/choreo.segm.quad.IntegrateOnSegment.html">choreo.segm.quad.IntegrateOnSegment</a></li>
+</ul>
 </div>
 </nav></div>
     </div>
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -668,12 +705,12 @@
 <h1>API<a class="headerlink" href="#api" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Even though the performance critical sections of <a class="reference internal" href="#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a> are coded in <a class="reference external" href="https://cython.org/">Cython</a>, the actual underlying C types only appear in this API documentation as part of function prototypes. The rest of the API documentation uses <a class="reference external" href="https://www.python.org/">Python</a> types as expected from a user interacting with the code. This follows <a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#automatic-type-conversions">Cython’s automatic type conversions</a> and uses <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> in lieu of <a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/memoryviews.html">Cython typed memoryviews</a>.</p>
+<p>Even though the performance critical sections of <a class="reference internal" href="#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a> are coded in <a class="reference external" href="https://cython.org/">Cython</a>, the actual underlying C types only appear in this API documentation as part of function prototypes. The rest of the API documentation uses <a class="reference external" href="https://www.python.org/">Python</a> types as expected from a user interacting with the code. This follows <a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/language_basics.html#automatic-type-conversions">Cython’s automatic type conversions</a> and uses <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> with specified <code class="xref py py-class docutils literal notranslate"><span class="pre">shape</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">dtype</span></code> attributes when possible in lieu of <a class="reference external" href="https://cython.readthedocs.io/en/latest/src/userguide/memoryviews.html">Cython typed memoryviews</a> as present in the code.</p>
 <p>The following modules classes are concerned:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="_generated/choreo.ActionSym.html#choreo.ActionSym" title="choreo.ActionSym"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.ActionSym</span></code></a></p></li>
 <li><p><a class="reference internal" href="_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.NBodySyst</span></code></a></p></li>
-<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo.scipy_plus.ODE</span></code></p></li>
+<li><p><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo.segm.ODE</span></code></p></li>
 </ul>
 </div>
 <section id="choreo">
@@ -691,11 +728,28 @@
 </div>
 </section>
 <section id="defining-symmetries">
-<h2>Defining Symmetries<a class="headerlink" href="#defining-symmetries" title="Link to this heading">#</a></h2>
+<h2>Defining symmetries<a class="headerlink" href="#defining-symmetries" title="Link to this heading">#</a></h2>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo.ActionSym.html#choreo.ActionSym" title="choreo.ActionSym"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ActionSym</span></code></a></p></td>
 <td><p>This class defines the symmetries in a N-body system.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="numerical-tools-on-segment">
+<h2>Numerical tools on segment<a class="headerlink" href="#numerical-tools-on-segment" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.html#choreo.segm.quad.QuadTable" title="choreo.segm.quad.QuadTable"><code class="xref py py-obj docutils literal notranslate"><span class="pre">segm.quad.QuadTable</span></code></a></p></td>
+<td><p>Numerical integration and approximation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/choreo.segm.multiprec_tables.ComputeQuadrature.html#choreo.segm.multiprec_tables.ComputeQuadrature" title="choreo.segm.multiprec_tables.ComputeQuadrature"><code class="xref py py-obj docutils literal notranslate"><span class="pre">segm.multiprec_tables.ComputeQuadrature</span></code></a></p></td>
+<td><p>ComputeQuadrature Computes a <a class="reference internal" href="_generated/choreo.segm.quad.QuadTable.html#choreo.segm.quad.QuadTable" title="choreo.segm.quad.QuadTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.segm.quad.QuadTable</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/choreo.segm.quad.IntegrateOnSegment.html#choreo.segm.quad.IntegrateOnSegment" title="choreo.segm.quad.IntegrateOnSegment"><code class="xref py py-obj docutils literal notranslate"><span class="pre">segm.quad.IntegrateOnSegment</span></code></a></p></td>
+<td><p>Computes an approximation of the integral of a function on a segment.</p></td>
 </tr>
 </tbody>
 </table>
@@ -725,7 +779,8 @@
 </section>
 <section id="choreo-gui">
 <span id="module-choreo_GUI"></span><h2>choreo_GUI<a class="headerlink" href="#choreo-gui" title="Link to this heading">#</a></h2>
-<p>Launches choreo GUI</p>
+<p>Launches the GUI server.</p>
+<p>Access the GUI by typing <a class="reference external" href="http://127.0.0.1:8000">http://127.0.0.1:8000</a> in your favorite internet browser after launching the server.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">usage: choreo_GUI [-h] [-f]</span>
 </pre></div>
 </div>
@@ -769,7 +824,8 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo">choreo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-of-interacting-point-masses">Systems of interacting point masses</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-symmetries">Defining Symmetries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-symmetries">Defining symmetries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-tools-on-segment">Numerical tools on segment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrypoints">Entrypoints</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo-cli-search">choreo_CLI_search</a></li>
 </ul>
@@ -777,31 +833,6 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#choreo-gui">choreo_GUI</a></li>
 </ul>
   </nav></div>
-
-  <div class="sidebar-secondary-item">
-
-  
-  <div class="tocsection editthispage">
-    <a href="https://github.com/gabrielfougeron/choreo/edit/main/docs/source/api.rst">
-      <i class="fa-solid fa-pencil"></i>
-      
-      
-        
-          Edit on GitHub
-        
-      
-    </a>
-  </div>
-</div>
-
-  <div class="sidebar-secondary-item">
-
-  <div class="tocsection sourcelink">
-    <a href="_sources/api.rst.txt">
-      <i class="fa-solid fa-file-lines"></i> Show Source
-    </a>
-  </div>
-</div>
 
 </div></div>
               
@@ -816,8 +847,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

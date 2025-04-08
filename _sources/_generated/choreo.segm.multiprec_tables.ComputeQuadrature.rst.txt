@@ -1,0 +1,6 @@
+choreo.segm.multiprec\_tables.ComputeQuadrature
+===============================================
+
+.. currentmodule:: choreo.segm.multiprec_tables
+
+.. autofunction:: ComputeQuadrature

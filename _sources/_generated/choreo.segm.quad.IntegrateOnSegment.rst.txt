@@ -1,0 +1,6 @@
+choreo.segm.quad.IntegrateOnSegment
+===================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autofunction:: IntegrateOnSegment

@@ -34,9 +34,9 @@ Definition of benchmarked integrands
     all_funs = {
         'mul_py_fun_array' : test_from_fun(mul_py_fun_array),
         'mul_nb_fun_inplace_pointer' : test_from_fun(mul_nb_fun_inplace_pointer),
-        'py_fun_in_pyx' : test_from_fun(choreo.scipy_plus.cython.test.mul_py_fun_tx) ,
-        'cy_fun_pointer_LowLevel' : test_from_fun(scipy.LowLevelCallable.from_cython(choreo.scipy_plus.cython.test, "mul_cy_fun_pointer_tx")),
-        'cy_fun_memoryview_LowLevel' : test_from_fun(scipy.LowLevelCallable.from_cython(choreo.scipy_plus.cython.test, "mul_cy_fun_memoryview_tx")),
+        'py_fun_in_pyx' : test_from_fun(choreo.segm.cython.test.mul_py_fun_tx) ,
+        'cy_fun_pointer_LowLevel' : test_from_fun(scipy.LowLevelCallable.from_cython(choreo.segm.cython.test, "mul_cy_fun_pointer_tx")),
+        'cy_fun_memoryview_LowLevel' : test_from_fun(scipy.LowLevelCallable.from_cython(choreo.segm.cython.test, "mul_cy_fun_memoryview_tx")),
     }
 
 

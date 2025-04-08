@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_periodicity\_default\_pos
+===================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_periodicity_default_pos

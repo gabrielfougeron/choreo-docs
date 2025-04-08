@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,10 +26,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sg_gallery.css?v=d2d258e8" />
@@ -39,20 +39,20 @@
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-test-results/common.css?v=9ec2c1d5" />
     <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=f19979f9" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/jquery.js?v=5d32c60e"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
@@ -165,7 +165,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="theory.html">
+  <a class="nav-link nav-internal" href="theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -297,7 +297,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="theory.html">
+  <a class="nav-link nav-internal" href="theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -399,9 +399,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -438,12 +443,14 @@
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#Q"><strong>Q</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
  | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
+ | <a href="#X"><strong>X</strong></a>
  
 </div>
 <h2 id="Symbols">Symbols</h2>
@@ -497,6 +504,8 @@
 
       <ul>
         <li><a href="_generated/choreo.NBodySyst.__init__.html#choreo.NBodySyst.__init__">(NBodySyst method)</a>
+</li>
+        <li><a href="_generated/choreo.segm.quad.QuadTable.__init__.html#choreo.segm.quad.QuadTable.__init__">(QuadTable method)</a>
 </li>
       </ul></li>
   </ul></td>
@@ -623,8 +632,6 @@
         <li><a href="api.html#cmdoption-choreo_GUI-h">-h</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.co_in.html#choreo.NBodySyst.co_in">co_in() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.ActionSym.Compose.html#choreo.ActionSym.Compose">Compose() (ActionSym method)</a>
@@ -633,21 +640,43 @@
 </li>
       <li><a href="_generated/choreo.NBodySyst.Compute_forces_nosym.html#choreo.NBodySyst.Compute_forces_nosym">Compute_forces_nosym() (NBodySyst method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.Compute_forces_vectorized.html#choreo.NBodySyst.Compute_forces_vectorized">Compute_forces_vectorized() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.Compute_forces_vectorized_nosym.html#choreo.NBodySyst.Compute_forces_vectorized_nosym">Compute_forces_vectorized_nosym() (NBodySyst method)</a>
 </li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_grad_forces.html#choreo.NBodySyst.Compute_grad_forces">Compute_grad_forces() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_grad_forces_nosym.html#choreo.NBodySyst.Compute_grad_forces_nosym">Compute_grad_forces_nosym() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_grad_forces_vectorized.html#choreo.NBodySyst.Compute_grad_forces_vectorized">Compute_grad_forces_vectorized() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_grad_forces_vectorized_nosym.html#choreo.NBodySyst.Compute_grad_forces_vectorized_nosym">Compute_grad_forces_vectorized_nosym() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_grad_velocities.html#choreo.NBodySyst.Compute_grad_velocities">Compute_grad_velocities() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_grad_velocities_vectorized.html#choreo.NBodySyst.Compute_grad_velocities_vectorized">Compute_grad_velocities_vectorized() (NBodySyst method)</a>
+</li>
       <li><a href="_generated/choreo.NBodySyst.Compute_init_pos_mom.html#choreo.NBodySyst.Compute_init_pos_mom">Compute_init_pos_mom() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_initial_constraint_default_pos.html#choreo.NBodySyst.Compute_initial_constraint_default_pos">Compute_initial_constraint_default_pos() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_initial_constraint_default_vel.html#choreo.NBodySyst.Compute_initial_constraint_default_vel">Compute_initial_constraint_default_vel() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.Compute_n_sub_fft.html#choreo.NBodySyst.Compute_n_sub_fft">Compute_n_sub_fft() (NBodySyst method)</a>
 </li>
-      <li><a href="_generated/choreo.NBodySyst.Compute_periodicity_default.html#choreo.NBodySyst.Compute_periodicity_default">Compute_periodicity_default() (NBodySyst method)</a>
+      <li><a href="_generated/choreo.NBodySyst.Compute_periodicity_default_pos.html#choreo.NBodySyst.Compute_periodicity_default_pos">Compute_periodicity_default_pos() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.Compute_periodicity_default_vel.html#choreo.NBodySyst.Compute_periodicity_default_vel">Compute_periodicity_default_vel() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.Compute_velocities.html#choreo.NBodySyst.Compute_velocities">Compute_velocities() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.Compute_velocities_vectorized.html#choreo.NBodySyst.Compute_velocities_vectorized">Compute_velocities_vectorized() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.ComputeCenterOfMass.html#choreo.NBodySyst.ComputeCenterOfMass">ComputeCenterOfMass() (NBodySyst method)</a>
+</li>
+      <li><a href="_generated/choreo.segm.multiprec_tables.ComputeQuadrature.html#choreo.segm.multiprec_tables.ComputeQuadrature">ComputeQuadrature() (in module choreo.segm.multiprec_tables)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.ComputeSymDefault.html#choreo.NBodySyst.ComputeSymDefault">ComputeSymDefault() (NBodySyst method)</a>
 </li>
@@ -777,6 +806,8 @@
 </li>
       <li><a href="_generated/choreo.NBodySyst.InitValVelBasis.html#choreo.NBodySyst.InitValVelBasis">InitValVelBasis (NBodySyst attribute)</a>
 </li>
+      <li><a href="_generated/choreo.segm.quad.IntegrateOnSegment.html#choreo.segm.quad.IntegrateOnSegment">IntegrateOnSegment() (in module choreo.segm.quad)</a>
+</li>
       <li><a href="_generated/choreo.NBodySyst.inter_law_param_dict.html#choreo.NBodySyst.inter_law_param_dict">inter_law_param_dict (NBodySyst attribute)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.inter_law_str.html#choreo.NBodySyst.inter_law_str">inter_law_str (NBodySyst attribute)</a>
@@ -797,10 +828,14 @@
 </li>
       <li><a href="_generated/choreo.ActionSym.InvolutivePermutations.html#choreo.ActionSym.InvolutivePermutations">InvolutivePermutations() (ActionSym static method)</a>
 </li>
-      <li><a href="_generated/choreo.ActionSym.IsIdentity.html#choreo.ActionSym.IsIdentity">IsIdentity() (ActionSym method)</a>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.is_symmetric.html#choreo.segm.quad.QuadTable.is_symmetric">is_symmetric() (QuadTable method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.is_symmetric_pair.html#choreo.segm.quad.QuadTable.is_symmetric_pair">is_symmetric_pair() (QuadTable method)</a>
+</li>
+      <li><a href="_generated/choreo.ActionSym.IsIdentity.html#choreo.ActionSym.IsIdentity">IsIdentity() (ActionSym method)</a>
+</li>
       <li><a href="_generated/choreo.ActionSym.IsIdentityPerm.html#choreo.ActionSym.IsIdentityPerm">IsIdentityPerm() (ActionSym method)</a>
 </li>
       <li><a href="_generated/choreo.ActionSym.IsIdentityPermAndRot.html#choreo.ActionSym.IsIdentityPermAndRot">IsIdentityPermAndRot() (ActionSym method)</a>
@@ -906,10 +941,10 @@
 </li>
       <li><a href="_generated/choreo.NBodySyst.ngensegm_loop.html#choreo.NBodySyst.ngensegm_loop">ngensegm_loop (NBodySyst attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.nint.html#choreo.NBodySyst.nint">nint (NBodySyst attribute)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.nint_fac.html#choreo.NBodySyst.nint_fac">nint_fac (NBodySyst attribute)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.nint_min.html#choreo.NBodySyst.nint_min">nint_min (NBodySyst attribute)</a>
@@ -925,6 +960,8 @@
       <li><a href="_generated/choreo.NBodySyst.nrem.html#choreo.NBodySyst.nrem">nrem (NBodySyst attribute)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.nsegm.html#choreo.NBodySyst.nsegm">nsegm (NBodySyst attribute)</a>
+</li>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.nsteps.html#choreo.segm.quad.QuadTable.nsteps">nsteps (QuadTable attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -960,12 +997,12 @@
 </li>
       <li><a href="_generated/choreo.NBodySyst.params_to_kin_nrg.html#choreo.NBodySyst.params_to_kin_nrg">params_to_kin_nrg() (NBodySyst method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.params_to_kin_nrg_grad.html#choreo.NBodySyst.params_to_kin_nrg_grad">params_to_kin_nrg_grad() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.params_to_pot_nrg.html#choreo.NBodySyst.params_to_pot_nrg">params_to_pot_nrg() (NBodySyst method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.params_to_pot_nrg_grad.html#choreo.NBodySyst.params_to_pot_nrg_grad">params_to_pot_nrg_grad() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.params_to_pot_nrg_hess.html#choreo.NBodySyst.params_to_pot_nrg_hess">params_to_pot_nrg_hess() (NBodySyst method)</a>
@@ -974,13 +1011,21 @@
 </li>
       <li><a href="_generated/choreo.NBodySyst.params_to_segmvel.html#choreo.NBodySyst.params_to_segmvel">params_to_segmvel() (NBodySyst method)</a>
 </li>
-      <li><a href="_generated/choreo.NBodySyst.PerDef_Isegm.html#choreo.NBodySyst.PerDef_Isegm">PerDef_Isegm (NBodySyst attribute)</a>
+      <li><a href="_generated/choreo.NBodySyst.PerDefBeg_Isegm.html#choreo.NBodySyst.PerDefBeg_Isegm">PerDefBeg_Isegm (NBodySyst attribute)</a>
 </li>
-      <li><a href="_generated/choreo.NBodySyst.PerDef_SpaceRotPos.html#choreo.NBodySyst.PerDef_SpaceRotPos">PerDef_SpaceRotPos (NBodySyst attribute)</a>
+      <li><a href="_generated/choreo.NBodySyst.PerDefBeg_SpaceRotPos.html#choreo.NBodySyst.PerDefBeg_SpaceRotPos">PerDefBeg_SpaceRotPos (NBodySyst attribute)</a>
 </li>
-      <li><a href="_generated/choreo.NBodySyst.PerDef_SpaceRotVel.html#choreo.NBodySyst.PerDef_SpaceRotVel">PerDef_SpaceRotVel (NBodySyst attribute)</a>
+      <li><a href="_generated/choreo.NBodySyst.PerDefBeg_SpaceRotVel.html#choreo.NBodySyst.PerDefBeg_SpaceRotVel">PerDefBeg_SpaceRotVel (NBodySyst attribute)</a>
 </li>
-      <li><a href="_generated/choreo.NBodySyst.PerDef_TimeRev.html#choreo.NBodySyst.PerDef_TimeRev">PerDef_TimeRev (NBodySyst attribute)</a>
+      <li><a href="_generated/choreo.NBodySyst.PerDefBeg_TimeRev.html#choreo.NBodySyst.PerDefBeg_TimeRev">PerDefBeg_TimeRev (NBodySyst attribute)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.PerDefEnd_Isegm.html#choreo.NBodySyst.PerDefEnd_Isegm">PerDefEnd_Isegm (NBodySyst attribute)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.PerDefEnd_SpaceRotPos.html#choreo.NBodySyst.PerDefEnd_SpaceRotPos">PerDefEnd_SpaceRotPos (NBodySyst attribute)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.PerDefEnd_SpaceRotVel.html#choreo.NBodySyst.PerDefEnd_SpaceRotVel">PerDefEnd_SpaceRotVel (NBodySyst attribute)</a>
+</li>
+      <li><a href="_generated/choreo.NBodySyst.PerDefEnd_TimeRev.html#choreo.NBodySyst.PerDefEnd_TimeRev">PerDefEnd_TimeRev (NBodySyst attribute)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.plot_segmpos_2D.html#choreo.NBodySyst.plot_segmpos_2D">plot_segmpos_2D() (NBodySyst method)</a>
 </li>
@@ -989,6 +1034,14 @@
       <li><a href="_generated/choreo.NBodySyst.pos_slice.html#choreo.NBodySyst.pos_slice">pos_slice() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.pos_slice_shapes.html#choreo.NBodySyst.pos_slice_shapes">pos_slice_shapes (NBodySyst attribute)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="Q">Q</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.html#choreo.segm.quad.QuadTable">QuadTable (class in choreo.segm.quad)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1026,10 +1079,10 @@
 </li>
       <li><a href="_generated/choreo.NBodySyst.segmpos_to_all_noopt.html#choreo.NBodySyst.segmpos_to_all_noopt">segmpos_to_all_noopt() (NBodySyst method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.segmpos_to_allbody_noopt.html#choreo.NBodySyst.segmpos_to_allbody_noopt">segmpos_to_allbody_noopt() (NBodySyst method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_generated/choreo.NBodySyst.segmpos_to_hash.html#choreo.NBodySyst.segmpos_to_hash">segmpos_to_hash() (NBodySyst method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.segmpos_to_params.html#choreo.NBodySyst.segmpos_to_params">segmpos_to_params() (NBodySyst method)</a>
@@ -1045,6 +1098,10 @@
       <li><a href="_generated/choreo.ActionSym.SurjectiveDirectSpaceRot.html#choreo.ActionSym.SurjectiveDirectSpaceRot">SurjectiveDirectSpaceRot() (ActionSym static method)</a>
 </li>
       <li><a href="_generated/choreo.NBodySyst.Sym_list.html#choreo.NBodySyst.Sym_list">Sym_list (NBodySyst attribute)</a>
+</li>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.symmetric_adjoint.html#choreo.segm.quad.QuadTable.symmetric_adjoint">symmetric_adjoint() (QuadTable method)</a>
+</li>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.symmetry_default.html#choreo.segm.quad.QuadTable.symmetry_default">symmetry_default() (QuadTable method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1064,6 +1121,8 @@
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_all_vel_to_segmvel.html#tests.test_NBodySyst.test_all_vel_to_segmvel">test_all_vel_to_segmvel() (in module tests.test_NBodySyst)</a>
 </li>
+      <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_bad_init_args.html#tests.test_NBodySyst.test_bad_init_args">test_bad_init_args() (in module tests.test_NBodySyst)</a>
+</li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_capture_co.html#tests.test_NBodySyst.test_capture_co">test_capture_co() (in module tests.test_NBodySyst)</a>
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_ActionSym.test_Cayley_graph.html#tests.test_ActionSym.test_Cayley_graph">test_Cayley_graph() (in module tests.test_ActionSym)</a>
@@ -1082,6 +1141,8 @@
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_ForceGreaterNstore.html#tests.test_NBodySyst.test_ForceGreaterNstore">test_ForceGreaterNstore() (in module tests.test_NBodySyst)</a>
 </li>
+      <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_grad_fun_FD.html#tests.test_NBodySyst.test_grad_fun_FD">test_grad_fun_FD() (in module tests.test_NBodySyst)</a>
+</li>
       <li><a href="test-report/_generated/_generated/tests.test_ActionSym.test_Identity.html#tests.test_ActionSym.test_Identity">test_Identity() (in module tests.test_ActionSym)</a>
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_ODE.test_Implicit_ODE.html#tests.test_ODE.test_Implicit_ODE">test_Implicit_ODE() (in module tests.test_ODE)</a>
@@ -1098,6 +1159,8 @@
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_scipy_plus_linalg.test_nullspace.html#tests.test_scipy_plus_linalg.test_nullspace">test_nullspace() (in module tests.test_scipy_plus_linalg)</a>
 </li>
+      <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD.html#tests.test_NBodySyst.test_ODE_grad_vs_FD">test_ODE_grad_vs_FD() (in module tests.test_NBodySyst)</a>
+</li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html#tests.test_NBodySyst.test_ODE_vs_spectral">test_ODE_vs_spectral() (in module tests.test_NBodySyst)</a>
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_params_segmpos_dual.html#tests.test_NBodySyst.test_params_segmpos_dual">test_params_segmpos_dual() (in module tests.test_NBodySyst)</a>
@@ -1110,10 +1173,10 @@
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_scipy_plus_linalg.test_random_orthogonal_matrix.html#tests.test_scipy_plus_linalg.test_random_orthogonal_matrix">test_random_orthogonal_matrix() (in module tests.test_scipy_plus_linalg)</a>
 </li>
-      <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_repeatability.html#tests.test_NBodySyst.test_repeatability">test_repeatability() (in module tests.test_NBodySyst)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_repeatability.html#tests.test_NBodySyst.test_repeatability">test_repeatability() (in module tests.test_NBodySyst)</a>
+</li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_resize.html#tests.test_NBodySyst.test_resize">test_resize() (in module tests.test_NBodySyst)</a>
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_ActionSym.test_rotation_generation.html#tests.test_ActionSym.test_rotation_generation">test_rotation_generation() (in module tests.test_ActionSym)</a>
@@ -1121,6 +1184,8 @@
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_round_trips_pos.html#tests.test_NBodySyst.test_round_trips_pos">test_round_trips_pos() (in module tests.test_NBodySyst)</a>
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_round_trips_vel.html#tests.test_NBodySyst.test_round_trips_vel">test_round_trips_vel() (in module tests.test_NBodySyst)</a>
+</li>
+      <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_segmpos_param.html#tests.test_NBodySyst.test_segmpos_param">test_segmpos_param() (in module tests.test_NBodySyst)</a>
 </li>
       <li><a href="test-report/_generated/_generated/tests.test_NBodySyst.test_segmpos_to_all_pos.html#tests.test_NBodySyst.test_segmpos_to_all_pos">test_segmpos_to_all_pos() (in module tests.test_NBodySyst)</a>
 </li>
@@ -1177,6 +1242,8 @@
         <li><a href="test-report/_generated/tests.test_scipy_plus_linalg.html#module-tests.test_scipy_plus_linalg">module</a>
 </li>
       </ul></li>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.th_cvg_rate.html#choreo.segm.quad.QuadTable.th_cvg_rate">th_cvg_rate (QuadTable attribute)</a>
+</li>
       <li><a href="_generated/choreo.ActionSym.TimeDerivative.html#choreo.ActionSym.TimeDerivative">TimeDerivative() (ActionSym method)</a>
 </li>
       <li><a href="_generated/choreo.ActionSym.TimeRev.html#choreo.ActionSym.TimeRev">TimeRev (ActionSym attribute)</a>
@@ -1217,7 +1284,21 @@
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.w.html#choreo.segm.quad.QuadTable.w">w (QuadTable attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.wlag.html#choreo.segm.quad.QuadTable.wlag">wlag (QuadTable attribute)</a>
+</li>
       <li><a href="_generated/choreo.NBodySyst.Write_Descriptor.html#choreo.NBodySyst.Write_Descriptor">Write_Descriptor() (NBodySyst method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="X">X</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="_generated/choreo.segm.quad.QuadTable.x.html#choreo.segm.quad.QuadTable.x">x (QuadTable attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1245,8 +1326,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

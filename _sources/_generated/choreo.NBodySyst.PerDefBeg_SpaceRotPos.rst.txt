@@ -1,0 +1,6 @@
+choreo.NBodySyst.PerDefBeg\_SpaceRotPos
+=======================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.PerDefBeg_SpaceRotPos

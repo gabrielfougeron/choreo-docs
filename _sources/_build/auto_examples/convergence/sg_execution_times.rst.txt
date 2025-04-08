@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:05.930** total execution time for 3 files **from _build/auto_examples/convergence**:
+**00:02.839** total execution time for 3 files **from _build/auto_examples/convergence**:
 
 .. container::
 
@@ -33,11 +33,11 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr__build_auto_examples_convergence_SelectedRungeKutta.py` (``SelectedRungeKutta.py``)
-     - 00:02.935
+     - 00:01.284
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_EFT_RungeKutta.py` (``EFT_RungeKutta.py``)
-     - 00:01.800
+     - 00:01.024
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_Integration_on_segment.py` (``Integration_on_segment.py``)
-     - 00:01.196
+     - 00:00.531
      - 0.0

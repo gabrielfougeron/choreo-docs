@@ -1,0 +1,6 @@
+test\_bad\_init\_args
+=====================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_bad_init_args

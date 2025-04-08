@@ -1,0 +1,44 @@
+choreo.segm.quad.QuadTable
+==========================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autoclass:: QuadTable
+
+   
+
+   .. rubric:: Class Constructor
+   .. automethod:: __init__
+      :no-index:
+
+   
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+    :nosignatures:
+    :recursive:
+    :toctree:
+
+   
+      ~QuadTable.__init__
+      ~QuadTable.is_symmetric
+      ~QuadTable.is_symmetric_pair
+      ~QuadTable.symmetric_adjoint
+      ~QuadTable.symmetry_default
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+    :toctree:
+   
+      ~QuadTable.nsteps
+      ~QuadTable.th_cvg_rate
+      ~QuadTable.w
+      ~QuadTable.wlag
+      ~QuadTable.x
+   
+   

@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.symmetry\_default
+============================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. automethod:: QuadTable.symmetry_default

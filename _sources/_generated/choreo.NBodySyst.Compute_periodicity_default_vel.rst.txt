@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_periodicity\_default\_vel
+===================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_periodicity_default_vel

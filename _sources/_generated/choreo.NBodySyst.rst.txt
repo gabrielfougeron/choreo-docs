@@ -31,9 +31,18 @@ choreo.NBodySyst
       ~NBodySyst.Compute_forces_nosym
       ~NBodySyst.Compute_forces_vectorized
       ~NBodySyst.Compute_forces_vectorized_nosym
+      ~NBodySyst.Compute_grad_forces
+      ~NBodySyst.Compute_grad_forces_nosym
+      ~NBodySyst.Compute_grad_forces_vectorized
+      ~NBodySyst.Compute_grad_forces_vectorized_nosym
+      ~NBodySyst.Compute_grad_velocities
+      ~NBodySyst.Compute_grad_velocities_vectorized
       ~NBodySyst.Compute_init_pos_mom
+      ~NBodySyst.Compute_initial_constraint_default_pos
+      ~NBodySyst.Compute_initial_constraint_default_vel
       ~NBodySyst.Compute_n_sub_fft
-      ~NBodySyst.Compute_periodicity_default
+      ~NBodySyst.Compute_periodicity_default_pos
+      ~NBodySyst.Compute_periodicity_default_vel
       ~NBodySyst.Compute_velocities
       ~NBodySyst.Compute_velocities_vectorized
       ~NBodySyst.ConfigureShortcutSym
@@ -134,10 +143,14 @@ choreo.NBodySyst
       ~NBodySyst.LoopGenConstraints
       ~NBodySyst.ParamBasisShortcutPos
       ~NBodySyst.ParamBasisShortcutVel
-      ~NBodySyst.PerDef_Isegm
-      ~NBodySyst.PerDef_SpaceRotPos
-      ~NBodySyst.PerDef_SpaceRotVel
-      ~NBodySyst.PerDef_TimeRev
+      ~NBodySyst.PerDefBeg_Isegm
+      ~NBodySyst.PerDefBeg_SpaceRotPos
+      ~NBodySyst.PerDefBeg_SpaceRotVel
+      ~NBodySyst.PerDefBeg_TimeRev
+      ~NBodySyst.PerDefEnd_Isegm
+      ~NBodySyst.PerDefEnd_SpaceRotPos
+      ~NBodySyst.PerDefEnd_SpaceRotVel
+      ~NBodySyst.PerDefEnd_TimeRev
       ~NBodySyst.RequiresGreaterNStore
       ~NBodySyst.SegmGraph
       ~NBodySyst.SegmRequiresDisp

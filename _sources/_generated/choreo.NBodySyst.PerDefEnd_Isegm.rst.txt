@@ -1,0 +1,6 @@
+choreo.NBodySyst.PerDefEnd\_Isegm
+=================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.PerDefEnd_Isegm

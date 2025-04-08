@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>What is a n-body system ? &#8212; Choreo  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=803738c0" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-test-results/common.css?v=9ec2c1d5" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=f19979f9" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>window.MathJax = {"tex": {"macros": {"dd": "\\operatorname{\\mathrm{d}}", "eqdef": "\\mathrel{\\stackrel{\\mathrm{def}}{=}}"}}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'theory/n-body-system';</script>
+    <script src="../_static/js/custom-icon.js?v=063adea7"></script>
+    <link rel="canonical" href="https://gabrielfougeron.github.io/choreo-docs/theory/n-body-system.html" />
+    <link rel="icon" href="../_static/eight_icon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="What is a symmetry ?" href="symmetries.html" />
+    <link rel="prev" title="Theory" href="theory_main.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="main" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/eight_icon.png" class="logo__image only-light" alt="choreo"/>
+    <img src="../_static/eight_icon.png" class="logo__image only-dark pst-js-only" alt="choreo"/>
+  
+  
+    <p class="title logo__title">choreo</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="theory_main.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../_build/auto_examples/index.html">
+    Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../test-report/test-report.html">
+    Tests
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api.html">
+    API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/gabrielfougeron/choreo" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gabrielfougeron.github.io/choreo/" title="Choreo_GUI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/img/eight_icon.png" class="icon-link-image" alt="Choreo_GUI"/></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../usage.html">
+    Usage
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="theory_main.html">
+    Theory
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../_build/auto_examples/index.html">
+    Gallery
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../test-report/test-report.html">
+    Tests
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api.html">
+    API
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/gabrielfougeron/choreo" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gabrielfougeron.github.io/choreo/" title="Choreo_GUI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="../_static/img/eight_icon.png" class="icon-link-image" alt="Choreo_GUI"/></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="../_static/eight_icon.png" class="logo__image only-light" alt="choreo"/>
+    <img src="../_static/eight_icon.png" class="logo__image only-dark pst-js-only" alt="choreo"/>
+  
+  
+    <p class="title logo__title">choreo</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">What is a n-body system ?</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="symmetries.html">What is a symmetry ?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ODE_RK.html">Symplectic Partitionned Runge-Kutta solvers</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="theory_main.html" class="nav-link">Theory</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">What is a n-body system ?</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="what-is-a-n-body-system">
+<span id="n-body-system"></span><h1>What is a n-body system ?<a class="headerlink" href="#what-is-a-n-body-system" title="Link to this heading">#</a></h1>
+<p>A n-body system is a set of <span class="math notranslate nohighlight">\(n\)</span> classical <strong>non-relativistic</strong> point masses undergoing <strong>binary</strong> interactions. These interactions are modelled by forces following the direction of the straight line joining the bodies positions, and whose magnitude only depends on the <strong>inter-body distance</strong>.</p>
+<p>In <a class="reference internal" href="../api.html#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a>, n-body systems are represented by the class <a class="reference internal" href="../_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.NBodySyst</span></code></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dimensionality of the system (geodim)</p>
+</div>
+<p>The following sections detail three different formulations of the evolution equations of n-body systems. While all three descriptions are equivalent in the sense that they predict the same evolution for the system, each description shines when exploring a particular aspect of the dynamics the n-body system.</p>
+<section id="the-newtonian-point-of-view">
+<span id="newtonian-pov"></span><h2>The Newtonian point of view<a class="headerlink" href="#the-newtonian-point-of-view" title="Link to this heading">#</a></h2>
+<p>The mass of a body <span class="math notranslate nohighlight">\(i = 0 \dots n-1\)</span> is denoted <span class="math notranslate nohighlight">\(m_i &gt; 0\)</span>, its position <span class="math notranslate nohighlight">\(x_i\)</span>, and the resultant of all forces applied <span class="math notranslate nohighlight">\(f_i\)</span>.
+The Newtonian formulation of the equations of motion of a n-body system states that the mass times the acceleration of a body equals the forces applied to this body:</p>
+<div class="math notranslate nohighlight" id="equation-newton">
+<span class="eqno">(1)<a class="headerlink" href="#equation-newton" title="Link to this equation">#</a></span>\[m_i \frac{\dd^2 x_i}{\dd t^2} = f_i\]</div>
+<p>This equation alone specifies the evolution of the unknown variables, <em>i.e.</em> the positions <span class="math notranslate nohighlight">\(\mathbf{q}(t) \eqdef (x_0(t), \dots, x_{n-1}(t))\)</span> as soon as the forces can be written as a function of the positions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although the usage of the letter <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> here might seem confusing, it follows standard notation in the study of Hamiltonian and Lagrangian systems. It should not be mistaken for the <em>charges</em> that we denote <span class="math notranslate nohighlight">\(q\)</span> in this documentation.</p>
+</div>
+<p>The force <span class="math notranslate nohighlight">\(f_i\)</span> in the above equation is the resultant of binary interactions with all the other bodies in the system. In other terms, it is the sum of all the forces that all other bodies <span class="math notranslate nohighlight">\(j \neq i\)</span> apply to body <span class="math notranslate nohighlight">\(i\)</span>.
+Moreover, the force that body <span class="math notranslate nohighlight">\(i\)</span> applies on body <span class="math notranslate nohighlight">\(j\)</span> is the opposite of the force that body <span class="math notranslate nohighlight">\(j\)</span> applies on body <span class="math notranslate nohighlight">\(i\)</span>. This force points in the direction of the other body, and its magnitude is a function of the inter-body distance <span class="math notranslate nohighlight">\(\|x_j = x_i\|\)</span>. These restrictions constraint the forces in the system to be conservative:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_i &amp;= \sum_{j \neq i} f_{i,j} \\
+f_{i,j} &amp;= -f_{j,i} = \pm \|f_{i,j}(\|x_i - x_j\|)\| \frac{x_i - x_j}{\|x_i - x_j\|}\\
+&amp;= - \frac{\partial}{\partial x_i}V_{i,j}(\|x_i - x_j\|)\\\end{split}\]</div>
+<p>For both performance reasons and ease of input, <a class="reference internal" href="../api.html#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a> additionally constraints the inter-body potential <span class="math notranslate nohighlight">\(V_{i,j}\)</span> to be proportional to a <strong>universal</strong> user-specified potential denoted <span class="math notranslate nohighlight">\(V_{\mathrm{u}}\)</span>, with body-specific proportionality constants <span class="math notranslate nohighlight">\(q_i\)</span> and <span class="math notranslate nohighlight">\(q_j\)</span> called <em>charges</em>:</p>
+<div class="math notranslate nohighlight">
+\[V_{i,j} = q_i q_j V_{\mathrm{u}}(\|x_i - x_j\|)\]</div>
+<p>This convention is compatible with both the classical Newtonian gravitational potential (with <span class="math notranslate nohighlight">\(m_i = q_i\)</span>) and the electrostatic potential (in which case the body charges are the electric charges) if the potential is proportional to the inverse of the distance:</p>
+<div class="math notranslate nohighlight">
+\[V(x) \propto \frac{1}{x}\]</div>
+<p>The classical Newtonian gravitational potential is the default in <a class="reference internal" href="../api.html#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a>. This default behavior can be changed using <a class="reference internal" href="../_generated/choreo.NBodySyst.Set_inter_law.html#choreo.NBodySyst.Set_inter_law" title="choreo.NBodySyst.Set_inter_law"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.Set_inter_law()</span></code></a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>TODO
+Independence wrt the proportionality constant for homogeneous potentials.</p>
+</div>
+<p>While equation <a class="reference internal" href="#equation-newton">(1)</a> as it is could be directly plugged in a <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/integrate.html#solving-initial-value-problems-for-ode-systems">general purpose ODE solver</a> to get an approximate solution, the next two sections highlight how variations on the problem formulation can be exploited for more performance, and to better deal with <a class="reference internal" href="#periodicity"><span class="std std-ref">periodicity constraints</span></a>.</p>
+</section>
+<section id="the-hamiltonian-point-of-view">
+<span id="hamiltonian-pov"></span><h2>The Hamiltonian point of view<a class="headerlink" href="#the-hamiltonian-point-of-view" title="Link to this heading">#</a></h2>
+<p>While Newton’s law of motion <a class="reference internal" href="#equation-newton">(1)</a> completely determines the evolution of a n-body system, their Hamiltonian reformulation reveal hidden mathematical structure that can be exploited to find more precise approximate solutions at a lower computational cost.</p>
+<p>The unknown <strong>independent</strong> variables in the Hamiltonian formulations are both the positions <span class="math notranslate nohighlight">\(\mathbf{q}(t) = (x_0(t), \dots, x_{n-1}(t))\)</span>, and the momenta <span class="math notranslate nohighlight">\(\mathbf{p}(t) \eqdef (p_0(t), \dots, p_{n-1}(t))\)</span>. Given a <em>scalar</em> function of the momenta and positions denoted <span class="math notranslate nohighlight">\(H(\mathbf{q}, \mathbf{p})\)</span> and called the <em>Hamiltonian</em> of the system, the equations of motion for the evolution of the inpendant variables read:</p>
+<div class="math notranslate nohighlight" id="equation-hamilton-eq-evolution">
+<span class="eqno">(2)<a class="headerlink" href="#equation-hamilton-eq-evolution" title="Link to this equation">#</a></span>\[\begin{split}\frac{\dd \mathbf{q}}{\dd t}  &amp;= \frac{\partial H}{\partial \mathbf{p}} \\
+\frac{\dd \mathbf{p}}{\dd t}  &amp;= -\frac{\partial H}{\partial \mathbf{q}}  \\\end{split}\]</div>
+<p>The Newton equations of motion <a class="reference internal" href="#equation-newton">(1)</a> are retrieved for the following choice of Hamiltonian:</p>
+<div class="math notranslate nohighlight" id="equation-hamiltonian-of-nbodysyst">
+<span class="eqno">(3)<a class="headerlink" href="#equation-hamiltonian-of-nbodysyst" title="Link to this equation">#</a></span>\[\begin{split}H(\mathbf{q}, \mathbf{p}) &amp;= T(\mathbf{p}) + V(\mathbf{q})  \\
+&amp;= \sum_{i=0}^{n-1} \frac{p_i^2}{2 m_i} + \sum_{i=0}^{n-1} \sum_{j\neq i} q_i q_j V_{\mathrm{u}}(\|x_i - x_j\|)\\\end{split}\]</div>
+<p>This particular Hamiltonian is called <strong>partionned</strong> since it decomposes into the sum of a <strong>kinetic energy</strong> <span class="math notranslate nohighlight">\(T(\mathbf{p})\)</span> that is a function of the momenta <em>only</em>, and a <strong>potential energy</strong> <span class="math notranslate nohighlight">\(V(\mathbf{q})\)</span> that is a function of the positions <em>only</em>. This partitioned structure is exploited in the ODE RK methods ref ???</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TODO : Lagrangian least action principle vs Hamiltonian least action principle. Stability ?</p>
+</div>
+</section>
+<section id="the-lagrangian-point-of-view">
+<h2>The Lagrangian point of view<a class="headerlink" href="#the-lagrangian-point-of-view" title="Link to this heading">#</a></h2>
+</section>
+</section>
+<section id="what-is-periodicity">
+<span id="periodicity"></span><h1>What is periodicity ?<a class="headerlink" href="#what-is-periodicity" title="Link to this heading">#</a></h1>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">What is a n-body system ?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-newtonian-point-of-view">The Newtonian point of view</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hamiltonian-point-of-view">The Hamiltonian point of view</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-lagrangian-point-of-view">The Lagrangian point of view</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-periodicity">What is periodicity ?</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

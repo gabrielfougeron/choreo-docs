@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.is\_symmetric
+========================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. automethod:: QuadTable.is_symmetric

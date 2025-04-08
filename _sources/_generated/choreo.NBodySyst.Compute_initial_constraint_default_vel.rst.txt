@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_initial\_constraint\_default\_vel
+===========================================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_initial_constraint_default_vel

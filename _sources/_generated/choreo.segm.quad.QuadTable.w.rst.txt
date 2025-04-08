@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.w
+============================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autoattribute:: QuadTable.w

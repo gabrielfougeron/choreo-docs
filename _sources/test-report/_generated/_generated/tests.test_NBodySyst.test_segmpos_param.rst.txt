@@ -1,0 +1,6 @@
+test\_segmpos\_param
+====================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_segmpos_param

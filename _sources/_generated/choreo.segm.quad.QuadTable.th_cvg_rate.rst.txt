@@ -1,0 +1,6 @@
+choreo.segm.quad.QuadTable.th\_cvg\_rate
+========================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autoattribute:: QuadTable.th_cvg_rate

@@ -15,8 +15,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -26,10 +26,10 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
@@ -39,20 +39,20 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-test-results/common.css?v=9ec2c1d5" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=f19979f9" />
   
   <!-- So that users can add custom icons -->
-  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
@@ -165,7 +165,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../theory.html">
+  <a class="nav-link nav-internal" href="../../theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -297,7 +297,7 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../theory.html">
+  <a class="nav-link nav-internal" href="../../theory/theory_main.html">
     Theory
   </a>
 </li>
@@ -399,9 +399,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -462,28 +467,28 @@
 
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">pytest</span>
-<span class="kn">from</span> <span class="nn">.test_config</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy</span>
-<span class="kn">import</span> <span class="nn">choreo</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.test_config</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">choreo</span>
 
 <div class="viewcode-block" id="test_ImplicitRKDefaultDPSIsEnough">
 <a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough.html#tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough">[docs]</a>
 <span class="nd">@ParametrizeDocstrings</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="n">ClassicalImplicitRKMethods</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_ImplicitRKDefaultDPSIsEnough</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitRKDefaultDPSIsEnough</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether the default precision is sufficient for computing implicit Runge-Kutta tables.</span>
 <span class="sd">    </span>
-<span class="sd">Tests whether the default value of the dps parameter of :func:`choreo.scipy_plus.multiprec_tables.ComputeImplicitRKTable_Gauss` is large enough to ensure that that the Runge-Kutta tables are exact at least up to double precision.</span>
+<span class="sd">Tests whether the default value of the dps parameter of :func:`choreo.segm.multiprec_tables.ComputeImplicitRKTable_Gauss` is large enough to ensure that that the Runge-Kutta tables are exact at least up to double precision.</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">dps_overkill</span> <span class="o">=</span> <span class="mi">1000</span>
 
-    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
-    <span class="n">rk_overkill</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps_overkill</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="n">rk_overkill</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps_overkill</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">a_table</span>  <span class="o">-</span> <span class="n">rk_overkill</span><span class="o">.</span><span class="n">a_table</span><span class="p">))</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">b_table</span>  <span class="o">-</span> <span class="n">rk_overkill</span><span class="o">.</span><span class="n">b_table</span><span class="p">))</span>
@@ -536,12 +541,12 @@
 <span class="nd">@ParametrizeDocstrings</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method_pair&quot;</span><span class="p">,</span> <span class="n">SymplecticImplicitRKMethodPairs</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_ImplicitSymplecticPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitSymplecticPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether symplectic pairs of implicit Runge-Kutta tables are indeed symplectic at least up to double precision accuracy.    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symplectic_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
     
@@ -553,12 +558,12 @@
 <span class="nd">@ParametrizeDocstrings</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method_pair&quot;</span><span class="p">,</span> <span class="n">SymmetricImplicitRKMethodPairs</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_ImplicitSymmetricPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitSymmetricPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether symmetric pairs of implicit Runge-Kutta tables are indeed symmetric at least up to double precision accuracy.</span>
 <span class="sd">    &quot;&quot;&quot;</span>   
     
-    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symmetry_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
     
@@ -570,10 +575,10 @@
 <span class="nd">@ParametrizeDocstrings</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method_pair&quot;</span><span class="p">,</span> <span class="n">SymmetricSymplecticImplicitRKMethodPairs</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">test_ImplicitSymmetricSymplecticPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitSymmetricSymplecticPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
 
-    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">symmetric_adjoint</span><span class="p">()</span>
+    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">symmetric_adjoint</span><span class="p">()</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symplectic_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
     
@@ -602,8 +607,8 @@
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>
