@@ -1,0 +1,6 @@
+test\_nullspace
+===============
+
+.. currentmodule:: tests.test_scipy_plus
+
+.. autofunction:: test_nullspace

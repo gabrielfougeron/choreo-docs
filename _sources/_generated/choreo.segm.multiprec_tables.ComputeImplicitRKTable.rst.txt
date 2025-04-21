@@ -1,0 +1,6 @@
+choreo.segm.multiprec\_tables.ComputeImplicitRKTable
+====================================================
+
+.. currentmodule:: choreo.segm.multiprec_tables
+
+.. autofunction:: ComputeImplicitRKTable

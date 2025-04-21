@@ -1,0 +1,6 @@
+test\_random\_orthogonal\_matrix
+================================
+
+.. currentmodule:: tests.test_scipy_plus
+
+.. autofunction:: test_random_orthogonal_matrix

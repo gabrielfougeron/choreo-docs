@@ -1,0 +1,6 @@
+test\_interp
+============
+
+.. currentmodule:: tests.test_quad_ODE
+
+.. autofunction:: test_interp

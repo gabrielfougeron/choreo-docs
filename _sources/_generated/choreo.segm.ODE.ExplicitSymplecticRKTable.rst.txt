@@ -1,0 +1,43 @@
+choreo.segm.ODE.ExplicitSymplecticRKTable
+=========================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoclass:: ExplicitSymplecticRKTable
+
+   
+
+   .. rubric:: Class Constructor
+   .. automethod:: __init__
+      :no-index:
+
+   
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+    :nosignatures:
+    :recursive:
+    :toctree:
+
+   
+      ~ExplicitSymplecticRKTable.__init__
+      ~ExplicitSymplecticRKTable.is_symmetric
+      ~ExplicitSymplecticRKTable.is_symmetric_pair
+      ~ExplicitSymplecticRKTable.symmetric_adjoint
+      ~ExplicitSymplecticRKTable.symmetry_default
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+    :toctree:
+   
+      ~ExplicitSymplecticRKTable.c_table
+      ~ExplicitSymplecticRKTable.d_table
+      ~ExplicitSymplecticRKTable.nsteps
+      ~ExplicitSymplecticRKTable.th_cvg_rate
+   
+   

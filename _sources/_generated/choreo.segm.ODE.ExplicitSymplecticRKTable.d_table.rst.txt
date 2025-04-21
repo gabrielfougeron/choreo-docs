@@ -1,0 +1,6 @@
+choreo.segm.ODE.ExplicitSymplecticRKTable.d\_table
+==================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ExplicitSymplecticRKTable.d_table

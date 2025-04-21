@@ -1437,7 +1437,7 @@
     <span class="n">nint_ODE</span> <span class="o">=</span> <span class="p">(</span><span class="n">NBS</span><span class="o">.</span><span class="n">segm_store</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">keep_freq</span>
     <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;Gauss&quot;</span>
     
-    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
     
     <span class="n">segmpos_ODE</span><span class="p">,</span> <span class="n">segmvel_ODE</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">ODE</span><span class="o">.</span><span class="n">SymplecticIVP</span><span class="p">(</span>
         <span class="n">rk</span> <span class="o">=</span> <span class="n">rk</span>                 <span class="p">,</span>
@@ -1554,7 +1554,7 @@
     <span class="n">keep_freq</span> <span class="o">=</span> <span class="n">nint_ODE</span>
     <span class="n">method</span> <span class="o">=</span> <span class="s2">&quot;Gauss&quot;</span>
     
-    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="n">rk</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
 
     <span class="n">t_span</span> <span class="o">=</span> <span class="n">ODE_Syst</span><span class="p">[</span><span class="s2">&quot;t_span&quot;</span><span class="p">]</span>
     <span class="n">fun</span> <span class="o">=</span> <span class="n">ODE_Syst</span><span class="p">[</span><span class="s2">&quot;fun&quot;</span><span class="p">]</span>

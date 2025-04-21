@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.451** total execution time for 9 files **from all galleries**:
+**00:06.613** total execution time for 10 files **from all galleries**:
 
 .. container::
 
@@ -32,30 +32,33 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_quad_Integration_LowLevel_bench.py` (``../../examples/benchmarks/quad_Integration_LowLevel_bench.py``)
-     - 00:00.451
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_Numerical_tricks_FFT_sym.py` (``../../examples/Numerical_tricks/FFT_sym.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_Benchmark_Hardware_Info.py` (``../../examples/benchmarks/Benchmark_Hardware_Info.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTsum_bench.py` (``../../examples/benchmarks/EFTsum_bench.py``)
-     - 00:00.000
-     - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_FFT_bench_scipy_backend.py` (``../../examples/benchmarks/FFT_bench_scipy_backend.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_benchmarks_ODE_ivp_LowLevel_bench.py` (``../../examples/benchmarks/ODE_ivp_LowLevel_bench.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_convergence_EFT_RungeKutta.py` (``../../examples/convergence/EFT_RungeKutta.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr__build_auto_examples_convergence_Integration_on_segment.py` (``../../examples/convergence/Integration_on_segment.py``)
-     - 00:00.000
+     - 00:02.461
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_SelectedRungeKutta.py` (``../../examples/convergence/SelectedRungeKutta.py``)
-     - 00:00.000
+     - 00:01.200
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_convergence_EFT_RungeKutta.py` (``../../examples/convergence/EFT_RungeKutta.py``)
+     - 00:00.855
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_convergence_Integration_on_segment.py` (``../../examples/convergence/Integration_on_segment.py``)
+     - 00:00.568
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTdot_bench.py` (``../../examples/benchmarks/EFTdot_bench.py``)
+     - 00:00.394
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTsum_bench.py` (``../../examples/benchmarks/EFTsum_bench.py``)
+     - 00:00.368
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_quad_Integration_LowLevel_bench.py` (``../../examples/benchmarks/quad_Integration_LowLevel_bench.py``)
+     - 00:00.266
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_ODE_ivp_LowLevel_bench.py` (``../../examples/benchmarks/ODE_ivp_LowLevel_bench.py``)
+     - 00:00.255
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_Numerical_tricks_FFT_sym.py` (``../../examples/Numerical_tricks/FFT_sym.py``)
+     - 00:00.169
+     - 0.0
+   * - :ref:`sphx_glr__build_auto_examples_benchmarks_Benchmark_Hardware_Info.py` (``../../examples/benchmarks/Benchmark_Hardware_Info.py``)
+     - 00:00.077
      - 0.0

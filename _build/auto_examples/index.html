@@ -411,7 +411,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Numerical_tricks/FFT_sym.html">FFT and symmetries</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="convergence/index.html">Convergence analysis of numerical methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="convergence/index.html">Analysis of numerical methods</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="convergence/EFT_RungeKutta.html">Benchmark of Error-Free Transforms for ODE IVP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="convergence/Integration_on_segment.html">Convergence analysis of integration methods on segment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="convergence/SelectedRungeKutta.html">Convergence analysis of Runge-Kutta methods for ODE IVP</a></li>
@@ -419,10 +419,11 @@
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="benchmarks/index.html">Benchmarks</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="benchmarks/Benchmark_Hardware_Info.html">Description of the benchmark machine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmarks/EFTdot_bench.html">Benchmark of Error-Free Transforms for dot product</a></li>
 <li class="toctree-l2"><a class="reference internal" href="benchmarks/EFTsum_bench.html">Benchmark of Error-Free Transforms for summation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="benchmarks/FFT_bench_scipy_backend.html">Benchmark of FFT implementations available as scipy backends</a></li>
 <li class="toctree-l2"><a class="reference internal" href="benchmarks/ODE_ivp_LowLevel_bench.html">Benchmark of LowLevelCallable for ODE IVP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="benchmarks/quad_Integration_LowLevel_bench.html">Benchmark of LowLevelCallable for ODE IVP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmarks/quad_Integration_LowLevel_bench.html">Benchmark of LowLevelCallable for quadrature on segment</a></li>
 </ul>
 </details></li>
 </ul>
@@ -490,8 +491,8 @@
 <p><a class="reference internal" href="Numerical_tricks/FFT_sym.html#sphx-glr-build-auto-examples-numerical-tricks-fft-sym-py"><span class="std std-ref">FFT and symmetries</span></a></p>
   <div class="sphx-glr-thumbnail-title">FFT and symmetries</div>
 </div></div></section>
-<section id="convergence-analysis-of-numerical-methods">
-<h2>Convergence analysis of numerical methods<a class="headerlink" href="#convergence-analysis-of-numerical-methods" title="Link to this heading">#</a></h2>
+<section id="analysis-of-numerical-methods">
+<h2>Analysis of numerical methods<a class="headerlink" href="#analysis-of-numerical-methods" title="Link to this heading">#</a></h2>
 <div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Benchmark of Error-Free Transforms for ODE IVP"><img alt="" src="../../_images/sphx_glr_EFT_RungeKutta_thumb.png" />
 <p><a class="reference internal" href="convergence/EFT_RungeKutta.html#sphx-glr-build-auto-examples-convergence-eft-rungekutta-py"><span class="std std-ref">Benchmark of Error-Free Transforms for ODE IVP</span></a></p>
   <div class="sphx-glr-thumbnail-title">Benchmark of Error-Free Transforms for ODE IVP</div>
@@ -507,6 +508,9 @@
 <div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Description of the benchmark machine"><img alt="" src="../../_images/sphx_glr_Benchmark_Hardware_Info_thumb.png" />
 <p><a class="reference internal" href="benchmarks/Benchmark_Hardware_Info.html#sphx-glr-build-auto-examples-benchmarks-benchmark-hardware-info-py"><span class="std std-ref">Description of the benchmark machine</span></a></p>
   <div class="sphx-glr-thumbnail-title">Description of the benchmark machine</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Benchmark of Error-Free Transforms for dot product"><img alt="" src="../../_images/sphx_glr_EFTdot_bench_thumb.png" />
+<p><a class="reference internal" href="benchmarks/EFTdot_bench.html#sphx-glr-build-auto-examples-benchmarks-eftdot-bench-py"><span class="std std-ref">Benchmark of Error-Free Transforms for dot product</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Benchmark of Error-Free Transforms for dot product</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="Benchmark of Error-Free Transforms for summation"><img alt="" src="../../_images/sphx_glr_EFTsum_bench_thumb.png" />
 <p><a class="reference internal" href="benchmarks/EFTsum_bench.html#sphx-glr-build-auto-examples-benchmarks-eftsum-bench-py"><span class="std std-ref">Benchmark of Error-Free Transforms for summation</span></a></p>
   <div class="sphx-glr-thumbnail-title">Benchmark of Error-Free Transforms for summation</div>
@@ -516,9 +520,9 @@
 </div><div class="sphx-glr-thumbcontainer" tooltip="Benchmark of LowLevelCallable for ODE IVP"><img alt="" src="../../_images/sphx_glr_ODE_ivp_LowLevel_bench_thumb.png" />
 <p><a class="reference internal" href="benchmarks/ODE_ivp_LowLevel_bench.html#sphx-glr-build-auto-examples-benchmarks-ode-ivp-lowlevel-bench-py"><span class="std std-ref">Benchmark of LowLevelCallable for ODE IVP</span></a></p>
   <div class="sphx-glr-thumbnail-title">Benchmark of LowLevelCallable for ODE IVP</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Benchmark of LowLevelCallable for ODE IVP"><img alt="" src="../../_images/sphx_glr_quad_Integration_LowLevel_bench_thumb.png" />
-<p><a class="reference internal" href="benchmarks/quad_Integration_LowLevel_bench.html#sphx-glr-build-auto-examples-benchmarks-quad-integration-lowlevel-bench-py"><span class="std std-ref">Benchmark of LowLevelCallable for ODE IVP</span></a></p>
-  <div class="sphx-glr-thumbnail-title">Benchmark of LowLevelCallable for ODE IVP</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Benchmark of LowLevelCallable for quadrature on segment"><img alt="" src="../../_images/sphx_glr_quad_Integration_LowLevel_bench_thumb.png" />
+<p><a class="reference internal" href="benchmarks/quad_Integration_LowLevel_bench.html#sphx-glr-build-auto-examples-benchmarks-quad-integration-lowlevel-bench-py"><span class="std std-ref">Benchmark of LowLevelCallable for quadrature on segment</span></a></p>
+  <div class="sphx-glr-thumbnail-title">Benchmark of LowLevelCallable for quadrature on segment</div>
 </div></div><div class="toctree-wrapper compound">
 </div>
 <div class="sphx-glr-footer sphx-glr-footer-gallery docutils container">
@@ -557,7 +561,7 @@
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-tips-and-tricks">Numerical tips and tricks</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convergence-analysis-of-numerical-methods">Convergence analysis of numerical methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-of-numerical-methods">Analysis of numerical methods</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#benchmarks">Benchmarks</a></li>
 </ul>
   </nav></div>

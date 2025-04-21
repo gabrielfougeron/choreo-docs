@@ -1,0 +1,6 @@
+choreo.segm.ODE.ExplicitSymplecticRKTable.\_\_init\_\_
+======================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ExplicitSymplecticRKTable.__init__

@@ -1,0 +1,52 @@
+choreo.segm.ODE.ImplicitRKTable
+===============================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoclass:: ImplicitRKTable
+
+   
+
+   .. rubric:: Class Constructor
+   .. automethod:: __init__
+      :no-index:
+
+   
+   .. rubric:: Methods Summary
+
+   .. autosummary::
+    :nosignatures:
+    :recursive:
+    :toctree:
+
+   
+      ~ImplicitRKTable.__init__
+      ~ImplicitRKTable.is_symmetric
+      ~ImplicitRKTable.is_symmetric_pair
+      ~ImplicitRKTable.is_symplectic
+      ~ImplicitRKTable.is_symplectic_pair
+      ~ImplicitRKTable.symmetric_adjoint
+      ~ImplicitRKTable.symmetry_default
+      ~ImplicitRKTable.symplectic_adjoint
+      ~ImplicitRKTable.symplectic_default
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+    :toctree:
+   
+      ~ImplicitRKTable.a_table
+      ~ImplicitRKTable.b_table
+      ~ImplicitRKTable.beta_table
+      ~ImplicitRKTable.c_table
+      ~ImplicitRKTable.gamma_table
+      ~ImplicitRKTable.nsteps
+      ~ImplicitRKTable.quad_table
+      ~ImplicitRKTable.stability_cst
+      ~ImplicitRKTable.th_cvg_rate
+   
+   

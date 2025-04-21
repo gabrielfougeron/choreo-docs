@@ -106,6 +106,11 @@ The input length is of the form 3 * 5 * 2**i, so as to favor powers of 2 and sma
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_FFT_bench_scipy_backend_001.png
    :class: sphx-glr-single-img
 
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :class: sphx-glr-single-img
+
 
 
 
@@ -135,6 +140,11 @@ The input length is of the form 3 * 5 * 2**i, so as to favor powers of 2 and sma
 .. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_FFT_bench_scipy_backend_002.png
    :alt: Relative timings wrt MKL fft, backend : scipy, backend : MKL
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_FFT_bench_scipy_backend_002.png
+   :class: sphx-glr-single-img
+
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
    :class: sphx-glr-single-img
 
 

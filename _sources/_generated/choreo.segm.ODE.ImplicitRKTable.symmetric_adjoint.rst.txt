@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.symmetric\_adjoint
+==================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.symmetric_adjoint

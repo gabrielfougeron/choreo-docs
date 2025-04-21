@@ -25,17 +25,14 @@ Benchmark of Error-Free Transforms for summation
 
 This benchmark compares accuracy and efficiency of several summation algorithms in floating point arithmetics
 
-.. GENERATED FROM PYTHON SOURCE LINES 8-42
+.. GENERATED FROM PYTHON SOURCE LINES 8-35
 
 .. code-block:: Python
 
 
 
     def naive_sum(x):
-        return choreo.scipy_plus.cython.eft_lib.FastSumK(x,0)
-
-    def builtin_sum(x):
-        return sum(x)
+        return choreo.segm.cython.eft_lib.SumK(x,0)
 
     def np_sum(x):
         return np.sum(x)
@@ -44,23 +41,19 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
         return m.fsum(x)
 
     def SumK_1(x):
-        return choreo.scipy_plus.cython.eft_lib.SumK(x,1)
+        return choreo.segm.cython.eft_lib.SumK(x,1)
 
     def SumK_2(x):
-        return choreo.scipy_plus.cython.eft_lib.SumK(x,2)
+        return choreo.segm.cython.eft_lib.SumK(x,2)
 
     def SumK_3(x):
-        return choreo.scipy_plus.cython.eft_lib.SumK(x,3)
+        return choreo.segm.cython.eft_lib.SumK(x,3)
 
-    def FastSumK_1(x):
-        return choreo.scipy_plus.cython.eft_lib.FastSumK(x,1)
+    def SumK_4(x):
+        return choreo.segm.cython.eft_lib.SumK(x,4)
 
-    def FastSumK_2(x):
-        return choreo.scipy_plus.cython.eft_lib.FastSumK(x,2)
-
-    def FastSumK_3(x):
-        return choreo.scipy_plus.cython.eft_lib.FastSumK(x,3)
-
+    def SumK_5(x):
+        return choreo.segm.cython.eft_lib.SumK(x,5)
 
 
 
@@ -71,11 +64,16 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_EFTsum_bench_001.png
    :class: sphx-glr-single-img
 
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :class: sphx-glr-single-img
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-150
+
+.. GENERATED FROM PYTHON SOURCE LINES 132-146
 
 .. code-block:: Python
 
@@ -85,11 +83,55 @@ This benchmark compares accuracy and efficiency of several summation algorithms 
         return {'x': x}
 
 
+    pyquickbench.plot_benchmark(
+        all_times   ,
+        all_sizes   ,
+        all_funs    ,
+        show = True ,
+        title = "Measured CPU time"   ,
+    )
+
+
 
 
 .. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_EFTsum_bench_002.png
-   :alt: Time (s) as a function of array size
+   :alt: Measured CPU time
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_EFTsum_bench_002.png
+   :class: sphx-glr-single-img
+
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 167-176
+
+.. code-block:: Python
+
+
+    pyquickbench.plot_benchmark(
+        all_times   ,
+        all_sizes   ,
+        all_funs    ,
+        show = True ,
+        relative_to_val = {pyquickbench.fun_ax_name: "naive_sum"},
+        title = "Relative measured CPU time compared to naive_sum"   ,
+    )
+
+
+
+.. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_EFTsum_bench_003.png
+   :alt: Relative measured CPU time compared to naive_sum
+   :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_EFTsum_bench_003.png
+   :class: sphx-glr-single-img
+
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
    :class: sphx-glr-single-img
 
 

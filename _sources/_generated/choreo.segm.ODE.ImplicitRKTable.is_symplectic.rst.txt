@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.is\_symplectic
+==============================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.is_symplectic

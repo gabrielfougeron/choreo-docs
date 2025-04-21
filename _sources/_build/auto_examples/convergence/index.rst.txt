@@ -2,8 +2,8 @@
 
 .. _sphx_glr__build_auto_examples_convergence:
 
-Convergence analysis of numerical methods
-=========================================
+Analysis of numerical methods
+=============================
 
 
 

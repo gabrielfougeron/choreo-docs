@@ -32,6 +32,23 @@ Benchmarks
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="Benchmark of Error-Free Transforms for dot product">
+
+.. only:: html
+
+  .. image:: /_build/auto_examples/benchmarks/images/thumb/sphx_glr_EFTdot_bench_thumb.png
+    :alt:
+
+  :ref:`sphx_glr__build_auto_examples_benchmarks_EFTdot_bench.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">Benchmark of Error-Free Transforms for dot product</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Benchmark of Error-Free Transforms for summation">
 
 .. only:: html
@@ -83,7 +100,7 @@ Benchmarks
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Benchmark of LowLevelCallable for ODE IVP">
+    <div class="sphx-glr-thumbcontainer" tooltip="Benchmark of LowLevelCallable for quadrature on segment">
 
 .. only:: html
 
@@ -94,7 +111,7 @@ Benchmarks
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">Benchmark of LowLevelCallable for ODE IVP</div>
+      <div class="sphx-glr-thumbnail-title">Benchmark of LowLevelCallable for quadrature on segment</div>
     </div>
 
 
@@ -109,6 +126,7 @@ Benchmarks
    :hidden:
 
    /_build/auto_examples/benchmarks/Benchmark_Hardware_Info
+   /_build/auto_examples/benchmarks/EFTdot_bench
    /_build/auto_examples/benchmarks/EFTsum_bench
    /_build/auto_examples/benchmarks/FFT_bench_scipy_backend
    /_build/auto_examples/benchmarks/ODE_ivp_LowLevel_bench

@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.stability\_cst
+==============================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.stability_cst

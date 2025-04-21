@@ -1,0 +1,6 @@
+choreo.segm.quad.EvalOnNodes
+============================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autofunction:: EvalOnNodes

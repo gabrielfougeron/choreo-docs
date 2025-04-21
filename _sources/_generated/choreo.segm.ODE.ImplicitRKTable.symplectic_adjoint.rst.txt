@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.symplectic\_adjoint
+===================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.symplectic_adjoint

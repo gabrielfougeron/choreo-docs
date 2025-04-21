@@ -1,6 +1,0 @@
-choreo.segm
-===========
-
-.. automodule:: choreo.segm
-
-   

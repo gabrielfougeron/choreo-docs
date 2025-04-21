@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.th\_cvg\_rate
+=============================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.th_cvg_rate

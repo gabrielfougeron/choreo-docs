@@ -504,10 +504,9 @@ f_{i,j} &amp;= -f_{j,i} = \pm \|f_{i,j}(\|x_i - x_j\|)\| \frac{x_i - x_j}{\|x_i 
 <div class="math notranslate nohighlight">
 \[V(x) \propto \frac{1}{x}\]</div>
 <p>The classical Newtonian gravitational potential is the default in <a class="reference internal" href="../api.html#module-choreo" title="choreo"><code class="xref py py-mod docutils literal notranslate"><span class="pre">choreo</span></code></a>. This default behavior can be changed using <a class="reference internal" href="../_generated/choreo.NBodySyst.Set_inter_law.html#choreo.NBodySyst.Set_inter_law" title="choreo.NBodySyst.Set_inter_law"><code class="xref py py-meth docutils literal notranslate"><span class="pre">choreo.NBodySyst.Set_inter_law()</span></code></a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>TODO
-Independence wrt the proportionality constant for homogeneous potentials.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Independence wrt the proportionality constant for homogeneous potentials.</p>
 </div>
 <p>While equation <a class="reference internal" href="#equation-newton">(1)</a> as it is could be directly plugged in a <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/integrate.html#solving-initial-value-problems-for-ode-systems">general purpose ODE solver</a> to get an approximate solution, the next two sections highlight how variations on the problem formulation can be exploited for more performance, and to better deal with <a class="reference internal" href="#periodicity"><span class="std std-ref">periodicity constraints</span></a>.</p>
 </section>
@@ -523,9 +522,9 @@ Independence wrt the proportionality constant for homogeneous potentials.</p>
 <span class="eqno">(3)<a class="headerlink" href="#equation-hamiltonian-of-nbodysyst" title="Link to this equation">#</a></span>\[\begin{split}H(\mathbf{q}, \mathbf{p}) &amp;= T(\mathbf{p}) + V(\mathbf{q})  \\
 &amp;= \sum_{i=0}^{n-1} \frac{p_i^2}{2 m_i} + \sum_{i=0}^{n-1} \sum_{j\neq i} q_i q_j V_{\mathrm{u}}(\|x_i - x_j\|)\\\end{split}\]</div>
 <p>This particular Hamiltonian is called <strong>partionned</strong> since it decomposes into the sum of a <strong>kinetic energy</strong> <span class="math notranslate nohighlight">\(T(\mathbf{p})\)</span> that is a function of the momenta <em>only</em>, and a <strong>potential energy</strong> <span class="math notranslate nohighlight">\(V(\mathbf{q})\)</span> that is a function of the positions <em>only</em>. This partitioned structure is exploited in the ODE RK methods ref ???</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>TODO : Lagrangian least action principle vs Hamiltonian least action principle. Stability ?</p>
+<div class="admonition-todo admonition" id="id2">
+<p class="admonition-title">Todo</p>
+<p>Lagrangian least action principle vs Hamiltonian least action principle. Stability ?</p>
 </div>
 </section>
 <section id="the-lagrangian-point-of-view">

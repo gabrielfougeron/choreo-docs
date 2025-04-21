@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.is\_symmetric\_pair
+===================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.is_symmetric_pair

@@ -1,0 +1,4 @@
+test\_scipy\_plus
+=================
+
+.. automodule:: tests.test_scipy_plus

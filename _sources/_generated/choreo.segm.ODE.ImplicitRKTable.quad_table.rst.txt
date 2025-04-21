@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.quad\_table
+===========================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.quad_table

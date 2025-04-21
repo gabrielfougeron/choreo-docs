@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.beta\_table
+===========================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.beta_table

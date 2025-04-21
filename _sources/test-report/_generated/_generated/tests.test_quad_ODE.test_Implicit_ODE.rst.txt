@@ -1,0 +1,6 @@
+test\_Implicit\_ODE
+===================
+
+.. currentmodule:: tests.test_quad_ODE
+
+.. autofunction:: test_Implicit_ODE

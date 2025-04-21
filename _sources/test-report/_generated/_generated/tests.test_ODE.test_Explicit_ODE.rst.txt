@@ -1,6 +1,0 @@
-test\_Explicit\_ODE
-===================
-
-.. currentmodule:: tests.test_ODE
-
-.. autofunction:: test_Explicit_ODE

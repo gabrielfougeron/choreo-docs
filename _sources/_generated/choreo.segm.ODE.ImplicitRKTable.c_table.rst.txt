@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.c\_table
+========================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.c_table

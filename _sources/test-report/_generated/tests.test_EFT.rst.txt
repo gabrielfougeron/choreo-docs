@@ -1,0 +1,4 @@
+test\_EFT
+=========
+
+.. automodule:: tests.test_EFT

@@ -48,6 +48,11 @@ Definition of benchmarked integrands
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_001.png
    :class: sphx-glr-single-img
 
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :class: sphx-glr-single-img
+
 
 
 
@@ -74,6 +79,11 @@ Definition of benchmarked integrands
 .. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_002.png
    :alt: Timings relative to cy_fun_memoryview_LowLevel
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_ODE_ivp_LowLevel_bench_002.png
+   :class: sphx-glr-single-img
+
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
    :class: sphx-glr-single-img
 
 

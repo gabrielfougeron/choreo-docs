@@ -18,8 +18,8 @@
 .. _sphx_glr__build_auto_examples_benchmarks_quad_Integration_LowLevel_bench.py:
 
 
-Benchmark of LowLevelCallable for ODE IVP
-=========================================
+Benchmark of LowLevelCallable for quadrature on segment
+=======================================================
 
 .. GENERATED FROM PYTHON SOURCE LINES 7-18
 
@@ -122,6 +122,11 @@ Talk about the types of the arguments
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_quad_Integration_LowLevel_bench_001.png
    :class: sphx-glr-single-img
 
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :class: sphx-glr-single-img
+
 
 
 
@@ -148,6 +153,11 @@ Talk about the types of the arguments
 .. image-sg:: /_build/auto_examples/benchmarks/images/sphx_glr_quad_Integration_LowLevel_bench_002.png
    :alt: Timings relative to Wallis7_c_inplace_array_cython
    :srcset: /_build/auto_examples/benchmarks/images/sphx_glr_quad_Integration_LowLevel_bench_002.png
+   :class: sphx-glr-single-img
+
+.. image-sg:: /_build/auto_examples/benchmarks/videos/3D2k.mp4
+   :alt: 
+   :srcset: /_build/auto_examples/benchmarks/videos/3D2k.mp4
    :class: sphx-glr-single-img
 
 

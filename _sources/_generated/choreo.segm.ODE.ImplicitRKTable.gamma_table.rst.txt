@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.gamma\_table
+============================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.gamma_table

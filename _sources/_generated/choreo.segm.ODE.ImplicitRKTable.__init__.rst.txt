@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.\_\_init\_\_
+============================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.__init__

@@ -414,9 +414,13 @@
 <li class="toctree-l2"><a class="reference internal" href="tests.test_config.float32_tols.html">float32_tols</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_scipy_plus_linalg.html">test_scipy_plus_linalg</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus_linalg.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus_linalg.test_nullspace.html">test_nullspace</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_scipy_plus.html">test_scipy_plus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_nullspace.html">test_nullspace</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_EFT.html">test_EFT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_EFT.test_elemental.html">test_elemental</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_integration_tables.html">test_integration_tables</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -426,9 +430,11 @@
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymmetricSymplecticPairs.html">test_ImplicitSymmetricSymplecticPairs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_ODE.html">test_ODE</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_ODE.test_Implicit_ODE.html">test_Implicit_ODE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_ODE.test_Explicit_ODE.html">test_Explicit_ODE</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_quad_ODE.html">test_quad_ODE</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_quad_ODE.test_quad.html">test_quad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_quad_ODE.test_interp.html">test_interp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_quad_ODE.test_Implicit_ODE.html">test_Implicit_ODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_quad_ODE.test_Explicit_ODE.html">test_Explicit_ODE</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_ActionSym.html">test_ActionSym</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -563,7 +569,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>float64_tols</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.3.5)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols.html#tests.test_config.float64_tols" title="tests.test_config.float64_tols"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols()</span></code></a>.</p></li>
-<li><p><strong>NBS_pair</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>)</p></li>
+<li><p><strong>NBS_pair</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a>) – [‘3D-3C’, ‘3C2k-3C’, ‘3C4k-3C’, ‘3C5k-3C’, ‘3C101k-3C’, ‘3C7k2-3C’, ‘4D-4C’, ‘4C5k-4C’, ‘6D-6C’, ‘6Ck5-6C’, ‘3D7k2-3D’]</p></li>
 </ul>
 </dd>
 </dl>

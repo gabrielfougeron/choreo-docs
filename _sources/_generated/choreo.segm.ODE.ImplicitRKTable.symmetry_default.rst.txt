@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.symmetry\_default
+=================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.symmetry_default

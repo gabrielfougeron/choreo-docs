@@ -1,0 +1,6 @@
+test\_elemental
+===============
+
+.. currentmodule:: tests.test_EFT
+
+.. autofunction:: test_elemental

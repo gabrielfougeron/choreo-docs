@@ -1,0 +1,6 @@
+choreo.segm.ODE.ExplicitSymplecticIVP
+=====================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autofunction:: ExplicitSymplecticIVP

@@ -1,0 +1,6 @@
+choreo.segm.ODE.ExplicitSymplecticRKTable.th\_cvg\_rate
+=======================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ExplicitSymplecticRKTable.th_cvg_rate

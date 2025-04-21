@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.is\_symplectic\_pair
+====================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. automethod:: ImplicitRKTable.is_symplectic_pair

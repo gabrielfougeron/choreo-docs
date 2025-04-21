@@ -1,4 +1,0 @@
-test\_ODE
-=========
-
-.. automodule:: tests.test_ODE

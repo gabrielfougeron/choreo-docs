@@ -478,7 +478,6 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">tridiag_eigenvalues</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Adapted from mpmath </span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
@@ -902,10 +901,10 @@
         <span class="k">if</span> <span class="n">quad_method</span> <span class="ow">in</span> <span class="n">method</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">quad_method</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown associated quadrature method </span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">method</span>
 
 <span class="nd">@functools</span><span class="o">.</span><span class="n">cache</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">ComputeGaussButcherTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ComputeNamedGaussButcherTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">):</span>
     
     <span class="n">mpmath</span><span class="o">.</span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="n">dps</span>
     <span class="n">quad_method</span> <span class="o">=</span> <span class="n">Get_quad_method_from_RK_method</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
@@ -917,7 +916,7 @@
         <span class="n">Butcher_a</span> <span class="o">=</span> <span class="n">ComputeButcher_sub_collocation</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
     
     <span class="n">known_method</span> <span class="o">=</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">method</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Gauss&quot;</span><span class="p">,</span> <span class="s2">&quot;Lobatto_IIIA&quot;</span><span class="p">,</span> <span class="s2">&quot;Radau_IIA&quot;</span><span class="p">,</span> <span class="s2">&quot;Lobatto_IIIC*&quot;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">method</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Gauss&quot;</span><span class="p">,</span> <span class="s2">&quot;Lobatto_IIIA&quot;</span><span class="p">,</span> <span class="s2">&quot;Radau_IIA&quot;</span><span class="p">,</span> <span class="s2">&quot;Lobatto_IIIC*&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheb_I&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheb_II&quot;</span><span class="p">,</span> <span class="s2">&quot;ClenshawCurtis&quot;</span><span class="p">]:</span>
         <span class="c1"># No transformation is required</span>
         <span class="n">known_method</span> <span class="o">=</span> <span class="kc">True</span>
         
@@ -965,8 +964,23 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">ComputeQuadratureTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">):</span>
 
     <span class="n">mpmath</span><span class="o">.</span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="n">dps</span>
-    
     <span class="n">z</span> <span class="o">=</span> <span class="n">ComputeQuadNodes</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ComputeQuadratureTablesFromNodes</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">ComputeQuadratureTablesFromNodes</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">30</span><span class="p">):</span>
+
+    <span class="n">mpmath</span><span class="o">.</span><span class="n">mp</span><span class="o">.</span><span class="n">dps</span> <span class="o">=</span> <span class="n">dps</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">mpmath</span><span class="o">.</span><span class="n">matrix</span><span class="p">):</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">nodes</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Not sure how to cast properly</span>
+        <span class="n">z</span> <span class="o">=</span> <span class="n">mpmath</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+            <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nodes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
     <span class="n">wlag</span> <span class="o">=</span> <span class="n">ComputeLagrangeWeights</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
     
     <span class="n">vdm_inv</span> <span class="o">=</span> <span class="n">ComputeVandermondeInverseParker</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">wlag</span><span class="p">)</span>
@@ -977,8 +991,8 @@
 
 <div class="viewcode-block" id="ComputeQuadrature">
 <a class="viewcode-back" href="../../../_generated/choreo.segm.multiprec_tables.ComputeQuadrature.html#choreo.segm.multiprec_tables.ComputeQuadrature">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">ComputeQuadrature</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;ComputeQuadrature Computes a :class:`choreo.segm.quad.QuadTable`</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ComputeQuadrature</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes a :class:`choreo.segm.quad.QuadTable`</span>
 
 <span class="sd">    The computation is performed at a user-defined precision using `mpmath &lt;https://mpmath.org/doc/current&gt;`_ to ensure that the result does not suffer from precision loss, even at relatively high orders.</span>
 <span class="sd">    </span>
@@ -990,24 +1004,34 @@
 <span class="sd">    * ``&quot;Cheb_I&quot;`` and ``&quot;Cheb_II&quot;``</span>
 <span class="sd">    * ``&quot;ClenshawCurtis&quot;``</span>
 <span class="sd">    </span>
+<span class="sd">    Alternatively, the user can supply an array of node values between ``0.`` and ``1.``. The result is then the associated collocation method.</span>
+<span class="sd">    </span>
 <span class="sd">    Example</span>
 <span class="sd">    -------</span>
 <span class="sd">    </span>
 <span class="sd">    &gt;&gt;&gt; import choreo</span>
-<span class="sd">    &gt;&gt;&gt; choreo.segm.multiprec_tables.ComputeQuadrature(2, dps=60, method=&quot;Lobatto_III&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; choreo.segm.multiprec_tables.ComputeQuadrature(n=2, dps=60, method=&quot;Lobatto_III&quot;)</span>
 <span class="sd">    QuadTable object with 2 nodes</span>
 <span class="sd">    Nodes: [7.7787691e-62 1.0000000e+00]</span>
 <span class="sd">    Weights: [0.5 0.5]</span>
 <span class="sd">    Barycentric Lagrange interpolation weights: [-1.  1.]</span>
+<span class="sd">    &gt;&gt;&gt; </span>
+<span class="sd">    &gt;&gt;&gt; choreo.segm.multiprec_tables.ComputeQuadrature(nodes=[0., 0.25, 0.5, 0.75, 1.])</span>
+<span class="sd">    QuadTable object with 5 nodes</span>
+<span class="sd">    Nodes: [0.   0.25 0.5  0.75 1.  ]</span>
+<span class="sd">    Weights: [0.07777778 0.35555556 0.13333333 0.35555556 0.07777778]</span>
+<span class="sd">    Barycentric Lagrange interpolation weights: [ 10.66666667 -42.66666667  64.         -42.66666667  10.66666667]</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
-<span class="sd">    n : :class:`python:int`</span>
-<span class="sd">        Order of the method.</span>
+<span class="sd">    n : :class:`python:int`, optional</span>
+<span class="sd">        Order of the method. By default ``10``.</span>
 <span class="sd">    dps : :class:`python:int`, optional</span>
 <span class="sd">        Context precision in `mpmath &lt;https://mpmath.org/doc/current&gt;`_. See :doc:`mpmath:contexts` for more info. By default ``30``.</span>
 <span class="sd">    method : :class:`python:str`, optional</span>
-<span class="sd">        Name of the method, by default &quot;Gauss&quot;.</span>
+<span class="sd">        Name of the method, by default ``&quot;Gauss&quot;``.</span>
+<span class="sd">    nodes: :class:`numpy:numpy.ndarray` | :class:`mpmath:mpmath.matrix` | :data:`python:None`, optional</span>
+<span class="sd">        Array of integration node values. By default, :data:`python:None`.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -1015,8 +1039,13 @@
 <span class="sd">        The resulting nodes and weights of the quadrature.</span>
 <span class="sd">    &quot;&quot;&quot;</span>    
 
-    <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">GetConvergenceRate</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    <span class="n">w</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">wlag</span><span class="p">,</span> <span class="n">vdm_inv</span> <span class="o">=</span> <span class="n">ComputeQuadratureTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">nodes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">GetConvergenceRate</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">wlag</span><span class="p">,</span> <span class="n">vdm_inv</span> <span class="o">=</span> <span class="n">ComputeQuadratureTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+        <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">wlag</span><span class="p">,</span> <span class="n">vdm_inv</span> <span class="o">=</span> <span class="n">ComputeQuadratureTablesFromNodes</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">)</span>
 
     <span class="n">w_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
     <span class="n">z_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
@@ -1030,14 +1059,85 @@
     <span class="p">)</span></div>
 
 
-<span class="k">def</span><span class="w"> </span><span class="nf">ComputeImplicitRKTable_Gauss</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="ComputeImplicitRKTable">
+<a class="viewcode-back" href="../../../_generated/choreo.segm.multiprec_tables.ComputeImplicitRKTable.html#choreo.segm.multiprec_tables.ComputeImplicitRKTable">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Computes a :class:`choreo.segm.ODE.ImplicitRKTable`</span>
 
-    <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">GetConvergenceRate</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="sd">    The computation is performed at a user-defined precision using `mpmath &lt;https://mpmath.org/doc/current&gt;`_ to ensure that the result does not suffer from precision loss, even at relatively high orders.</span>
+<span class="sd">    </span>
+<span class="sd">    Available choices for ``method`` are:</span>
+<span class="sd">    </span>
+<span class="sd">    * ``&quot;Gauss&quot;``</span>
+<span class="sd">    * ``&quot;Radau_IA&quot;``, ``&quot;Radau_IIA&quot;``, ``&quot;Radau_IB&quot;`` and ``&quot;Radau_IIB&quot;``</span>
+<span class="sd">    * ``&quot;Lobatto_IIIA&quot;``, ``&quot;Lobatto_IIIB&quot;``, ``&quot;Lobatto_IIIC&quot;``, ``&quot;Lobatto_IIIC*&quot;``, ``&quot;Lobatto_IIID&quot;`` and ``&quot;Lobatto_IIIS&quot;`` </span>
+<span class="sd">    * ``&quot;Cheb_I&quot;`` and ``&quot;Cheb_II&quot;``</span>
+<span class="sd">    * ``&quot;ClenshawCurtis&quot;``</span>
+<span class="sd">    </span>
+<span class="sd">    Alternatively, the user can supply an array of node values between ``0.`` and ``1.``. The result is then the associated collocation method. Cf Theorem 7.7 of :footcite:`hairer1987solvingODEI` for more details.</span>
+<span class="sd">    </span>
+<span class="sd">    :cited:</span>
+<span class="sd">    .. footbibliography::</span>
+<span class="sd">    </span>
+<span class="sd">    Example</span>
+<span class="sd">    -------</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; import choreo</span>
+<span class="sd">    &gt;&gt;&gt; Gauss = choreo.segm.multiprec_tables.ComputeImplicitRKTable(n=2, dps=60, method=&quot;Gauss&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; Gauss</span>
+<span class="sd">    ImplicitRKTable object of order 2</span>
+<span class="sd">    &gt;&gt;&gt; Gauss.a_table</span>
+<span class="sd">    array([[ 0.25      , -0.03867513],</span>
+<span class="sd">        [ 0.53867513,  0.25      ]])</span>
+<span class="sd">    &gt;&gt;&gt; Gauss.b_table</span>
+<span class="sd">    array([0.5, 0.5])</span>
+<span class="sd">    &gt;&gt;&gt; Gauss.c_table</span>
+<span class="sd">    array([0.21132487, 0.78867513])</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n : :class:`python:int`, optional</span>
+<span class="sd">        Order of the method. By default ``10``.</span>
+<span class="sd">    dps : :class:`python:int`, optional</span>
+<span class="sd">        Context precision in `mpmath &lt;https://mpmath.org/doc/current&gt;`_. See :doc:`mpmath:contexts` for more info. By default ``30``.</span>
+<span class="sd">    method : :class:`python:str`, optional</span>
+<span class="sd">        Name of the method, by default ``&quot;Gauss&quot;``.</span>
+<span class="sd">    nodes: :class:`numpy:numpy.ndarray` | :class:`mpmath:mpmath.matrix` | :data:`python:None`, optional</span>
+<span class="sd">        Array of integration node values. By default, :data:`python:None`.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :class:`choreo.segm.quad.QuadTable`</span>
+<span class="sd">        The resulting nodes and weights of the quadrature.</span>
+<span class="sd">    &quot;&quot;&quot;</span>    
     
-    <span class="n">quad_method</span> <span class="o">=</span> <span class="n">Get_quad_method_from_RK_method</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
-    <span class="n">quad_table</span> <span class="o">=</span> <span class="n">ComputeQuadrature</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">quad_method</span><span class="p">)</span>
-    <span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_b</span><span class="p">,</span> <span class="n">Butcher_c</span><span class="p">,</span> <span class="n">Butcher_beta</span><span class="p">,</span> <span class="n">Butcher_gamma</span> <span class="o">=</span> <span class="n">ComputeGaussButcherTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
 
+    <span class="k">if</span> <span class="n">nodes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">GetConvergenceRate</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        
+        <span class="n">quad_method</span> <span class="o">=</span> <span class="n">Get_quad_method_from_RK_method</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+        <span class="n">quad_table</span> <span class="o">=</span> <span class="n">ComputeQuadrature</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">quad_method</span><span class="p">)</span>
+        <span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_b</span><span class="p">,</span> <span class="n">Butcher_c</span><span class="p">,</span> <span class="n">Butcher_beta</span><span class="p">,</span> <span class="n">Butcher_gamma</span> <span class="o">=</span> <span class="n">ComputeNamedGaussButcherTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+        <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">wlag</span><span class="p">,</span> <span class="n">vdm_inv</span> <span class="o">=</span> <span class="n">ComputeQuadratureTablesFromNodes</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">)</span>
+        
+        <span class="n">w_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">z_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">w_lag_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">wlag</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        
+        <span class="n">quad_table</span> <span class="o">=</span> <span class="n">QuadTable</span><span class="p">(</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">w_np</span>                    <span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">z_np</span>                    <span class="p">,</span>
+            <span class="n">wlag</span> <span class="o">=</span> <span class="n">w_lag_np</span>             <span class="p">,</span>
+            <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">th_cvg_rate</span>   <span class="p">,</span>
+        <span class="p">)</span>
+        
+        <span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_beta</span> <span class="p">,</span> <span class="n">Butcher_gamma</span> <span class="o">=</span> <span class="n">ComputeButcher_collocation</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">vdm_inv</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        
     <span class="n">Butcher_a_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Butcher_a</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
     <span class="n">Butcher_beta_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Butcher_beta</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
     <span class="n">Butcher_gamma_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Butcher_gamma</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
@@ -1048,14 +1148,37 @@
         <span class="n">beta_table</span>  <span class="o">=</span> <span class="n">Butcher_beta_np</span>   <span class="p">,</span>
         <span class="n">gamma_table</span> <span class="o">=</span> <span class="n">Butcher_gamma_np</span>  <span class="p">,</span>
         <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">th_cvg_rate</span>       <span class="p">,</span>
-    <span class="p">)</span>
+    <span class="p">)</span></div>
+
         
-<span class="k">def</span><span class="w"> </span><span class="nf">ComputeImplicitSymplecticRKTablePair_Gauss</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">):</span>
-    
-    <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">GetConvergenceRate</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-    
-    <span class="n">quad_table</span> <span class="o">=</span> <span class="n">ComputeQuadrature</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
-    <span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_b</span><span class="p">,</span> <span class="n">Butcher_c</span><span class="p">,</span> <span class="n">Butcher_beta</span><span class="p">,</span> <span class="n">Butcher_gamma</span> <span class="o">=</span> <span class="n">ComputeGaussButcherTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">ComputeImplicitSymplecticRKTablePair_Gauss</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;Gauss&quot;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="n">nodes</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+
+        <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">GetConvergenceRate</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        
+        <span class="n">quad_method</span> <span class="o">=</span> <span class="n">Get_quad_method_from_RK_method</span><span class="p">(</span><span class="n">method</span><span class="p">)</span>
+        <span class="n">quad_table</span> <span class="o">=</span> <span class="n">ComputeQuadrature</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">quad_method</span><span class="p">)</span>
+        <span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_b</span><span class="p">,</span> <span class="n">Butcher_c</span><span class="p">,</span> <span class="n">Butcher_beta</span><span class="p">,</span> <span class="n">Butcher_gamma</span> <span class="o">=</span> <span class="n">ComputeNamedGaussButcherTables</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">nodes</span><span class="p">)</span>
+        <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">wlag</span><span class="p">,</span> <span class="n">vdm_inv</span> <span class="o">=</span> <span class="n">ComputeQuadratureTablesFromNodes</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps</span><span class="p">)</span>
+        
+        <span class="n">w_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">z_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">w_lag_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">wlag</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+        
+        <span class="n">quad_table</span> <span class="o">=</span> <span class="n">QuadTable</span><span class="p">(</span>
+            <span class="n">w</span> <span class="o">=</span> <span class="n">w_np</span>                    <span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">z_np</span>                    <span class="p">,</span>
+            <span class="n">wlag</span> <span class="o">=</span> <span class="n">w_lag_np</span>             <span class="p">,</span>
+            <span class="n">th_cvg_rate</span> <span class="o">=</span> <span class="n">th_cvg_rate</span>   <span class="p">,</span>
+        <span class="p">)</span>
+        
+        <span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_beta</span> <span class="p">,</span> <span class="n">Butcher_gamma</span> <span class="o">=</span> <span class="n">ComputeButcher_collocation</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="n">vdm_inv</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        
     <span class="n">Butcher_a_ad</span> <span class="o">=</span> <span class="n">SymplecticAdjointButcher</span><span class="p">(</span><span class="n">Butcher_a</span><span class="p">,</span> <span class="n">Butcher_b</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>  
     
     <span class="n">Butcher_a_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Butcher_a</span><span class="o">.</span><span class="n">tolist</span><span class="p">(),</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>

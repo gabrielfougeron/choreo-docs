@@ -1,0 +1,6 @@
+choreo.segm.ODE.ImplicitRKTable.nsteps
+======================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ImplicitRKTable.nsteps

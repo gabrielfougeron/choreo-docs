@@ -1,0 +1,6 @@
+choreo.segm.quad.InterpolateOnSegment
+=====================================
+
+.. currentmodule:: choreo.segm.quad
+
+.. autofunction:: InterpolateOnSegment
