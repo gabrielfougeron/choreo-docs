@@ -1,0 +1,6 @@
+test\_QuadDefaultDPSIsEnough
+============================
+
+.. currentmodule:: tests.test_integration_tables
+
+.. autofunction:: test_QuadDefaultDPSIsEnough

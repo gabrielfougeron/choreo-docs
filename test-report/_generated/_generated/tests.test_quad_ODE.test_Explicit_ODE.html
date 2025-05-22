@@ -417,6 +417,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_scipy_plus.html">test_scipy_plus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_nullspace.html">test_nullspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_blas_matmul.html">test_blas_matmul</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_EFT.html">test_EFT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -424,6 +425,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_integration_tables.html">test_integration_tables</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_QuadDefaultDPSIsEnough.html">test_QuadDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough.html">test_ImplicitRKDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymplecticPairs.html">test_ImplicitSymplecticPairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymmetricPairs.html">test_ImplicitSymmetricPairs</a></li>
@@ -467,10 +469,16 @@
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_action_cst_sym_pairs.html">test_action_cst_sym_pairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_custom_inter_law.html">test_custom_inter_law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_periodicity_default.html">test_periodicity_default</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_vs_spectral.html">test_ODE_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral.html">test_RK_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral_reset.html">test_RK_vs_spectral_reset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_segmpos_param.html">test_segmpos_param</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_grad_fun_FD.html">test_grad_fun_FD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD.html">test_ODE_grad_vs_FD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit.html">test_ODE_grad_vs_FD_Implicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit.html">test_ODE_grad_vs_FD_Explicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_nrg.html">test_remove_all_syms_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_ODE.html">test_remove_all_syms_ODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_noopt.html">test_ODE_grad_period_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_opt.html">test_ODE_grad_period_opt</a></li>
 </ul>
 </details></li>
 </ul>
@@ -561,8 +569,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>float64_tols</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.3.5)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols.html#tests.test_config.float64_tols" title="tests.test_config.float64_tols"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols()</span></code></a>.</p></li>
-<li><p><strong>rk</strong> (<a class="reference internal" href="../../../_generated/choreo.segm.ODE.ExplicitSymplecticRKTable.html#choreo.segm.ODE.ExplicitSymplecticRKTable" title="choreo.segm.cython.ODE.ExplicitSymplecticRKTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.segm.cython.ODE.ExplicitSymplecticRKTable</span></code></a>) – [‘SymplecticEuler’, ‘StormerVerlet’, ‘McAte2’, ‘Ruth3’, ‘McAte3’, ‘Ruth4’, ‘Ruth4Rat’, ‘McAte4’, ‘CalvoSanz4’, ‘McAte5’, ‘Yoshida6A’, ‘Yoshida6B’, ‘Yoshida6C’, ‘KahanLi6’, ‘McAte8’, ‘KahanLi8’, ‘Yoshida8A’, ‘Yoshida8B’, ‘Yoshida8C’, ‘Yoshida8D’, ‘Yoshida8E’, ‘SofSpa10’]</p></li>
-<li><p><strong>ivp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>) – [‘ypp=minus_y’]</p></li>
+<li><p><strong>rk</strong> (<a class="reference internal" href="../../../_generated/choreo.segm.ODE.ExplicitSymplecticRKTable.html#choreo.segm.ODE.ExplicitSymplecticRKTable" title="choreo.segm.cython.ODE.ExplicitSymplecticRKTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.segm.cython.ODE.ExplicitSymplecticRKTable</span></code></a>) – [‘SymplecticEuler’, ‘StormerVerlet’, ‘McAte2’, ‘Ruth3’, ‘McAte3’, ‘Ruth4’, ‘Ruth4Rat’, ‘McAte4’, ‘CalvoSanz4’, ‘McAte5’, ‘Yoshida6A’, ‘Yoshida6B’, ‘Yoshida6C’, ‘KahanLi6’, ‘McLahan8’, ‘KahanLi8’, ‘Yoshida8A’, ‘Yoshida8B’, ‘Yoshida8C’, ‘Yoshida8D’, ‘Yoshida8E’, ‘SofSpa10’]</p></li>
+<li><p><strong>ivp</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>) – [‘ypp=minus_y’, ‘ypp=xy’]</p></li>
 <li><p><strong>fun_type</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>) – [‘py_fun’, ‘c_fun_memoryview’, ‘c_fun_pointer’]</p></li>
 <li><p><strong>DoEFT</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">bool</span></code></a>) – [True, False]</p></li>
 </ul>

@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.CalvoSanz4
+==========================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: CalvoSanz4

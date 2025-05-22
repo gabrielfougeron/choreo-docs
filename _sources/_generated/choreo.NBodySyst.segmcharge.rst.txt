@@ -1,0 +1,6 @@
+choreo.NBodySyst.segmcharge
+===========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.segmcharge

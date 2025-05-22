@@ -1,0 +1,80 @@
+choreo.segm.precomputed\_tables
+===============================
+
+.. automodule:: choreo.segm.precomputed_tables
+
+..    
+..
+..    .. rubric:: Module Attributes
+..    .. autosummary::
+..       :recursive:
+..    
+..       SymplecticEuler
+..
+..       StormerVerlet
+..
+..       StormerVerlet_noopt
+..
+..       McAte2
+..
+..       Ruth3
+..
+..       McAte3
+..
+..       Ruth4
+..
+..       Ruth4Rat
+..
+..       McAte4
+..
+..       CalvoSanz4
+..
+..       McAte5
+..
+..       Yoshida6A
+..
+..       Yoshida6B
+..
+..       Yoshida6C
+..
+..       KahanLi6
+..
+..       McLahan8
+..
+..       KahanLi8
+..
+..       Yoshida8A
+..
+..       Yoshida8B
+..
+..       Yoshida8C
+..
+..       Yoshida8D
+..
+..       Yoshida8E
+..
+..       SofSpa10
+..
+..    
+..
+.. 
+..
+..
+..    .. rubric:: Functions
+..    .. autosummary::
+..       :recursive:
+..    
+..       Yoshida_w_to_cd
+..
+..       Yoshida_w_to_cd_reduced
+..
+..    
+..
+.. 
+..
+..
+..
+.. 
+..
+..
+..

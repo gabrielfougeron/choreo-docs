@@ -1,0 +1,6 @@
+test\_blas\_matmul
+==================
+
+.. currentmodule:: tests.test_scipy_plus
+
+.. autofunction:: test_blas_matmul

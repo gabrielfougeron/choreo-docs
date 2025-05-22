@@ -1,0 +1,6 @@
+choreo.NBodySyst.invsegmmass
+============================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.invsegmmass

@@ -72,11 +72,23 @@ Description of the machine on which benchmarks were run.
               width: 64 bits
               capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp x86-64 constant_tsc rep_good nopl tsc_reliable nonstop_tsc cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy svm cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext perfctr_core ssbd ibrs ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 erms invpcid avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 clzero xsaveerptr arat npt nrip_save tsc_scale vmcb_clean flushbyasid decodeassists pausefilter pfthreshold v_vmsave_vmload avx512vbmi umip avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid fsrm avx512_vp2intersect
               configuration: microcode=4294967295
+         *-display:0
+              description: 3D controller
+              product: Basic Render Driver
+              vendor: Microsoft Corporation
+              physical id: 2
+              bus info: pci@3674:00:00.0
+              version: 00
+              width: 32 bits
+              clock: 33MHz
+              capabilities: bus_master cap_list
+              configuration: driver=dxgkrnl latency=0
+              resources: irq:0
          *-scsi
               description: SCSI storage controller
               product: Virtio 1.0 console
               vendor: Red Hat, Inc.
-              physical id: 2
+              physical id: 3
               bus info: pci@5582:00:00.0
               version: 01
               width: 64 bits
@@ -89,24 +101,12 @@ Description of the machine on which benchmarks were run.
                  physical id: 0
                  bus info: virtio@0
                  configuration: driver=virtio_console
-         *-display:0
-              description: 3D controller
-              product: Basic Render Driver
-              vendor: Microsoft Corporation
-              physical id: 3
-              bus info: pci@78fe:00:00.0
-              version: 00
-              width: 32 bits
-              clock: 33MHz
-              capabilities: bus_master cap_list
-              configuration: driver=dxgkrnl latency=0
-              resources: irq:0
          *-display:1
               description: 3D controller
               product: Basic Render Driver
               vendor: Microsoft Corporation
               physical id: 4
-              bus info: pci@a8ca:00:00.0
+              bus info: pci@5a56:00:00.0
               version: 00
               width: 32 bits
               clock: 33MHz
@@ -118,7 +118,7 @@ Description of the machine on which benchmarks were run.
               product: Virtio file system
               vendor: Red Hat, Inc.
               physical id: 5
-              bus info: pci@fca6:00:00.0
+              bus info: pci@881a:00:00.0
               version: 01
               width: 64 bits
               clock: 33MHz
@@ -139,7 +139,7 @@ Description of the machine on which benchmarks were run.
            description: Ethernet interface
            physical id: 1
            logical name: eth0
-           serial: 00:15:5d:e3:f7:91
+           serial: 00:15:5d:71:8d:69
            size: 10Gbit/s
            capabilities: ethernet physical
            configuration: autonegotiation=off broadcast=yes driver=hv_netvsc driverversion=5.15.167.4-microsoft-standard-W duplex=full firmware=N/A ip=172.28.98.79 link=yes multicast=yes speed=10Gbit/s
@@ -279,91 +279,52 @@ Scipy config informations
       blas:
         detection method: pkgconfig
         found: true
-        include directory: /home/gfo/miniforge3/envs/choreo/include
-        lib directory: /home/gfo/miniforge3/envs/choreo/lib
+        include directory: /usr/local/include
+        lib directory: /usr/local/lib
         name: openblas
-        openblas configuration: USE_64BITINT= DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=
-          NO_LAPACK=0 NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP=0 PRESCOTT MAX_THREADS=128
-        pc file directory: /home/gfo/miniforge3/envs/choreo/lib/pkgconfig
-        version: 0.3.21
+        openblas configuration: USE_64BITINT=0 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=
+          NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= ZEN MAX_THREADS=64
+        pc file directory: /usr/local/lib/pkgconfig
+        version: 0.3.27
       lapack:
         detection method: pkgconfig
         found: true
-        include directory: /home/gfo/miniforge3/envs/choreo/include
-        lib directory: /home/gfo/miniforge3/envs/choreo/lib
+        include directory: /usr/local/include
+        lib directory: /usr/local/lib
         name: openblas
-        openblas configuration: USE_64BITINT= DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=
-          NO_LAPACK=0 NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP=0 PRESCOTT MAX_THREADS=128
-        pc file directory: /home/gfo/miniforge3/envs/choreo/lib/pkgconfig
-        version: 0.3.21
+        openblas configuration: USE_64BITINT=0 DYNAMIC_ARCH=1 DYNAMIC_OLDER= NO_CBLAS=
+          NO_LAPACK= NO_LAPACKE= NO_AFFINITY=1 USE_OPENMP= ZEN MAX_THREADS=64
+        pc file directory: /usr/local/lib/pkgconfig
+        version: 0.3.27
       pybind11:
-        detection method: pkgconfig
-        include directory: /home/gfo/miniforge3/envs/choreo/include
+        detection method: config-tool
+        include directory: unknown
         name: pybind11
-        version: 2.13.6
+        version: 2.12.0
     Compilers:
       c:
-        args: -march=nocona, -mtune=haswell, -ftree-vectorize, -fPIC, -fstack-protector-strong,
-          -fno-plt, -O2, -ffunction-sections, -pipe, -isystem, /home/gfo/miniforge3/envs/choreo/include,
-          -fdebug-prefix-map=/croot/scipy_1743153247252/work=/usr/local/src/conda/scipy-1.15.2,
-          -fdebug-prefix-map=/home/gfo/miniforge3/envs/choreo=/usr/local/src/conda-prefix,
-          -DNDEBUG, -D_FORTIFY_SOURCE=2, -O2, -isystem, /home/gfo/miniforge3/envs/choreo/include
-        commands: /croot/scipy_1743153247252/_build_env/bin/x86_64-conda-linux-gnu-cc
+        commands: cc
         linker: ld.bfd
-        linker args: -Wl,-O2, -Wl,--sort-common, -Wl,--as-needed, -Wl,-z,relro, -Wl,-z,now,
-          -Wl,--disable-new-dtags, -Wl,--gc-sections, -Wl,-rpath,/home/gfo/miniforge3/envs/choreo/lib,
-          -Wl,-rpath-link,/home/gfo/miniforge3/envs/choreo/lib, -L/home/gfo/miniforge3/envs/choreo/lib,
-          -march=nocona, -mtune=haswell, -ftree-vectorize, -fPIC, -fstack-protector-strong,
-          -fno-plt, -O2, -ffunction-sections, -pipe, -isystem, /home/gfo/miniforge3/envs/choreo/include,
-          -fdebug-prefix-map=/croot/scipy_1743153247252/work=/usr/local/src/conda/scipy-1.15.2,
-          -fdebug-prefix-map=/home/gfo/miniforge3/envs/choreo=/usr/local/src/conda-prefix,
-          -DNDEBUG, -D_FORTIFY_SOURCE=2, -O2, -isystem, /home/gfo/miniforge3/envs/choreo/include
         name: gcc
-        version: 11.2.0
+        version: 10.2.1
       c++:
-        args: -fvisibility-inlines-hidden, -std=c++17, -fmessage-length=0, -march=nocona,
-          -mtune=haswell, -ftree-vectorize, -fPIC, -fstack-protector-strong, -fno-plt,
-          -O2, -ffunction-sections, -pipe, -isystem, /home/gfo/miniforge3/envs/choreo/include,
-          -fdebug-prefix-map=/croot/scipy_1743153247252/work=/usr/local/src/conda/scipy-1.15.2,
-          -fdebug-prefix-map=/home/gfo/miniforge3/envs/choreo=/usr/local/src/conda-prefix,
-          -DNDEBUG, -D_FORTIFY_SOURCE=2, -O2, -isystem, /home/gfo/miniforge3/envs/choreo/include
-        commands: /croot/scipy_1743153247252/_build_env/bin/x86_64-conda-linux-gnu-c++
+        commands: c++
         linker: ld.bfd
-        linker args: -Wl,-O2, -Wl,--sort-common, -Wl,--as-needed, -Wl,-z,relro, -Wl,-z,now,
-          -Wl,--disable-new-dtags, -Wl,--gc-sections, -Wl,-rpath,/home/gfo/miniforge3/envs/choreo/lib,
-          -Wl,-rpath-link,/home/gfo/miniforge3/envs/choreo/lib, -L/home/gfo/miniforge3/envs/choreo/lib,
-          -fvisibility-inlines-hidden, -std=c++17, -fmessage-length=0, -march=nocona,
-          -mtune=haswell, -ftree-vectorize, -fPIC, -fstack-protector-strong, -fno-plt,
-          -O2, -ffunction-sections, -pipe, -isystem, /home/gfo/miniforge3/envs/choreo/include,
-          -fdebug-prefix-map=/croot/scipy_1743153247252/work=/usr/local/src/conda/scipy-1.15.2,
-          -fdebug-prefix-map=/home/gfo/miniforge3/envs/choreo=/usr/local/src/conda-prefix,
-          -DNDEBUG, -D_FORTIFY_SOURCE=2, -O2, -isystem, /home/gfo/miniforge3/envs/choreo/include
         name: gcc
-        version: 11.2.0
+        version: 10.2.1
       cython:
         commands: cython
         linker: cython
         name: cython
-        version: 3.0.11
+        version: 3.0.10
       fortran:
-        args: -fopenmp, -march=nocona, -mtune=haswell, -ftree-vectorize, -fPIC, -fstack-protector-strong,
-          -fno-plt, -O2, -ffunction-sections, -pipe, -isystem, /home/gfo/miniforge3/envs/choreo/include,
-          -fdebug-prefix-map=/croot/scipy_1743153247252/work=/usr/local/src/conda/scipy-1.15.2,
-          -fdebug-prefix-map=/home/gfo/miniforge3/envs/choreo=/usr/local/src/conda-prefix
-        commands: /croot/scipy_1743153247252/_build_env/bin/x86_64-conda-linux-gnu-gfortran
+        commands: gfortran
         linker: ld.bfd
-        linker args: -Wl,-O2, -Wl,--sort-common, -Wl,--as-needed, -Wl,-z,relro, -Wl,-z,now,
-          -Wl,--disable-new-dtags, -Wl,--gc-sections, -Wl,-rpath,/home/gfo/miniforge3/envs/choreo/lib,
-          -Wl,-rpath-link,/home/gfo/miniforge3/envs/choreo/lib, -L/home/gfo/miniforge3/envs/choreo/lib,
-          -fopenmp, -march=nocona, -mtune=haswell, -ftree-vectorize, -fPIC, -fstack-protector-strong,
-          -fno-plt, -O2, -ffunction-sections, -pipe, -isystem, /home/gfo/miniforge3/envs/choreo/include,
-          -fdebug-prefix-map=/croot/scipy_1743153247252/work=/usr/local/src/conda/scipy-1.15.2,
-          -fdebug-prefix-map=/home/gfo/miniforge3/envs/choreo=/usr/local/src/conda-prefix
         name: gcc
-        version: 11.2.0
+        version: 10.2.1
       pythran:
-        include directory: ../../_h_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_p/lib/python3.12/site-packages/pythran
-        version: 0.16.1
+        include directory: ../../tmp/pip-build-env-_pmdoejz/overlay/lib/python3.12/site-packages/pythran
+        version: 0.15.0
     Machine Information:
       build:
         cpu: x86_64
@@ -377,7 +338,7 @@ Scipy config informations
         family: x86_64
         system: linux
     Python Information:
-      path: /home/gfo/miniforge3/envs/choreo/bin/python
+      path: /opt/python/cp312-cp312/bin/python
       version: '3.12'
 
 

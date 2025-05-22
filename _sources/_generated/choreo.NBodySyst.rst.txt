@@ -58,11 +58,15 @@ choreo.NBodySyst
       ~NBodySyst.GetFullAABB
       ~NBodySyst.GetKrylovJacobian
       ~NBodySyst.Get_ODE_def
+      ~NBodySyst.Get_ODE_params
       ~NBodySyst.Get_segmpos_minmax
       ~NBodySyst.Init_to_dict
       ~NBodySyst.Make_params_bounds
       ~NBodySyst.PlotTimeBodyGraph
+      ~NBodySyst.PropagateMonodromy
+      ~NBodySyst.PropagateMonodromy_noopt
       ~NBodySyst.Segmpos_Descriptor
+      ~NBodySyst.SetODEArrays
       ~NBodySyst.Set_inter_law
       ~NBodySyst.TT_params_to_action_grad
       ~NBodySyst.TestActionSame
@@ -80,7 +84,9 @@ choreo.NBodySyst
       ~NBodySyst.all_to_segm_noopt
       ~NBodySyst.allocate_owned_memory
       ~NBodySyst.co_in
+      ~NBodySyst.copy_nosym
       ~NBodySyst.free_owned_memory
+      ~NBodySyst.inplace_segmvel_to_segmmom
       ~NBodySyst.nnz_k
       ~NBodySyst.params_basis_pos
       ~NBodySyst.params_basis_vel
@@ -96,8 +102,10 @@ choreo.NBodySyst
       ~NBodySyst.params_to_pot_nrg
       ~NBodySyst.params_to_pot_nrg_grad
       ~NBodySyst.params_to_pot_nrg_hess
+      ~NBodySyst.params_to_segmmom
       ~NBodySyst.params_to_segmpos
       ~NBodySyst.params_to_segmvel
+      ~NBodySyst.plot_all_2D_anim
       ~NBodySyst.plot_segmpos_2D
       ~NBodySyst.pos_slice
       ~NBodySyst.segm_to_path_stats
@@ -106,6 +114,7 @@ choreo.NBodySyst
       ~NBodySyst.segmpos_params_to_action_grad
       ~NBodySyst.segmpos_to_all_noopt
       ~NBodySyst.segmpos_to_allbody_noopt
+      ~NBodySyst.segmpos_to_allsegm_noopt
       ~NBodySyst.segmpos_to_hash
       ~NBodySyst.segmpos_to_params
       ~NBodySyst.segmpos_to_params_T
@@ -123,6 +132,8 @@ choreo.NBodySyst
       ~NBodySyst.ALG_SpaceRot
       ~NBodySyst.ALG_TimeRev
       ~NBodySyst.BinProdChargeSum
+      ~NBodySyst.BinProdChargeSumSource_ODE
+      ~NBodySyst.BinProdChargeSumTarget_ODE
       ~NBodySyst.BinSourceSegm
       ~NBodySyst.BinSpaceRot
       ~NBodySyst.BinSpaceRotIsId
@@ -169,11 +180,13 @@ choreo.NBodySyst
       ~NBodySyst.gensegm_to_iintrel
       ~NBodySyst.geodim
       ~NBodySyst.ifft_shapes
+      ~NBodySyst.iint_TimeRev
       ~NBodySyst.inter_law_param_dict
       ~NBodySyst.inter_law_str
       ~NBodySyst.intersegm_to_all
       ~NBodySyst.intersegm_to_body
       ~NBodySyst.intersegm_to_iint
+      ~NBodySyst.invsegmmass
       ~NBodySyst.loopcharge
       ~NBodySyst.loopgen
       ~NBodySyst.loopmass
@@ -198,5 +211,7 @@ choreo.NBodySyst
       ~NBodySyst.pos_slice_shapes
       ~NBodySyst.segm_size
       ~NBodySyst.segm_store
+      ~NBodySyst.segmcharge
+      ~NBodySyst.segmmass
    
    

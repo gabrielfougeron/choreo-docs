@@ -1,0 +1,6 @@
+choreo.NBodySyst.inplace\_segmvel\_to\_segmmom
+==============================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.inplace_segmvel_to_segmmom

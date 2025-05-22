@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.SymplecticEuler
+===============================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: SymplecticEuler

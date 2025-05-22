@@ -1,0 +1,6 @@
+test\_ODE\_grad\_period\_opt
+============================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_ODE_grad_period_opt

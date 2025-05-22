@@ -1,0 +1,6 @@
+test\_remove\_all\_syms\_ODE
+============================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_remove_all_syms_ODE

@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.SofSpa10
+========================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: SofSpa10

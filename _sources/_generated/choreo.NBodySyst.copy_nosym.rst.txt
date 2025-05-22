@@ -1,0 +1,6 @@
+choreo.NBodySyst.copy\_nosym
+============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.copy_nosym

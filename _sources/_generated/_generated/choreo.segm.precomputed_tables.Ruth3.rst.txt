@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.Ruth3
+=====================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: Ruth3

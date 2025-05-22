@@ -25,7 +25,7 @@ Convergence analysis of integration methods on segment
 
 The following plots show the relative error made by different quadrature methods available as :class:`choreo.segm.quad.QuadTable` on the integration of a smooth function (a scaled exponential).
 
-.. GENERATED FROM PYTHON SOURCE LINES 7-72
+.. GENERATED FROM PYTHON SOURCE LINES 7-74
 
 .. code-block:: Python
 
@@ -36,13 +36,15 @@ The following plots show the relative error made by different quadrature methods
     ]
 
     methods = [
-        'Gauss'         ,
-        'Radau_I'       ,
-        'Radau_II'      ,
-        'Lobatto_III'   ,
-        'Cheb_I'        ,
-        'Cheb_II'       ,
-        'ClenshawCurtis',
+        'Gauss'             ,
+        'Radau_I'           ,
+        'Radau_II'          ,
+        'Lobatto_III'       ,
+        'Cheb_I'            ,
+        'Cheb_II'           ,
+        'ClenshawCurtis'    ,
+        'NewtonCotesOpen'   ,
+        'NewtonCotesClosed' ,
     ]
 
     all_nsteps = [5,6]
@@ -106,12 +108,12 @@ The following plots show the relative error made by different quadrature methods
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 115-117
+.. GENERATED FROM PYTHON SOURCE LINES 118-120
 
 The following plots give the measured convergence rate as a function of the number of quadrature subintervals.
 The dotted lines are theoretical convergence rates.
 
-.. GENERATED FROM PYTHON SOURCE LINES 117-147
+.. GENERATED FROM PYTHON SOURCE LINES 120-150
 
 .. code-block:: Python
 
@@ -157,7 +159,7 @@ The dotted lines are theoretical convergence rates.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-155
+.. GENERATED FROM PYTHON SOURCE LINES 151-158
 
 We can see 3 distinct phases on these plots:
 
@@ -167,7 +169,7 @@ We can see 3 distinct phases on these plots:
 
 Now, if the number of integration steps is increased beyond what is necessary, these floating points error will start to steadily grow. This effect can be mitigated using a compensated summation algorithm. This is enabled by setting the argument ``DoEFT = True`` as shown below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 155-197
+.. GENERATED FROM PYTHON SOURCE LINES 158-200
 
 .. code-block:: Python
 

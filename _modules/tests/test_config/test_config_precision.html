@@ -597,13 +597,13 @@
         <span class="n">dfdx_FD</span> <span class="o">=</span> <span class="n">compute_FD</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span><span class="n">xo</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">eps</span><span class="p">,</span><span class="n">fo</span><span class="o">=</span><span class="n">fo</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
         
         <span class="c1"># print()</span>
-        <span class="c1"># print(eps)</span>
-        <span class="c1"># print(dfdx_FD)</span>
-        <span class="c1"># print(dfdx_exact)</span>
-        <span class="c1"># print(dfdx_FD / dfdx_exact)</span>
+        <span class="c1"># print(f&#39;{eps = }&#39;)</span>
+        <span class="c1"># print(f&#39;{dfdx_FD = }&#39;)</span>
+        <span class="c1"># print(f&#39;{dfdx_exact = }&#39;)</span>
+        <span class="c1"># print(f&#39;{dfdx_FD / dfdx_exact = }&#39;)</span>
         
         <span class="k">if</span> <span class="n">relative</span><span class="p">:</span>
-            <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dfdx_FD</span> <span class="o">-</span> <span class="n">dfdx_exact</span><span class="p">)</span> <span class="o">/</span> <span class="n">dfdx_exact_magn</span> 
+            <span class="n">error</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dfdx_FD</span> <span class="o">-</span> <span class="n">dfdx_exact</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">dfdx_exact_magn</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dfdx_FD</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">dfdx_FD</span> <span class="o">-</span> <span class="n">dfdx_exact</span><span class="p">)</span>
             
@@ -611,6 +611,13 @@
     
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">error_list</span><span class="p">)</span>
         
+<span class="k">def</span><span class="w"> </span><span class="nf">inarray</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">arr</span><span class="p">,</span> <span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="p">):</span>
+     
+    <span class="n">minval</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">arr</span><span class="o">-</span><span class="n">val</span><span class="p">))</span>
+    <span class="n">nrm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="nb">ord</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="p">(</span><span class="n">minval</span> <span class="o">&lt;</span> <span class="n">atol</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">minval</span> <span class="o">&lt;</span> <span class="n">rtol</span> <span class="o">*</span> <span class="n">nrm</span><span class="p">)</span>
+    
 </pre></div>
 
                 </article>

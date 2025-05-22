@@ -1,0 +1,6 @@
+choreo.NBodySyst.PropagateMonodromy\_noopt
+==========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.PropagateMonodromy_noopt

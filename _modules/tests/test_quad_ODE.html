@@ -472,7 +472,6 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">choreo</span>
 
-
 <div class="viewcode-block" id="test_quad">
 <a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_quad_ODE.test_quad.html#tests.test_quad_ODE.test_quad">[docs]</a>
 <span class="nd">@ParametrizeDocstrings</span>
@@ -490,7 +489,7 @@
     <span class="n">fun</span> <span class="o">=</span> <span class="n">quad_problem</span><span class="p">[</span><span class="s2">&quot;fun&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">fun_type</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">fun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span>
+        <span class="n">pytest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;NotImplemented&quot;</span><span class="p">)</span>
 
     <span class="n">x_span</span> <span class="o">=</span> <span class="n">quad_problem</span><span class="p">[</span><span class="s2">&quot;x_span&quot;</span><span class="p">]</span>
     <span class="n">ndim</span> <span class="o">=</span> <span class="n">quad_problem</span><span class="p">[</span><span class="s2">&quot;ndim&quot;</span><span class="p">]</span>
@@ -520,7 +519,7 @@
 <div class="viewcode-block" id="test_interp">
 <a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_quad_ODE.test_interp.html#tests.test_quad_ODE.test_interp">[docs]</a>
 <span class="nd">@ParametrizeDocstrings</span>
-<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="n">QuadMethods</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="n">StableInterpMethods</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">High_orders</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;quad_problem&quot;</span><span class="p">,</span> <span class="p">[</span><span class="n">pytest</span><span class="o">.</span><span class="n">param</span><span class="p">(</span><span class="n">define_quad_problem</span><span class="p">(</span><span class="n">eq_name</span><span class="p">),</span> <span class="nb">id</span><span class="o">=</span><span class="n">eq_name</span><span class="p">)</span> <span class="k">for</span> <span class="n">eq_name</span> <span class="ow">in</span> <span class="n">all_quad_problem_names</span><span class="p">])</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;fun_type&quot;</span><span class="p">,</span> <span class="n">all_fun_types</span><span class="p">)</span>
@@ -534,7 +533,7 @@
     <span class="n">fun</span> <span class="o">=</span> <span class="n">quad_problem</span><span class="p">[</span><span class="s2">&quot;fun&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">fun_type</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">fun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span>
+        <span class="n">pytest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;NotImplemented&quot;</span><span class="p">)</span>
     
     <span class="n">x_span</span> <span class="o">=</span> <span class="n">quad_problem</span><span class="p">[</span><span class="s2">&quot;x_span&quot;</span><span class="p">]</span>
     <span class="n">ndim</span> <span class="o">=</span> <span class="n">quad_problem</span><span class="p">[</span><span class="s2">&quot;ndim&quot;</span><span class="p">]</span>
@@ -566,8 +565,9 @@
     
     <span class="k">assert</span> <span class="n">fun_approx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">ntests</span>
     <span class="k">assert</span> <span class="n">fun_approx</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">ndim</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">funvals_exact</span><span class="o">-</span><span class="n">fun_approx</span><span class="p">))</span>
     <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">funvals_exact</span><span class="p">,</span> <span class="n">fun_approx</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> </div>
-
 
 
 <div class="viewcode-block" id="test_Implicit_ODE">
@@ -582,20 +582,18 @@
 <span class="k">def</span><span class="w"> </span><span class="nf">test_Implicit_ODE</span><span class="p">(</span><span class="n">float64_tols</span><span class="p">,</span> <span class="n">method_x</span><span class="p">,</span> <span class="n">method_v</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">,</span> <span class="n">ivp</span><span class="p">,</span> <span class="n">fun_type</span><span class="p">,</span> <span class="n">vector_calls</span><span class="p">,</span> <span class="n">DoEFT</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Tests the accuracy of implicit ODE solvers.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
+    
     <span class="n">rk_x</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method_x</span><span class="p">)</span>
     <span class="n">rk_v</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="n">method_v</span><span class="p">)</span>
    
     <span class="n">fgun</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;fgun&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">fun_type</span><span class="p">,</span> <span class="n">vector_calls</span><span class="p">))</span>
     
     <span class="k">if</span> <span class="n">fgun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span>
+        <span class="n">pytest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;NotImplemented&quot;</span><span class="p">)</span>
     
     <span class="n">fun</span><span class="p">,</span> <span class="n">gun</span> <span class="o">=</span> <span class="n">fgun</span>
     
     <span class="n">t_span</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;t_span&quot;</span><span class="p">]</span>
-    <span class="n">ex_sol_x</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_x&quot;</span><span class="p">]</span>
-    <span class="n">ex_sol_v</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_v&quot;</span><span class="p">]</span>
     <span class="n">nint_OK</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;nint&quot;</span><span class="p">](</span><span class="n">rk_x</span><span class="o">.</span><span class="n">th_cvg_rate</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">nint_OK</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -603,8 +601,8 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">nint</span> <span class="o">=</span> <span class="n">nint_OK</span>
     
-    <span class="n">x0</span> <span class="o">=</span> <span class="n">ex_sol_x</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">v0</span> <span class="o">=</span> <span class="n">ex_sol_v</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">]</span>
+    <span class="n">v0</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;v0&quot;</span><span class="p">]</span>
     
     <span class="n">xf</span><span class="p">,</span> <span class="n">vf</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">ODE</span><span class="o">.</span><span class="n">ImplicitSymplecticIVP</span><span class="p">(</span>
         <span class="n">fun</span>                         <span class="p">,</span>
@@ -619,8 +617,8 @@
         <span class="n">DoEFT</span> <span class="o">=</span> <span class="n">DoEFT</span>               <span class="p">,</span>
     <span class="p">)</span>
     
-    <span class="n">xf_ex</span> <span class="o">=</span> <span class="n">ex_sol_x</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">vf_ex</span> <span class="o">=</span> <span class="n">ex_sol_v</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">xf_ex</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_x&quot;</span><span class="p">]</span>
+    <span class="n">vf_ex</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_v&quot;</span><span class="p">]</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">xf</span><span class="o">-</span><span class="n">xf_ex</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">nint_OK</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -642,15 +640,13 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Tests the accuracy of explicit ODE solvers.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">fgun</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;fgun&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">((</span><span class="n">fun_type</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
-    
+
     <span class="k">if</span> <span class="n">fgun</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">return</span>
+        <span class="n">pytest</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;NotImplemented&quot;</span><span class="p">)</span>
     
     <span class="n">fun</span><span class="p">,</span> <span class="n">gun</span> <span class="o">=</span> <span class="n">fgun</span>
     
     <span class="n">t_span</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;t_span&quot;</span><span class="p">]</span>
-    <span class="n">ex_sol_x</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_x&quot;</span><span class="p">]</span>
-    <span class="n">ex_sol_v</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_v&quot;</span><span class="p">]</span>
     <span class="n">nint_OK</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;nint&quot;</span><span class="p">](</span><span class="n">rk</span><span class="o">.</span><span class="n">th_cvg_rate</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">nint_OK</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -658,8 +654,8 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">nint</span> <span class="o">=</span> <span class="n">nint_OK</span>
         
-    <span class="n">x0</span> <span class="o">=</span> <span class="n">ex_sol_x</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">v0</span> <span class="o">=</span> <span class="n">ex_sol_v</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">x0</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;x0&quot;</span><span class="p">]</span>
+    <span class="n">v0</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;v0&quot;</span><span class="p">]</span>
     
     <span class="n">xf</span><span class="p">,</span> <span class="n">vf</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">ODE</span><span class="o">.</span><span class="n">ExplicitSymplecticIVP</span><span class="p">(</span>
         <span class="n">fun</span>             <span class="p">,</span>
@@ -672,8 +668,8 @@
         <span class="n">DoEFT</span> <span class="o">=</span> <span class="n">DoEFT</span>   <span class="p">,</span>
     <span class="p">)</span>
     
-    <span class="n">xf_ex</span> <span class="o">=</span> <span class="n">ex_sol_x</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-    <span class="n">vf_ex</span> <span class="o">=</span> <span class="n">ex_sol_v</span><span class="p">(</span><span class="n">t_span</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">xf_ex</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_x&quot;</span><span class="p">]</span>
+    <span class="n">vf_ex</span> <span class="o">=</span> <span class="n">ivp</span><span class="p">[</span><span class="s2">&quot;ex_sol_v&quot;</span><span class="p">]</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">xf</span><span class="o">-</span><span class="n">xf_ex</span><span class="p">))</span>
     <span class="k">if</span> <span class="n">nint_OK</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>

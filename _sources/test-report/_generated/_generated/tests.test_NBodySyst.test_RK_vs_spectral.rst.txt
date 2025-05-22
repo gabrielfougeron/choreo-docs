@@ -1,0 +1,6 @@
+test\_RK\_vs\_spectral
+======================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_RK_vs_spectral

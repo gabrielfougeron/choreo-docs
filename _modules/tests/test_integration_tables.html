@@ -460,6 +460,7 @@
 <span class="sd">    :template: tests-formatting/base.rst</span>
 <span class="sd">    :nosignatures:</span>
 
+<span class="sd">    test_QuadDefaultDPSIsEnough</span>
 <span class="sd">    test_ImplicitRKDefaultDPSIsEnough</span>
 <span class="sd">    test_ImplicitSymplecticPairs</span>
 <span class="sd">    test_ImplicitSymmetricPairs</span>
@@ -473,12 +474,57 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">choreo</span>
 
+<div class="viewcode-block" id="test_QuadDefaultDPSIsEnough">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_integration_tables.test_QuadDefaultDPSIsEnough.html#tests.test_integration_tables.test_QuadDefaultDPSIsEnough">[docs]</a>
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="n">QuadMethods</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_QuadDefaultDPSIsEnough</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether the default precision is sufficient for computing quadrature methods.</span>
+<span class="sd">    </span>
+<span class="sd">Tests whether the default value of the dps parameter of :func:`choreo.segm.multiprec_tables.ComputeQuadrature` is large enough to ensure that that the quadrature tables are exact at least up to double precision.</span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">dps_overkill</span> <span class="o">=</span> <span class="mi">1000</span>
+
+    <span class="n">quad</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeQuadrature</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+    <span class="n">quad_overkill</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeQuadrature</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">dps</span><span class="o">=</span><span class="n">dps_overkill</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">x</span>  <span class="o">-</span> <span class="n">quad_overkill</span><span class="o">.</span><span class="n">x</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">w</span>  <span class="o">-</span> <span class="n">quad_overkill</span><span class="o">.</span><span class="n">w</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">wlag</span>  <span class="o">-</span> <span class="n">quad_overkill</span><span class="o">.</span><span class="n">wlag</span><span class="p">))</span>
+
+    <span class="k">assert</span>  <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span>
+        <span class="n">quad</span><span class="o">.</span><span class="n">x</span>                          <span class="p">,</span>
+        <span class="n">quad_overkill</span><span class="o">.</span><span class="n">x</span>                 <span class="p">,</span>
+        <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span> <span class="p">,</span>
+        <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">rtol</span> <span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">assert</span>  <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span>
+        <span class="n">quad</span><span class="o">.</span><span class="n">w</span>                          <span class="p">,</span>
+        <span class="n">quad_overkill</span><span class="o">.</span><span class="n">w</span>                 <span class="p">,</span>
+        <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span> <span class="p">,</span>
+        <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">rtol</span> <span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">assert</span>  <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span>
+        <span class="n">quad</span><span class="o">.</span><span class="n">wlag</span>                       <span class="p">,</span>
+        <span class="n">quad_overkill</span><span class="o">.</span><span class="n">wlag</span>              <span class="p">,</span>
+        <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span> <span class="p">,</span>
+        <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">rtol</span> <span class="p">,</span>
+    <span class="p">)</span>
+    
+    <span class="n">quad_ad</span> <span class="o">=</span> <span class="n">quad</span><span class="o">.</span><span class="n">symmetric_adjoint</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">quad</span><span class="o">.</span><span class="n">symmetry_default</span><span class="p">(</span><span class="n">quad_ad</span><span class="p">))</span>
+    <span class="k">assert</span> <span class="n">quad</span><span class="o">.</span><span class="n">is_symmetric_pair</span><span class="p">(</span><span class="n">quad_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span></div>
+
+    
 <div class="viewcode-block" id="test_ImplicitRKDefaultDPSIsEnough">
 <a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough.html#tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough">[docs]</a>
 <span class="nd">@ParametrizeDocstrings</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="n">ClassicalImplicitRKMethods</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitRKDefaultDPSIsEnough</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitRKDefaultDPSIsEnough</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">float64_tols</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether the default precision is sufficient for computing implicit Runge-Kutta tables.</span>
 <span class="sd">    </span>
 <span class="sd">Tests whether the default value of the dps parameter of :func:`choreo.segm.multiprec_tables.ComputeImplicitRKTable` is large enough to ensure that that the Runge-Kutta tables are exact at least up to double precision.</span>
@@ -529,11 +575,11 @@
     
     <span class="n">rk_ad</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">symplectic_adjoint</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symplectic_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
-    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symplectic_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symplectic_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>
     
     <span class="n">rk_ad</span> <span class="o">=</span> <span class="n">rk</span><span class="o">.</span><span class="n">symmetric_adjoint</span><span class="p">()</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symmetry_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
-    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symmetric_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span></div>
+    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symmetric_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span></div>
 
     
 <div class="viewcode-block" id="test_ImplicitSymplecticPairs">
@@ -576,6 +622,8 @@
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method_pair&quot;</span><span class="p">,</span> <span class="n">SymmetricSymplecticImplicitRKMethodPairs</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">test_ImplicitSymmetricSymplecticPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether symmetric-symplectic pairs of explicit Runge-Kutta tables are indeed symmetric-symplectic at least up to double precision accuracy.</span>
+<span class="sd">    &quot;&quot;&quot;</span>   
 
     <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">symmetric_adjoint</span><span class="p">()</span>
@@ -584,6 +632,20 @@
     
     <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symplectic_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span></div>
 
+
+<span class="nd">@ParametrizeDocstrings</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method_pair&quot;</span><span class="p">,</span> <span class="n">SymmetricImplicitRKMethodPairs</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ExplicitSymmetricPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether symmetric pairs of explicit Runge-Kutta tables are indeed symmetric at least up to double precision accuracy.</span>
+<span class="sd">    &quot;&quot;&quot;</span>   
+    
+    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symmetry_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
+    
+    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symmetric_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>
 </pre></div>
 
                 </article>

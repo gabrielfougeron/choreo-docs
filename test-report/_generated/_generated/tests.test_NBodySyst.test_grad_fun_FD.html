@@ -74,7 +74,7 @@
     <link rel="icon" href="../../../_static/eight_icon.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="test_ODE_grad_vs_FD" href="tests.test_NBodySyst.test_ODE_grad_vs_FD.html" />
+    <link rel="next" title="test_ODE_grad_vs_FD_Implicit" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit.html" />
     <link rel="prev" title="test_segmpos_param" href="tests.test_NBodySyst.test_segmpos_param.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -417,6 +417,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_scipy_plus.html">test_scipy_plus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_nullspace.html">test_nullspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_blas_matmul.html">test_blas_matmul</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_EFT.html">test_EFT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -424,6 +425,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_integration_tables.html">test_integration_tables</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_QuadDefaultDPSIsEnough.html">test_QuadDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough.html">test_ImplicitRKDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymplecticPairs.html">test_ImplicitSymplecticPairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymmetricPairs.html">test_ImplicitSymmetricPairs</a></li>
@@ -467,10 +469,16 @@
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_action_cst_sym_pairs.html">test_action_cst_sym_pairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_custom_inter_law.html">test_custom_inter_law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_periodicity_default.html">test_periodicity_default</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_vs_spectral.html">test_ODE_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral.html">test_RK_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral_reset.html">test_RK_vs_spectral_reset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_segmpos_param.html">test_segmpos_param</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">test_grad_fun_FD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD.html">test_ODE_grad_vs_FD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit.html">test_ODE_grad_vs_FD_Implicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit.html">test_ODE_grad_vs_FD_Explicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_nrg.html">test_remove_all_syms_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_ODE.html">test_remove_all_syms_ODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_noopt.html">test_ODE_grad_period_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_opt.html">test_ODE_grad_period_opt</a></li>
 </ul>
 </details></li>
 </ul>
@@ -562,7 +570,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>float64_tols_loose</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.3.5)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols_loose.html#tests.test_config.float64_tols_loose" title="tests.test_config.float64_tols_loose"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols_loose()</span></code></a>.</p></li>
 <li><p><strong>NoSymIfPossible</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">bool</span></code></a>) – [True, False]</p></li>
-<li><p><strong>NBS</strong> (<a class="reference internal" href="../../../_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.cython._NBodySyst.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.cython._NBodySyst.NBodySyst</span></code></a>) – [‘5C3k-Double_lobes’, ‘2C2C1C-Double_blob’, ‘3D-Heart’, ‘3C-Figure_eight’, ‘5C-Pinched_circle’, ‘5D3k-Flower’, ‘complex_mass_charges’]</p></li>
+<li><p><strong>NBS</strong> (<a class="reference internal" href="../../../_generated/choreo.NBodySyst.html#choreo.NBodySyst" title="choreo.cython._NBodySyst.NBodySyst"><code class="xref py py-class docutils literal notranslate"><span class="pre">choreo.cython._NBodySyst.NBodySyst</span></code></a>) – [‘1C1C-Ellipse’, ‘5C3k-Double_lobes’, ‘2C2C1C-Double_blob’, ‘6q6q’, ‘3C3k2q_6_lobes’, ‘3D-Heart’, ‘3C-Figure_eight’, ‘5C-Pinched_circle’, ‘3q1q’, ‘5D3k-Flower’, ‘4q4qD’, ‘2D-Circle’, ‘3q-Ellipse’, ‘complex_mass_charges’]</p></li>
 <li><p><strong>params_buf</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>) – See <strong>NBS</strong> above.</p></li>
 </ul>
 </dd>

@@ -1,6 +1,0 @@
-test\_ODE\_vs\_spectral
-=======================
-
-.. currentmodule:: tests.test_NBodySyst
-
-.. autofunction:: test_ODE_vs_spectral

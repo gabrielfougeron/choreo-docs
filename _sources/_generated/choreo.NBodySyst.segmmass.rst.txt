@@ -1,0 +1,6 @@
+choreo.NBodySyst.segmmass
+=========================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.segmmass

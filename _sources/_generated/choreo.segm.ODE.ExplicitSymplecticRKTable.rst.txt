@@ -37,6 +37,7 @@ choreo.segm.ODE.ExplicitSymplecticRKTable
    
       ~ExplicitSymplecticRKTable.c_table
       ~ExplicitSymplecticRKTable.d_table
+      ~ExplicitSymplecticRKTable.n_eff_steps
       ~ExplicitSymplecticRKTable.nsteps
       ~ExplicitSymplecticRKTable.th_cvg_rate
    

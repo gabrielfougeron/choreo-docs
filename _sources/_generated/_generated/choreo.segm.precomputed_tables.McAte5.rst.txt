@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.McAte5
+======================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: McAte5

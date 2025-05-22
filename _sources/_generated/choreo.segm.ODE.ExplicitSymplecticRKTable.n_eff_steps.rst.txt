@@ -1,0 +1,6 @@
+choreo.segm.ODE.ExplicitSymplecticRKTable.n\_eff\_steps
+=======================================================
+
+.. currentmodule:: choreo.segm.ODE
+
+.. autoattribute:: ExplicitSymplecticRKTable.n_eff_steps

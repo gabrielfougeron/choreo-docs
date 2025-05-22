@@ -1,0 +1,6 @@
+choreo.NBodySyst.plot\_all\_2D\_anim
+====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.plot_all_2D_anim

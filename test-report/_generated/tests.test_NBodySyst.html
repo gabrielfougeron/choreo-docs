@@ -68,7 +68,7 @@
     <script src="../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>window.MathJax = {"tex": {"macros": {"dd": "\\operatorname{\\mathrm{d}}", "eqdef": "\\mathrel{\\stackrel{\\mathrm{def}}{=}}"}}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"dd": "\\ \\mathrm{d}", "eqdef": "\\mathrel{\\stackrel{\\mathrm{def}}{=}}"}}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'test-report/_generated/tests.test_NBodySyst';</script>
     <script src="../../_static/js/custom-icon.js?v=063adea7"></script>
@@ -415,6 +415,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="tests.test_scipy_plus.html">test_scipy_plus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_scipy_plus.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_scipy_plus.test_nullspace.html">test_nullspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_scipy_plus.test_blas_matmul.html">test_blas_matmul</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="tests.test_EFT.html">test_EFT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -422,6 +423,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="tests.test_integration_tables.html">test_integration_tables</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_integration_tables.test_QuadDefaultDPSIsEnough.html">test_QuadDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough.html">test_ImplicitRKDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_integration_tables.test_ImplicitSymplecticPairs.html">test_ImplicitSymplecticPairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_integration_tables.test_ImplicitSymmetricPairs.html">test_ImplicitSymmetricPairs</a></li>
@@ -465,10 +467,16 @@
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_action_cst_sym_pairs.html">test_action_cst_sym_pairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_custom_inter_law.html">test_custom_inter_law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_periodicity_default.html">test_periodicity_default</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html">test_ODE_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_RK_vs_spectral.html">test_RK_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_RK_vs_spectral_reset.html">test_RK_vs_spectral_reset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_param.html">test_segmpos_param</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_grad_fun_FD.html">test_grad_fun_FD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD.html">test_ODE_grad_vs_FD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit.html">test_ODE_grad_vs_FD_Implicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit.html">test_ODE_grad_vs_FD_Explicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_remove_all_syms_nrg.html">test_remove_all_syms_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_remove_all_syms_ODE.html">test_remove_all_syms_ODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_period_noopt.html">test_ODE_grad_period_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_period_opt.html">test_ODE_grad_period_opt</a></li>
 </ul>
 </details></li>
 </ul>
@@ -617,17 +625,35 @@
 <tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_periodicity_default.html#tests.test_NBodySyst.test_periodicity_default" title="tests.test_NBodySyst.test_periodicity_default"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_periodicity_default</span></code></a></p></td>
 <td><p>Tests that Fourier periodic trajectories have zero periodicity default and satisfy initial constraints.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_vs_spectral.html#tests.test_NBodySyst.test_ODE_vs_spectral" title="tests.test_NBodySyst.test_ODE_vs_spectral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_vs_spectral</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_RK_vs_spectral.html#tests.test_NBodySyst.test_RK_vs_spectral" title="tests.test_NBodySyst.test_RK_vs_spectral"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_RK_vs_spectral</span></code></a></p></td>
 <td><p>Tests that the Fourier periodic spectral solver agrees with the time forward Runge-Kutta solver.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_param.html#tests.test_NBodySyst.test_segmpos_param" title="tests.test_NBodySyst.test_segmpos_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_segmpos_param</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_RK_vs_spectral_reset.html#tests.test_NBodySyst.test_RK_vs_spectral_reset" title="tests.test_NBodySyst.test_RK_vs_spectral_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_RK_vs_spectral_reset</span></code></a></p></td>
+<td><p>Tests that the Fourier periodic spectral solver agrees with the time forward Runge-Kutta solver.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_segmpos_param.html#tests.test_NBodySyst.test_segmpos_param" title="tests.test_NBodySyst.test_segmpos_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_segmpos_param</span></code></a></p></td>
 <td><p>Tests whether functions taking advantage of <code class="docutils literal notranslate"><span class="pre">segmpos</span></code> caching give the same result as those that do not.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_grad_fun_FD.html#tests.test_NBodySyst.test_grad_fun_FD" title="tests.test_NBodySyst.test_grad_fun_FD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_grad_fun_FD</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_grad_fun_FD.html#tests.test_NBodySyst.test_grad_fun_FD" title="tests.test_NBodySyst.test_grad_fun_FD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_grad_fun_FD</span></code></a></p></td>
 <td><p>Tests that the gradient of velocities and forces agree with their finite difference estimations.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD.html#tests.test_NBodySyst.test_ODE_grad_vs_FD" title="tests.test_NBodySyst.test_ODE_grad_vs_FD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_grad_vs_FD</span></code></a></p></td>
-<td><p>Tests that the solution of the tangent system agrees with its finite difference estimation.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit.html#tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit" title="tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_grad_vs_FD_Implicit</span></code></a></p></td>
+<td><p>Tests that the solution of the tangent system using an implicit integration agrees with its finite difference estimation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit.html#tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit" title="tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_grad_vs_FD_Explicit</span></code></a></p></td>
+<td><p>Tests that the solution of the tangent system using an explicit integration agrees with its finite difference estimation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_remove_all_syms_nrg.html#tests.test_NBodySyst.test_remove_all_syms_nrg" title="tests.test_NBodySyst.test_remove_all_syms_nrg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_remove_all_syms_nrg</span></code></a></p></td>
+<td><p>Tests whether action gradient and hessian computation can be replicated without symmetries</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_remove_all_syms_ODE.html#tests.test_NBodySyst.test_remove_all_syms_ODE" title="tests.test_NBodySyst.test_remove_all_syms_ODE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_remove_all_syms_ODE</span></code></a></p></td>
+<td><p>Tests whether ODE computations can be replicated without symmetries</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_period_noopt.html#tests.test_NBodySyst.test_ODE_grad_period_noopt" title="tests.test_NBodySyst.test_ODE_grad_period_noopt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_grad_period_noopt</span></code></a></p></td>
+<td><p>Tests the integration of the tangent system on a minimum interval</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_generated/tests.test_NBodySyst.test_ODE_grad_period_opt.html#tests.test_NBodySyst.test_ODE_grad_period_opt" title="tests.test_NBodySyst.test_ODE_grad_period_opt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">test_ODE_grad_period_opt</span></code></a></p></td>
+<td><p>Tests the integration of the tangent system on a minimum interval</p></td>
 </tr>
 </tbody>
 </table>

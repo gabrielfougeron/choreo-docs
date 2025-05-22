@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.McLahan8
+========================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: McLahan8

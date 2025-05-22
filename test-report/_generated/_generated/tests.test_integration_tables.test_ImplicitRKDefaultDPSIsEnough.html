@@ -75,7 +75,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="test_ImplicitSymplecticPairs" href="tests.test_integration_tables.test_ImplicitSymplecticPairs.html" />
-    <link rel="prev" title="test_integration_tables" href="../tests.test_integration_tables.html" />
+    <link rel="prev" title="test_QuadDefaultDPSIsEnough" href="tests.test_integration_tables.test_QuadDefaultDPSIsEnough.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="main" />
@@ -417,6 +417,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_scipy_plus.html">test_scipy_plus</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_random_orthogonal_matrix.html">test_random_orthogonal_matrix</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_nullspace.html">test_nullspace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_scipy_plus.test_blas_matmul.html">test_blas_matmul</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../tests.test_EFT.html">test_EFT</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -424,6 +425,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../tests.test_integration_tables.html">test_integration_tables</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_QuadDefaultDPSIsEnough.html">test_QuadDefaultDPSIsEnough</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">test_ImplicitRKDefaultDPSIsEnough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymplecticPairs.html">test_ImplicitSymplecticPairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_integration_tables.test_ImplicitSymmetricPairs.html">test_ImplicitSymmetricPairs</a></li>
@@ -467,10 +469,16 @@
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_action_cst_sym_pairs.html">test_action_cst_sym_pairs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_custom_inter_law.html">test_custom_inter_law</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_periodicity_default.html">test_periodicity_default</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_vs_spectral.html">test_ODE_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral.html">test_RK_vs_spectral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral_reset.html">test_RK_vs_spectral_reset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_segmpos_param.html">test_segmpos_param</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_grad_fun_FD.html">test_grad_fun_FD</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD.html">test_ODE_grad_vs_FD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Implicit.html">test_ODE_grad_vs_FD_Implicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_vs_FD_Explicit.html">test_ODE_grad_vs_FD_Explicit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_nrg.html">test_remove_all_syms_nrg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_ODE.html">test_remove_all_syms_ODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_noopt.html">test_ODE_grad_period_noopt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_opt.html">test_ODE_grad_period_opt</a></li>
 </ul>
 </details></li>
 </ul>
@@ -555,14 +563,15 @@
 <h1>test_ImplicitRKDefaultDPSIsEnough<a class="headerlink" href="#test-implicitrkdefaultdpsisenough" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough">
-<span class="sig-name descname"><span class="pre">test_ImplicitRKDefaultDPSIsEnough</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">float64_tols_strict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/tests/test_integration_tables.html#test_ImplicitRKDefaultDPSIsEnough"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">test_ImplicitRKDefaultDPSIsEnough</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">float64_tols_strict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float64_tols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nsteps</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../../_modules/tests/test_integration_tables.html#test_ImplicitRKDefaultDPSIsEnough"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tests.test_integration_tables.test_ImplicitRKDefaultDPSIsEnough" title="Link to this definition">#</a></dt>
 <dd><p>Tests whether the default precision is sufficient for computing implicit Runge-Kutta tables.</p>
 <p>Tests whether the default value of the dps parameter of <a class="reference internal" href="../../../_generated/choreo.segm.multiprec_tables.ComputeImplicitRKTable.html#choreo.segm.multiprec_tables.ComputeImplicitRKTable" title="choreo.segm.multiprec_tables.ComputeImplicitRKTable"><code class="xref py py-func docutils literal notranslate"><span class="pre">choreo.segm.multiprec_tables.ComputeImplicitRKTable()</span></code></a> is large enough to ensure that that the Runge-Kutta tables are exact at least up to double precision.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>float64_tols_strict</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.3.5)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols_strict.html#tests.test_config.float64_tols_strict" title="tests.test_config.float64_tols_strict"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols_strict()</span></code></a>.</p></li>
-<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>) – [‘Gauss’, ‘Radau_IA’, ‘Radau_IIA’, ‘Radau_IB’, ‘Radau_IIB’, ‘Lobatto_IIIA’, ‘Lobatto_IIIB’, ‘Lobatto_IIIC’, ‘Lobatto_IIIC*’, ‘Lobatto_IIID’, ‘Lobatto_IIIS’, ‘Cheb_I’, ‘Cheb_II’, ‘ClenshawCurtis’]</p></li>
+<li><p><strong>float64_tols</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.3.5)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols.html#tests.test_config.float64_tols" title="tests.test_config.float64_tols"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols()</span></code></a>.</p></li>
+<li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>) – [‘Gauss’, ‘Radau_IA’, ‘Radau_IIA’, ‘Radau_IB’, ‘Radau_IIB’, ‘Lobatto_IIIA’, ‘Lobatto_IIIB’, ‘Lobatto_IIIC’, ‘Lobatto_IIIC*’, ‘Lobatto_IIID’, ‘Lobatto_IIIS’, ‘Cheb_I’, ‘Cheb_II’, ‘ClenshawCurtis’, ‘NewtonCotesOpen’, ‘NewtonCotesClosed’]</p></li>
 <li><p><strong>nsteps</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>) – [2, 3, 4, 5, 6, 7, 8, 9, 10]</p></li>
 </ul>
 </dd>

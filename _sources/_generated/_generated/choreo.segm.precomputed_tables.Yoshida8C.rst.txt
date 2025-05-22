@@ -1,0 +1,6 @@
+choreo.segm.precomputed\_tables.Yoshida8C
+=========================================
+
+.. currentmodule:: choreo.segm.precomputed_tables
+
+.. autodata:: Yoshida8C

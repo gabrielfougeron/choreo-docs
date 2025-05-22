@@ -462,6 +462,7 @@
 
 <span class="sd">    test_random_orthogonal_matrix</span>
 <span class="sd">    test_nullspace</span>
+<span class="sd">    test_blas_matmul</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 
@@ -531,6 +532,8 @@
         <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">Z</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">Z</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">nullspace_dim</span><span class="p">),</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> </div>
 
 
+<div class="viewcode-block" id="test_blas_matmul">
+<a class="viewcode-back" href="../../test-report/_generated/_generated/tests.test_scipy_plus.test_blas_matmul.html#tests.test_scipy_plus.test_blas_matmul">[docs]</a>
 <span class="nd">@ParametrizeDocstrings</span>
 <span class="nd">@ProbabilisticTest</span><span class="p">()</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="n">Dense_linalg_dims</span><span class="p">)</span>
@@ -547,7 +550,8 @@
     <span class="n">AB_blas</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">scipy_plus</span><span class="o">.</span><span class="n">cython</span><span class="o">.</span><span class="n">blas_cheatsheet</span><span class="o">.</span><span class="n">blas_matmul</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">)</span>
     
     <span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">AB_np</span> <span class="o">-</span> <span class="n">AB_blas</span><span class="p">))</span>
-    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">AB_np</span><span class="p">,</span> <span class="n">AB_blas</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> 
+    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">AB_np</span><span class="p">,</span> <span class="n">AB_blas</span><span class="p">,</span> <span class="n">rtol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span> <span class="o">=</span> <span class="n">float64_tols</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span> </div>
+
             
 
 </pre></div>
