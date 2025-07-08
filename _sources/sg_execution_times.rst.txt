@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:04.802** total execution time for 10 files **from all galleries**:
+**00:05.106** total execution time for 10 files **from all galleries**:
 
 .. container::
 
@@ -33,32 +33,32 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr__build_auto_examples_convergence_SelectedRungeKutta.py` (``../../examples/convergence/SelectedRungeKutta.py``)
-     - 00:01.451
+     - 00:01.360
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_EFT_RungeKutta.py` (``../../examples/convergence/EFT_RungeKutta.py``)
-     - 00:00.869
+     - 00:00.921
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_convergence_Integration_on_segment.py` (``../../examples/convergence/Integration_on_segment.py``)
-     - 00:00.591
+     - 00:00.662
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_FFT_bench_scipy_backend.py` (``../../examples/benchmarks/FFT_bench_scipy_backend.py``)
-     - 00:00.467
+     - 00:00.532
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTdot_bench.py` (``../../examples/benchmarks/EFTdot_bench.py``)
-     - 00:00.347
+     - 00:00.396
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_EFTsum_bench.py` (``../../examples/benchmarks/EFTsum_bench.py``)
-     - 00:00.339
+     - 00:00.390
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_quad_Integration_LowLevel_bench.py` (``../../examples/benchmarks/quad_Integration_LowLevel_bench.py``)
-     - 00:00.254
+     - 00:00.281
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_ODE_ivp_LowLevel_bench.py` (``../../examples/benchmarks/ODE_ivp_LowLevel_bench.py``)
-     - 00:00.249
+     - 00:00.279
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_Numerical_tricks_FFT_sym.py` (``../../examples/Numerical_tricks/FFT_sym.py``)
-     - 00:00.165
+     - 00:00.187
      - 0.0
    * - :ref:`sphx_glr__build_auto_examples_benchmarks_Benchmark_Hardware_Info.py` (``../../examples/benchmarks/Benchmark_Hardware_Info.py``)
-     - 00:00.070
+     - 00:00.098
      - 0.0

@@ -1,0 +1,6 @@
+choreo.NBodySyst.ODEinitparams\_basis\_mom
+==========================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ODEinitparams_basis_mom

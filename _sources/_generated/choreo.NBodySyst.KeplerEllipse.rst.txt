@@ -1,0 +1,6 @@
+choreo.NBodySyst.KeplerEllipse
+==============================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.KeplerEllipse

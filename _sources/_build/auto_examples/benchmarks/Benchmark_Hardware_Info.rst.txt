@@ -77,7 +77,7 @@ Description of the machine on which benchmarks were run.
               product: Basic Render Driver
               vendor: Microsoft Corporation
               physical id: 2
-              bus info: pci@3674:00:00.0
+              bus info: pci@3d61:00:00.0
               version: 00
               width: 32 bits
               clock: 33MHz
@@ -101,24 +101,12 @@ Description of the machine on which benchmarks were run.
                  physical id: 0
                  bus info: virtio@0
                  configuration: driver=virtio_console
-         *-display:1
-              description: 3D controller
-              product: Basic Render Driver
-              vendor: Microsoft Corporation
-              physical id: 4
-              bus info: pci@5a56:00:00.0
-              version: 00
-              width: 32 bits
-              clock: 33MHz
-              capabilities: bus_master cap_list
-              configuration: driver=dxgkrnl latency=0
-              resources: irq:0
          *-generic
               description: System peripheral
               product: Virtio file system
               vendor: Red Hat, Inc.
-              physical id: 5
-              bus info: pci@881a:00:00.0
+              physical id: 4
+              bus info: pci@a825:00:00.0
               version: 01
               width: 64 bits
               clock: 33MHz
@@ -130,6 +118,18 @@ Description of the machine on which benchmarks were run.
                  physical id: 0
                  bus info: virtio@1
                  configuration: driver=virtiofs
+         *-display:1
+              description: 3D controller
+              product: Basic Render Driver
+              vendor: Microsoft Corporation
+              physical id: 5
+              bus info: pci@df74:00:00.0
+              version: 00
+              width: 32 bits
+              clock: 33MHz
+              capabilities: bus_master cap_list
+              configuration: driver=dxgkrnl latency=0
+              resources: irq:0
          *-pnp00:00
               product: PnP device PNP0b00
               physical id: 6
@@ -139,7 +139,7 @@ Description of the machine on which benchmarks were run.
            description: Ethernet interface
            physical id: 1
            logical name: eth0
-           serial: 00:15:5d:71:8d:69
+           serial: 00:15:5d:44:d4:af
            size: 10Gbit/s
            capabilities: ethernet physical
            configuration: autonegotiation=off broadcast=yes driver=hv_netvsc driverversion=5.15.167.4-microsoft-standard-W duplex=full firmware=N/A ip=172.28.98.79 link=yes multicast=yes speed=10Gbit/s

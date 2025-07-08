@@ -1,0 +1,6 @@
+test\_center\_of\_mass
+======================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_center_of_mass

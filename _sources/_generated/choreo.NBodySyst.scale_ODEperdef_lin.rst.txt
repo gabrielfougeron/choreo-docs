@@ -1,0 +1,6 @@
+choreo.NBodySyst.scale\_ODEperdef\_lin
+======================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.scale_ODEperdef_lin

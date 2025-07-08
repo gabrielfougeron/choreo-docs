@@ -1,0 +1,6 @@
+test\_RK\_vs\_spectral\_periodicity\_default
+============================================
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_RK_vs_spectral_periodicity_default

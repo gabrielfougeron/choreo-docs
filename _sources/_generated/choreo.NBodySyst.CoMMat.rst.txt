@@ -1,0 +1,6 @@
+choreo.NBodySyst.CoMMat
+=======================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.CoMMat

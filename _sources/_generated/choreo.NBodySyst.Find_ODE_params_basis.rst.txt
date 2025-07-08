@@ -1,0 +1,6 @@
+choreo.NBodySyst.Find\_ODE\_params\_basis
+=========================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Find_ODE_params_basis

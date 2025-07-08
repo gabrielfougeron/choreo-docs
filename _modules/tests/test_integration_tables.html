@@ -633,19 +633,21 @@
     <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symplectic_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span></div>
 
 
+
 <span class="nd">@ParametrizeDocstrings</span>
-<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method_pair&quot;</span><span class="p">,</span> <span class="n">SymmetricImplicitRKMethodPairs</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;method&quot;</span><span class="p">,</span> <span class="n">ClassicalImplicitRKMethods</span><span class="p">)</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;nsteps&quot;</span><span class="p">,</span> <span class="n">Small_orders</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">test_ExplicitSymmetricPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method_pair</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether symmetric pairs of explicit Runge-Kutta tables are indeed symmetric at least up to double precision accuracy.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ClassicalImplicitSymmetricPairs</span><span class="p">(</span><span class="n">float64_tols_strict</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">nsteps</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Tests whether symplectic pairs of implicit Runge-Kutta tables can be generated at least up to double precision accuracy.</span>
 <span class="sd">    &quot;&quot;&quot;</span>   
     
-    <span class="n">rk</span>      <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">rk_ad</span>   <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitRKTable</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">rk</span><span class="p">,</span> <span class="n">rk_ad</span> <span class="o">=</span> <span class="n">choreo</span><span class="o">.</span><span class="n">segm</span><span class="o">.</span><span class="n">multiprec_tables</span><span class="o">.</span><span class="n">ComputeImplicitSymplecticRKTablePair</span><span class="p">(</span><span class="n">nsteps</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symplectic_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">rk</span><span class="o">.</span><span class="n">symmetry_default</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">))</span>
-    
-    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symmetric_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">rk</span><span class="o">.</span><span class="n">is_symplectic_pair</span><span class="p">(</span><span class="n">rk_ad</span><span class="p">,</span> <span class="n">tol</span> <span class="o">=</span> <span class="n">float64_tols_strict</span><span class="o">.</span><span class="n">atol</span><span class="p">)</span>
+
+
 </pre></div>
 
                 </article>

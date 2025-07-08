@@ -1,0 +1,6 @@
+test\_Kepler
+============
+
+.. currentmodule:: tests.test_NBodySyst
+
+.. autofunction:: test_Kepler

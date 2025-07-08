@@ -1,0 +1,6 @@
+choreo.NBodySyst.SetConvenienceArrays
+=====================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.SetConvenienceArrays

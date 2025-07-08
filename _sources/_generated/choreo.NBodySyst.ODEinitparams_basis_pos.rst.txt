@@ -1,0 +1,6 @@
+choreo.NBodySyst.ODEinitparams\_basis\_pos
+==========================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ODEinitparams_basis_pos

@@ -1,6 +1,0 @@
-choreo.NBodySyst.PerDefEnd\_TimeRev
-===================================
-
-.. currentmodule:: choreo
-
-.. autoattribute:: NBodySyst.PerDefEnd_TimeRev

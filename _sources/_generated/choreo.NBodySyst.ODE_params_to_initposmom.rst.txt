@@ -1,0 +1,6 @@
+choreo.NBodySyst.ODE\_params\_to\_initposmom
+============================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.ODE_params_to_initposmom

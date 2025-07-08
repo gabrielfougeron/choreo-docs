@@ -1,0 +1,6 @@
+choreo.NBodySyst.Compute\_ODE\_default
+======================================
+
+.. currentmodule:: choreo
+
+.. automethod:: NBodySyst.Compute_ODE_default

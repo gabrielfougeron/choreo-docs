@@ -27,6 +27,7 @@ choreo.NBodySyst
       ~NBodySyst.ChooseLoopGen
       ~NBodySyst.ComputeCenterOfMass
       ~NBodySyst.ComputeSymDefault
+      ~NBodySyst.Compute_ODE_default
       ~NBodySyst.Compute_forces
       ~NBodySyst.Compute_forces_nosym
       ~NBodySyst.Compute_forces_vectorized
@@ -52,6 +53,7 @@ choreo.NBodySyst
       ~NBodySyst.DetectSegmRequiresDisp
       ~NBodySyst.DetectXlim
       ~NBodySyst.Detect_homo_inter_law
+      ~NBodySyst.Find_ODE_params_basis
       ~NBodySyst.FromDict
       ~NBodySyst.FromSolutionFile
       ~NBodySyst.GatherInterSym
@@ -61,11 +63,14 @@ choreo.NBodySyst
       ~NBodySyst.Get_ODE_params
       ~NBodySyst.Get_segmpos_minmax
       ~NBodySyst.Init_to_dict
+      ~NBodySyst.KeplerEllipse
       ~NBodySyst.Make_params_bounds
+      ~NBodySyst.ODE_params_to_initposmom
       ~NBodySyst.PlotTimeBodyGraph
       ~NBodySyst.PropagateMonodromy
       ~NBodySyst.PropagateMonodromy_noopt
       ~NBodySyst.Segmpos_Descriptor
+      ~NBodySyst.SetConvenienceArrays
       ~NBodySyst.SetODEArrays
       ~NBodySyst.Set_inter_law
       ~NBodySyst.TT_params_to_action_grad
@@ -85,7 +90,10 @@ choreo.NBodySyst
       ~NBodySyst.allocate_owned_memory
       ~NBodySyst.co_in
       ~NBodySyst.copy_nosym
+      ~NBodySyst.endposmom_to_perdef
+      ~NBodySyst.endposmom_to_perdef_bulk
       ~NBodySyst.free_owned_memory
+      ~NBodySyst.initposmom_to_ODE_params
       ~NBodySyst.inplace_segmvel_to_segmmom
       ~NBodySyst.nnz_k
       ~NBodySyst.params_basis_pos
@@ -108,6 +116,8 @@ choreo.NBodySyst
       ~NBodySyst.plot_all_2D_anim
       ~NBodySyst.plot_segmpos_2D
       ~NBodySyst.pos_slice
+      ~NBodySyst.scale_ODEperdef_lin
+      ~NBodySyst.scale_init_period
       ~NBodySyst.segm_to_path_stats
       ~NBodySyst.segmpos_dparams_to_action_hess
       ~NBodySyst.segmpos_params_to_action
@@ -139,6 +149,7 @@ choreo.NBodySyst
       ~NBodySyst.BinSpaceRotIsId
       ~NBodySyst.BinTargetSegm
       ~NBodySyst.BodyGraph
+      ~NBodySyst.CoMMat
       ~NBodySyst.ForceGeneralSym
       ~NBodySyst.ForceGreaterNStore
       ~NBodySyst.GreaterNStore
@@ -152,21 +163,25 @@ choreo.NBodySyst
       ~NBodySyst.InterTimeRev
       ~NBodySyst.LawIsHomo
       ~NBodySyst.LoopGenConstraints
+      ~NBodySyst.ODEinitparams_basis_mom
+      ~NBodySyst.ODEinitparams_basis_pos
+      ~NBodySyst.ODEperdef_eqproj_mom
+      ~NBodySyst.ODEperdef_eqproj_pos
+      ~NBodySyst.ODEperdef_eqproj_pos_mul
       ~NBodySyst.ParamBasisShortcutPos
       ~NBodySyst.ParamBasisShortcutVel
       ~NBodySyst.PerDefBeg_Isegm
       ~NBodySyst.PerDefBeg_SpaceRotPos
       ~NBodySyst.PerDefBeg_SpaceRotVel
-      ~NBodySyst.PerDefBeg_TimeRev
       ~NBodySyst.PerDefEnd_Isegm
       ~NBodySyst.PerDefEnd_SpaceRotPos
       ~NBodySyst.PerDefEnd_SpaceRotVel
-      ~NBodySyst.PerDefEnd_TimeRev
       ~NBodySyst.RequiresGreaterNStore
       ~NBodySyst.SegmGraph
       ~NBodySyst.SegmRequiresDisp
       ~NBodySyst.Sym_list
       ~NBodySyst.Targets
+      ~NBodySyst.TimeRev
       ~NBodySyst.bodyloop
       ~NBodySyst.bodysegm
       ~NBodySyst.fft_backend
@@ -180,7 +195,6 @@ choreo.NBodySyst
       ~NBodySyst.gensegm_to_iintrel
       ~NBodySyst.geodim
       ~NBodySyst.ifft_shapes
-      ~NBodySyst.iint_TimeRev
       ~NBodySyst.inter_law_param_dict
       ~NBodySyst.inter_law_str
       ~NBodySyst.intersegm_to_all
@@ -191,6 +205,12 @@ choreo.NBodySyst
       ~NBodySyst.loopgen
       ~NBodySyst.loopmass
       ~NBodySyst.loopnb
+      ~NBodySyst.n_ODEinitparams
+      ~NBodySyst.n_ODEinitparams_mom
+      ~NBodySyst.n_ODEinitparams_pos
+      ~NBodySyst.n_ODEperdef_eqproj
+      ~NBodySyst.n_ODEperdef_eqproj_mom
+      ~NBodySyst.n_ODEperdef_eqproj_pos
       ~NBodySyst.n_sub_fft
       ~NBodySyst.nbin_segm_tot
       ~NBodySyst.nbin_segm_unique
@@ -213,5 +233,6 @@ choreo.NBodySyst
       ~NBodySyst.segm_store
       ~NBodySyst.segmcharge
       ~NBodySyst.segmmass
+      ~NBodySyst.segmpos
    
    

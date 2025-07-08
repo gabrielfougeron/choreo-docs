@@ -1,0 +1,6 @@
+choreo.NBodySyst.ODEperdef\_eqproj\_pos\_mul
+============================================
+
+.. currentmodule:: choreo
+
+.. autoattribute:: NBodySyst.ODEperdef_eqproj_pos_mul

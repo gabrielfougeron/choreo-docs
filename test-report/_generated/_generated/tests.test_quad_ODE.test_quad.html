@@ -479,6 +479,9 @@
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_remove_all_syms_ODE.html">test_remove_all_syms_ODE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_noopt.html">test_ODE_grad_period_noopt</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_ODE_grad_period_opt.html">test_ODE_grad_period_opt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_Kepler.html">test_Kepler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_RK_vs_spectral_periodicity_default.html">test_RK_vs_spectral_periodicity_default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.test_NBodySyst.test_center_of_mass.html">test_center_of_mass</a></li>
 </ul>
 </details></li>
 </ul>
@@ -568,7 +571,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>float64_tols</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.3.5)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols.html#tests.test_config.float64_tols" title="tests.test_config.float64_tols"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols()</span></code></a>.</p></li>
+<li><p><strong>float64_tols</strong> (<a class="reference external" href="https://pytest.org/en/stable/reference/reference.html#pytest.fixture" title="(in pytest v8.4.1)"><code class="docutils literal notranslate"><span class="pre">pytest.fixture()</span></code></a>) – See <a class="reference internal" href="tests.test_config.float64_tols.html#tests.test_config.float64_tols" title="tests.test_config.float64_tols"><code class="xref py py-func docutils literal notranslate"><span class="pre">tests.test_config.float64_tols()</span></code></a>.</p></li>
 <li><p><strong>method</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a>) – [‘Gauss’, ‘Radau_I’, ‘Radau_II’, ‘Lobatto_III’, ‘Cheb_I’, ‘Cheb_II’, ‘ClenshawCurtis’, ‘NewtonCotesOpen’, ‘NewtonCotesClosed’]</p></li>
 <li><p><strong>nsteps</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a>) – [2, 3, 4, 5, 6, 7, 8, 9, 10]</p></li>
 <li><p><strong>quad_problem</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a>) – [‘Wallis’]</p></li>
